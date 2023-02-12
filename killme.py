@@ -57,7 +57,7 @@ text = "How many commits has the author izzyrybz made?"
 # Parse the input text using spaCy
 
 doc = nlp(text)
-lemmas = [token.lemma_ for token in doc]
+#lemmas = [token.lemma_ for token in doc]
 
 
 # Mapping to a Machine-Readable Representation

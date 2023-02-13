@@ -1,7 +1,7 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 import requests, json, re, operator
-
+from myclassifier import QuestionClassifier
 import spacy
 from spacy import displacy
 from nltk import Tree
@@ -84,35 +84,46 @@ if __name__ == "__main__":
     # Load the spaCy model
     nlp = spacy.load("en_core_web_sm")
 
-    #trying with the benchmark from qa-code
-
-    with open('data.json', 'r', encoding='utf-8') as f:
+    
+##################################### LCQUAD BENCHMARK ##########################################3
+    '''with open('data.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     
     #for question in data["corrected_question"]:
     for question in data:
-        #print(question["corrected_question"])
+        print(question["corrected_question"])
         dependecyTree,lemmizized_question = question_analysis(question["corrected_question"])
-        questions_type = question_type_classifcation(lemmizized_question)
-        print(questions_type)
-        
+        #questions_type = question_type_classifcation(lemmizized_question)
+        #print(questions_type)
+        classifier = QuestionClassifier()
+        question_types = classifier.classify_questions(question["corrected_question"])
+        print(question_types)'''
 
       
-
-
-    
+################################ ONE SINGLE QUESTION ###########################################
 
     # Define the input question
-    #question = "Is Isabelle Rybank in office?"
+    question = "When did world war 2 happen?"
 
 # Alternative questions
 # How many commits have the user izzyrybz made?
 # Who is the mayor of the capital of French Polynesia?
 # When was the initial commit created?
 # How many merges have there been?
+# When was world war 2?
 # What language is the repository written in?
 # Who is the wife of Obama?
+# Did world war 2 happen?
 # Is Isabelle Rybank in office?
+
+    dependecyTree,lemmizized_question = question_analysis(question)
+    #questions_type = question_type_classifcation(lemmizized_question)
+    #print(lemmizized_question)
+    classifier = QuestionClassifier()
+    question_type = classifier.classify_questions(question)
+    print(question_type)
+
+
 
 #     #question = input("Write question")
 

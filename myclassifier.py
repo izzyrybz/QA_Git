@@ -1,14 +1,15 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import LinearSVC
+from sklearn.ensemble import RandomForestClassifier
+#from sklearn.svm import LinearSVC
 from sklearn.pipeline import Pipeline
-
-
 
 train_data = [
     {"question": "How many apples are there?", "type": "count"},
     {"question": "What are the names of the books?", "type": "list"},
     {"question": "Is the sky blue?", "type": "boolean"},
+    {"question": "Did Gwen die in spiderman?", "type": "boolean"},
+    {"question": "When did the first world war start?", "type": "count"},
     {"question": "What's the answer to the ultimate question of life, the universe, and everything?", "type": "unknown"},
     {"question": "How much wood would a woodchuck chuck if a woodchuck could chuck wood?", "type": "count"},
     {"question": "Muhammad Yunus has won how many awards?", "type": "count"},
@@ -29,27 +30,21 @@ train_data = [
     {"question": "Are all snakes dangerous to humans?", "type": "boolean"},
     {"question": "How many oceans are there on Earth?", "type": "count"},
     {"question": "How many commits are there on Github?", "type": "count"},
+    {"question": "Does it snow in Portugal?", "type": "boolean"},
     {"question": "What is the capital of France?", "type": "list"}
 ]
 
-df = pd.DataFrame(train_data)
 
-classifier = Pipeline([
-    ('vectorizer', TfidfVectorizer()),
-    ('classifier', LinearSVC())
-])
+class QuestionClassifier:
+    def __init__(self):
+        self.train_data = train_data
+        self.df = pd.DataFrame(self.train_data)
+        self.classifier = Pipeline([
+            ('vectorizer', TfidfVectorizer()),
+            ('classifier', RandomForestClassifier())
+        ])
+        self.classifier.fit(self.df['question'], self.df['type'])
 
-classifier.fit(df['question'], df['type'])
-
-def classify_question_type(question):
-    return classifier.predict([question])[0]
-
-questions = [
-    "How many apples are there?",
-    "What are the names of the books?",
-    "Is the sky blue?",
-    "Who is the husband of Jennifer Lawrence?"
-]
-
-for question in questions:
-    print(f"{question} -> {classify_question_type(question)}")
+    def classify_questions(self, question):
+        print(question)
+        return self.classifier.predict([question])

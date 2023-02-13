@@ -81,5 +81,5 @@ class QuestionClassifier:
         self.classifier.fit(self.df['question'], self.df['type'])
 
     def classify_questions(self, question):
-        print(question)
+        #print(question)
         return self.classifier.predict([question])

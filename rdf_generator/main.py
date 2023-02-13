@@ -88,24 +88,27 @@ with open(path,'r') as f:
 
 ############################################ TO CREATE THE RDF TRIPPLES #############################################
 
-commits = Namespace("http://dbpedia.org/resource/Commit_(version_control)")
+commits = URIRef("http://dbpedia.org/resource/Commit_(version_control)")
 # I think we can create namespace for like entity or ontology 
 # https://dbpedia.org/ontology/author ???
 #
-EX = Namespace("http://dbpedia.org/page/")
+Author = URIRef("https://dbpedia.org/ontology/author")
+Description = URIRef("https://dbpedia.org/ontology/Description")
+Calendar_date = URIRef("https://dbpedia.org/ontology/Calendar_date")
+
 
 data=[]
 g = Graph()
 
 for commit in history:
-    urirefstring = "http://example.org/"+commit["commit_ref"]
+    urirefstring = "http://example.org/"+ commit["commit_ref"]
     urirefstring= urirefstring.replace(" ", "")
     commit_uri = URIRef(urirefstring)
     #commit_uri = commits[commit['commit_ref']]
-    g.add((commit_uri, RDF.type, EX.Commit))
-    g.add((commit_uri, EX.Author, Literal(commit['author'])))
-    g.add((commit_uri, EX.Description, Literal(commit['description'])))
-    g.add((commit_uri, EX.Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
+    g.add((commit_uri, RDF.type, commits))
+    g.add((commit_uri, Author, Literal(commit['author'])))
+    g.add((commit_uri, Description, Literal(commit['description'])))
+    g.add((commit_uri, Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
 
 # To save the graph to a file
 g.serialize(destination='commits3.ttl', format='turtle')

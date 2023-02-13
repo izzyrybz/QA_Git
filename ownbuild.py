@@ -2,6 +2,8 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 import requests, json, re, operator
 from myclassifier import QuestionClassifier
+from myphrasemapping import PhraseMapping
+
 import spacy
 from spacy import displacy
 from nltk import Tree
@@ -23,19 +25,15 @@ def question_analysis(question):
         
         #use this information to generate a dependency tree
         dependecyTree = dependecy_tree(lemmizized_question)
-        return dependecyTree,lemmizized_question
+        return dependecyTree,lemmizized_question,representation
 
 
 def question_representation(question):
-    
-    #doc = nlp(question)
-
-    # Mapping to a Machine-Readable representation
+     # Mapping to a Machine-Readable representation
     representation = []
     for token in question:
         representation.append((token.text, token.lemma_, token.pos_, token.tag_, token.dep_, token.ent_type_))
         #print("this is the lemma",token.lemma_ ,"and tag", token.tag_, "and entity type" ,token.ent_type_, "for the word", token.text)
-    
     return representation
 
 def dependecy_tree(question):
@@ -86,7 +84,8 @@ if __name__ == "__main__":
 
     
 ##################################### LCQUAD BENCHMARK ##########################################3
-    with open('data.json', 'r', encoding='utf-8') as f:
+    '''
+    with open('json_files/data.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
     correct_count = 0
     correct_count_question = []
@@ -96,7 +95,7 @@ if __name__ == "__main__":
     #for question in data["corrected_question"]:
     for question in data:
         #print(question["corrected_question"])
-        dependecyTree,lemmizized_question = question_analysis(question["corrected_question"])
+        dependecy_tree,lemmizized_question = question_analysis(question["corrected_question"])
         #questions_type = question_type_classifcation(lemmizized_question)
         #print(questions_type)
         classifier = QuestionClassifier()
@@ -114,15 +113,15 @@ if __name__ == "__main__":
         if question in correct_count_question:
             continue
         else:
-            print(question)
+            print(question)'''
 
         
 
       
 ################################ ONE SINGLE QUESTION ###########################################
-'''
+
 # Define the input question
-    question = "Count everyone who studied at an institute which are in Suburbs?"
+    question = "How many commits have there been for the repo?"
 
 # Alternative questions
 # How many commits have the user izzyrybz made?
@@ -132,11 +131,10 @@ if __name__ == "__main__":
 # When was world war 2?
 # What language is the repository written in?
 # Who is the wife of Obama?
+# How many commits have there been for the repo?
 
 #What is the total number of other tenant of the stadia whose one of the tenant is Raptors 905?
 #Count everyone who studied at an institute which are in Suburbs?
-#Count the units garrisoned at Arlington County, Virginia.
-#Count the number of sports team members  which have player named Matt Williams ?
 
 # Did world war 2 happen?
 # Is Isabelle Rybank in office?
@@ -144,14 +142,17 @@ if __name__ == "__main__":
 # What year was Cristiano Ronaldo born?
 # When did the queen earn the throne?
 
-#### WHEN DID - BOOLEAN - NOT GOOD / TOO MANY LISTS
-
-    dependecyTree,lemmizized_question = question_analysis(question)
+    print("Question:" ,question)
+    dependecy_tree,lemmizized_question,tokened_question = question_analysis(question)
     #questions_type = question_type_classifcation(lemmizized_question)
-    #print(lemmizized_question)
+    print("Lemma",lemmizized_question)
+    print("Dependency Tree: " ,dependecy_tree)
+    print("Tokenized question:" ,tokened_question)
     classifier = QuestionClassifier()
     question_type = classifier.classify_questions(question)
-    print(question_type)
+    print("Type of question:",question_type)
+    phrasemapper = PhraseMapping()
+    phrasemapper.phrasemap_question(question,tokened_question)
 
 
 

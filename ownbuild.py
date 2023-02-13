@@ -86,24 +86,43 @@ if __name__ == "__main__":
 
     
 ##################################### LCQUAD BENCHMARK ##########################################3
-    '''with open('data.json', 'r', encoding='utf-8') as f:
+    with open('data.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
+    correct_count = 0
+    correct_count_question = []
+    count_q_question = []
+    count_q = 0
     
     #for question in data["corrected_question"]:
     for question in data:
-        print(question["corrected_question"])
+        #print(question["corrected_question"])
         dependecyTree,lemmizized_question = question_analysis(question["corrected_question"])
         #questions_type = question_type_classifcation(lemmizized_question)
         #print(questions_type)
         classifier = QuestionClassifier()
-        question_types = classifier.classify_questions(question["corrected_question"])
-        print(question_types)'''
+        question_type = classifier.classify_questions(question["corrected_question"])
+        print(question_type[0].upper())
+        if(question_type[0].upper() in question["sparql_query"]):
+            correct_count_question.append(question["corrected_question"])
+            correct_count+=1
+        if("COUNT" in question["sparql_query"]):
+            count_q_question.append(question["corrected_question"])
+            count_q +=1
+    
+    print("result of count question, total", count_q, "correct:", correct_count)
+    for question in count_q_question:
+        if question in correct_count_question:
+            continue
+        else:
+            print(question)
+
+        
 
       
 ################################ ONE SINGLE QUESTION ###########################################
-
-    # Define the input question
-    question = "When did world war 2 happen?"
+'''
+# Define the input question
+    question = "Count everyone who studied at an institute which are in Suburbs?"
 
 # Alternative questions
 # How many commits have the user izzyrybz made?
@@ -113,8 +132,19 @@ if __name__ == "__main__":
 # When was world war 2?
 # What language is the repository written in?
 # Who is the wife of Obama?
+
+#What is the total number of other tenant of the stadia whose one of the tenant is Raptors 905?
+#Count everyone who studied at an institute which are in Suburbs?
+#Count the units garrisoned at Arlington County, Virginia.
+#Count the number of sports team members  which have player named Matt Williams ?
+
 # Did world war 2 happen?
 # Is Isabelle Rybank in office?
+# Can Sebastian mountain climb?
+# What year was Cristiano Ronaldo born?
+# When did the queen earn the throne?
+
+#### WHEN DID - BOOLEAN - NOT GOOD / TOO MANY LISTS
 
     dependecyTree,lemmizized_question = question_analysis(question)
     #questions_type = question_type_classifcation(lemmizized_question)
@@ -125,12 +155,12 @@ if __name__ == "__main__":
 
 
 
-#     #question = input("Write question")
+#     #question = input("Write question")'''
 
 
     # Parse the input question using spaCy and then create representation and dependency tree
     #returns depency tree and lemmeized question
-    '''dependecyTree,lemmizized_question = question_analysis(question)
+'''dependecyTree,lemmizized_question = question_analysis(question)
     questions_type = question_type_classifcation(lemmizized_question)
     print(questions_type)'''
 

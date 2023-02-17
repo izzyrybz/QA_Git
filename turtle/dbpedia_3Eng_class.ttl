@@ -653,4 +653,3 @@
 <http://dbpedia.org/ontology/HotSpring> <http://www.w3.org/2000/01/rdf-schema#label> "hot spring" .
 <http://dbpedia.org/ontology/Actor> <http://www.w3.org/2000/01/rdf-schema#label> "actress" .
 <http://dbpedia.org/ontology/Monarch> <http://www.w3.org/2000/01/rdf-schema#label> "king" .
-<http://dbpedia.org/resource/Commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .

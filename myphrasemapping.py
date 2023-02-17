@@ -66,7 +66,7 @@ def preprocess_relations(file, prop=False):
         content = f.readlines()
         for line in content:
             split_line = line.split()
-            #print(line)
+            #print(split_line)
 
             key = ' '.join(split_line[2:])[1:-3].lower()
             key = ' '.join([stemmer.stem(word) for word in key.split()])

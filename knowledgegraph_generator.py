@@ -37,7 +37,7 @@ def json_to_knowledgegraph(data):
         for triplet in knowledge_graph:
             subject, predicate, object = triplet
             #print("<{}> <{}> {} .".format(subject, predicate, json.dumps(object)))
-            f.write("<%s> <%s> '%s' .\n" % (subject, predicate, object))
+            f.write("<%s> <%s> '%s' .\n" % (predicate,subject, object))
 
 
 class KnowledgeGraphGenerator:

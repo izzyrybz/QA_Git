@@ -48,79 +48,7 @@
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "http://example.org/7089b9e96ca11c5c328320d2798158a236ddac34"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    31,
-                    7
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://example.org/65970ecb019eef5a3b2f709180113213e6000a78"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    31,
-                    7
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://example.org/0d0be4e2fdc3669f613616b3086ea18bde2ba3be"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    31,
-                    7
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://example.org/ea5651d8770d389b1c1b1413c171fa9631d96d0f"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    31,
-                    7
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://example.org/a6322d9e4d8c0a7472a55b0fbe7c3490007b1853"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    31,
-                    7
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://example.org/7cbfc32cac2814864f6d6bfcf96a058d4f990f78"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    31,
-                    7
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://example.org/d6c19b935258dd668b497524354c47c88d4ad47b"
+                        "uri": "https://dbpedia.org/ontology/author"
                     }
                 ]
             },
@@ -144,7 +72,7 @@
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "http://dbpedia.org/property/used"
+                        "uri": "http://dbpedia.org/ontology/computingInput"
                     }
                 ]
             },
@@ -156,7 +84,7 @@
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "http://dbpedia.org/ontology/computingInput"
+                        "uri": "http://dbpedia.org/property/used"
                     }
                 ]
             },

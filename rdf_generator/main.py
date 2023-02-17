@@ -111,7 +111,7 @@ for commit in history:
     g.add((commit_uri, Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
 
 # To save the graph to a file
-g.serialize(destination='commits4.ttl', format='turtle')
+g.serialize(destination='commits5.ttl', format='turtle')
 
 
 

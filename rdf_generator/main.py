@@ -66,11 +66,11 @@ with open(path,'r') as f:
                 commit["commit_ref"]  = hash
             if('Author:' in element): 
                 #print("adding person",line[index+1])
-                name = element[element.index(":") + 1:]
+                name = element[element.index(":") + 1:].strip()
                 commit["author"] = name
             if('Description:' in element): 
                 #print("adding person",line[index+1])
-                description = element[element.index(":") + 1:]
+                description = element[element.index(":") + 1:].strip()
                 commit["description"] = description
             if('Date:' in element):
                 date = element[element.index(":") + 1:]
@@ -111,7 +111,7 @@ for commit in history:
     g.add((commit_uri, Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
 
 # To save the graph to a file
-g.serialize(destination='commits3.ttl', format='turtle')
+g.serialize(destination='commits4.ttl', format='turtle')
 
 
 

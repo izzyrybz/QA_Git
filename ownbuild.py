@@ -3,6 +3,8 @@ import json
 import requests, json, re, operator
 from myclassifier import QuestionClassifier
 from myphrasemapping import PhraseMapping
+from knowledgegraph_generator import KnowledgeGraphGenerator
+
 
 import spacy
 from spacy import displacy
@@ -24,9 +26,8 @@ def question_analysis(question):
         lemmizized_question = nlp(lemmizized_question)
         
         #use this information to generate a dependency tree
-        dependecyTree = dependecy_tree(lemmizized_question)
-        return dependecyTree,lemmizized_question,representation
-
+        dependecy_tree = dependecy_tree_generation(lemmizized_question)
+        return dependecy_tree,lemmizized_question,representation
 
 def question_representation(question):
      # Mapping to a Machine-Readable representation
@@ -36,7 +37,7 @@ def question_representation(question):
         #print("this is the lemma",token.lemma_ ,"and tag", token.tag_, "and entity type" ,token.ent_type_, "for the word", token.text)
     return representation
 
-def dependecy_tree(question):
+def dependecy_tree_generation(question):
     dep_tree = []
     for token in question:
         dep_tree.append({
@@ -50,38 +51,9 @@ def dependecy_tree(question):
     return dep_tree
 
 
-def question_type_classifcation(question):
-    #print(question)
-    question_word = [token.text for token in question if token.dep_ == "ROOT"][0]
-    if question_word.lower() in ["how", "what", "which"]:
-        if any([token.text.lower() in ["many", "much"] for token in question]):
-            return "count"
-        else:
-            return "list"
-    elif question_word.lower() in ["is", "are", "was", "were", "do", "does", "did", "be"]:
-        return "boolean"
-    else:
-        return "unknown"
-
-
-def build_sparql_query(dep_tree):
-    query = "SELECT ?subject ?predicate ?object WHERE {\n"
-    for token in dep_tree:
-        if token["dep"] in ["nsubj", "dobj"]:
-            print(token)
-            subject = token["question"].capitalize()
-            predicate = token["question"].capitalize().replace(" ", "_")
-            object = token["head"].capitalize()
-            query += f"\t?subject {predicate} ?object .\n"
-    query += "}"
-    return query
-
-    
-
 if __name__ == "__main__":
     # Load the spaCy model
     nlp = spacy.load("en_core_web_sm")
-
     
 ##################################### LCQUAD BENCHMARK ##########################################3
     '''
@@ -94,12 +66,15 @@ if __name__ == "__main__":
     
     #for question in data["corrected_question"]:
     for question in data:
-        #print(question["corrected_question"])
-        dependecy_tree,lemmizized_question = question_analysis(question["corrected_question"])
-        #questions_type = question_type_classifcation(lemmizized_question)
+        print(question["corrected_question"])
+        dependecy_tree,lemmizized_question,tokened_question = question_analysis(question["corrected_question"])
         #print(questions_type)
         classifier = QuestionClassifier()
         question_type = classifier.classify_questions(question["corrected_question"])
+
+        phrasemapper = PhraseMapping()
+        phrasemapper.phrasemap_question(question["corrected_question"],tokened_question)
+        ### Check if count question is correct ##
         print(question_type[0].upper())
         if(question_type[0].upper() in question["sparql_query"]):
             correct_count_question.append(question["corrected_question"])
@@ -113,15 +88,15 @@ if __name__ == "__main__":
         if question in correct_count_question:
             continue
         else:
-            print(question)'''
+            print(question)
 
         
-
+    '''
       
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question
-    question = "How many commits have there been for the repo?"
+    question = "How many commits have the user izzyrybz made?"
 
 # Alternative questions
 # How many commits have the user izzyrybz made?
@@ -143,30 +118,29 @@ if __name__ == "__main__":
 # When did the queen earn the throne?
 
     print("Question:" ,question)
+
+    #Parse the input question using spaCy and then create representation and dependency tree
+    #returns depency tree and lemmeized question and the question tokenized (verbs,nouns ect)
     dependecy_tree,lemmizized_question,tokened_question = question_analysis(question)
-    #questions_type = question_type_classifcation(lemmizized_question)
+
     print("Lemma",lemmizized_question)
     print("Dependency Tree: " ,dependecy_tree)
     print("Tokenized question:" ,tokened_question)
+
+    #create an instance of a classifier that looks at the questions and returns what type the question is
     classifier = QuestionClassifier()
     question_type = classifier.classify_questions(question)
     print("Type of question:",question_type)
+
+    #Knowledge Graph generator to a ttl file that we can use a properties
+    KnowledgeGraphGenerator()
+    print("Knowledge graph generated")
+
+    #We create a phrase mapping
     phrasemapper = PhraseMapping()
     phrasemapper.phrasemap_question(question,tokened_question)
 
 
-
-#     #question = input("Write question")'''
-
-
-    # Parse the input question using spaCy and then create representation and dependency tree
-    #returns depency tree and lemmeized question
-'''dependecyTree,lemmizized_question = question_analysis(question)
-    questions_type = question_type_classifcation(lemmizized_question)
-    print(questions_type)'''
-
-
-   
 
     
     #displacy.serve(doc, style="dep", options={"compact": True})

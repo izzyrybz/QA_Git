@@ -193,6 +193,7 @@
 <http://dbpedia.org/ontology/structuralSystem> <http://www.w3.org/2000/01/rdf-schema#label> "made of" .
 <http://dbpedia.org/ontology/computingInput> <http://www.w3.org/2000/01/rdf-schema#label> "play with" .
 <http://dbpedia.org/ontology/computingInput> <http://www.w3.org/2000/01/rdf-schema#label> "use" .
+<https://dbpedia.org/property/user> <http://www.w3.org/2000/01/rdf-schema#label> "user" .
 <http://dbpedia.org/ontology/developer> <http://www.w3.org/2000/01/rdf-schema#label> "develop" .
 <http://dbpedia.org/ontology/developer> <http://www.w3.org/2000/01/rdf-schema#label> "developer" .
 <http://dbpedia.org/ontology/sisterStation> <http://www.w3.org/2000/01/rdf-schema#label> "sister station" .

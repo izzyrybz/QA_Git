@@ -1,7 +1,7 @@
-<http://dbpedia.org//commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
-<http://dbpedia.org//commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "Commit" .
-<http://dbpedia.org//commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "Commits" .
-<http://dbpedia.org//commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
+<http://dbpedia.org/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
+<http://dbpedia.org/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "Commit" .
+<http://dbpedia.org/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "Commits" .
+<http://dbpedia.org/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
 <http://dbpedia.org/resource/Git> <http://www.w3.org/2000/01/rdf-schema#label> "Git" .
 <http://dbpedia.org/resource/Git> <http://www.w3.org/2000/01/rdf-schema#label> "git" .
 <http://dbpedia.org/resource/Calendar_date><http://www.w3.org/2000/01/rdf-schema#label> "dates" .

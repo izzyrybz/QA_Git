@@ -1,0 +1,189 @@
+[
+    {
+        "entities": [
+            {
+                "surface": [
+                    9,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.9239816818240237,
+                        "uri": "http://dbpedia.org/resource/Commit_(version_control)"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    4
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.9060399688865811,
+                        "uri": "http://dbpedia.org/resource/User_interface"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    0,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.8927646989181806,
+                        "uri": "http://dbpedia.org/resource/How_(TV_series)"
+                    }
+                ]
+            }
+        ],
+        "question": "How many commits have the user izzyrybz made?",
+        "relations": [
+            {
+                "surface": [
+                    31,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://example.org/7089b9e96ca11c5c328320d2798158a236ddac34"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    31,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://example.org/65970ecb019eef5a3b2f709180113213e6000a78"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    31,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://example.org/0d0be4e2fdc3669f613616b3086ea18bde2ba3be"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    31,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://example.org/ea5651d8770d389b1c1b1413c171fa9631d96d0f"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    31,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://example.org/a6322d9e4d8c0a7472a55b0fbe7c3490007b1853"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    31,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://example.org/7cbfc32cac2814864f6d6bfcf96a058d4f990f78"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    31,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://example.org/d6c19b935258dd668b497524354c47c88d4ad47b"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "https://dbpedia.org/property/user"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/property/used"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/ontology/computingInput"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/property/computingInput"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    9,
+                    6
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/resource/commit_(version_control)"
+                    }
+                ]
+            }
+        ]
+    }
+]

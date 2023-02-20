@@ -15,6 +15,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 train_data = [
     {"question": "How many apples are there?", "type": "count"},
     {"question": "What are the names of the books?", "type": "list"},
+    {"question": "Which books of JK Rowling are of the fantasy genre?", "type": "list"},
     {"question": "Count the stars in the sky?", "type": "list"},
     {"question": "Is the sky blue?", "type": "boolean"},
     {"question": "Did Gwen die in spiderman?", "type": "boolean"},
@@ -29,6 +30,7 @@ train_data = [
     {"question": "Do all birds have wings?", "type": "boolean"},
     {"question": "Are all reptiles cold-blooded?", "type": "boolean"},
     {"question": "How many days are there in a week?", "type": "count"},
+    {"question": "which country has the most islands?", "type": "list"},
     {"question": "Are there more dogs or cats as pets in the world?", "type": "boolean"},
     {"question": "What are the plantes with life?", "type": "list"},
     {"question": "When did the queen die?", "type": "list"},

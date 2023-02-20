@@ -91,3 +91,38 @@ class PhraseMapping:
     def phrasemap_question(self, question,tokened_question):
         print("fun")
 
+def generate_sparql_queries(question_tokens, entities, relationships):
+    # Generate all possible combinations of entities and relationships
+    entity_uris = [[uri_dict['uri'] for uri_dict in entity['uris']] for entity in entities]
+    entity_surface = [entity['surface'] for entity in entities]
+    relationship_uris = [[uri_dict['uri'] for uri_dict in relationship['uris']] for relationship in relationships]
+    relationship_surface = [relationship['surface'] for relationship in relationships]
+
+    # Generate all possible combinations of entities and relationships
+    entity_combinations = itertools.combinations(range(len(entities)), 2)
+    relationship_combinations = itertools.permutations(range(len(relationships)), 2)
+
+    # Initialize an empty list to store the queries
+    queries = []
+
+    # Loop through each combination and generate a query
+    for entity_combo in entity_combinations:
+        for relationship_combo in relationship_combinations:
+            # Construct the query string
+            query = f"SELECT ?{entity_combo[0]} ?{entity_combo[1]} WHERE {{ ?{entity_combo[0]} {relationship_combo[0]} ?{entity_combo[1]} . ?{entity_combo[0]} {relationship_combo[1]} ?{entity_combo[1]} . "
+
+            # Add the relevant question tokens to the query
+            for token in question_tokens:
+                if token in entity_combo or token in relationship_combo:
+                    continue
+                else:
+                    query += f"?{entity_combo[0]} <{token}> ?{token} . ?{entity_combo[1]} <{token}> ?{token} . "
+
+            # Add the closing braces to the query
+            query += "}"
+
+            # Add the query to the list of queries
+            queries.append(query)
+            
+
+    return queries

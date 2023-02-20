@@ -3,7 +3,7 @@
         "entities": [
             {
                 "surface": [
-                    9,
+                    6,
                     7
                 ],
                 "uris": [
@@ -15,12 +15,12 @@
             },
             {
                 "surface": [
-                    26,
+                    23,
                     4
                 ],
                 "uris": [
                     {
-                        "confidence": 0.9060399688865811,
+                        "confidence": 0.9170735543251727,
                         "uri": "http://dbpedia.org/resource/User_interface"
                     }
                 ]
@@ -28,21 +28,57 @@
             {
                 "surface": [
                     0,
-                    3
+                    5
                 ],
                 "uris": [
                     {
-                        "confidence": 0.8927646989181806,
-                        "uri": "http://dbpedia.org/resource/How_(TV_series)"
+                        "confidence": 0.8956483894223672,
+                        "uri": "http://dbpedia.org/resource/Langues_d'o\u00efl"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    35,
+                    28
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "izzyrybz"
                     }
                 ]
             }
         ],
-        "question": "How many commits have the user izzyrybz made?",
+        "question": "Which commits have the user izzyrybz made?",
         "relations": [
             {
                 "surface": [
-                    31,
+                    35,
+                    28
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "https://dbpedia.org/ontology/Description"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    35,
+                    28
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "https://dbpedia.org/ontology/author"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    28,
                     7
                 ],
                 "uris": [
@@ -54,7 +90,7 @@
             },
             {
                 "surface": [
-                    26,
+                    23,
                     3
                 ],
                 "uris": [
@@ -66,7 +102,7 @@
             },
             {
                 "surface": [
-                    26,
+                    23,
                     3
                 ],
                 "uris": [
@@ -78,19 +114,7 @@
             },
             {
                 "surface": [
-                    26,
-                    3
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/property/used"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    26,
+                    23,
                     3
                 ],
                 "uris": [
@@ -102,7 +126,19 @@
             },
             {
                 "surface": [
-                    9,
+                    23,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/property/used"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    6,
                     6
                 ],
                 "uris": [

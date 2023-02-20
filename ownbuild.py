@@ -3,12 +3,14 @@ import json
 import requests, json, re, operator
 from myclassifier import QuestionClassifier
 from myphrasemapping import PhraseMapping
+from test_q_generator import QuestionGenerator
 from knowledgegraph_generator import KnowledgeGraphGenerator
-
-
 import spacy
 from spacy import displacy
 from nltk import Tree
+import itertools
+import string
+
 
 def question_analysis(question):
         # Parse the input text using spaCy
@@ -96,9 +98,10 @@ if __name__ == "__main__":
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question
-    question = "How many commits have the user izzyrybz made?"
+    question = "Which commits have the user izzyrybz made?"
 
 # Alternative questions
+# Which commits have the user izzyrybz made?
 # How many commits have the user izzyrybz made?
 # Who is the mayor of the capital of French Polynesia?
 # When was the initial commit created?
@@ -133,12 +136,20 @@ if __name__ == "__main__":
     print("Type of question:",question_type)
 
     #Knowledge Graph generator to a ttl file that we can use a properties
-    KnowledgeGraphGenerator()
-    print("Knowledge graph generated")
+    #KnowledgeGraphGenerator()
+    #print("Knowledge graph generated")
 
     #We create a phrase mapping
     phrasemapper = PhraseMapping()
     phrasemapper.phrasemap_question(question,tokened_question)
+    print("phrasemapping generated in file that can be found under json_files")
+
+
+
+    #generate all possible queries and check if they are within the knowledgegraph
+    
+    question_generator = QuestionGenerator()
+    #queries = question_generator.generate_sparql_queries(question_type,tokened_question,is_question_within_knowledge_graph_domain, knowledge_graph_r,knowledge_graph_e )
 
 
 

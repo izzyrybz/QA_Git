@@ -25,7 +25,7 @@ stemmer = PorterStemmer()
 p = inflect.engine()
 tagme.GCUBE_TOKEN = ""
 
-def ttl_file_processing(filepath):
+def process_knowledge_graph(filepath):
     graph = Graph()
     all_the_properties=[]
     properties={}
@@ -53,12 +53,6 @@ def ttl_file_processing(filepath):
         properties={}
 
     return all_the_properties
-
-'''def knowledge_graph_check(question, knowledge_graph):
-    print("THIS IS KNOWLEDGE GRAPH ",knowledge_graph)
-    for token in question:'''
-        
-
 
 def sort_dict_by_values(dictionary):
     #print("sort dick")
@@ -144,7 +138,7 @@ def get_earl_entities(query):
                 if relation['uris'] != []:
                     result['relations'].append(relation)
     except:
-        print("earl might be done")
+        print("earl fail")
     return result
 
 def get_spotlight_entities(query):
@@ -159,7 +153,7 @@ def get_spotlight_entities(query):
         response = requests.post('https://api.dbpedia-spotlight.org/en/annotate', data=data, headers=headers)
         response_json = response.text.replace('@', '')
         output = json.loads(response_json)
-        print(output)
+        #print(output)
         if 'Resources' in output.keys():
             resource = output['Resources']
             for item in resource:
@@ -181,7 +175,7 @@ def get_nliwod_entities(query, hashmap):
 
     string = ' '.join(singular_query)
     words = query.split(' ')
-    print("THIS IS WORDs",words)
+    #print("THIS IS WORDs",words)
     indexlist = {}
     surface = []
     current = 0
@@ -336,7 +330,7 @@ class PhraseMapping:
         self.properties = preprocess_relations('turtle/dbpedia_3Eng_property.ttl', True)
         #properties_class = preprocess_relations('turtle/dbpedia_3Eng_class.ttl', True)
         self.properties_knowledgegraph = preprocess_relations('turtle/knowledge_graph.ttl')
-        self.subject_prop_object_ttl = ttl_file_processing('turtle/knowledge_graph.ttl')
+        self.subject_prop_object_ttl = process_knowledge_graph('turtle/knowledge_graph.ttl')
     
         #print(properties_knowledgegraph)
         for key in self.properties_knowledgegraph.keys():
@@ -354,7 +348,7 @@ class PhraseMapping:
 
         #how to start the phrasemapping
         earl = get_earl_entities(question)
-        print("This is earl",earl)
+        #print("This is earl",earl)
         
         nliwod = get_nliwod_entities(question, self.properties)
         #print("This is nliwod" ,nliwod)
@@ -362,7 +356,7 @@ class PhraseMapping:
             earl['relations'] = merge_entity(earl['relations'], nliwod)
             
         spot_e = get_spotlight_entities(question)
-        print("This is spot_e" ,spot_e)
+        #print("This is spot_e" ,spot_e)
 
         if len(spot_e) > 0:
             earl['entities'] = merge_entity(earl['entities'], spot_e)
@@ -371,10 +365,10 @@ class PhraseMapping:
         spacy_e, spacy_r= spacy_parse(question,self.subject_prop_object_ttl)
         #print(spacy_e)
         if len(spacy_e) > 0:
-            print("THIS IS SPACY",spacy_e)
+            #print("THIS IS SPACY",spacy_e)
             earl['entities'] = merge_entity(earl['entities'], spacy_e,)
         if len(spacy_r) > 0:
-            print("THIS IS SPACY",spacy_r)
+            #print("THIS IS SPACY",spacy_r)
             earl['relations'] = merge_entity(earl['relations'], spacy_r)
 
 

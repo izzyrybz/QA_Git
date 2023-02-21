@@ -1,5 +1,10 @@
 import itertools
 import json
+
+from rdflib import Graph
+
+from myphrasemapping import process_knowledge_graph
+
 def generate_combinations():
         #print(self.relationship_uris)
         #print(self.entity_uris)
@@ -7,12 +12,12 @@ def generate_combinations():
         entity_combinations = itertools.combinations(range(len(self.entity_uris)), 2)
         relationship_combinations = itertools.permutations(range(len(self.relationship_uris)), 2)
 
-        options_w_uris = []
+        combinations = []
 
         # Loop through each combination and generate the options
         for e_firstindex,e_secondindex  in entity_combinations:
             for r_firstindex,r_secondindex in relationship_combinations:
-                print("PRITN",self.entity_uris[e_firstindex])
+                print("PRINT",self.entity_uris[e_firstindex])
                 # Construct the query string
                 query = f"SELECT ?{self.entity_uris[e_firstindex]} ?{self.entity_uris[e_secondindex]} WHERE ?{self.entity_uris[e_firstindex]} {self.relationship_uris[r_firstindex]} ?{self.entity_uris[e_secondindex]} . ?{self.entity_uris[e_firstindex]} {self.relationship_uris[r_secondindex]} ?{self.entity_uris[e_secondindex]} . "
 
@@ -28,7 +33,11 @@ def generate_combinations():
                 #print(query)  
 
                 # Add the query to the list of queries
-                queries.append(query)
+                combinations.append(query)
+
+def get_entity_relation_from_KG(knowledge_graph_info, entites, relations):
+    for item in knowledge_graph_info:
+        print(item)
 
 class QuestionGenerator():
     def __init__(self):
@@ -52,11 +61,14 @@ class QuestionGenerator():
                 for uris in relations['uris']:
                     #print(uris['uri'])
                     self.relationship_uris.append(uris['uri'])
-            
-
         
-    def generate_sparql_queries(self,question_type, question_tokens,is_question_within_knowledge_graph_domain,knowledge_graph_r,knowledge_graph_e):
-        #check type and corresponding where clasue
+        self.knowledge_graph_info = process_knowledge_graph('turtle/knowledge_graph.ttl')
+
+
+
+ 
+    def generate_sparql_queries(self,question_type, question_tokens):
+        #check type and corresponding where clause
         if(question_type[0] == 'list'):
             print("we have a list")
             where_clause = 'SELECT DISTINCT'
@@ -65,19 +77,30 @@ class QuestionGenerator():
         elif(question_type[0] == 'boolean'):
                     where_clause = 'ASK WHERE {'
 
+        print(self.relationship_uris)
+        #graph = Graph()
+
+        ####### GOING AFTER THE ALGO IN PAPER #####
+
+        #Step 1: find out what entities and properties that are part of the knowledge graph to generate the sets
+        #knowledge graph = KG
+
+        list = get_entity_relation_from_KG(self.knowledge_graph_info, self.entity_uris, self.relationship_uris)
         
 
+        
         set1_e_p_e = {}
+
+
         set2_e_p_uri = {}
         set2_uri_p_e = {}
         #the idea is also to check if the question is within the knowledge graph, which has been done by previous method
         #use this information to check which of the entites and relations are in the knowledge graph
 
-        if(is_question_within_knowledge_graph_domain):
-            print("kms")
+       
 
                 
-        with open('json_files/dmump.json', "w") as data_file:
-                    json.dump(queries, data_file, sort_keys=True, indent=4, separators=(',', ': '))
+        #with open('json_files/dmump.json', "w") as data_file:
+        #            json.dump(queries, data_file, sort_keys=True, indent=4, separators=(',', ': '))
         
 

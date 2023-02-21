@@ -1,0 +1,117 @@
+?u_0 residence #ent
+?u_0 type OfficeHolder
+?u_0 residence India .?u_0 type OfficeHolder
+?u_0 artist #ent
+?u_0 subsequentWork ?u_1
+?u_0 type Album
+?u_0 artist The_Band .?u_0 subsequentWork ?u_1
+?u_0 artist The_Band .?u_0 type Album
+?u_0 subsequentWork ?u_1 .?u_0 type Album
+?u_1 artist The_Band
+?u_1 type Album
+?u_1 artist The_Band .?u_0 subsequentWork ?u_1
+?u_1 artist The_Band .?u_1 type Album
+?u_0 subsequentWork ?u_1 .?u_1 type Album
+?u_1 artist The_Band .?u_0 subsequentWork ?u_1 .?u_1 type Album
+?u_1 subsequentWork ?u_0
+?u_0 artist The_Band .?u_1 subsequentWork ?u_0
+?u_1 subsequentWork ?u_0 .?u_0 type Album
+?u_0 artist The_Band .?u_1 subsequentWork ?u_0 .?u_0 type Album
+?u_1 artist The_Band .?u_1 subsequentWork ?u_0
+?u_1 subsequentWork ?u_0 .?u_1 type Album
+Where_Everybody_Knows_Your_Name album ?u_0
+?u_0 ingredient #ent
+?u_0 country ?u_1
+?u_0 type Food
+?u_0 ingredient Shallot .?u_0 country ?u_1
+?u_0 ingredient Shallot .?u_0 type Food
+?u_0 country ?u_1 .?u_0 type Food
+?u_0 ingredient Shallot .?u_0 country ?u_1 .?u_0 type Food
+?u_1 ingredient Shallot
+?u_1 type Food
+?u_1 ingredient Shallot .?u_1 type Food
+?u_0 country ?u_1 .?u_1 type Food
+?u_1 ingredient Shallot .?u_0 type Food
+?u_0 ingredient Shallot .?u_1 type Food
+?u_1 country ?u_0
+?u_1 country ?u_0 .?u_0 type Food
+?u_1 ingredient Shallot .?u_1 country ?u_0
+?u_1 country ?u_0 .?u_1 type Food
+?u_1 ingredient Shallot .?u_1 country ?u_0 .?u_1 type Food
+#ent university ?u_0
+#ent officialLanguage #ent
+#ent publisher ?u_0
+?u_0 products ?u_1
+Tweenies:_Game_Time publisher ?u_0 .?u_0 products ?u_1
+Tweenies:_Game_Time publisher ?u_1
+?u_1 series #ent
+?u_0 religion ?u_1
+?u_0 type FictionalCharacter
+?u_1 series Absolutely_Fabulous .?u_0 type FictionalCharacter
+?u_0 religion ?u_1 .?u_0 type FictionalCharacter
+?u_0 series Absolutely_Fabulous
+?u_1 type FictionalCharacter
+?u_0 series Absolutely_Fabulous .?u_0 religion ?u_1
+?u_0 series Absolutely_Fabulous .?u_1 type FictionalCharacter
+?u_0 religion ?u_1 .?u_1 type FictionalCharacter
+?u_0 series Absolutely_Fabulous .?u_0 type FictionalCharacter
+?u_0 series Absolutely_Fabulous .?u_0 religion ?u_1 .?u_0 type FictionalCharacter
+?u_1 series Absolutely_Fabulous .?u_1 type FictionalCharacter
+?u_1 religion ?u_0
+?u_1 series Absolutely_Fabulous .?u_1 religion ?u_0
+?u_1 religion ?u_0 .?u_0 type FictionalCharacter
+?u_1 religion ?u_0 .?u_1 type FictionalCharacter
+?u_1 series Absolutely_Fabulous .?u_1 religion ?u_0 .?u_1 type FictionalCharacter
+?u_1 instrument #ent
+?u_1 musicComposer ?u_0
+?u_0 type Film
+?u_1 musicComposer ?u_0 .?u_0 type Film
+?u_0 instrument Hammond_organ
+?u_1 type Film
+?u_0 instrument Hammond_organ .?u_1 musicComposer ?u_0
+?u_1 musicComposer ?u_0 .?u_1 type Film
+?u_0 instrument Hammond_organ .?u_1 musicComposer ?u_0 .?u_1 type Film
+?u_0 musicComposer ?u_1
+?u_1 instrument Hammond_organ .?u_0 musicComposer ?u_1
+?u_0 musicComposer ?u_1 .?u_0 type Film
+?u_1 instrument Hammond_organ .?u_0 musicComposer ?u_1 .?u_0 type Film
+?u_0 musicComposer ?u_1 .?u_1 type Film
+#ent album #ent
+?u_0 artist #ent
+?u_0 starring Jason_Carter_(actor)
+?u_0 type TelevisionShow
+?u_0 artist Christopher_Franke .?u_0 starring Jason_Carter_(actor)
+?u_0 artist Christopher_Franke .?u_0 type TelevisionShow
+?u_0 starring Jason_Carter_(actor) .?u_0 type TelevisionShow
+?u_0 artist Christopher_Franke .?u_0 starring Jason_Carter_(actor) .?u_0 type TelevisionShow
+?u_0 spouse #ent
+?u_0 type Artist
+?u_0 spouse Lee_Krasner .?u_0 type Artist
+Lee_Krasner spouse ?u_0
+Lee_Krasner spouse ?u_0 .?u_0 type Artist
+?u_0 youthclubs #ent
+?u_0 debutteam ?u_1
+?u_0 youthclubs Lighthouse_Boys_Club .?u_0 debutteam ?u_1
+?u_1 youthclubs Lighthouse_Boys_Club
+?u_0 education #ent
+?u_0 bodyDiscovered ?u_1
+?u_0 education General_Educational_Development .?u_0 bodyDiscovered ?u_1
+?u_1 education General_Educational_Development
+?u_0 locatedInArea #ent
+?u_1 designer ?u_0
+?u_0 type Bridge
+?u_0 locatedInArea Oddamavadi .?u_0 type Bridge
+?u_1 designer ?u_0 .?u_0 type Bridge
+?u_1 locatedInArea Oddamavadi
+?u_1 type Bridge
+?u_1 locatedInArea Oddamavadi .?u_1 designer ?u_0
+?u_1 locatedInArea Oddamavadi .?u_1 type Bridge
+?u_1 designer ?u_0 .?u_1 type Bridge
+?u_1 locatedInArea Oddamavadi .?u_1 designer ?u_0 .?u_1 type Bridge
+?u_1 locatedInArea Oddamavadi .?u_0 type Bridge
+?u_0 locatedInArea Oddamavadi .?u_1 type Bridge
+?u_0 designer ?u_1
+?u_0 locatedInArea Oddamavadi .?u_0 designer ?u_1
+?u_0 designer ?u_1 .?u_0 type Bridge
+?u_0 locatedInArea Oddamavadi .?u_0 designer ?u_1 .?u_0 type Bridge
+?u_0 designer ?u_1 .?u_1 type Bridge

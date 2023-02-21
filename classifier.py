@@ -8,11 +8,12 @@ import pickle
 class Classifier(object):
     def __init__(self, model_file_path):
         self.model_file_path = model_file_path
-        print("FGANGSADG",model_file_path)
+        print("we are in the classifer")
         if self.model_file_path is not None and os.path.exists(self.model_file_path):
-
             self.load(model_file_path)
+            print("we have found the model at ",model_file_path)
         else:
+            print("no model found")
             self.model = None
 
     # def __pipeline(self):
@@ -32,6 +33,7 @@ class Classifier(object):
         #     self.model = pickle.load(pickle_file)
 
     def train(self, X_train, y_train):
+        print("TRAINING CLASSIFIER")
         optimized_classifier = GridSearchCV(self.pipeline, self.parameters, n_jobs=-1, cv=10)
         # optimized_classifier = self.pipeline
         print("y_train :", y_train)

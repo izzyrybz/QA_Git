@@ -1,0 +1,117 @@
+residence ?u_0 #ent
+type ?u_0 OfficeHolder
+residence type ?u_0 OfficeHolder India
+artist ?u_0 #ent
+subsequentWork ?u_0 ?u_1
+type ?u_0 Album
+artist subsequentWork ?u_0 ?u_1 The_Band
+artist type ?u_0 Album The_Band
+subsequentWork type ?u_0 Album ?u_1
+artist ?u_1 The_Band
+type ?u_1 Album
+artist subsequentWork ?u_0 ?u_1 The_Band
+artist type ?u_1 Album The_Band
+subsequentWork ?u_0 type ?u_1 Album
+artist subsequentWork ?u_0 type ?u_1 Album The_Band
+subsequentWork ?u_1 ?u_0
+artist subsequentWork ?u_1 ?u_0 The_Band
+subsequentWork ?u_1 type ?u_0 Album
+artist subsequentWork ?u_1 type ?u_0 Album The_Band
+artist subsequentWork ?u_1 ?u_0 The_Band
+subsequentWork type ?u_1 Album ?u_0
+album Where_Everybody_Knows_Your_Name ?u_0
+ingredient ?u_0 #ent
+country ?u_0 ?u_1
+type ?u_0 Food
+ingredient country ?u_0 ?u_1 Shallot
+ingredient type ?u_0 Food Shallot
+country type ?u_0 Food ?u_1
+ingredient country type ?u_0 Food ?u_1 Shallot
+ingredient ?u_1 Shallot
+type ?u_1 Food
+ingredient type ?u_1 Food Shallot
+country ?u_0 type ?u_1 Food
+ingredient ?u_1 Shallot
+ingredient ?u_0 Shallot
+country ?u_1 ?u_0
+country ?u_1 type ?u_0 Food
+ingredient country ?u_1 ?u_0 Shallot
+country type ?u_1 Food ?u_0
+ingredient country type ?u_1 Food ?u_0 Shallot
+university #ent ?u_0
+officialLanguage #ent #ent
+publisher #ent ?u_0
+products ?u_0 ?u_1
+publisher Tweenies:_Game_Time products ?u_0 ?u_1
+publisher Tweenies:_Game_Time ?u_1
+series ?u_1 #ent
+religion ?u_0 ?u_1
+type ?u_0 FictionalCharacter
+series ?u_1 Absolutely_Fabulous
+religion type ?u_0 FictionalCharacter ?u_1
+series ?u_0 Absolutely_Fabulous
+type ?u_1 FictionalCharacter
+series religion ?u_0 ?u_1 Absolutely_Fabulous
+series ?u_0 Absolutely_Fabulous
+religion ?u_0 type ?u_1 FictionalCharacter
+series type ?u_0 FictionalCharacter Absolutely_Fabulous
+series religion type ?u_0 FictionalCharacter ?u_1 Absolutely_Fabulous
+series type ?u_1 FictionalCharacter Absolutely_Fabulous
+religion ?u_1 ?u_0
+series religion ?u_1 ?u_0 Absolutely_Fabulous
+religion ?u_1 type ?u_0 FictionalCharacter
+religion type ?u_1 FictionalCharacter ?u_0
+series religion type ?u_1 FictionalCharacter ?u_0 Absolutely_Fabulous
+instrument ?u_1 #ent
+musicComposer ?u_1 ?u_0
+type ?u_0 Film
+musicComposer ?u_1 type ?u_0 Film
+instrument ?u_0 Hammond_organ
+type ?u_1 Film
+instrument musicComposer ?u_1 ?u_0 Hammond_organ
+musicComposer type ?u_1 Film ?u_0
+instrument musicComposer type ?u_1 Film ?u_0 Hammond_organ
+musicComposer ?u_0 ?u_1
+instrument musicComposer ?u_0 ?u_1 Hammond_organ
+musicComposer type ?u_0 Film ?u_1
+instrument musicComposer type ?u_0 Film ?u_1 Hammond_organ
+musicComposer ?u_0 type ?u_1 Film
+album #ent #ent
+artist ?u_0 #ent
+starring ?u_0 Jason_Carter_(actor)
+type ?u_0 TelevisionShow
+artist starring ?u_0 Jason_Carter_(actor) Christopher_Franke
+artist type ?u_0 TelevisionShow Christopher_Franke
+starring type ?u_0 TelevisionShow Jason_Carter_(actor)
+artist starring type ?u_0 TelevisionShow Jason_Carter_(actor) Christopher_Franke
+spouse ?u_0 #ent
+type ?u_0 Artist
+spouse type ?u_0 Artist Lee_Krasner
+spouse Lee_Krasner ?u_0
+spouse Lee_Krasner type ?u_0 Artist
+youthclubs ?u_0 #ent
+debutteam ?u_0 ?u_1
+youthclubs debutteam ?u_0 ?u_1 Lighthouse_Boys_Club
+youthclubs ?u_1 Lighthouse_Boys_Club
+education ?u_0 #ent
+bodyDiscovered ?u_0 ?u_1
+education bodyDiscovered ?u_0 ?u_1 General_Educational_Development
+education ?u_1 General_Educational_Development
+locatedInArea ?u_0 #ent
+designer ?u_1 ?u_0
+type ?u_0 Bridge
+locatedInArea type ?u_0 Bridge Oddamavadi
+designer ?u_1 type ?u_0 Bridge
+locatedInArea ?u_1 Oddamavadi
+type ?u_1 Bridge
+locatedInArea designer ?u_1 ?u_0 Oddamavadi
+locatedInArea type ?u_1 Bridge Oddamavadi
+designer type ?u_1 Bridge ?u_0
+locatedInArea designer type ?u_1 Bridge ?u_0 Oddamavadi
+locatedInArea ?u_1 Oddamavadi
+locatedInArea ?u_0 Oddamavadi
+designer ?u_0 ?u_1
+locatedInArea designer ?u_0 ?u_1 Oddamavadi
+designer type ?u_0 Bridge ?u_1
+locatedInArea designer type ?u_0 Bridge ?u_1 Oddamavadi
+designer ?u_0 type ?u_1 Bridge

@@ -1,0 +1,117 @@
+regionServed ?u_0 #ent
+ingredient ?u_0 #ent
+country ?u_0 ?u_1
+type ?u_0 Food
+ingredient country ?u_0 ?u_1 Coconut
+ingredient type ?u_0 Food Coconut
+country type ?u_0 Food ?u_1
+ingredient country type ?u_0 Food ?u_1 Coconut
+ingredient ?u_1 Coconut
+type ?u_1 Food
+ingredient type ?u_1 Food Coconut
+country ?u_0 type ?u_1 Food
+ingredient ?u_1 Coconut
+ingredient ?u_0 Coconut
+country ?u_1 ?u_0
+country ?u_1 type ?u_0 Food
+ingredient country ?u_1 ?u_0 Coconut
+country type ?u_1 Food ?u_0
+ingredient country type ?u_1 Food ?u_0 Coconut
+name #ent ?u_0
+chairman ?u_0 Patrcia_Amorim
+type ?u_0 Person
+name Patrcia_Amorim ?u_0
+chairman ?u_1 ?u_0
+type ?u_0 Person
+chairman ?u_1 type ?u_0 Person
+name Patrcia_Amorim ?u_1
+type ?u_1 Person
+chairman type ?u_1 Person ?u_0
+name Patrcia_Amorim ?u_1
+name Patrcia_Amorim ?u_0
+chairman ?u_0 ?u_1
+chairman type ?u_0 Person ?u_1
+chairman ?u_0 type ?u_1 Person
+chairman ?u_0 Patrcia_Amorim
+chairman name ?u_0 ?u_1 Patrcia_Amorim
+name type ?u_0 Person ?u_1
+chairman ?u_1 Patrcia_Amorim
+name ?u_0 type ?u_1 Person
+chairman name ?u_0 ?u_1 Patrcia_Amorim
+name ?u_1 type ?u_0 Person
+chairman name ?u_1 ?u_0 Patrcia_Amorim
+name type ?u_1 Person ?u_0
+chairman name ?u_1 ?u_0 Patrcia_Amorim
+genre ?u_0 #ent
+computingPlatform ?u_0 Amiga
+genre ?u_0 Amiga
+computingPlatform ?u_0 ?u_1
+computingPlatform ?u_1 ?u_0
+computingPlatform ?u_0 Amiga
+genre ?u_0 ?u_1
+computingPlatform genre ?u_0 ?u_1 Amiga
+genre ?u_1 ?u_0
+computingPlatform genre ?u_1 ?u_0 Amiga
+genre ?u_1 Amiga
+computingPlatform ?u_1 Amiga
+computingPlatform genre ?u_0 ?u_1 Amiga
+computingPlatform genre ?u_1 ?u_0 Amiga
+battles ?u_0 #ent
+relation ?u_0 ?u_1
+battles relation ?u_0 ?u_1 Battle_of_the_Bulge
+relation ?u_1 ?u_0
+battles relation ?u_1 ?u_0 Battle_of_the_Bulge
+battles ?u_1 Battle_of_the_Bulge
+battles relation ?u_0 ?u_1 Battle_of_the_Bulge
+battles relation ?u_1 ?u_0 Battle_of_the_Bulge
+computingPlatform ?u_0 #ent
+genre ?u_0 ?u_1
+computingPlatform genre ?u_0 ?u_1 Commodore_CDTV
+computingPlatform ?u_1 Commodore_CDTV
+position #ent #ent
+restingPlace ?u_0 #ent
+director ?u_1 ?u_0
+restingPlace director ?u_1 ?u_0 Ronda
+restingPlace ?u_1 Ronda
+birthPlace ?u_0 #ent
+debutTeam ?u_0 ?u_1
+type ?u_0 BaseballPlayer
+birthPlace debutTeam ?u_0 ?u_1 Houston
+birthPlace type ?u_0 BaseballPlayer Houston
+debutTeam type ?u_0 BaseballPlayer ?u_1
+birthPlace debutTeam type ?u_0 BaseballPlayer ?u_1 Houston
+birthPlace ?u_1 Houston
+type ?u_1 BaseballPlayer
+birthPlace type ?u_1 BaseballPlayer Houston
+debutTeam ?u_0 type ?u_1 BaseballPlayer
+debutTeam ?u_1 ?u_0
+debutTeam ?u_1 type ?u_0 BaseballPlayer
+birthPlace debutTeam ?u_1 ?u_0 Houston
+debutTeam type ?u_1 BaseballPlayer ?u_0
+birthPlace debutTeam type ?u_1 BaseballPlayer ?u_0 Houston
+international ?u_0 #ent
+religion ?u_0 ?u_1
+type ?u_0 PoliticalParty
+international religion ?u_0 ?u_1 Muslim_Brotherhood
+international type ?u_0 PoliticalParty Muslim_Brotherhood
+religion type ?u_0 PoliticalParty ?u_1
+international religion type ?u_0 PoliticalParty ?u_1 Muslim_Brotherhood
+international ?u_1 Muslim_Brotherhood
+type ?u_1 PoliticalParty
+international type ?u_1 PoliticalParty Muslim_Brotherhood
+international ?u_1 Muslim_Brotherhood
+international ?u_0 Muslim_Brotherhood
+knownFor #ent ?u_0
+knownFor #ent ?u_0
+knownFor ?u_1 ?u_0
+knownFor Sam_Loyd knownFor Eric_Schiller ?u_0
+knownFor Sam_Loyd knownFor ?u_1 ?u_0
+knownFor Eric_Schiller knownFor ?u_1 ?u_0
+knownFor Sam_Loyd knownFor Eric_Schiller knownFor ?u_1 ?u_0
+knownFor ?u_0 ?u_1
+knownFor Sam_Loyd ?u_1
+knownFor Sam_Loyd ?u_1
+knownFor Eric_Schiller ?u_1
+knownFor Sam_Loyd ?u_0
+knownFor Sam_Loyd knownFor ?u_0 ?u_1
+knownFor Eric_Schiller knownFor ?u_0 ?u_1

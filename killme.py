@@ -1,141 +1,125 @@
-from SPARQLWrapper import SPARQLWrapper, JSON
+import numpy as np
+from common.graph.graph import Graph
 
-import spacy
-from spacy import displacy
+from common.query.querybuilder import QueryBuilder
+import kb
+from myclassifier import QuestionClassifier
+import parser
+from svmclassifier import SVMClassifier
 
+class Struct(object): pass
 
-nlp = spacy.load("en_core_web_sm")
+def generate_query(question, entities, relations, h1_threshold=9999999, question_type=2):
+    ask_query = False
+    sort_query = False
+    count_query = False
 
-'''def build_sparql_query(dep_tree):
-    query = "SELECT ?repo ?property ?value WHERE {\n"
-    for token in dep_tree:
-        if token["dep"] in ["nsubj", "attr"]:
-            repo = token["head"].capitalize()
-            property = token["text"].capitalize().replace(" ", "_")
-            value = "?value"
-            query += f"\t?repo {property} {value} .\n"
-    query += "}"
-    return query
+    if question_type == 2:
+        count_query = True
+    elif question_type == 1:
+        ask_query = True
 
-def generate_sparql_query(question):
-    doc = nlp(question)
-    dep_tree = []
-    for token in doc:
-        dep_tree.append({
-            "text": token.text,
-            "head": token.head.text,
-            "dep": token.dep_,
-            "pos": token.pos_
-        })
-    return build_sparql_query(dep_tree)
+    '''type_confidence = question_classifier.predict_proba([question])[0][question_type]
+    if isinstance(QuestionClassifier.predict_proba([question])[0][question_type], (np.ndarray, list)):
+        type_confidence = type_confidence[0]
+    '''
+    question_type_classifier = SVMClassifier("double_relation_classifier/svm.model")
+    double_relation_classifier = SVMClassifier("/home/bell/rdf_code/question_type_classifier/svm.model")
+    double_relation = False
+    if double_relation_classifier is not None:
+        double_relation = double_relation_classifier.predict([question])
+        print(double_relation_classifier.predict([question]))
+        if double_relation == 1:
+            double_relation = True
 
-question = "What is the language of the repository named Git-Tutorial?"
+    graph = Graph(kb)
+    query_builder = QueryBuilder()
+    #I think this is where we need to focus
+    graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
+                                sort_query=sort_query, h1_threshold=h1_threshold)
 
-print(generate_sparql_query(question))'''
+    valid_walks = query_builder.to_where_statement(graph, parser.parse_queryresult, ask_query=ask_query,
+                                                    count_query=count_query, sort_query=sort_query)
 
+    if question_type == 0 and len(relations) == 1:
+        double_relation = True
+        graph = Graph()
+        query_builder = QueryBuilder()
+        graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
+                                    sort_query=sort_query, h1_threshold=h1_threshold)
+        valid_walks_new = query_builder.to_where_statement(graph, parser.parse_queryresult,
+                                                            ask_query=ask_query,
+                                                            count_query=count_query, sort_query=sort_query)
+        valid_walks.extend(valid_walks_new)
 
-def build_sparql_query(dep_tree):
-    query = "SELECT ?subject ?predicate ?object WHERE {\n"
-    for token in dep_tree:
-        if token["dep"] in ["nsubj", "dobj"]:
-            print(token)
-            subject = token["text"].capitalize()
-            predicate = token["text"].capitalize().replace(" ", "_")
-            object = token["head"].capitalize()
-            query += f"\t?subject {predicate} ?object .\n"
-    query += "}"
-    return query
+    args = Struct()
+    base_path = "./learning/treelstm/"
+    args.expname = "lc_quad,epoch=5,train_loss=0.08340245485305786"
+    args.mem_dim = 150
+    args.hidden_dim = 50
+    args.num_classes = 2
+    args.input_dim = 300
+    args.sparse = False
+    args.lr = 0.01
+    args.wd = 1e-4
+    args.data = os.path.join(base_path, "data/lc_quad/")
+    args.cuda = False
+    # args.cuda = True
+    '''try:
+        scores = rank(args, question, valid_walks)
+    except:
+        scores = [1 for _ in valid_walks]
+    for idx, item in enumerate(valid_walks):
+        if idx >= len(scores):
+            item["confidence"] = 0.3
+        else:
+            item["confidence"] = float(scores[idx] - 1)
+'''
+    print(valid_walks, question_type)
 
-# Load the spaCy model
-nlp = spacy.load("en_core_web_sm")
+question = "Which commits have the user izzyrybz made?"
+entities = [
+            {
+                "confidence": 0.9239816818240237,
+                "uri": "http://dbpedia.org/resource/Commit_(version_control)"
+            },
+    
+            {
+                "confidence": 0.9170735543251727,
+                "uri": "http://dbpedia.org/resource/User_interface"
+            },
 
-# Define the input text
-text = "How many commits has the author izzyrybz made?"
-#text = input("Write question")
+            {
+                "confidence": 0.8956483894223672,
+                "uri": "http://dbpedia.org/resource/Langues_d'o\u00efl"
+            },
+        
+            {
+                "confidence": 0.75,
+                "uri": "izzyrybz"
+            }]
+h1_threshold = 9999999
+relations = [
+            {
+                "confidence": 0.75,
+                "uri": "https://dbpedia.org/ontology/author"
+            },
 
+            {
+                "confidence": 0.75,
+                "uri": "https://dbpedia.org/ontology/Description"
+            },
 
-# Parse the input text using spaCy
-
-doc = nlp(text)
-#lemmas = [token.lemma_ for token in doc]
-
-
-# Mapping to a Machine-Readable Representation
-representation = []
-for token in doc:
-    representation.append((token.text, token.lemma_, token.pos_, token.tag_, token.dep_, token.ent_type_))
-
-# Print the representation
-print(representation)
-
-#displacy.serve(doc, style="dep", options={"compact": True})
-
-dep_tree = []
-for token in doc:
-    dep_tree.append({
-        "text": token.text,
-        "head": token.head.text,
-        "dep": token.dep_,
-        "pos": token.pos_
-    })
-print(dep_tree)
-#print(lemmas) 
-print(build_sparql_query(dep_tree))
-
-
-
-'''# Connect to the reference dataset
-sparql = SPARQLWrapper("http://localhost:3030/#/dataset/test4commits/query")
-
-# Define the query
-query = """
-SELECT ?object
-WHERE {
-	
-<http://example.org/65970ecb019eef5a3b2f709180113213e6000a78>
-  <http://example.com/author>
-   ?object
-}
-"""
-sparql.setQuery(query)
-sparql.setReturnFormat(JSON)
-
-# Execute the query and retrieve the results
-results = sparql.query().convert()
-
-# Store the results in a list
-#golden_standard = []
-#for result in results["results"]["bindings"]:
-#    person = result["author"]["value"]
-#    golden_standard.append((person))
-
-# Print the golden standard
-print(results)'''
-
-
-
-'''import requests
-question = input("What is your question?")
-
-#question = "Barack Obama was the 44th President of the United States."
-
-url = "http://api.dbpedia-spotlight.org/en/annotate"
-
-headers = {
-    "Accept": "application/json"
-}
-
-payload = {
-    "text": question,
-    "confidence": 0.25,
-    "support": 20
-}
-
-response = requests.get(url, headers=headers, params=payload)
-
-if response.status_code == 200:
-    entities = response.json()["Resources"]
-    for entity in entities:
-        print(entity["@URI"])
-else:
-    print("Annotation request failed.")'''
+            
+            {
+                "confidence": 0.5,
+                "uri": "https://dbpedia.org/ontology/author"
+            },
+           
+            {
+                "confidence": 0.5,
+                "uri": "https://dbpedia.org/property/user"
+            }
+                
+]
+generate_query(question,entities,relations,h1_threshold,question_type=2)

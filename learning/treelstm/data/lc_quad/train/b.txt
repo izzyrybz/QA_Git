@@ -1,0 +1,529 @@
+?u_0 leaderName #ent
+?u_1 majorShrine ?u_0
+?u_0 leaderName Justin_Trudeau .?u_1 majorShrine ?u_0
+?u_1 leaderName Justin_Trudeau
+#ent leaderName ?u_0
+?u_0 sisterStation #ent
+?u_0 city ?u_1
+?u_0 sisterStation KTXY .?u_0 city ?u_1
+?u_1 city ?u_0
+?u_0 sisterStation KTXY
+KTXY city ?u_0
+KTXY city ?u_0
+?u_0 sisterStation ?u_1
+KTXY sisterStation ?u_0
+?u_1 sisterStation ?u_0
+KTXY sisterStation ?u_0
+KTXY sisterStation ?u_0 .?u_0 city ?u_1
+?u_1 sisterStation KTXY
+?u_1 sisterStation KTXY .?u_1 city ?u_0
+KTXY city ?u_1
+KTXY sisterStation ?u_1
+KTXY sisterStation ?u_1 .?u_1 city ?u_0
+#ent birthPlace ?u_0
+?u_1 successor ?u_0
+Hank_Brown birthPlace ?u_0
+?u_0 successor Hank_Brown
+?u_0 successor ?u_1
+Hank_Brown successor ?u_0
+?u_0 successor Hank_Brown
+?u_1 birthPlace ?u_0
+?u_0 birthPlace ?u_1
+?u_0 successor Hank_Brown .?u_0 birthPlace ?u_1
+Hank_Brown successor ?u_0
+Hank_Brown successor ?u_0 .?u_0 birthPlace ?u_1
+Hank_Brown birthPlace ?u_1
+?u_1 successor Hank_Brown
+?u_1 successor Hank_Brown .?u_1 birthPlace ?u_0
+Hank_Brown successor ?u_1
+Hank_Brown successor ?u_1 .?u_1 birthPlace ?u_0
+Katyayana_(Buddhist) religion ?u_0
+?u_0 managerclubs England_national_under-21_football_team
+?u_0 constituency Mumbai_North_(Lok_Sabha_constituency)
+?u_0 party ?u_1
+?u_0 constituency Mumbai_North_(Lok_Sabha_constituency) .?u_0 party ?u_1
+?u_1 constituency Mumbai_North_(Lok_Sabha_constituency)
+?u_0 associatedBand #ent
+?u_1 themeMusicComposer ?u_0
+?u_0 associatedBand #ent .?u_1 themeMusicComposer ?u_0
+Phish associatedBand ?u_0
+?u_1 associatedBand Phish
+Phish associatedBand ?u_1
+#ent associatedBand #ent
+?u_0 manufacturer #ent
+?u_0 origin ?u_1
+?u_0 type Beverage
+?u_0 manufacturer Refriango .?u_0 origin ?u_1
+?u_0 manufacturer Refriango .?u_0 type Beverage
+?u_0 origin ?u_1 .?u_0 type Beverage
+?u_0 manufacturer Refriango .?u_0 origin ?u_1 .?u_0 type Beverage
+?u_1 manufacturer Refriango
+?u_1 type Beverage
+?u_1 manufacturer Refriango .?u_1 type Beverage
+?u_1 manufacturer Refriango .?u_0 type Beverage
+?u_0 manufacturer Refriango .?u_1 type Beverage
+?u_1 creator #ent
+?u_1 format ?u_0
+?u_0 type RadioProgram
+?u_1 creator Timoteo_Jeffries .?u_1 format ?u_0
+?u_1 creator Timoteo_Jeffries .?u_0 type RadioProgram
+?u_1 format ?u_0 .?u_0 type RadioProgram
+?u_0 creator Timoteo_Jeffries
+?u_1 type RadioProgram
+?u_0 creator Timoteo_Jeffries .?u_1 type RadioProgram
+?u_1 format ?u_0 .?u_1 type RadioProgram
+?u_0 creator Timoteo_Jeffries .?u_0 type RadioProgram
+?u_1 creator Timoteo_Jeffries .?u_1 type RadioProgram
+?u_1 creator Timoteo_Jeffries .?u_1 format ?u_0 .?u_1 type RadioProgram
+?u_0 format ?u_1
+?u_0 format ?u_1 .?u_0 type RadioProgram
+?u_0 creator Timoteo_Jeffries .?u_0 format ?u_1
+?u_0 format ?u_1 .?u_1 type RadioProgram
+?u_0 creator Timoteo_Jeffries .?u_0 format ?u_1 .?u_0 type RadioProgram
+?u_0 location #ent
+?u_0 nearestCity Bend,_Oregon
+?u_0 type ProtectedArea
+?u_0 nearestCity Bend,_Oregon .?u_0 type ProtectedArea
+?u_0 location Bend,_Oregon
+?u_0 nearestCity ?u_1
+?u_0 type ProtectedArea
+?u_0 nearestCity ?u_1 .?u_0 type ProtectedArea
+?u_1 location Bend,_Oregon
+?u_1 type ProtectedArea
+?u_0 nearestCity ?u_1 .?u_1 type ProtectedArea
+?u_1 location Bend,_Oregon .?u_0 type ProtectedArea
+?u_0 location Bend,_Oregon .?u_1 type ProtectedArea
+?u_1 nearestCity ?u_0
+?u_1 nearestCity ?u_0 .?u_0 type ProtectedArea
+?u_1 nearestCity ?u_0 .?u_1 type ProtectedArea
+?u_0 nearestCity Bend,_Oregon
+?u_0 location ?u_1
+?u_0 nearestCity Bend,_Oregon .?u_0 location ?u_1
+?u_0 nearestCity Bend,_Oregon .?u_0 type ProtectedArea
+?u_0 location ?u_1 .?u_0 type ProtectedArea
+?u_0 nearestCity Bend,_Oregon .?u_0 location ?u_1 .?u_0 type ProtectedArea
+?u_1 nearestCity Bend,_Oregon
+?u_1 nearestCity Bend,_Oregon .?u_0 location ?u_1
+?u_1 nearestCity Bend,_Oregon .?u_1 type ProtectedArea
+?u_0 location ?u_1 .?u_1 type ProtectedArea
+?u_1 nearestCity Bend,_Oregon .?u_0 location ?u_1 .?u_1 type ProtectedArea
+?u_1 nearestCity Bend,_Oregon .?u_0 type ProtectedArea
+?u_1 nearestCity Bend,_Oregon .?u_0 location ?u_1 .?u_0 type ProtectedArea
+?u_0 nearestCity Bend,_Oregon .?u_1 type ProtectedArea
+?u_0 nearestCity Bend,_Oregon .?u_0 location ?u_1 .?u_1 type ProtectedArea
+?u_1 location ?u_0
+?u_0 nearestCity Bend,_Oregon .?u_1 location ?u_0
+?u_1 location ?u_0 .?u_0 type ProtectedArea
+?u_0 nearestCity Bend,_Oregon .?u_1 location ?u_0 .?u_0 type ProtectedArea
+?u_1 nearestCity Bend,_Oregon .?u_1 location ?u_0
+?u_1 location ?u_0 .?u_1 type ProtectedArea
+?u_1 nearestCity Bend,_Oregon .?u_1 location ?u_0 .?u_1 type ProtectedArea
+?u_1 nearestCity Bend,_Oregon .?u_1 location ?u_0 .?u_0 type ProtectedArea
+?u_0 nearestCity Bend,_Oregon .?u_1 location ?u_0 .?u_1 type ProtectedArea
+#ent literaryGenre #ent
+?u_0 distributor #ent
+?u_0 academicDiscipline #ent
+?u_0 academicDiscipline ?u_1
+?u_1 academicDiscipline ?u_0
+?u_0 academicDiscipline Neuroimaging .?u_0 academicDiscipline ?u_1
+?u_1 academicDiscipline Neuroimaging
+?u_1 academicDiscipline Neuroimaging .?u_1 academicDiscipline ?u_0
+#ent award ?u_0
+#ent award ?u_0
+?u_0 award ?u_1
+Charles_LeMaire award ?u_0 .Nick_Park award ?u_0
+?u_1 award ?u_0
+Charles_LeMaire award ?u_0 .?u_1 award ?u_0
+Nick_Park award ?u_0 .?u_1 award ?u_0
+Charles_LeMaire award ?u_0 .Nick_Park award ?u_0 .?u_1 award ?u_0
+Charles_LeMaire award ?u_1
+Charles_LeMaire award ?u_1 .Nick_Park award ?u_0
+Charles_LeMaire award ?u_1 .?u_0 award ?u_1
+Nick_Park award ?u_1
+Charles_LeMaire award ?u_0 .Nick_Park award ?u_1
+Nick_Park award ?u_1 .?u_0 award ?u_1
+?u_0 buildingType #ent
+?u_0 locationTown ?u_1
+?u_0 buildingType Ferris_wheel .?u_0 locationTown ?u_1
+?u_1 buildingType Ferris_wheel
+?u_0 language #ent
+?u_0 type Film
+?u_0 language Swedish_language .?u_0 type Film
+?u_0 themeMusicComposer #ent
+?u_0 creator #ent
+?u_0 themeMusicComposer Julian_Gingell .?u_0 creator Simon_Fuller
+?u_0 kingdom #ent
+?u_0 family ?u_1
+?u_0 kingdom Animal .?u_0 family ?u_1
+?u_1 family ?u_0
+?u_0 kingdom Animal .?u_1 family ?u_0
+?u_1 kingdom Animal
+?u_1 kingdom Animal .?u_0 family ?u_1
+?u_1 kingdom Animal .?u_1 family ?u_0
+#ent successor ?u_0
+?u_0 party ?u_1
+?u_0 type Person
+A._K._Singh successor ?u_0 .?u_0 party ?u_1
+A._K._Singh successor ?u_0 .?u_0 type Person
+?u_0 party ?u_1 .?u_0 type Person
+A._K._Singh successor ?u_0 .?u_0 party ?u_1 .?u_0 type Person
+A._K._Singh successor ?u_1
+?u_1 type Person
+A._K._Singh successor ?u_1 .?u_1 type Person
+?u_0 party ?u_1 .?u_1 type Person
+?u_1 party ?u_0
+?u_1 party ?u_0 .?u_0 type Person
+A._K._Singh successor ?u_1 .?u_1 party ?u_0
+?u_1 party ?u_0 .?u_1 type Person
+A._K._Singh successor ?u_1 .?u_1 party ?u_0 .?u_1 type Person
+?u_0 successor A._K._Singh
+?u_0 successor A._K._Singh .?u_0 party ?u_1
+?u_0 successor A._K._Singh .?u_0 type Person
+?u_0 successor A._K._Singh .?u_0 party ?u_1 .?u_0 type Person
+?u_1 successor A._K._Singh
+?u_1 successor A._K._Singh .?u_1 type Person
+?u_1 successor A._K._Singh .?u_0 type Person
+?u_0 successor A._K._Singh .?u_1 type Person
+?u_1 successor A._K._Singh .?u_1 party ?u_0
+?u_1 successor A._K._Singh .?u_1 party ?u_0 .?u_1 type Person
+#ent manager ?u_0
+?u_0 club ?u_1
+?u_1 club ?u_0
+Middlesbrough_F.C. manager ?u_0
+?u_0 club Middlesbrough_F.C.
+?u_0 club Middlesbrough_F.C.
+?u_0 manager ?u_1
+?u_0 club Middlesbrough_F.C. .?u_0 manager ?u_1
+?u_1 manager ?u_0
+Middlesbrough_F.C. manager ?u_1
+?u_1 club Middlesbrough_F.C.
+?u_1 club Middlesbrough_F.C. .?u_1 manager ?u_0
+Sidney_Catlin_Partridge education ?u_0
+#ent education ?u_0
+?u_0 education ?u_1
+Sidney_Catlin_Partridge education ?u_0 .Cyril_Hume education ?u_0
+?u_1 education ?u_0
+Sidney_Catlin_Partridge education ?u_0 .?u_1 education ?u_0
+Cyril_Hume education ?u_0 .?u_1 education ?u_0
+Sidney_Catlin_Partridge education ?u_0 .Cyril_Hume education ?u_0 .?u_1 education ?u_0
+Sidney_Catlin_Partridge education ?u_1
+Sidney_Catlin_Partridge education ?u_1 .Cyril_Hume education ?u_0
+Sidney_Catlin_Partridge education ?u_1 .?u_0 education ?u_1
+Cyril_Hume education ?u_1
+Sidney_Catlin_Partridge education ?u_0 .Cyril_Hume education ?u_1
+Cyril_Hume education ?u_1 .?u_0 education ?u_1
+#ent mother #ent
+?u_1 music #ent
+?u_1 producer ?u_0
+?u_0 type Film
+?u_1 music Gary_Chang .?u_1 producer ?u_0
+?u_1 producer ?u_0 .?u_0 type Film
+?u_0 music Gary_Chang
+?u_1 type Film
+?u_1 producer ?u_0 .?u_1 type Film
+?u_0 music Gary_Chang .?u_0 type Film
+?u_1 music Gary_Chang .?u_1 type Film
+?u_1 music Gary_Chang .?u_1 producer ?u_0 .?u_1 type Film
+?u_0 producer ?u_1
+?u_0 producer ?u_1 .?u_0 type Film
+?u_0 music Gary_Chang .?u_0 producer ?u_1
+?u_0 producer ?u_1 .?u_1 type Film
+?u_0 music Gary_Chang .?u_0 producer ?u_1 .?u_0 type Film
+#ent recorded ?u_0
+?u_1 associatedActs #ent
+?u_1 musicComposer ?u_0
+?u_0 type Film
+?u_1 associatedActs Demis_Roussos .?u_0 type Film
+?u_1 musicComposer ?u_0 .?u_0 type Film
+?u_0 associatedActs Demis_Roussos
+?u_1 type Film
+?u_0 associatedActs Demis_Roussos .?u_1 musicComposer ?u_0
+?u_0 associatedActs Demis_Roussos .?u_1 type Film
+?u_1 musicComposer ?u_0 .?u_1 type Film
+?u_0 associatedActs Demis_Roussos .?u_1 musicComposer ?u_0 .?u_1 type Film
+?u_0 musicComposer ?u_1
+?u_1 associatedActs Demis_Roussos .?u_0 musicComposer ?u_1
+?u_0 musicComposer ?u_1 .?u_0 type Film
+?u_1 associatedActs Demis_Roussos .?u_0 musicComposer ?u_1 .?u_0 type Film
+?u_0 musicComposer ?u_1 .?u_1 type Film
+#ent allegiance ?u_0
+#ent starring ?u_0
+?u_0 almaMater ?u_1
+The_God_Who_Wasn't_There starring ?u_0 .?u_0 almaMater ?u_1
+The_God_Who_Wasn't_There starring ?u_1
+?u_1 operator #ent
+?u_0 hubAirport ?u_1
+?u_0 type Airline
+?u_1 operator Los_Angeles_World_Airports .?u_0 hubAirport ?u_1
+?u_1 operator Los_Angeles_World_Airports .?u_0 type Airline
+?u_0 hubAirport ?u_1 .?u_0 type Airline
+?u_1 operator Los_Angeles_World_Airports .?u_0 hubAirport ?u_1 .?u_0 type Airline
+?u_0 operator Los_Angeles_World_Airports
+?u_1 type Airline
+?u_0 operator Los_Angeles_World_Airports .?u_1 type Airline
+?u_0 hubAirport ?u_1 .?u_1 type Airline
+?u_1 hubAirport ?u_0
+?u_1 hubAirport ?u_0 .?u_0 type Airline
+?u_0 operator Los_Angeles_World_Airports .?u_1 hubAirport ?u_0
+?u_1 hubAirport ?u_0 .?u_1 type Airline
+?u_0 operator Los_Angeles_World_Airports .?u_1 hubAirport ?u_0 .?u_1 type Airline
+The_Haunted_House_(1929_film) director ?u_0
+?u_0 type Non-governmental_organization
+?u_0 purpose ?u_1
+?u_0 type Non-governmental_organization .?u_0 purpose ?u_1
+?u_1 type Non-governmental_organization
+?u_0 birthPlace #ent
+?u_0 team ?u_1
+?u_0 birthPlace Bellaire,_Ohio .?u_0 team ?u_1
+?u_1 birthPlace Bellaire,_Ohio
+Katyayana_(Buddhist) religion ?u_0
+#ent ideology ?u_0
+Katyayana_(Buddhist) religion ?u_0 .Palang_Dharma_Party ideology ?u_0
+?u_1 writer #ent
+?u_1 starring ?u_0
+?u_0 type Film
+?u_1 writer Mark_Sandrich .?u_1 starring ?u_0
+?u_1 writer Mark_Sandrich .?u_0 type Film
+?u_1 starring ?u_0 .?u_0 type Film
+?u_0 writer Mark_Sandrich
+?u_1 type Film
+?u_0 writer Mark_Sandrich .?u_1 type Film
+?u_1 starring ?u_0 .?u_1 type Film
+?u_0 writer Mark_Sandrich .?u_0 type Film
+?u_1 writer Mark_Sandrich .?u_1 type Film
+?u_1 writer Mark_Sandrich .?u_1 starring ?u_0 .?u_1 type Film
+?u_0 starring ?u_1
+?u_0 starring ?u_1 .?u_0 type Film
+?u_0 writer Mark_Sandrich .?u_0 starring ?u_1
+?u_0 starring ?u_1 .?u_1 type Film
+?u_0 writer Mark_Sandrich .?u_0 starring ?u_1 .?u_0 type Film
+#ent birthName ?u_0
+?u_0 deathPlace Tampa,_Florida
+?u_0 occupation ?u_1
+?u_0 deathPlace Tampa,_Florida .?u_0 occupation ?u_1
+?u_1 deathPlace Tampa,_Florida
+?u_0 branch #ent
+#ent associatedActs ?u_1
+?u_1 birthPlace ?u_0
+?u_0 type MusicalArtist
+Ren_&_Angela associatedActs ?u_1 .?u_1 birthPlace ?u_0
+Ren_&_Angela associatedActs ?u_1 .?u_0 type MusicalArtist
+?u_1 birthPlace ?u_0 .?u_0 type MusicalArtist
+Ren_&_Angela associatedActs ?u_0
+?u_1 type MusicalArtist
+Ren_&_Angela associatedActs ?u_0 .?u_1 type MusicalArtist
+?u_1 birthPlace ?u_0 .?u_1 type MusicalArtist
+Ren_&_Angela associatedActs ?u_0 .?u_0 type MusicalArtist
+Ren_&_Angela associatedActs ?u_1 .?u_1 type MusicalArtist
+Ren_&_Angela associatedActs ?u_1 .?u_1 birthPlace ?u_0 .?u_1 type MusicalArtist
+?u_0 birthPlace ?u_1
+?u_0 birthPlace ?u_1 .?u_0 type MusicalArtist
+Ren_&_Angela associatedActs ?u_0 .?u_0 birthPlace ?u_1
+?u_0 birthPlace ?u_1 .?u_1 type MusicalArtist
+Ren_&_Angela associatedActs ?u_0 .?u_0 birthPlace ?u_1 .?u_0 type MusicalArtist
+?u_1 associatedActs Ren_&_Angela
+?u_1 associatedActs Ren_&_Angela .?u_1 birthPlace ?u_0
+?u_1 associatedActs Ren_&_Angela .?u_0 type MusicalArtist
+?u_0 associatedActs Ren_&_Angela
+?u_0 associatedActs Ren_&_Angela .?u_1 type MusicalArtist
+?u_0 associatedActs Ren_&_Angela .?u_0 type MusicalArtist
+?u_1 associatedActs Ren_&_Angela .?u_1 type MusicalArtist
+?u_1 associatedActs Ren_&_Angela .?u_1 birthPlace ?u_0 .?u_1 type MusicalArtist
+?u_0 associatedActs Ren_&_Angela .?u_0 birthPlace ?u_1
+?u_0 associatedActs Ren_&_Angela .?u_0 birthPlace ?u_1 .?u_0 type MusicalArtist
+#ent designer ?u_0
+#ent debutTeam ?u_0
+#ent poleDriver ?u_0
+1994_Spanish_Grand_Prix poleDriver ?u_0
+?u_0 poleDriver ?u_1
+1997_Canadian_Grand_Prix poleDriver ?u_0 .1994_Spanish_Grand_Prix poleDriver ?u_0
+?u_1 poleDriver ?u_0
+1997_Canadian_Grand_Prix poleDriver ?u_0 .?u_1 poleDriver ?u_0
+1994_Spanish_Grand_Prix poleDriver ?u_0 .?u_1 poleDriver ?u_0
+1997_Canadian_Grand_Prix poleDriver ?u_0 .1994_Spanish_Grand_Prix poleDriver ?u_0 .?u_1 poleDriver ?u_0
+1997_Canadian_Grand_Prix poleDriver ?u_1
+1997_Canadian_Grand_Prix poleDriver ?u_1 .1994_Spanish_Grand_Prix poleDriver ?u_0
+1997_Canadian_Grand_Prix poleDriver ?u_1 .?u_0 poleDriver ?u_1
+1994_Spanish_Grand_Prix poleDriver ?u_1
+1997_Canadian_Grand_Prix poleDriver ?u_0 .1994_Spanish_Grand_Prix poleDriver ?u_1
+1994_Spanish_Grand_Prix poleDriver ?u_1 .?u_0 poleDriver ?u_1
+Not_on_Our_Watch_(organization) foundedBy ?u_0
+#ent owningCompany ?u_0
+?u_0 deathPlace #ent
+?u_0 occupation ?u_1
+?u_0 deathPlace Tampa,_Florida .?u_0 occupation ?u_1
+?u_1 deathPlace Tampa,_Florida
+?u_0 music #ent
+?u_0 editing Julian_Doyle_(filmmaker)
+?u_0 type Film
+?u_0 music Geoffrey_Burgon .?u_0 editing Julian_Doyle_(filmmaker)
+?u_0 music Geoffrey_Burgon .?u_0 type Film
+?u_0 editing Julian_Doyle_(filmmaker) .?u_0 type Film
+?u_0 music Geoffrey_Burgon .?u_0 editing Julian_Doyle_(filmmaker) .?u_0 type Film
+?u_0 screenplay #ent
+?u_0 type Film
+?u_0 screenplay Eric_Roth .?u_0 type Film
+?u_0 recordedIn #ent
+?u_0 writer ?u_1
+?u_0 recordedIn Miami .?u_0 writer ?u_1
+?u_1 recordedIn Miami
+#ent architecturalStyle ?u_0
+?u_0 religion ?u_1
+Sanggar_Agung architecturalStyle ?u_0 .?u_0 religion ?u_1
+Sanggar_Agung architecturalStyle ?u_1
+Money_(Pink_Floyd_song) producer ?u_0
+?u_0 album ?u_1
+Money_(Pink_Floyd_song) album ?u_0
+?u_1 album ?u_0
+Money_(Pink_Floyd_song) album ?u_0
+?u_1 producer ?u_0
+?u_0 producer ?u_1
+Money_(Pink_Floyd_song) album ?u_0 .?u_0 producer ?u_1
+Money_(Pink_Floyd_song) producer ?u_1
+Money_(Pink_Floyd_song) album ?u_1
+Money_(Pink_Floyd_song) album ?u_1 .?u_1 producer ?u_0
+?u_0 genre Science_fiction
+?u_0 themeMusicComposer #ent
+?u_0 type TelevisionShow
+?u_0 genre Science_fiction .?u_0 themeMusicComposer Ron_Grainer
+?u_0 genre Science_fiction .?u_0 type TelevisionShow
+?u_0 themeMusicComposer Ron_Grainer .?u_0 type TelevisionShow
+?u_0 genre Science_fiction .?u_0 themeMusicComposer Ron_Grainer .?u_0 type TelevisionShow
+?u_0 foundedBy #ent
+?u_0 type Company
+?u_0 foundedBy Fusajiro_Yamauchi .?u_0 type Company
+#ent membership ?u_0
+#ent state ?u_0
+#ent state ?u_0
+?u_1 state ?u_0
+Daniel_L._D._Granger state ?u_0 .Job_Durfee state ?u_0
+Daniel_L._D._Granger state ?u_0 .?u_1 state ?u_0
+Job_Durfee state ?u_0 .?u_1 state ?u_0
+Daniel_L._D._Granger state ?u_0 .Job_Durfee state ?u_0 .?u_1 state ?u_0
+?u_0 state ?u_1
+Daniel_L._D._Granger state ?u_1
+Daniel_L._D._Granger state ?u_1 .Job_Durfee state ?u_0
+Job_Durfee state ?u_1
+Daniel_L._D._Granger state ?u_0 .Job_Durfee state ?u_1
+Daniel_L._D._Granger state ?u_1 .?u_0 state ?u_1
+Job_Durfee state ?u_1 .?u_0 state ?u_1
+?u_1 league #ent
+?u_0 mascot ?u_1
+?u_0 type HandballTeam
+?u_1 league Turkish_Handball_Super_League .?u_0 type HandballTeam
+?u_0 mascot ?u_1 .?u_0 type HandballTeam
+?u_0 league Turkish_Handball_Super_League
+?u_1 type HandballTeam
+?u_0 league Turkish_Handball_Super_League .?u_0 mascot ?u_1
+?u_0 league Turkish_Handball_Super_League .?u_1 type HandballTeam
+?u_0 league Turkish_Handball_Super_League .?u_0 type HandballTeam
+?u_0 league Turkish_Handball_Super_League .?u_0 mascot ?u_1 .?u_0 type HandballTeam
+?u_1 league Turkish_Handball_Super_League .?u_1 type HandballTeam
+?u_0 artist #ent
+?u_0 language ?u_1
+?u_0 artist Marika_Gombitov .?u_0 language ?u_1
+?u_1 artist Marika_Gombitov
+?u_1 recordLabel #ent
+?u_1 associatedMusicalArtist ?u_0
+?u_0 type MusicalArtist
+?u_1 recordLabel #ent .?u_1 associatedMusicalArtist ?u_0
+?u_1 associatedMusicalArtist ?u_0 .?u_0 type MusicalArtist
+?u_1 recordLabel #ent .?u_1 associatedMusicalArtist ?u_0 .?u_0 type MusicalArtist
+?u_0 recordLabel #ent
+?u_1 type MusicalArtist
+?u_0 recordLabel #ent .?u_1 associatedMusicalArtist ?u_0
+?u_1 associatedMusicalArtist ?u_0 .?u_1 type MusicalArtist
+?u_0 recordLabel EMI .?u_1 associatedMusicalArtist ?u_0 .?u_1 type MusicalArtist
+?u_0 recordLabel EMI .?u_0 type MusicalArtist
+?u_0 recordLabel EMI .?u_1 associatedMusicalArtist ?u_0 .?u_0 type MusicalArtist
+?u_1 recordLabel EMI .?u_1 type MusicalArtist
+?u_1 recordLabel EMI .?u_1 associatedMusicalArtist ?u_0 .?u_1 type MusicalArtist
+?u_0 associatedMusicalArtist ?u_1
+?u_1 recordLabel EMI .?u_0 associatedMusicalArtist ?u_1
+?u_0 associatedMusicalArtist ?u_1 .?u_0 type MusicalArtist
+?u_1 recordLabel EMI .?u_0 associatedMusicalArtist ?u_1 .?u_0 type MusicalArtist
+?u_0 recordLabel EMI .?u_0 associatedMusicalArtist ?u_1
+?u_0 associatedMusicalArtist ?u_1 .?u_1 type MusicalArtist
+?u_0 recordLabel EMI .?u_0 associatedMusicalArtist ?u_1 .?u_1 type MusicalArtist
+?u_0 recordLabel EMI .?u_0 associatedMusicalArtist ?u_1 .?u_0 type MusicalArtist
+?u_1 recordLabel EMI .?u_0 associatedMusicalArtist ?u_1 .?u_1 type MusicalArtist
+?u_0 doctoralAdvisor #ent
+?u_0 doctoralStudents Mary_Ainsworth
+?u_0 type Scientist
+?u_0 doctoralAdvisor Mary_Ainsworth .?u_0 type Scientist
+?u_0 doctoralStudents Mary_Ainsworth .?u_0 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_0
+Mary_Ainsworth doctoralAdvisor ?u_0 .?u_0 doctoralStudents Mary_Ainsworth
+Mary_Ainsworth doctoralAdvisor ?u_0 .?u_0 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_0 .?u_0 doctoralStudents Mary_Ainsworth .?u_0 type Scientist
+?u_1 doctoralAdvisor Mary_Ainsworth
+?u_0 doctoralStudents ?u_1
+?u_0 type Scientist
+?u_1 doctoralAdvisor Mary_Ainsworth .?u_0 type Scientist
+?u_0 doctoralStudents ?u_1 .?u_0 type Scientist
+?u_0 doctoralAdvisor Mary_Ainsworth
+?u_1 type Scientist
+?u_0 doctoralAdvisor Mary_Ainsworth .?u_1 type Scientist
+?u_0 doctoralStudents ?u_1 .?u_1 type Scientist
+?u_0 doctoralAdvisor Mary_Ainsworth .?u_0 type Scientist
+?u_1 doctoralAdvisor Mary_Ainsworth .?u_1 type Scientist
+?u_1 doctoralStudents ?u_0
+?u_1 doctoralStudents ?u_0 .?u_0 type Scientist
+?u_1 doctoralStudents ?u_0 .?u_1 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_1
+Mary_Ainsworth doctoralAdvisor ?u_1 .?u_0 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_0
+Mary_Ainsworth doctoralAdvisor ?u_0 .?u_0 doctoralStudents ?u_1
+Mary_Ainsworth doctoralAdvisor ?u_0 .?u_1 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_0 .?u_0 doctoralStudents ?u_1 .?u_1 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_0 .?u_0 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_0 .?u_0 doctoralStudents ?u_1 .?u_0 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_1 .?u_1 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_1 .?u_1 doctoralStudents ?u_0
+Mary_Ainsworth doctoralAdvisor ?u_1 .?u_1 doctoralStudents ?u_0 .?u_0 type Scientist
+Mary_Ainsworth doctoralAdvisor ?u_1 .?u_1 doctoralStudents ?u_0 .?u_1 type Scientist
+?u_1 doctoralStudents Mary_Ainsworth
+?u_1 doctoralAdvisor ?u_0
+?u_1 doctoralStudents Mary_Ainsworth .?u_1 doctoralAdvisor ?u_0
+?u_1 doctoralStudents Mary_Ainsworth .?u_0 type Scientist
+?u_1 doctoralAdvisor ?u_0 .?u_0 type Scientist
+?u_1 doctoralStudents Mary_Ainsworth .?u_1 doctoralAdvisor ?u_0 .?u_0 type Scientist
+?u_0 doctoralStudents Mary_Ainsworth
+?u_0 doctoralStudents Mary_Ainsworth .?u_1 doctoralAdvisor ?u_0
+?u_0 doctoralStudents Mary_Ainsworth .?u_1 type Scientist
+?u_1 doctoralAdvisor ?u_0 .?u_1 type Scientist
+?u_0 doctoralStudents Mary_Ainsworth .?u_1 doctoralAdvisor ?u_0 .?u_1 type Scientist
+?u_0 doctoralStudents Mary_Ainsworth .?u_0 type Scientist
+?u_0 doctoralStudents Mary_Ainsworth .?u_1 doctoralAdvisor ?u_0 .?u_0 type Scientist
+?u_1 doctoralStudents Mary_Ainsworth .?u_1 type Scientist
+?u_1 doctoralStudents Mary_Ainsworth .?u_1 doctoralAdvisor ?u_0 .?u_1 type Scientist
+?u_0 doctoralAdvisor ?u_1
+?u_1 doctoralStudents Mary_Ainsworth .?u_0 doctoralAdvisor ?u_1
+?u_0 doctoralAdvisor ?u_1 .?u_0 type Scientist
+?u_1 doctoralStudents Mary_Ainsworth .?u_0 doctoralAdvisor ?u_1 .?u_0 type Scientist
+?u_0 doctoralStudents Mary_Ainsworth .?u_0 doctoralAdvisor ?u_1
+?u_0 doctoralAdvisor ?u_1 .?u_1 type Scientist
+?u_0 doctoralStudents Mary_Ainsworth .?u_0 doctoralAdvisor ?u_1 .?u_1 type Scientist
+?u_0 doctoralStudents Mary_Ainsworth .?u_0 doctoralAdvisor ?u_1 .?u_0 type Scientist
+?u_1 doctoralStudents Mary_Ainsworth .?u_0 doctoralAdvisor ?u_1 .?u_1 type Scientist
+#ent party ?u_0
+?u_0 awards #ent
+?u_0 type Scientist
+?u_0 awards Copley_Medal .?u_0 type Scientist
+?u_1 headquarters #ent
+?u_1 presenter ?u_0
+?u_0 type Award
+?u_1 headquarters Beverly_Hills,_California .?u_0 type Award
+?u_1 presenter ?u_0 .?u_0 type Award
+?u_0 headquarters Beverly_Hills,_California
+?u_1 type Award
+?u_0 headquarters Beverly_Hills,_California .?u_1 presenter ?u_0
+?u_0 headquarters Beverly_Hills,_California .?u_1 type Award
+?u_1 presenter ?u_0 .?u_1 type Award
+?u_0 headquarters Beverly_Hills,_California .?u_1 presenter ?u_0 .?u_1 type Award
+?u_0 presenter ?u_1
+?u_1 headquarters Beverly_Hills,_California .?u_0 presenter ?u_1
+?u_0 presenter ?u_1 .?u_0 type Award
+?u_1 headquarters Beverly_Hills,_California .?u_0 presenter ?u_1 .?u_0 type Award
+?u_0 presenter ?u_1 .?u_1 type Award
+#ent narrator ?u_0

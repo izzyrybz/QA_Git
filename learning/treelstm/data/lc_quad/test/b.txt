@@ -1,0 +1,117 @@
+?u_0 regionServed #ent
+?u_0 ingredient #ent
+?u_0 country ?u_1
+?u_0 type Food
+?u_0 ingredient Coconut .?u_0 country ?u_1
+?u_0 ingredient Coconut .?u_0 type Food
+?u_0 country ?u_1 .?u_0 type Food
+?u_0 ingredient Coconut .?u_0 country ?u_1 .?u_0 type Food
+?u_1 ingredient Coconut
+?u_1 type Food
+?u_1 ingredient Coconut .?u_1 type Food
+?u_0 country ?u_1 .?u_1 type Food
+?u_1 ingredient Coconut .?u_0 type Food
+?u_0 ingredient Coconut .?u_1 type Food
+?u_1 country ?u_0
+?u_1 country ?u_0 .?u_0 type Food
+?u_1 ingredient Coconut .?u_1 country ?u_0
+?u_1 country ?u_0 .?u_1 type Food
+?u_1 ingredient Coconut .?u_1 country ?u_0 .?u_1 type Food
+#ent name ?u_0
+?u_0 chairman Patrcia_Amorim
+?u_0 type Person
+Patrcia_Amorim name ?u_0
+?u_1 chairman ?u_0
+?u_0 type Person
+?u_1 chairman ?u_0 .?u_0 type Person
+Patrcia_Amorim name ?u_1
+?u_1 type Person
+?u_1 chairman ?u_0 .?u_1 type Person
+Patrcia_Amorim name ?u_1 .?u_0 type Person
+Patrcia_Amorim name ?u_0 .?u_1 type Person
+?u_0 chairman ?u_1
+?u_0 chairman ?u_1 .?u_0 type Person
+?u_0 chairman ?u_1 .?u_1 type Person
+?u_0 chairman Patrcia_Amorim
+?u_0 chairman Patrcia_Amorim .?u_0 name ?u_1
+?u_0 name ?u_1 .?u_0 type Person
+?u_1 chairman Patrcia_Amorim
+?u_0 name ?u_1 .?u_1 type Person
+?u_0 chairman Patrcia_Amorim .?u_0 name ?u_1 .?u_1 type Person
+?u_1 name ?u_0 .?u_0 type Person
+?u_1 chairman Patrcia_Amorim .?u_1 name ?u_0
+?u_1 name ?u_0 .?u_1 type Person
+?u_1 chairman Patrcia_Amorim .?u_1 name ?u_0 .?u_0 type Person
+?u_0 genre #ent
+?u_0 computingPlatform Amiga
+?u_0 genre Amiga
+?u_0 computingPlatform ?u_1
+?u_1 computingPlatform ?u_0
+?u_0 computingPlatform Amiga
+?u_0 genre ?u_1
+?u_0 computingPlatform Amiga .?u_0 genre ?u_1
+?u_1 genre ?u_0
+?u_0 computingPlatform Amiga .?u_1 genre ?u_0
+?u_1 genre Amiga
+?u_1 computingPlatform Amiga
+?u_1 computingPlatform Amiga .?u_0 genre ?u_1
+?u_1 computingPlatform Amiga .?u_1 genre ?u_0
+?u_0 battles #ent
+?u_0 relation ?u_1
+?u_0 battles Battle_of_the_Bulge .?u_0 relation ?u_1
+?u_1 relation ?u_0
+?u_0 battles Battle_of_the_Bulge .?u_1 relation ?u_0
+?u_1 battles Battle_of_the_Bulge
+?u_1 battles Battle_of_the_Bulge .?u_0 relation ?u_1
+?u_1 battles Battle_of_the_Bulge .?u_1 relation ?u_0
+?u_0 computingPlatform #ent
+?u_0 genre ?u_1
+?u_0 computingPlatform Commodore_CDTV .?u_0 genre ?u_1
+?u_1 computingPlatform Commodore_CDTV
+#ent position #ent
+?u_0 restingPlace #ent
+?u_1 director ?u_0
+?u_0 restingPlace Ronda .?u_1 director ?u_0
+?u_1 restingPlace Ronda
+?u_0 birthPlace #ent
+?u_0 debutTeam ?u_1
+?u_0 type BaseballPlayer
+?u_0 birthPlace Houston .?u_0 debutTeam ?u_1
+?u_0 birthPlace Houston .?u_0 type BaseballPlayer
+?u_0 debutTeam ?u_1 .?u_0 type BaseballPlayer
+?u_0 birthPlace Houston .?u_0 debutTeam ?u_1 .?u_0 type BaseballPlayer
+?u_1 birthPlace Houston
+?u_1 type BaseballPlayer
+?u_1 birthPlace Houston .?u_1 type BaseballPlayer
+?u_0 debutTeam ?u_1 .?u_1 type BaseballPlayer
+?u_1 debutTeam ?u_0
+?u_1 debutTeam ?u_0 .?u_0 type BaseballPlayer
+?u_1 birthPlace Houston .?u_1 debutTeam ?u_0
+?u_1 debutTeam ?u_0 .?u_1 type BaseballPlayer
+?u_1 birthPlace Houston .?u_1 debutTeam ?u_0 .?u_1 type BaseballPlayer
+?u_0 international #ent
+?u_0 religion ?u_1
+?u_0 type PoliticalParty
+?u_0 international Muslim_Brotherhood .?u_0 religion ?u_1
+?u_0 international Muslim_Brotherhood .?u_0 type PoliticalParty
+?u_0 religion ?u_1 .?u_0 type PoliticalParty
+?u_0 international Muslim_Brotherhood .?u_0 religion ?u_1 .?u_0 type PoliticalParty
+?u_1 international Muslim_Brotherhood
+?u_1 type PoliticalParty
+?u_1 international Muslim_Brotherhood .?u_1 type PoliticalParty
+?u_1 international Muslim_Brotherhood .?u_0 type PoliticalParty
+?u_0 international Muslim_Brotherhood .?u_1 type PoliticalParty
+#ent knownFor ?u_0
+#ent knownFor ?u_0
+?u_1 knownFor ?u_0
+Sam_Loyd knownFor ?u_0 .Eric_Schiller knownFor ?u_0
+Sam_Loyd knownFor ?u_0 .?u_1 knownFor ?u_0
+Eric_Schiller knownFor ?u_0 .?u_1 knownFor ?u_0
+Sam_Loyd knownFor ?u_0 .Eric_Schiller knownFor ?u_0 .?u_1 knownFor ?u_0
+?u_0 knownFor ?u_1
+Sam_Loyd knownFor ?u_1
+Sam_Loyd knownFor ?u_1 .Eric_Schiller knownFor ?u_0
+Eric_Schiller knownFor ?u_1
+Sam_Loyd knownFor ?u_0 .Eric_Schiller knownFor ?u_1
+Sam_Loyd knownFor ?u_1 .?u_0 knownFor ?u_1
+Eric_Schiller knownFor ?u_1 .?u_0 knownFor ?u_1

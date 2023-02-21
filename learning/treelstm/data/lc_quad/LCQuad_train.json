@@ -1,0 +1,8 @@
+[
+{
+    "_id": "2081", 
+    "corrected_question": "Who developed Git?", 
+    "intermediary_question": "Who <developed> <Git>?", 
+    "sparql_query": "SELECT ?object WHERE { <http://dbpedia.org/resource/Git> <http://dbpedia.org/property/developer>?object }", 
+    "sparql_template_id": 6
+}]

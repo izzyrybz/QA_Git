@@ -1,5 +1,8 @@
+import json
+import os
 from struct import Struct
 from rdflib import Graph
+from svmclassifier import SVMClassifier
 
 
 class Orchestrator:
@@ -546,7 +549,8 @@ class Orchestrator:
 
 
 if __name__ == "__main__":
-    data = json.load("/json_files/phrasemapping.json")
+    data = json.load("json_files/phrasemapping.json")
+    question = "Which commits have the user izzyrybz made?"
 
     output_file = 'all_possible_sql'
     question_type_classifier_path = "/question_type_classifier"
@@ -554,13 +558,9 @@ if __name__ == "__main__":
     question_type_classifier = SVMClassifier(os.path.join(question_type_classifier_path, "svm.model"))
     double_relation_classifier = SVMClassifier(os.path.join(double_relation_classifier_path, "svm.model"))
 
-    stats = Stats()
 
-    parser = LC_QaudParser()
-    kb = parser.kb
-
-    o = Orchestrator(question_type_classifier, double_relation_classifier, parser, question_type_classifier_path, True)
-
+    o = Orchestrator(question_type_classifier, double_relation_classifier, question_type_classifier_path, True)
+'''
     tmp = []
     output = []
     na_list = []
@@ -611,3 +611,4 @@ if __name__ == "__main__":
     with open('na_list_lcquadtest.txt', 'w') as f:
         for i in na_list:
             f.write("{}\n".format(i))
+'''

@@ -108,7 +108,7 @@
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "http://dbpedia.org/ontology/computingInput"
+                        "uri": "http://dbpedia.org/property/used"
                     }
                 ]
             },
@@ -132,7 +132,7 @@
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "http://dbpedia.org/property/used"
+                        "uri": "http://dbpedia.org/ontology/computingInput"
                     }
                 ]
             },

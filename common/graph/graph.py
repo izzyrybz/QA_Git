@@ -9,9 +9,8 @@ from tqdm import tqdm
 
 
 class Graph:
-    def __init__(self, kb, logger=None):
+    def __init__(self, kb, ):
         self.kb = kb
-        self.logger = logger or logging.getLogger(__name__)
         self.nodes, self.edges = set(), set()
         self.entity_items, self.relation_items = [], []
         self.suggest_retrieve_id = 0
@@ -29,6 +28,9 @@ class Graph:
     def add_node(self, node):
         if node not in self.nodes:
             self.nodes.add(node)
+    
+    def top_uris(self, top=1):
+        return self.uris[:int(top * len(self.uris))]
 
     def remove_node(self, node):
         self.nodes.remove(node)
@@ -48,17 +50,31 @@ class Graph:
             self.remove_node(edge.dest_node)
 
     def count_combinations(self, entity_items, relation_items, number_of_entities, top_uri):
-        total = 0
+
+        entity_uris = [[uri_dict['uri'] for uri_dict in entity['uris']] for entity in entity_items]
+        entity_surface = [entity['surface'] for entity in entity_items]
+        relationship_uris = [[uri_dict['uri'] for uri_dict in relationship['uris']] for relationship in relation_items]
+        relationship_surface = [relationship['surface'] for relationship in relation_items]
+        
+        entity_combinations = itertools.combinations(range(len(entity_items['uris'])), 2)
+        relationship_combinations = itertools.permutations(range(len(relation_items['uris'])), 2)
+        print(entity_combinations)
+        '''total = 0
+    
         for relation_item in relation_items:
-            rel_uris_len = len(relation_item.top_uris(top_uri))
-            for entity_uris in itertools.product(*[items.top_uris(top_uri) for items in entity_items]):
-                total += rel_uris_len * len(list(itertools.combinations(entity_uris, number_of_entities)))
+            for entity_item in entity_items:
+                print(relation_item['uri'])
+                rel_uris_len = len(relation_item['uri'])
+                entity_uris_len = len(relation_item['uri'])
+                for entity_uris in itertools.product(*[items.top_uris(top_uri) for items in entity_items]):
+            total += rel_uris_len * len(list(itertools.combinations(entity_uris, number_of_entities)))'''
         return total
 
     def __one_hop_graph(self, entity_items, relation_items, threshold=None, number_of_entities=1):
         top_uri = 1
 
         total = self.count_combinations(entity_items, relation_items, number_of_entities, top_uri)
+        print("THIS IS TOTAL , total")
         if threshold is not None:
             while total > threshold:
                 top_uri -= 0.1

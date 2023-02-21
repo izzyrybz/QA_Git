@@ -149,7 +149,7 @@ if __name__ == "__main__":
     #generate all possible queries and check if they are within the knowledgegraph
     
     question_generator = QuestionGenerator()
-    #queries = question_generator.generate_sparql_queries(question_type,tokened_question,is_question_within_knowledge_graph_domain, knowledge_graph_r,knowledge_graph_e )
+    queries = question_generator.generate_sparql_queries(question_type,tokened_question)
 
 
 

@@ -1,0 +1,26 @@
+SELECT COUNT(?subject)
+WHERE {
+  ?subject <https://dbpedia.org/ontology/author> 'izzyrybz'
+}
+
+how many commits have izzyrybz made?
+
+
+
+
+PREFIX dbo: <https://dbpedia.org/ontology/>
+
+ASK WHERE {
+  ?s dbo:Calendar_date "2021-01-27T12:12:22+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+}
+
+Was there a commit on the 27th of Jan 2021?
+
+SELECT DISTINCT ?subject
+WHERE {
+  ?subject <https://dbpedia.org/ontology/author> 'izzyrybz'
+}
+
+Which commits have the user izzyrybz made?"
+
+HARD LEVEL:

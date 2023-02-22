@@ -35,40 +35,31 @@ def generate_combinations(predicate,subj,obj):
                 combinations.append(query)
                 '''
 
-def get_entity_relation_from_graph(knowledge_graph_info, entites, relations):
-    #print("in get entity and relation from knowledge_graph_info")
+
+
+def get_entity_relation_from_graph(knowledge_graph_info, entities, relations):
     graph_entities = []
-    for entity in entites:
-        #print(entity)
-        for item in knowledge_graph_info:
-            for uri in item.values():
-               if entity in uri:
-                    #print("does this work")
+    graph_relations = []
+
+    def search_item(item, target_list):
+        for graph_item in knowledge_graph_info:
+            for uri in graph_item.values():
+               if item in uri:
                     #unsure if this should be extended with the item since that shows the full relationship????
-                    if entity not in graph_entities:
-                        graph_entities.append(entity)
-            
+                    if item not in target_list:
+                        target_list.append(item)    
 
-            #if entity in item:
-    #print(graph_entities)
 
-    graph_relation = []
+    for entity in entities:
+        search_item(entity, graph_entities)
+
     for relation in relations:
-        #print(relation)
-        for item in knowledge_graph_info:
-            for uri in item.values():
-               if relation in uri:
-                    #print("does this work")
-                    #unsure if this should be extended with the item since that shows the full relationship????
-                    if relation not in graph_relation:
-                        graph_relation.append(relation)
+        search_item(relation, graph_relations)
+
+    return graph_entities, graph_relations
+
             
 
-
-    return graph_entities,graph_relation
-            
-
-            #if entity in item:
 
 class QuestionGenerator():
     def __init__(self):

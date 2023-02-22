@@ -125,7 +125,7 @@ class QuestionGenerator():
 
 #line 1
         set1_e_p_e = set(itertools.product(graph_entities,graph_relation,graph_entities))
-#line 2
+#line 2s
         set2_e_p_uri = set(itertools.product(graph_entities,graph_relation,['?uri']))
 #line 3
         set3_uri_p_e = set(itertools.product(['?uri'],graph_relation,graph_entities))

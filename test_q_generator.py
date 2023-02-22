@@ -59,7 +59,24 @@ def get_entity_relation_from_graph(knowledge_graph_info, entities, relations):
     return graph_entities, graph_relations
 
             
+def is_triple_in_graph(triple, graph):
+    for element in graph:
+        element = element
+        s = element['subject'].strip('"')
+        p = element['predicate'].strip('"')
+        o = element['object'].strip('"')
 
+        
+        #print(triple[0] , s)
+        #print(str(triple[1])  == str(p) , triple[1], p.strip() )
+        #print(triple[2]== o,triple[2], o)
+        #print("#"*10)
+
+        if (str(triple[0]) == str(s) or triple[0] == '?uri') and \
+        (str(triple[1]) == str(p) or triple[1] == '?uri') and \
+        (str(triple[2]) == str(o) or triple[2] == '?uri'):
+            return True
+    return False
 
 class QuestionGenerator():
     def __init__(self):
@@ -105,13 +122,24 @@ class QuestionGenerator():
         print("this is the relation can be found in the knowledge graph: ",graph_relation)
 
         #Generate all the possible combinations of the entites, realtion and uri
-        set1_e_p_e = set(itertools.product(graph_entities,graph_relation,graph_entities))
-        set2_e_p_uri = set(itertools.product(graph_entities,graph_relation,['?uri']))
-        set2_uri_p_e = set(itertools.product(['?uri'],graph_relation,graph_entities))
 
-        all_sets = set1_e_p_e|set2_e_p_uri|set2_uri_p_e
-        #for tup in all_sets:
-        #    print(tup)
+#line 1
+        set1_e_p_e = set(itertools.product(graph_entities,graph_relation,graph_entities))
+#line 2
+        set2_e_p_uri = set(itertools.product(graph_entities,graph_relation,['?uri']))
+#line 3
+        set3_uri_p_e = set(itertools.product(['?uri'],graph_relation,graph_entities))
+#line 4
+        all_sets = set1_e_p_e|set2_e_p_uri|set3_uri_p_e
+        
+        #special = ('?uri', 'https://dbpedia.org/ontology/author', 'izzyrybz')
+        #is_triple_in_graph(special,self.knowledge_graph_info)
+
+
+        for tup in all_sets:
+            #print(tup)
+            if(is_triple_in_graph(tup, self.knowledge_graph_info)):
+                print(tup)
 
         # I think the next step is now to check if this combination exists in the knowledge graph
         # i.e ('http://dbpedia.org/resource/Commit_(version_control)', 'https://dbpedia.org/ontology/author', '?uri') no

@@ -19,5 +19,6 @@ WHERE {
   ?subject <https://dbpedia.org/ontology/author> 'izzyrybz'
 }
 
-
 Which commits have the user izzyrybz made?"
+
+HARD LEVEL:

@@ -328,35 +328,33 @@ class PhraseMapping:
     def __init__(self):
         self.properties = []
         self.properties = preprocess_relations('turtle/dbpedia_3Eng_property.ttl', True)
-        #properties_class = preprocess_relations('turtle/dbpedia_3Eng_class.ttl', True)
         self.properties_knowledgegraph = preprocess_relations('turtle/knowledge_graph.ttl')
         self.subject_prop_object_ttl = process_knowledge_graph('turtle/knowledge_graph.ttl')
     
-        #print(properties_knowledgegraph)
         for key in self.properties_knowledgegraph.keys():
             if key in self.properties:
                 self.properties[key].extend(self.properties_knowledgegraph[key])
             else:
                 self.properties[key] = self.properties_knowledgegraph[key]
         
-        
-        #print(properties)
 
     def phrasemap_question(self, question,tokened_question):
         phrasemap_data=[]
         print('properties: ', len(self.properties))
 
-        #how to start the phrasemapping
         earl = get_earl_entities(question)
-        #print("This is earl",earl)
+        print("This is earl",earl)
+        print("#"*20)
         
         nliwod = get_nliwod_entities(question, self.properties)
-        #print("This is nliwod" ,nliwod)
+        print("This is nliwod" ,nliwod)
+        print("#"*20)
         if len(nliwod) > 0:
             earl['relations'] = merge_entity(earl['relations'], nliwod)
             
         spot_e = get_spotlight_entities(question)
-        #print("This is spot_e" ,spot_e)
+        print("This is spot_e" ,spot_e)
+        print("#"*20)
 
         if len(spot_e) > 0:
             earl['entities'] = merge_entity(earl['entities'], spot_e)
@@ -365,10 +363,12 @@ class PhraseMapping:
         spacy_e, spacy_r= spacy_parse(question,self.subject_prop_object_ttl)
         #print(spacy_e)
         if len(spacy_e) > 0:
-            #print("THIS IS SPACY",spacy_e)
+            print("THIS IS SPACY ENITIY",spacy_e)
+            print("#"*20)
             earl['entities'] = merge_entity(earl['entities'], spacy_e,)
         if len(spacy_r) > 0:
-            #print("THIS IS SPACY",spacy_r)
+            print("THIS IS SPACY RELATIONS",spacy_r)
+            print("#"*20)
             earl['relations'] = merge_entity(earl['relations'], spacy_r)
 
 

@@ -120,6 +120,8 @@ if __name__ == "__main__":
 # What year was Cristiano Ronaldo born?
 # When did the queen earn the throne?
 
+#Main focus : Which commits have the user izzyrybz made?
+
     print("Question:" ,question)
 
     #Parse the input question using spaCy and then create representation and dependency tree

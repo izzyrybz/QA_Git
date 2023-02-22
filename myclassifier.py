@@ -28,6 +28,7 @@ train_data = [
     {"question": "How many fingers do humans have?", "type": "count"},
     {"question": "How many planets are there in our solar system?", "type": "count"},
     {"question": "Do all birds have wings?", "type": "boolean"},
+    {"question": "Was there ever a female president of the United States", "type": "boolean"},
     {"question": "Are all reptiles cold-blooded?", "type": "boolean"},
     {"question": "How many days are there in a week?", "type": "count"},
     {"question": "which country has the most islands?", "type": "list"},

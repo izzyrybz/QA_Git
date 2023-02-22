@@ -29,8 +29,6 @@ class Graph:
         if node not in self.nodes:
             self.nodes.add(node)
     
-    def top_uris(self, top=1):
-        return self.uris[:int(top * len(self.uris))]
 
     def remove_node(self, node):
         self.nodes.remove(node)
@@ -49,43 +47,35 @@ class Graph:
         if edge.dest_node.is_disconnected():
             self.remove_node(edge.dest_node)
 
-    def count_combinations(self, entity_items, relation_items, number_of_entities, top_uri):
-
-        entity_uris = [[uri_dict['uri'] for uri_dict in entity['uris']] for entity in entity_items]
-        entity_surface = [entity['surface'] for entity in entity_items]
-        relationship_uris = [[uri_dict['uri'] for uri_dict in relationship['uris']] for relationship in relation_items]
-        relationship_surface = [relationship['surface'] for relationship in relation_items]
-        
-        entity_combinations = itertools.combinations(range(len(entity_items['uris'])), 2)
-        relationship_combinations = itertools.permutations(range(len(relation_items['uris'])), 2)
-        print(entity_combinations)
-        '''total = 0
-    
+    def count_combinations(self, entity_items, relation_items, number_of_entities, confidence_target):
+        total = 0
         for relation_item in relation_items:
-            for entity_item in entity_items:
-                print(relation_item['uri'])
-                rel_uris_len = len(relation_item['uri'])
-                entity_uris_len = len(relation_item['uri'])
-                for entity_uris in itertools.product(*[items.top_uris(top_uri) for items in entity_items]):
-            total += rel_uris_len * len(list(itertools.combinations(entity_uris, number_of_entities)))'''
+            rel_uris_len = len(relation_item['uri'])
+            for entity_uris in itertools.product(*[items.confidence_targets(confidence_target) for items in entity_items]):
+                total += rel_uris_len * len(list(itertools.combinations(entity_uris, number_of_entities)))
         return total
 
     def __one_hop_graph(self, entity_items, relation_items, threshold=None, number_of_entities=1):
-        top_uri = 1
+        confidence_target = 1
 
-        total = self.count_combinations(entity_items, relation_items, number_of_entities, top_uri)
-        print("THIS IS TOTAL , total")
+        total = self.count_combinations(entity_items, relation_items, number_of_entities, confidence_target)
+        print("THIS IS TOTAL " ,total)
         if threshold is not None:
+            print("um")
             while total > threshold:
-                top_uri -= 0.1
-                total = self.count_combinations(entity_items, relation_items, number_of_entities, top_uri)
+                print("we are stuck")
+                confidence_target -= 0.1
+                total = self.count_combinations(entity_items, relation_items, number_of_entities, confidence_target)
 
         with tqdm(total=total, disable=self.logger.level >= 10) as pbar:
+            print("wher are we")
             for relation_item in relation_items:
-                for relation_uri in relation_item.top_uris(top_uri):
-                    for entity_uris in itertools.product(*[items.top_uris(top_uri) for items in entity_items]):
+                for relation_uri in relation_item['uri']:
+                    for entity_uris in itertools.product(*[items['uri'] for items in entity_items]):
                         for entity_uri in itertools.combinations(entity_uris, number_of_entities):
                             pbar.update(1)
+                            print("HERE")
+
                             result = self.kb.one_hop_graph(entity_uri[0], relation_uri,
                                                            entity_uri[1] if len(entity_uri) > 1 else None)
                             if result is not None:

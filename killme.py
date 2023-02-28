@@ -1,6 +1,5 @@
 import numpy as np
 from common.graph.graph import Graph
-
 from common.query.querybuilder import QueryBuilder
 import kb
 from myclassifier import QuestionClassifier
@@ -22,7 +21,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     '''type_confidence = question_classifier.predict_proba([question])[0][question_type]
     if isinstance(QuestionClassifier.predict_proba([question])[0][question_type], (np.ndarray, list)):
         type_confidence = type_confidence[0]
-    '''
+    
     question_type_classifier = SVMClassifier("double_relation_classifier/svm.model")
     double_relation_classifier = SVMClassifier("/home/bell/rdf_code/question_type_classifier/svm.model")
     double_relation = False
@@ -30,10 +29,16 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         double_relation = double_relation_classifier.predict([question])
         print(double_relation_classifier.predict([question]))
         if double_relation == 1:
-            double_relation = True
-
+            double_relation = True'''
+        
+        #i dont think we can use svm models build on other data??? 
+        #it is throwing errors like crazy too 
+    double_relation = False
     graph = Graph(kb)
+    print(graph)
     query_builder = QueryBuilder()
+    print(query_builder)
+
     #I think this is where we need to focus
     graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
                                 sort_query=sort_query, h1_threshold=h1_threshold)
@@ -77,7 +82,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
 '''
     print(valid_walks, question_type)
 
-question = "Which commits have the user izzyrybz made?"
+question = "How many commits have the user izzyrybz made?"
 entities = [
             {
                 "confidence": 0.9239816818240237,
@@ -102,23 +107,23 @@ h1_threshold = 9999999
 relations = [
             {
                 "confidence": 0.75,
-                "uri": "https://dbpedia.org/ontology/author"
+                "uri": "http://dbpedia.org/ontology/author"
             },
 
             {
                 "confidence": 0.75,
-                "uri": "https://dbpedia.org/ontology/Description"
+                "uri": "http://dbpedia.org/ontology/Description"
             },
 
             
             {
                 "confidence": 0.5,
-                "uri": "https://dbpedia.org/ontology/author"
+                "uri": "http://dbpedia.org/ontology/author"
             },
            
             {
                 "confidence": 0.5,
-                "uri": "https://dbpedia.org/property/user"
+                "uri": "http://dbpedia.org/property/user"
             }
                 
 ]

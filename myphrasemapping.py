@@ -168,7 +168,7 @@ def get_spotlight_entities(query):
         print('Spotlight: ', query)
     return entities
 
-def get_nliwod_entities(query, hashmap):
+def get_nliwod_entities(query, properties):
     ignore_list = []
     entities = []
     singular_query = [stemmer.stem(word) if p.singular_noun(word) == False else stemmer.stem(p.singular_noun(word)) for word in query.lower().split(' ')]
@@ -186,10 +186,10 @@ def get_nliwod_entities(query, hashmap):
         indexlist[current]['surface'] = [locate, len(words[i])-1]
         current += len(singular_query[i])+1
         locate += len(words[i])+1
-    for key in hashmap.keys():
+    for key in properties.keys():
         #print("THIS IS KEY",key ,"and this is singularQ", singular_query)
         if key in string and len(key) > 2 and key not in ignore_list:
-            e_list = list(set(hashmap[key]))
+            e_list = list(set(properties[key]))
             k_index = string.index(key)
             if k_index in indexlist.keys():
                 surface = indexlist[k_index]['surface']
@@ -260,69 +260,59 @@ def add_item(item,list,question,word):
     
     return list
 
+def item_already_exists(item, list):
+    print(item,list)
 
 def spacy_parse(question, properties):
     nlp = spacy.load("en_core_web_sm")
     doc = nlp(question)
     entities = []
     relationships = []
-    entity={}
-    relation = {}
-    #print(properties)
+    
     for token in doc:
         for line in properties:
-            #print(token.text)
-            #checking if the word in the sentence exists within the subject, predicate or object of our knowledge graph
-            #the re.search and espace is for the regex expression so e.g "the_dog" is not selected when we look for "the"
-            if re.search(r'\b'+re.escape(token.text )+r'\b', line['subject']):
-                #print(token.text,line['subject'],"subject")
-                if not any(entity['uris'] == token.text for entity in entities):
-                    add_item(token.text,entity,question,token.text)
+            # check if token is in the subject, predicate or object of the knowledge graph
+            if re.search(r'\b'+re.escape(token.text)+r'\b', line['subject']):
+                # add entity if it does not exist
+                entity_uri = token.text
+                if not any(entity['uris'] == entity_uri for entity in entities):
+                    entity = {'uris': entity_uri}
+                    add_item(entity_uri, entity, question, token.text)
                     entities.append(entity)
-                    entity = copy.deepcopy(entity)
-                    #entities.append(token.text)
-                if not any(relation['uris'] == line['subject'] for relation in relationships):
-                    add_item(line['subject'],relation,question,token.text)
-                    relationships.append(relation)
-                    relation = copy.deepcopy(relation)
-
-            if re.search(r'\b'+re.escape(token.text )+r'\b', line['predicate']):
-                #print(token.text,line['predicate'],"predicate")
                 
-                if not any(relation['uris'] == token.text for relation in relationships):
-                    add_item(token.text,relation,question,token.text)
+                # add relationship if it does not exist
+                relation_uri = line['subject']
+                if not any(relation['uris'] == relation_uri for relation in relationships):
+                    relation = {'uris': relation_uri}
+                    add_item(relation_uri, relation, question, token.text)
                     relationships.append(relation)
-                    relation = copy.deepcopy(relation)
 
-            if re.search(r'\b'+re.escape(token.text )+r'\b', line['object']):
-                #print(token.text,line['object'],"object")
-                if not any(entity['uris'] == token.text  for entity in entities):
-                #if token.text not in entities:
-                    entity= add_item(token.text,entity,question,token.text)
+            if re.search(r'\b'+re.escape(token.text)+r'\b', line['predicate']):
+                # add relationship if it does not exist
+                relation_uri = token.text
+                if not any(relation['uris'] == relation_uri for relation in relationships):
+                    relation = {'uris': relation_uri}
+                    add_item(relation_uri, relation, question, token.text)
+                    relationships.append(relation)
+
+            if re.search(r'\b'+re.escape(token.text)+r'\b', line['object']):
+                object_value = line['object'].strip('"')
+                # add entity if it does not exist
+                if not any(entity['uris'] == object_value for entity in entities):
+                    entity = {'uris': object_value}
+                    add_item(object_value, entity, question, token.text)
                     entities.append(entity)
-                    entity = copy.deepcopy(entity)
                 
-                #print(relationships.keys())
-                if not any(relation['uris'] == line['predicate'] for relation in relationships):
-                    relation = add_item(line['predicate'],relation,question,token.text)
+                # add relationship if it does not exist
+                relation_uri = line['predicate']
+                if not any(relation['uris'] == relation_uri for relation in relationships):
+                    relation = {'uris': relation_uri}
+                    add_item(relation_uri, relation, question, token.text)
                     relationships.append(relation)
-                    relation = copy.deepcopy(relation)
 
-                    #relationships.append(line['predicate'])
-            
-            '''f len(entity)> 0 or len(relation)> 0:
-                relationships.append(relation)
-                entities.append(entity)
-                relation = copy.deepcopy(relation)
-                entity = copy.deepcopy(entity)'''
-
-
-    #print("Entities:", entities)
-    #print("Relationships:", relationships)
-    
-    return entities,relationships
-    
-
+    return entities, relationships
+   
+#maybe possible to use nltk to find dates and such
 
 class PhraseMapping:
     def __init__(self):

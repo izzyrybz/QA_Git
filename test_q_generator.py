@@ -58,6 +58,11 @@ def get_entity_relation_from_graph(knowledge_graph_info, entities, relations):
 
     return graph_entities, graph_relations
 
+def make_sparql(tup,where_clause):
+    subject = tup[0]
+    predicate = tup[1]
+    object = tup[2]
+
             
 def is_triple_in_graph(triple, graph):
     for element in graph:
@@ -106,7 +111,6 @@ class QuestionGenerator():
     def generate_sparql_queries(self,question_type, question_tokens):
         #check type and corresponding where clause
         if(question_type[0] == 'list'):
-            #print("we have a list")
             where_clause = 'SELECT DISTINCT'
         elif(question_type[0] == 'count'):
             where_clause = 'SELECT COUNT'
@@ -136,21 +140,19 @@ class QuestionGenerator():
         #is_triple_in_graph(special,self.knowledge_graph_info)
 
 
+        #checking exactly which 
+        tup_in_graph = []
         for tup in all_sets:
             #print(tup)
             if(is_triple_in_graph(tup, self.knowledge_graph_info)):
+                tup_in_graph.append(tup)
                 print(tup)
 
-        # I think the next step is now to check if this combination exists in the knowledge graph
-        # i.e ('http://dbpedia.org/resource/Commit_(version_control)', 'https://dbpedia.org/ontology/author', '?uri') no
-        # '?uri', 'https://dbpedia.org/ontology/author', 'izzyrybz' YES
-
     
+        '''for tup in tup_in_graph:
+            queries = make_sparql(tup,where_clause)
 
-       
-
-                
-        #with open('json_files/dmump.json', "w") as data_file:
-        #            json.dump(queries, data_file, sort_keys=True, indent=4, separators=(',', ': '))
+        with open('json_files/dmump.json', "w") as data_file:
+                    json.dump(queries, data_file, sort_keys=True, indent=4, separators=(',', ': '))'''
         
 

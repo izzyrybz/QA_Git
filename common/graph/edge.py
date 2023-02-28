@@ -1,13 +1,14 @@
 class Edge:
     def __init__(self, source_node, uri, dest_node):
+        print("HELP",dest_node)
         self.source_node = source_node
         self.uri = uri
         self.dest_node = dest_node
         self.source_node.add_outbound(self)
         self.dest_node.add_inbound(self)
-        self.__confidence = (
+        '''self.__confidence = (
                                 self.source_node.confidence if self.source_node is not None else 1) * self.uri.confidence * (
-                                self.dest_node.confidence if self.dest_node is not None else 1)
+                                self.dest_node.confidence if self.dest_node is not None else 1)'''
         self.__hash = ("" if source_node is None else self.source_node.__str__()) + self.uri.__str__() + (
             "" if dest_node is None else self.dest_node.__str__())
 

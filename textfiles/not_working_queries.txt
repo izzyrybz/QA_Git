@@ -1,0 +1,18 @@
+    When was the initial commit created?
+    Was there a commit on the 27th of Jan 2021?
+
+DOUBLE ?uri
+    What are the descriptions of the commits?
+    Who made the most commits?
+
+COMPLEX 
+    What is the purpose of this repository, and who is the intended audience?
+    What is the project structure of this repository, and how are the files and directories organized?
+    How are branches and tags used in this repository, and what is their purpose?
+    How is the repository's commit history structured, and what do the commit messages indicate about the changes that were made?
+    How are issues and pull requests managed in this repository, and what is the workflow for resolving them?
+    What is the coding style and guidelines used in this repository, and are there any automated tools for enforcing them?
+    How are dependencies managed in this repository, and what is the process for updating them?
+    What is the testing and deployment strategy for this repository, and are there any automated tests or build scripts?
+    How is documentation managed in this repository, and what is the process for updating it?
+    How are contributions from external contributors managed in this repository, and what is the process for reviewing and accepting them?

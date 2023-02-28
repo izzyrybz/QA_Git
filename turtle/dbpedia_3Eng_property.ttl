@@ -193,7 +193,7 @@
 <http://dbpedia.org/ontology/structuralSystem> <http://www.w3.org/2000/01/rdf-schema#label> "made of" .
 <http://dbpedia.org/ontology/computingInput> <http://www.w3.org/2000/01/rdf-schema#label> "play with" .
 <http://dbpedia.org/ontology/computingInput> <http://www.w3.org/2000/01/rdf-schema#label> "use" .
-<https://dbpedia.org/property/user> <http://www.w3.org/2000/01/rdf-schema#label> "user" .
+<http://dbpedia.org/property/user> <http://www.w3.org/2000/01/rdf-schema#label> "user" .
 <http://dbpedia.org/ontology/developer> <http://www.w3.org/2000/01/rdf-schema#label> "develop" .
 <http://dbpedia.org/ontology/developer> <http://www.w3.org/2000/01/rdf-schema#label> "developer" .
 <http://dbpedia.org/ontology/sisterStation> <http://www.w3.org/2000/01/rdf-schema#label> "sister station" .
@@ -235,9 +235,9 @@
 <http://dbpedia.org/ontology/series> <http://www.w3.org/2000/01/rdf-schema#label> "part of" .
 <http://dbpedia.org/ontology/locationCountry> <http://www.w3.org/2000/01/rdf-schema#label> "based in" .
 <http://dbpedia.org/ontology/locationCountry> <http://www.w3.org/2000/01/rdf-schema#label> "located in" .
-<https://dbpedia.org/page/Repository_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "repo".
-<https://dbpedia.org/page/Repository_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "repository".
-<https://dbpedia.org/page/Repository_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "repositories".
+<http://dbpedia.org/page/Repository_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "repo".
+<http://dbpedia.org/page/Repository_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "repository".
+<http://dbpedia.org/page/Repository_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "repositories".
 <http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#label> "reside in" .
 <http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#label> "residence" .
 <http://dbpedia.org/ontology/associatedMusicalArtist> <http://www.w3.org/2000/01/rdf-schema#label> "associated act" .

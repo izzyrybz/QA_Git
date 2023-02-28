@@ -45,6 +45,18 @@
                 "uris": [
                     {
                         "confidence": 0.75,
+                        "uri": "Merge pull request #1 from izzyrybz/test1 Test1"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    35,
+                    28
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
                         "uri": "izzyrybz"
                     }
                 ]
@@ -60,7 +72,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "https://dbpedia.org/ontology/Description"
+                        "uri": "http://dbpedia.org/ontology/description"
                     }
                 ]
             },
@@ -72,7 +84,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "https://dbpedia.org/ontology/author"
+                        "uri": "http://dbpedia.org/ontology/author"
                     }
                 ]
             },
@@ -84,7 +96,7 @@
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "https://dbpedia.org/ontology/author"
+                        "uri": "http://dbpedia.org/ontology/author"
                     }
                 ]
             },
@@ -96,19 +108,7 @@
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "https://dbpedia.org/property/user"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    23,
-                    3
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/property/computingInput"
+                        "uri": "http://dbpedia.org/property/user"
                     }
                 ]
             },
@@ -121,6 +121,18 @@
                     {
                         "confidence": 0.5,
                         "uri": "http://dbpedia.org/property/used"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    23,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/property/computingInput"
                     }
                 ]
             },

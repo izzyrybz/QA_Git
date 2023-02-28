@@ -100,26 +100,6 @@ if __name__ == "__main__":
 # Define the input question
     question = "Which commits have the user izzyrybz made?"
 
-# Alternative questions
-# Which commits have the user izzyrybz made?
-# How many commits have the user izzyrybz made?
-# Who is the mayor of the capital of French Polynesia?
-# When was the initial commit created?
-# How many merges have there been?
-# When was world war 2?
-# What language is the repository written in?
-# Who is the wife of Obama?
-# How many commits have there been for the repo?
-
-#What is the total number of other tenant of the stadia whose one of the tenant is Raptors 905?
-#Count everyone who studied at an institute which are in Suburbs?
-
-# Did world war 2 happen?
-# Is Isabelle Rybank in office?
-# Can Sebastian mountain climb?
-# What year was Cristiano Ronaldo born?
-# When did the queen earn the throne?
-
 #Main focus : Which commits have the user izzyrybz made?
 
     print("Question:" ,question)
@@ -138,8 +118,8 @@ if __name__ == "__main__":
     print("Type of question:",question_type)
 
     #Knowledge Graph generator to a ttl file that we can use a properties
-    #KnowledgeGraphGenerator()
-    #print("Knowledge graph generated")
+    KnowledgeGraphGenerator()
+    print("Knowledge graph generated")
 
     #We create a phrase mapping
     phrasemapper = PhraseMapping()

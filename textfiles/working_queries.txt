@@ -1,0 +1,5 @@
+How many commits have the user izzyrybz made?
+How many commits have izzyrybz made?
+Which commits have the user izzyrybz made?
+Which commit had the description 'initial commit'? - needs ranking
+Provide the commits between 2023-01-27 and 2023-01-30? - works but needs exact dates and will not work with other formatting

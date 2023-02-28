@@ -4,20 +4,23 @@ import numpy as np
 
 class Node:
     def __init__(self, uris, mergable=False):
+        
         if isinstance(uris, Uri):
-            self.__uris = set([uris])
-        elif isinstance(uris, list):
-            self.__uris = set()
-            for uri in uris:
-                if isinstance(uri, Uri):
-                    self.__uris.add(uri)
-                elif isinstance(uris, list):
-                    self.__uris.update(uri)
-        self.uris_hash = self.__str__()
-        self.mergable = mergable
-        self.inbound = []
-        self.outbound = []
-        self.__confidence = np.prod([uri.confidence for uri in self.__uris])
+            self.__uris = set([uris])        
+            self.uris_hash = self.__str__()
+            self.mergable = mergable
+            self.inbound = []
+            self.outbound = []
+            self.__confidence = np.prod([uri.confidence for uri in self.__uris])
+        else:
+            print(("'"+uris+"'")  )
+            self.__uris = ("'"+uris+"'")        
+            self.uris_hash = uris
+            self.mergable = mergable
+            self.inbound = []
+            self.outbound = []
+            self.__confidence = 0.5
+            print("leave node",self.__uris)
 
     @property
     def confidence(self):
@@ -25,7 +28,8 @@ class Node:
 
     @property
     def uris(self):
-        return self.__uris
+        #print("is it here?")
+        return str(self.__uris)
 
     def is_disconnected(self):
         return len(self.inbound) == 0 and len(self.outbound) == 0
@@ -93,4 +97,4 @@ class Node:
         return not result
 
     def __str__(self):
-        return "\n".join(sorted([uri.__str__() for uri in self.__uris]))
+        return self.uris

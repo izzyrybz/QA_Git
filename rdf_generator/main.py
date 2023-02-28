@@ -92,16 +92,17 @@ commits = URIRef("http://dbpedia.org/resource/Commit_(version_control)")
 # I think we can create namespace for like entity or ontology 
 # https://dbpedia.org/ontology/author ???
 #
-Author = URIRef("https://dbpedia.org/ontology/author")
-Description = URIRef("https://dbpedia.org/ontology/Description")
-Calendar_date = URIRef("https://dbpedia.org/ontology/Calendar_date")
+Author = URIRef("http://dbpedia.org/ontology/author")
+Description = URIRef("http://dbpedia.org/ontology/description")
+Calendar_date = URIRef("http://dbpedia.org/ontology/Calendar_date")
 
 
 data=[]
 g = Graph()
 
 for commit in history:
-    urirefstring = "http://example.org/"+ commit["commit_ref"]
+    #possible to make this https://github.com/izzyrybz/rdf_code_extended/commit+commit["commit_ref"] but we need to make sure of the uri for that
+    urirefstring = "http://example.org/"+ commit['commit_ref']
     urirefstring= urirefstring.replace(" ", "")
     commit_uri = URIRef(urirefstring)
     #commit_uri = commits[commit['commit_ref']]

@@ -11,6 +11,7 @@ class QueryBuilder:
         graph.merge_edges()
 
         paths = self.__find_paths_start_with_entities(graph, graph.entity_items, graph.relation_items, graph.edges)
+        print(paths)
 
         paths = paths.remove_duplicates()
 

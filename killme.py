@@ -1,9 +1,10 @@
+import json
 import numpy as np
 from common.graph.graph import Graph
 from common.query.querybuilder import QueryBuilder
 import kb
 from myclassifier import QuestionClassifier
-import parser
+#import parser
 from svmclassifier import SVMClassifier
 
 class Struct(object): pass
@@ -22,7 +23,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     if isinstance(QuestionClassifier.predict_proba([question])[0][question_type], (np.ndarray, list)):
         type_confidence = type_confidence[0]
     
-    question_type_classifier = SVMClassifier("double_relation_classifier/svm.model")
+    question_type_classifier = SVMClassifier("question_type_classifier/svm.model")
     double_relation_classifier = SVMClassifier("/home/bell/rdf_code/question_type_classifier/svm.model")
     double_relation = False
     if double_relation_classifier is not None:
@@ -35,14 +36,14 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         #it is throwing errors like crazy too 
     double_relation = False
     graph = Graph(kb)
-    print(graph)
+    #print(graph)
     query_builder = QueryBuilder()
-    print(query_builder)
+    #print(query_builder)
 
     #I think this is where we need to focus
     graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
                                 sort_query=sort_query, h1_threshold=h1_threshold)
-
+    exit()
     valid_walks = query_builder.to_where_statement(graph, parser.parse_queryresult, ask_query=ask_query,
                                                     count_query=count_query, sort_query=sort_query)
 
@@ -52,6 +53,8 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         query_builder = QueryBuilder()
         graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
                                     sort_query=sort_query, h1_threshold=h1_threshold)
+        
+        
         valid_walks_new = query_builder.to_where_statement(graph, parser.parse_queryresult,
                                                             ask_query=ask_query,
                                                             count_query=count_query, sort_query=sort_query)
@@ -82,49 +85,33 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
 '''
     print(valid_walks, question_type)
 
-question = "How many commits have the user izzyrybz made?"
-entities = [
-            {
-                "confidence": 0.9239816818240237,
-                "uri": "http://dbpedia.org/resource/Commit_(version_control)"
-            },
-    
-            {
-                "confidence": 0.9170735543251727,
-                "uri": "http://dbpedia.org/resource/User_interface"
-            },
 
-            {
-                "confidence": 0.8956483894223672,
-                "uri": "http://dbpedia.org/resource/Langues_d'o\u00efl"
-            },
-        
-            {
-                "confidence": 0.75,
-                "uri": "izzyrybz"
-            }]
+   
+'''
+
+question = "Which commit had the description 'initial commit'? "
+
+entity_uris = []
+relations_uris = []
+with open('json_files/phrasemapping.json','r') as fp:
+    phrasemap = json.load(fp)
+
+for item in phrasemap:
+    entities = item['entities']
+    relations = item['relations']
+
+for entity_uri in entities:
+    entity_uris.append(entity_uri['uris'][0])
+
+for relations_uri in relations:
+    relations_uris.append(relations_uri['uris'][0])
+
+print(entity_uris)
+
+print(relations_uris)
+
 h1_threshold = 9999999
-relations = [
-            {
-                "confidence": 0.75,
-                "uri": "http://dbpedia.org/ontology/author"
-            },
 
-            {
-                "confidence": 0.75,
-                "uri": "http://dbpedia.org/ontology/Description"
-            },
 
-            
-            {
-                "confidence": 0.5,
-                "uri": "http://dbpedia.org/ontology/author"
-            },
-           
-            {
-                "confidence": 0.5,
-                "uri": "http://dbpedia.org/property/user"
-            }
-                
-]
-generate_query(question,entities,relations,h1_threshold,question_type=2)
+generate_query(question,entity_uris,relations_uris,h1_threshold,question_type=2)
+'''

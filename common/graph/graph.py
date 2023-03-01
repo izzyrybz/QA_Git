@@ -35,9 +35,9 @@ class Graph:
         if isinstance(uris, (int)):
             uris = self.__get_generic_uri(uris, 0)
             mergable = True
-        print("create_or_get_node",uris)
+        #print("create_or_get_node",uris)
         new_node = Node(uris, mergable)
-        print("past node ", new_node)
+        #print("past node ", new_node)
         for node in self.nodes:
             if node == new_node:
                 return node
@@ -66,14 +66,28 @@ class Graph:
 
     def count_combinations(self, entity_items, relation_items, number_of_entities):
         total = 0
+        uri_count=0
         for relation_item in relation_items:
-            rel_uris_len = len(relation_item['uri'])
+            uri_count = uri_count +1 
             for entity_uris in itertools.product(*[items for items in entity_items]):
-                total += rel_uris_len * len(list(itertools.combinations(entity_uris, number_of_entities)))
+                total += uri_count * len(list(itertools.combinations(entity_uris, number_of_entities)))
+        
+        ''''total = 0
+        num_relations = 0
+        num_entities = 0
+        for relation_item in relation_items:
+            #print(relation_item)
+            num_relations =num_relations+1
+        for entity_item in entity_items:
+            num_entities=num_entities+1
+        
+        total = num_entities*num_relations'''
+
         return total
 
     def transform_q_into_jena(self, query):
         query = query.split()
+        #print(query)
         
         for i,item in enumerate(query):
             if item in 'where' and query[i+1] in '{':
@@ -84,20 +98,43 @@ class Graph:
                         query[i+tripple_index] = current_tripple
                         #print(current_tripple)
                     elif(not is_var(current_tripple)):
-                        current_tripple = "'"+current_tripple+"'"
-                        query[i+tripple_index] = current_tripple
+                        #print("CUURENT TRIPPLE",current_tripple)
+                        if current_tripple in " ":
+                            print("IT IS POSSIBLE WE HAVE A DESCRIPTION")
+                        else:
+                            current_tripple = "'"+current_tripple+"'"
+                            query[i+tripple_index] = current_tripple
                         #print(current_tripple)
         delimiter = " "
         query = delimiter.join(query)
         return query
             
+    def create_all_combinations(self,entites, relations):
+        all_entites =[]
+        all_relations=[]
+        print(relations)
+        
+        for entity in entites:
+            all_entites.append(entity['uri'])
+        
+        for relation in relations:
+            all_relations.append(relation['uri'])
+        
+        #print(all_entites)
+        #print(all_relations)
+
+        set1_e_p_e = set(itertools.product(all_entites,all_relations,all_entites))
+#line 2s
+        set2_e_p_uri = set(itertools.product(all_entites,all_relations,[None]))
+#line 3
+        set3_uri_p_e = set(itertools.product([None],all_relations,all_entites))
+#line 4
+        all_sets = set1_e_p_e|set2_e_p_uri|set3_uri_p_e
+
+        return all_sets
 
 #this used to be in the kb file, but since we dont use kbpedia as endpoint put it here.,
     def one_hop_graph(self, entity1_uri, relation_uri, entity2_uri=None):
-        # print('kb one_hop_graph')
-        #print("THIS IS RELATION URI" ,relation_uri,entity1_uri)
-        #relation_uri = self.uri_to_sparql(relation_uri)
-        #entity1_uri = self.uri_to_sparql(entity1_uri)
         if entity2_uri is None:
             entity2_uri = "?u1"
         else:
@@ -105,11 +142,10 @@ class Graph:
 
         query_types = [u"{ent2} {rel} {ent1}",
                        u"{ent1} {rel} {ent2}",
-                       u"?u1 {type} {rel}"]
+                       u"?u1 {type} {rel} "]
         where = ""
         for i in range(len(query_types)):
             #print("THIS IS I", i)
-            
                         
             where = where + u"UNION {{ values ?m {{ {} }} {{select ?u1 where {{ {} }} }} }}\n". \
                 format(i,
@@ -118,26 +154,14 @@ class Graph:
                            rel=relation_uri,
                            ent1=entity1_uri,
                            ent2=entity2_uri,
-                           #WTF e type_uri, dbpedia ???
-                           #type=self.type_uri,
-                           type = "?o",
-
-                           #query_prefix() returnerar en tom sträng???
-                           #prefix=self.query_prefix()))
+                           type = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
                            prefix = ""
                            ))
         where = where[6:]
         where = self.transform_q_into_jena(where)
 
-        #print("THIS IS WHERE" , )
         query = u"""{prefix}
 SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
-        
-       
-
-        
-        #print("THIS IS Q"  ,query)
-        #OKEJ SO THEY START QUERYING HERE ;WHY???
         
         response = requests.get("http://localhost:3030/dbpedia/sparql", params={"query": query})
 
@@ -150,45 +174,70 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
             print("Query failed with status code", response.status_code)
 
 
-        '''status, response = self.query(query)
-        if status == 200 and len(response["results"]["bindings"]) > 0:
-            output = response["results"]["bindings"]
-            return output
-        '''        
-
     def __one_hop_graph(self, entity_items, relation_items, threshold=None, number_of_entities=1):
         #print("WE ARE IN ONE HOP WITH E R ",entity_items, relation_items)
 
-        total = self.count_combinations(entity_items, relation_items, number_of_entities)
-        #print("THIS IS TOTAL " ,total)
-        if threshold is not None:
-            #print(threshold)
-            while total > threshold:
-                print("we are stuck")
-                total = self.count_combinations(entity_items, relation_items, number_of_entities)
+        all_combinations = self.create_all_combinations(entity_items,relation_items)
+        #print("THIS IS ALL THE COBINATIONS", all_combinations)
 
-        with tqdm(total=total) as progress_bar:
+        with tqdm(total=len(all_combinations)) as progress_bar:
+            for tripple in all_combinations:
+                progress_bar.update(1)
+                print("sending in ",tripple[0], tripple[1],tripple[2])
+                result = self.one_hop_graph(tripple[0], tripple[1],tripple[2])
+                if result is not None:
+                            #print("THIS IS RESLUT", result)
+                            for item in result:
+                                m = int(item["m"]["value"])
+                                uri = tripple[2] if tripple[2] is not None else 0
+                                if m == 0:
+                                    n_s = self.create_or_get_node(uri, True)
+                                    #print(entity_uri[0])
+                                    n_d = self.create_or_get_node(tripple[0])
+                                    e = Edge(n_s, tripple[1], n_d)
+                                    self.add_edge(e)
+                                elif m == 1:
+                                    n_s = self.create_or_get_node(tripple[0])
+                                    n_d = self.create_or_get_node(uri, True)
+                                    e = Edge(n_s, tripple[1], n_d)
+                                    self.add_edge(e)
+                                elif m == 2:
+                                    n_s = self.create_or_get_node(uri)
+                                    n_d = self.create_or_get_node(tripple[1])
+                                    #e = Edge(n_s, Uri(self.kb.type_uri, self.kb.parse_uri), n_d)
+                                    #not sure what to do about that
+                                    self.add_edge(e)
+            for edge in self.edges:
+                print("dest node",edge.dest_node)
+                print("source_node",edge.source_node.raw_variable)
+                print(edge)
+
+    
+
+    '''
+        with tqdm(total=60) as progress_bar:
             print("we are tqdm")
             all_entity_uris = []
             for relation_item in relation_items:
                 relation_uri = relation_item['uri']
                 for item in entity_items:
                         all_entity_uris.append(item['uri'])
-                combinations_entity = itertools.combinations(all_entity_uris,2)
-                
+                #print(all_entity_uris)
+                combinations_entity = set(itertools.permutations(all_entity_uris,2))
+                #for combi in combinations_entity:
+                #    print(combi)
                 for entity_uris in combinations_entity:
-                    #print("gick den sönder ",entity_uris)
-                    for entity_uri in itertools.combinations(entity_uris, number_of_entities):
+                    for entity_uri in itertools.combinations(entity_uris, number_of_entities ):
+
                         progress_bar.update(1)
-                        #print("HERE")
-
-                        #this one is different?
-
+                        #print(entity_uri)
+                        print("sending in ",entity_uri[0], relation_uri,entity_uri[1] if len(entity_uri) > 1 else None)
                         result = self.one_hop_graph(entity_uri[0], relation_uri,
                                                         entity_uri[1] if len(entity_uri) > 1 else None)
                         #The result is a query answer, so idk why
 
                         if result is not None:
+                            print(result)
                             for item in result:
                                 m = int(item["m"]["value"])
                                 uri = entity_uri[1] if len(entity_uri) > 1 else 0
@@ -206,10 +255,16 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
                                 elif m == 2:
                                     n_s = self.create_or_get_node(uri)
                                     n_d = self.create_or_get_node(relation_uri)
-                                    e = Edge(n_s, Uri(self.kb.type_uri, self.kb.parse_uri), n_d)
+                                    #e = Edge(n_s, Uri(self.kb.type_uri, self.kb.parse_uri), n_d)
+                                    #not sure what to do about that
                                     self.add_edge(e)
             for edge in self.edges:
+                print("dest node",edge.dest_node)
+                print("source_node",edge.source_node.raw_variable)
                 print(edge)
+     '''       
+
+                
 
     def find_minimal_subgraph(self, entity_items, relation_items, double_relation=False, ask_query=False,
                               sort_query=False, h1_threshold=None):
@@ -219,38 +274,38 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
             self.relation_items.append(self.relation_items[0])
 
         # Find subgraphs that are consist of at least one entity and exactly one relation
-        # self.logger.info("start finding one hop graph")
+        
         self.__one_hop_graph(self.entity_items, self.relation_items, number_of_entities=int(ask_query) + 1,
                              threshold=h1_threshold)
-        # self.logger.info("finding one hop graph finished")
-        # print('one hop graph: ')
-        # for edge in self.edges:
-        #     print(edge.source_node, edge, edge.dest_node)
+    
 
         if len(self.edges) > 100:
             return
+        
+
+    
 
         # Extend the existing edges with another hop
-        # self.logger.info("Extend edges with another hop")
-        self.__extend_edges(self.edges, relation_items)
 
-        # print('extend_edges: ')
-        # for edge in self.edges:
-        #     print(edge.source_node, edge, edge.dest_node)
+        #self.__extend_edges(self.edges, relation_items)
+
 
 
     def __extend_edges(self, edges, relation_items):
         new_edges = set()
         total = 0
         for relation_item in relation_items:
-            for relation_uri in relation_item.uris:
+            print(relation_item)
+            for relation_uri in relation_item['uri']:
                 total += len(edges)
         with tqdm(total=total) as progress_bar:
             for relation_item in relation_items:
-                for relation_uri in relation_item.uris:
-                    for edge in edges:
-                        progress_bar.update(1)
-                        new_edges.update(self.__extend_edge(edge, relation_uri))
+                #for relation_uri in relation_item['uri']:
+                relation_uri = relation_item['uri']
+                for edge in edges:
+                    progress_bar.update(1)
+                    print(edge,relation_uri)
+                    new_edges.update(self.__extend_edge(edge, relation_uri))
         for e in new_edges:
             self.add_edge(e)
 

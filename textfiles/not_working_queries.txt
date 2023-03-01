@@ -5,6 +5,7 @@ DOUBLE ?uri
     What are the descriptions of the commits?
     Who made the most commits?
 
+
 COMPLEX 
     What is the purpose of this repository, and who is the intended audience?
     What is the project structure of this repository, and how are the files and directories organized?
@@ -16,3 +17,6 @@ COMPLEX
     What is the testing and deployment strategy for this repository, and are there any automated tests or build scripts?
     How is documentation managed in this repository, and what is the process for updating it?
     How are contributions from external contributors managed in this repository, and what is the process for reviewing and accepting them?
+
+FUTURE
+    In what commits did the file "___" have changes

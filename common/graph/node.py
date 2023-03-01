@@ -6,21 +6,24 @@ class Node:
     def __init__(self, uris, mergable=False):
         
         if isinstance(uris, Uri):
-            self.__uris = set([uris])        
+            self.__uris = set([uris])
+            self.raw_variable =uris   
             self.uris_hash = self.__str__()
             self.mergable = mergable
             self.inbound = []
             self.outbound = []
             self.__confidence = np.prod([uri.confidence for uri in self.__uris])
         else:
-            print(("'"+uris+"'")  )
-            self.__uris = ("'"+uris+"'")        
+            #print(("'"+uris+"'")  )
+            self.__uris = ("'"+uris+"'")
+            self.raw_varibel =uris   
+        
             self.uris_hash = uris
             self.mergable = mergable
             self.inbound = []
             self.outbound = []
             self.__confidence = 0.5
-            print("leave node",self.__uris)
+            #print("leave node",self.__uris)
 
     @property
     def confidence(self):
@@ -52,8 +55,10 @@ class Node:
         if len(self.__uris) == 1:
             return next(iter(self.__uris))
         return None
+    
 
     def __are_all_uris_of_type(self, uri_type):
+        #print(u.uri_type for u in self.__uris)
         uris_type = set([u.uri_type for u in self.__uris])
         return len(uris_type) == 1 and uris_type.pop() == uri_type
 
@@ -97,4 +102,7 @@ class Node:
         return not result
 
     def __str__(self):
-        return self.uris
+        if isinstance(self.__uris, Uri):
+            return "\n".join(sorted([uri.__str__() for uri in self.__uris]))
+        else:
+            return self.uris

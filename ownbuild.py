@@ -5,6 +5,7 @@ from myclassifier import QuestionClassifier
 from myphrasemapping import PhraseMapping
 from test_q_generator import QuestionGenerator
 from knowledgegraph_generator import KnowledgeGraphGenerator
+from killme import generate_query
 import spacy
 from spacy import displacy
 from nltk import Tree
@@ -52,6 +53,34 @@ def dependecy_tree_generation(question):
     
     return dep_tree
 
+def prepare_data(question_type):
+     
+    entity_uris = []
+    relations_uris = []
+    with open('json_files/phrasemapping.json','r') as fp:
+        phrasemap = json.load(fp)
+
+    for item in phrasemap:
+        entities = item['entities']
+        relations = item['relations']
+
+    for entity_uri in entities:
+        entity_uris.append(entity_uri['uris'][0])
+
+    for relations_uri in relations:
+        relations_uris.append(relations_uri['uris'][0])
+    
+    if question_type == 'count':
+        question_type = 2
+    
+    if question_type == 'boolean':
+        question_type = 1
+    
+    else:
+        question_type = 0
+
+    return entity_uris, relations_uris, question_type
+
 
 if __name__ == "__main__":
     # Load the spaCy model
@@ -98,7 +127,7 @@ if __name__ == "__main__":
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question
-    question = "Which commits have the user izzyrybz made?"
+    question = "Was there a commit on the 27th of Jan 2023?"
 
 #Main focus : Which commits have the user izzyrybz made?
 
@@ -128,10 +157,16 @@ if __name__ == "__main__":
 
 
 
-    #generate all possible queries and check if they are within the knowledgegraph
+   #prepare the data for the question_generator
+    entites,relations,num_question_type = prepare_data(question_type)
+    h1_threshold=999999
+
+    question_generator = generate_query(question,entites,relations,h1_threshold,num_question_type)
     
-    question_generator = QuestionGenerator()
-    queries = question_generator.generate_sparql_queries(question_type,tokened_question)
+
+    #generate all possible queries and check if they are within the knowledgegraph
+    #question_generator = QuestionGenerator()
+    #queries = question_generator.generate_sparql_queries(question_type,tokened_question)
 
 
 

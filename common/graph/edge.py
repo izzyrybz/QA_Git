@@ -1,6 +1,6 @@
 class Edge:
     def __init__(self, source_node, uri, dest_node):
-        print("HELP",dest_node)
+        #print("HELP",dest_node)
         self.source_node = source_node
         self.uri = uri
         self.dest_node = dest_node

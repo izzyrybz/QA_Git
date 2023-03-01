@@ -260,8 +260,6 @@ def add_item(item,list,question,word):
     
     return list
 
-def item_already_exists(item, list):
-    print(item,list)
 
 def spacy_parse(question, properties):
     nlp = spacy.load("en_core_web_sm")
@@ -319,7 +317,9 @@ class PhraseMapping:
         self.properties = []
         self.properties = preprocess_relations('turtle/dbpedia_3Eng_property.ttl', True)
         self.properties_knowledgegraph = preprocess_relations('turtle/knowledge_graph.ttl')
-        self.subject_prop_object_ttl = process_knowledge_graph('turtle/knowledge_graph.ttl')
+        self.knowledgeG_s_p_o = process_knowledge_graph('turtle/knowledge_graph.ttl')
+        self.properties_s_p_o = process_knowledge_graph('turtle/dbpedia_3Eng_property.ttl')
+
     
         for key in self.properties_knowledgegraph.keys():
             if key in self.properties:
@@ -350,15 +350,15 @@ class PhraseMapping:
             earl['entities'] = merge_entity(earl['entities'], spot_e)
 
         #spacy is used to check if the knowledge graph contains relations or entities that the question does. 
-        spacy_e, spacy_r= spacy_parse(question,self.subject_prop_object_ttl)
+        spacy_e, spacy_r= spacy_parse(question,self.knowledgeG_s_p_o)
+        print("THIS IS SPACY ENITIY",spacy_e)
+        print("#"*20)
+        print("THIS IS SPACY RELATIONS",spacy_r)
+        print("#"*20)
         #print(spacy_e)
         if len(spacy_e) > 0:
-            print("THIS IS SPACY ENITIY",spacy_e)
-            print("#"*20)
             earl['entities'] = merge_entity(earl['entities'], spacy_e,)
         if len(spacy_r) > 0:
-            print("THIS IS SPACY RELATIONS",spacy_r)
-            print("#"*20)
             earl['relations'] = merge_entity(earl['relations'], spacy_r)
 
 
@@ -392,6 +392,6 @@ class PhraseMapping:
         with open('json_files/phrasemapping.json', "w") as data_file:
             json.dump(phrasemap_data, data_file, sort_keys=True, indent=4, separators=(',', ': '))
         
-        #is_question_within_knowledge_graph_domain = knowledge_graph_check(tokened_question, self.subject_prop_object_ttl)
+        #is_question_within_knowledge_graph_domain = knowledge_graph_check(tokened_question, self.knowledgeG_s_p_o)
 
         #return is_question_within_knowledge_graph_domain,spacy_r,spacy_e

@@ -1,0 +1,42 @@
+?u1 http://dbpedia.org/property/computingInput izzyrybz
+izzyrybz http://dbpedia.org/property/computingInput ?u1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/property/computingInput ?u1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/property/computingInput izzyrybz
+?u1 http://dbpedia.org/ontology/computingInput Merge pull request #1 from izzyrybz/test1 Test1
+?u1 http://dbpedia.org/property/used izzyrybz
+izzyrybz http://dbpedia.org/ontology/computingInput Merge pull request #1 from izzyrybz/test1 Test1
+izzyrybz http://dbpedia.org/ontology/author Merge pull request #1 from izzyrybz/test1 Test1
+izzyrybz http://dbpedia.org/ontology/description ?u1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/ontology/description izzyrybz
+izzyrybz http://dbpedia.org/property/computingInput Merge pull request #1 from izzyrybz/test1 Test1
+?u1 http://dbpedia.org/ontology/description izzyrybz
+?u1 http://dbpedia.org/ontology/author Merge pull request #1 from izzyrybz/test1 Test1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/ontology/description ?u1
+?u1 http://dbpedia.org/property/computingInput Merge pull request #1 from izzyrybz/test1 Test1
+?u1 http://dbpedia.org/property/used Merge pull request #1 from izzyrybz/test1 Test1
+izzyrybz http://dbpedia.org/property/used ?u1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/property/used izzyrybz
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/property/used ?u1
+?u1 http://dbpedia.org/ontology/description Merge pull request #1 from izzyrybz/test1 Test1
+izzyrybz http://dbpedia.org/ontology/description Merge pull request #1 from izzyrybz/test1 Test1
+izzyrybz http://dbpedia.org/property/user ?u1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/ontology/computingInput izzyrybz
+?u1 http://dbpedia.org/property/user izzyrybz
+?u1 http://dbpedia.org/resource/commit_(version_control) izzyrybz
+izzyrybz http://dbpedia.org/property/used Merge pull request #1 from izzyrybz/test1 Test1
+izzyrybz http://dbpedia.org/resource/commit_(version_control) ?u1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/resource/commit_(version_control) izzyrybz
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/resource/commit_(version_control) ?u1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/property/user izzyrybz
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/property/user ?u1
+?u1 http://dbpedia.org/property/user Merge pull request #1 from izzyrybz/test1 Test1
+izzyrybz http://dbpedia.org/property/user Merge pull request #1 from izzyrybz/test1 Test1
+izzyrybz http://dbpedia.org/resource/commit_(version_control) Merge pull request #1 from izzyrybz/test1 Test1
+?u1 http://dbpedia.org/resource/commit_(version_control) Merge pull request #1 from izzyrybz/test1 Test1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/ontology/author izzyrybz
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/ontology/author ?u1
+izzyrybz http://dbpedia.org/ontology/computingInput ?u1
+Merge pull request #1 from izzyrybz/test1 Test1 http://dbpedia.org/ontology/computingInput ?u1
+izzyrybz http://dbpedia.org/ontology/author ?u1
+?u1 http://dbpedia.org/ontology/computingInput izzyrybz
+?u1 http://dbpedia.org/ontology/author izzyrybz

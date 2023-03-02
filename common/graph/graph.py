@@ -24,6 +24,7 @@ def is_var(string):
 
 
 
+
 class Graph:
     def __init__(self, kb, ):
         self.kb = kb
@@ -85,7 +86,7 @@ class Graph:
 
         return total
 
-    def transform_q_into_jena(self, query):
+    '''def transform_q_into_jena(self, query):
         query = query.split()
         #print(query)
         
@@ -97,22 +98,15 @@ class Graph:
                         current_tripple = "<"+current_tripple+">"
                         query[i+tripple_index] = current_tripple
                         #print(current_tripple)
-                    elif(not is_var(current_tripple)):
-                        #print("CUURENT TRIPPLE",current_tripple)
-                        if current_tripple in " ":
-                            print("IT IS POSSIBLE WE HAVE A DESCRIPTION")
-                        else:
-                            current_tripple = "'"+current_tripple+"'"
-                            query[i+tripple_index] = current_tripple
-                        #print(current_tripple)
+
         delimiter = " "
         query = delimiter.join(query)
-        return query
+        return query'''
             
     def create_all_combinations(self,entites, relations):
         all_entites =[]
         all_relations=[]
-        print(relations)
+        #print(relations)
         
         for entity in entites:
             all_entites.append(entity['uri'])
@@ -122,23 +116,50 @@ class Graph:
         
         #print(all_entites)
         #print(all_relations)
+#this is taken from the first lines of the algorithm in the paper
 
         set1_e_p_e = set(itertools.product(all_entites,all_relations,all_entites))
-#line 2s
-        set2_e_p_uri = set(itertools.product(all_entites,all_relations,[None]))
-#line 3
-        set3_uri_p_e = set(itertools.product([None],all_relations,all_entites))
-#line 4
+        set2_e_p_uri = set(itertools.product(all_entites,all_relations,['?u1']))
+        set3_uri_p_e = set(itertools.product(['?u1'],all_relations,all_entites))
         all_sets = set1_e_p_e|set2_e_p_uri|set3_uri_p_e
 
+        #remove all the variables that are used twice aka izzyrybz <http://dbpedia.org/ontology/description> izzyrybz
+        unique_set = set()
+        for tup in all_sets:
+            if all(tup.count(item) == 1 for item in tup):
+                unique_set.add(tup)
+        all_sets = unique_set
+
+        '''
+        with open('allcombo.txt', 'w') as f:
+            for tupple in all_sets:
+                f.write(' '.join(str(s) for s in tupple) + '\n')
+        '''
+
         return all_sets
+    
+    def jena_formatting(self,item):
+        if is_uri(item):
+            item = "<"+item+">"
+            return item
+        elif is_var(item):
+            return item
+        else: 
+            item = "'"+item+"'"
+            return item
 
 #this used to be in the kb file, but since we dont use kbpedia as endpoint put it here.,
-    def one_hop_graph(self, entity1_uri, relation_uri, entity2_uri=None):
+    def one_hop_graph(self, entity1_uri, relation_uri, entity2_uri):
+        print("THIS IS ENTITIES" ,entity1_uri,relation_uri, entity2_uri )
         if entity2_uri is None:
             entity2_uri = "?u1"
         else:
             entity2_uri = entity2_uri
+        
+        entity1_uri = self.jena_formatting(entity1_uri)
+        relation_uri = self.jena_formatting(relation_uri)
+        entity2_uri = self.jena_formatting(entity2_uri)
+
 
         query_types = [u"{ent2} {rel} {ent1}",
                        u"{ent1} {rel} {ent2}",
@@ -154,11 +175,11 @@ class Graph:
                            rel=relation_uri,
                            ent1=entity1_uri,
                            ent2=entity2_uri,
-                           type = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                           type = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>",
                            prefix = ""
                            ))
         where = where[6:]
-        where = self.transform_q_into_jena(where)
+        #where = self.transform_q_into_jena(where)
 
         query = u"""{prefix}
 SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
@@ -178,7 +199,7 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
         #print("WE ARE IN ONE HOP WITH E R ",entity_items, relation_items)
 
         all_combinations = self.create_all_combinations(entity_items,relation_items)
-        #print("THIS IS ALL THE COBINATIONS", all_combinations)
+        print("THIS IS ALL THE COBINATIONS", all_combinations)
 
         with tqdm(total=len(all_combinations)) as progress_bar:
             for tripple in all_combinations:
@@ -209,7 +230,7 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
                                     self.add_edge(e)
             for edge in self.edges:
                 print("dest node",edge.dest_node)
-                print("source_node",edge.source_node.raw_variable)
+                print("source_node",edge.source_node)
                 print(edge)
 
     

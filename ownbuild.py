@@ -127,7 +127,7 @@ if __name__ == "__main__":
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question
-    question = "Was there a commit on the 27th of Jan 2023?"
+    question = "Which commits have the user izzyrybz made?"
 
 #Main focus : Which commits have the user izzyrybz made?
 

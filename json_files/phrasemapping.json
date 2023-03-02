@@ -3,131 +3,35 @@
         "entities": [
             {
                 "surface": [
-                    2,
-                    0
+                    35,
+                    28
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "2023-01-27T12:24:16+01:00"
+                        "uri": "Merge pull request #1 from izzyrybz/test1 Test1"
                     }
                 ]
             },
             {
                 "surface": [
-                    2,
-                    0
+                    35,
+                    28
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "2023-01-27T12:21:26+01:00"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    2,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "2023-01-27T12:12:22+01:00"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    2,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "2023-01-27T12:23:12+01:00"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    2,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "2023-01-27T12:16:07+01:00"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    2,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "2023-01-30T11:08:55+01:00"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    2,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "2023-01-27T12:22:12+01:00"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    17,
-                    12
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "Initial commit"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    10,
-                    10
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "This is a long description to see if it works Whe I was young pumbaaaaa"
+                        "uri": "izzyrybz"
                     }
                 ]
             }
         ],
-        "question": "Was there a commit on the 27th of Jan 2023?",
+        "question": "Which commits have the user izzyrybz made?",
         "relations": [
             {
                 "surface": [
-                    2,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://dbpedia.org/ontology/Calendar_date"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    10,
-                    10
+                    35,
+                    28
                 ],
                 "uris": [
                     {
@@ -138,25 +42,85 @@
             },
             {
                 "surface": [
-                    12,
-                    5
+                    35,
+                    28
                 ],
                 "uris": [
                     {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/resource/commit_(version_control)"
+                        "confidence": 0.75,
+                        "uri": "http://dbpedia.org/ontology/author"
                     }
                 ]
             },
             {
                 "surface": [
-                    12,
+                    28,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/ontology/author"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    23,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/property/user"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    23,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/property/used"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    23,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/property/computingInput"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    23,
+                    3
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/ontology/computingInput"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    6,
                     6
                 ],
                 "uris": [
                     {
-                        "confidence": 0.10043444484472275,
-                        "uri": "http://dbpedia.org/ontology/address"
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/resource/commit_(version_control)"
                     }
                 ]
             }

@@ -8,8 +8,8 @@
 <http://dbpedia.org/ontology/populationMetro> <http://www.w3.org/2000/01/rdf-schema#label> "metropolitan population" .
 <http://dbpedia.org/ontology/populationMetro> <http://www.w3.org/2000/01/rdf-schema#label> "population" .
 <http://dbpedia.org/ontology/commissioningDate> <http://www.w3.org/2000/01/rdf-schema#label> "commissioned on" .
-<http://dbpedia.org/resource/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
-<http://dbpedia.org/resource/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
+<http://dbpedia.org/resource/Commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
+<http://dbpedia.org/resource/Commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
 <http://dbpedia.org/ontology/absoluteMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "absolute magnitude" .
 <http://dbpedia.org/ontology/requirement> <http://www.w3.org/2000/01/rdf-schema#label> "requirement of" .
 <http://dbpedia.org/ontology/requirement> <http://www.w3.org/2000/01/rdf-schema#label> "require" .
@@ -3054,6 +3054,8 @@
 <http://dbpedia.org/property/members> <http://www.w3.org/2000/01/rdf-schema#label> "members" .
 <http://dbpedia.org/property/membership> <http://www.w3.org/2000/01/rdf-schema#label> "membership" .
 <http://dbpedia.org/property/merged> <http://www.w3.org/2000/01/rdf-schema#label> "merged" .
+<http://dbpedia.org/page/Merge_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "merged" .
+<http://dbpedia.org/page/Merge_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "mergeds" .
 <http://dbpedia.org/property/meshid> <http://www.w3.org/2000/01/rdf-schema#label> "MeshID" .
 <http://dbpedia.org/property/meshname> <http://www.w3.org/2000/01/rdf-schema#label> "MeshName" .
 <http://dbpedia.org/property/meshnumber> <http://www.w3.org/2000/01/rdf-schema#label> "MeshNumber" .

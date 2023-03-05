@@ -46,6 +46,8 @@ class Edge:
     def sparql_format(self, kb):
         return u"{} {} {}".format(self.source_node.sparql_format(kb), self.uri.sparql_format(kb),
                                   self.dest_node.sparql_format(kb))
+    
+
 
     def full_path(self):
         return "{} --> {} --> {}".format(self.source_node.__str__(), self.uri.__str__(), self.dest_node.__str__())

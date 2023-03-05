@@ -1,3 +1,6 @@
+from urllib.parse import urlparse
+
+
 class LinkedItem:
     def __init__(self, surface_form, uris):
         self.surface_form = surface_form
@@ -12,7 +15,14 @@ class LinkedItem:
         :param uri:
         :return: Bool
         """
-        return uri in self.uris
+        
+        #return uri in self.uris
+
+        try:
+            result = urlparse(uri)
+            return all([result.scheme, result.netloc])
+        except ValueError:
+            return False
 
     @staticmethod
     def list_contains_uris(linkeditem_list, uris):
@@ -26,7 +36,11 @@ class LinkedItem:
         output = []
         for uri in sorted(uris, key=lambda x: len(str(x)), reverse=True):
             for item in linkeditem_list:
-                if item not in output and item.contains_uri(uri):
+                item = item['uri']
+                #print("(line 40 )list_contains_uris item = ",item)
+                if item not in output: #and contains_uri(item)
                     output.append(item)
+                    #print("(line 43 ) appending item",item ,"to output", output)
                     break
+        #print("(line 45) this is output in list_contains_uris", output)
         return output

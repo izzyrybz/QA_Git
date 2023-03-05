@@ -42,14 +42,11 @@ Who were the authors of the top 10 commits by the number of lines changed?
 
 # Alternative questions
 # How many merges have there been?
+# How many commits have there been?
 # What language is the repository written in?
 # How many commits have there been for the repo?
 
-#What is the total number of other tenant of the stadia whose one of the tenant is Raptors 905?
-#Count everyone who studied at an institute which are in Suburbs?
 
-# Did world war 2 happen?
-# Is Isabelle Rybank in office?
-# Can Sebastian mountain climb?
-# What year was Cristiano Ronaldo born?
-# When did the queen earn the throne?
+##### FOCUS ####
+How many commits have izzyrybz made? DONE
+How many commits have there been? DONE

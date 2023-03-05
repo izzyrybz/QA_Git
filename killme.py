@@ -1,8 +1,11 @@
 import json
+import os
 import numpy as np
 from common.graph.graph import Graph
 from common.query.querybuilder import QueryBuilder
 import kb
+from learning.treelstm import Constants
+from learning.treelstm.vocab import Vocab
 from myclassifier import QuestionClassifier
 #import parser
 from svmclassifier import SVMClassifier
@@ -35,7 +38,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         #i dont think we can use svm models build on other data??? 
         #it is throwing errors like crazy too 
     double_relation = False
-    graph = Graph(kb)
+    graph = Graph()
     #print(graph)
     query_builder = QueryBuilder()
     #print(query_builder)
@@ -43,9 +46,12 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     #I think this is where we need to focus
     graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
                                 sort_query=sort_query, h1_threshold=h1_threshold)
-    exit()
-    valid_walks = query_builder.to_where_statement(graph, parser.parse_queryresult, ask_query=ask_query,
+    valid_walks = query_builder.to_where_statement(graph, ask_query=ask_query,
                                                     count_query=count_query, sort_query=sort_query)
+    print("these are the valid paths found:" ,valid_walks)
+
+    '''
+    I DONT UNDERSTAND WHY WE ARE DOING THIS AGAIN SO SKIPPING IT
 
     if question_type == 0 and len(relations) == 1:
         double_relation = True
@@ -58,7 +64,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         valid_walks_new = query_builder.to_where_statement(graph, parser.parse_queryresult,
                                                             ask_query=ask_query,
                                                             count_query=count_query, sort_query=sort_query)
-        valid_walks.extend(valid_walks_new)
+        valid_walks.extend(valid_walks_new)'''
 
     args = Struct()
     base_path = "./learning/treelstm/"
@@ -75,43 +81,13 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     # args.cuda = True
     '''try:
         scores = rank(args, question, valid_walks)
+        print(scores)
     except:
         scores = [1 for _ in valid_walks]
     for idx, item in enumerate(valid_walks):
         if idx >= len(scores):
             item["confidence"] = 0.3
         else:
-            item["confidence"] = float(scores[idx] - 1)
-'''
-    print(valid_walks, question_type)
+            item["confidence"] = float(scores[idx] - 1)'''
 
-
-   
-'''
-
-question = "Which commit had the description 'initial commit'? "
-
-entity_uris = []
-relations_uris = []
-with open('json_files/phrasemapping.json','r') as fp:
-    phrasemap = json.load(fp)
-
-for item in phrasemap:
-    entities = item['entities']
-    relations = item['relations']
-
-for entity_uri in entities:
-    entity_uris.append(entity_uri['uris'][0])
-
-for relations_uri in relations:
-    relations_uris.append(relations_uri['uris'][0])
-
-print(entity_uris)
-
-print(relations_uris)
-
-h1_threshold = 9999999
-
-
-generate_query(question,entity_uris,relations_uris,h1_threshold,question_type=2)
-'''
+    

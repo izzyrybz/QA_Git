@@ -127,10 +127,10 @@ if __name__ == "__main__":
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question
-    question = "Which commits have the user izzyrybz made?"
+    question = "Which commit had the description 'initial commit'?"
 
 #Main focus : Which commits have the user izzyrybz made?
-
+#Secondary focus: How many commits have there been?
     print("Question:" ,question)
 
     #Parse the input question using spaCy and then create representation and dependency tree

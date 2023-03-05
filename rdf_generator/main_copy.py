@@ -12,8 +12,8 @@ import copy
 
 
 #file__name= input("Please provide the file which the history of commits exists:")
-path = '/home/bell/commithistory.txt'
-commit = {"commit_ref": "", "author": "", "description": "", "date":"" }
+path = '/home/bell/rdf_code/biggercommit.txt'
+commit = {"commit_ref": "", "author": "", "description": "", "date":"" ,"changed_files": "", "parents" :""}
 history = []
 date_format = " %a %b %d %H:%M:%S %Y %z"
 
@@ -60,7 +60,7 @@ with open(path,'r') as f:
             continue
         #print(line)
         for index, element in enumerate(line):
-            #print(index,element)
+            print(index,element)
             if ('commit' in element and not ('Initial'in element)):
                 hash = element[element.index(":") + 1:]
                 commit["commit_ref"]  = hash
@@ -78,12 +78,18 @@ with open(path,'r') as f:
                 date_obj = datetime.strptime(date, date_format)
                 #print(date_obj)
                 commit["date"] = date_obj
-            if('------' in element):
+            if('Parents:' in element): 
+                #print("adding person",line[index+1])
+                parents = element[element.index(":") + 1:].strip()
+                commit["parents"] = parents
+            
+
+            if('*' in element):
                 #print("this is a ",commit)
                 history.append(commit)
                 commit = copy.deepcopy(commit)
                          
-#print(history)
+print(history)
 
 
 ############################################ TO CREATE THE RDF TRIPPLES #############################################

@@ -9,28 +9,29 @@ import logging
 from tqdm import tqdm
 from urllib.parse import urlparse
 
-def is_uri(string):
-    try:
-        result = urlparse(string)
-        return all([result.scheme, result.netloc])
-    except ValueError:
-        return False
-    
-def is_var(string):
-    if string[0] == '?':
-        return True
-    else:
-        return False
+
 
 
 
 
 class Graph:
-    def __init__(self, kb, ):
-        self.kb = kb
+    def __init__(self, ):
         self.nodes, self.edges = set(), set()
         self.entity_items, self.relation_items = [], []
         self.suggest_retrieve_id = 0
+
+    def is_uri(self,string):
+        try:
+            result = urlparse(string)
+            return all([result.scheme, result.netloc])
+        except ValueError:
+            return False
+    
+    def is_var(self,string):
+        if string[0] == '?':
+            return True
+        else:
+            return False
 
     def create_or_get_node(self, uris, mergable=False):
         if isinstance(uris, (int)):
@@ -86,33 +87,22 @@ class Graph:
 
         return total
 
-    '''def transform_q_into_jena(self, query):
-        query = query.split()
-        #print(query)
-        
-        for i,item in enumerate(query):
-            if item in 'where' and query[i+1] in '{':
-                for tripple_index in range(2,5):
-                    current_tripple = query[i+tripple_index]
-                    if(is_uri(current_tripple)):
-                        current_tripple = "<"+current_tripple+">"
-                        query[i+tripple_index] = current_tripple
-                        #print(current_tripple)
-
-        delimiter = " "
-        query = delimiter.join(query)
-        return query'''
-            
+           
     def create_all_combinations(self,entites, relations):
         all_entites =[]
         all_relations=[]
-        #print(relations)
-        
-        for entity in entites:
-            all_entites.append(entity['uri'])
-        
-        for relation in relations:
-            all_relations.append(relation['uri'])
+        #print(all_entites)
+        if len(entites)<1:
+            all_entites.append('?u2')
+        else:
+            for entity in entites:
+                all_entites.append(entity['uri'])
+
+        if len(relations)<1:
+            all_relations.append('?u2')
+        else:
+            for relation in relations:
+                all_relations.append(relation['uri'])
         
         #print(all_entites)
         #print(all_relations)
@@ -122,7 +112,7 @@ class Graph:
         set2_e_p_uri = set(itertools.product(all_entites,all_relations,['?u1']))
         set3_uri_p_e = set(itertools.product(['?u1'],all_relations,all_entites))
         all_sets = set1_e_p_e|set2_e_p_uri|set3_uri_p_e
-
+        print(all_sets)
         #remove all the variables that are used twice aka izzyrybz <http://dbpedia.org/ontology/description> izzyrybz
         unique_set = set()
         for tup in all_sets:
@@ -139,10 +129,10 @@ class Graph:
         return all_sets
     
     def jena_formatting(self,item):
-        if is_uri(item):
+        if self.is_uri(item):
             item = "<"+item+">"
             return item
-        elif is_var(item):
+        elif self.is_var(item):
             return item
         else: 
             item = "'"+item+"'"
@@ -150,7 +140,7 @@ class Graph:
 
 #this used to be in the kb file, but since we dont use kbpedia as endpoint put it here.,
     def one_hop_graph(self, entity1_uri, relation_uri, entity2_uri):
-        print("THIS IS ENTITIES" ,entity1_uri,relation_uri, entity2_uri )
+        #print("THIS IS ENTITIES" ,entity1_uri,relation_uri, entity2_uri )
         if entity2_uri is None:
             entity2_uri = "?u1"
         else:
@@ -225,7 +215,7 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
                                 elif m == 2:
                                     n_s = self.create_or_get_node(uri)
                                     n_d = self.create_or_get_node(tripple[1])
-                                    #e = Edge(n_s, Uri(self.kb.type_uri, self.kb.parse_uri), n_d)
+                                    e = Edge(n_s, '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', n_d)
                                     #not sure what to do about that
                                     self.add_edge(e)
             for edge in self.edges:
@@ -234,56 +224,6 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
                 print(edge)
 
     
-
-    '''
-        with tqdm(total=60) as progress_bar:
-            print("we are tqdm")
-            all_entity_uris = []
-            for relation_item in relation_items:
-                relation_uri = relation_item['uri']
-                for item in entity_items:
-                        all_entity_uris.append(item['uri'])
-                #print(all_entity_uris)
-                combinations_entity = set(itertools.permutations(all_entity_uris,2))
-                #for combi in combinations_entity:
-                #    print(combi)
-                for entity_uris in combinations_entity:
-                    for entity_uri in itertools.combinations(entity_uris, number_of_entities ):
-
-                        progress_bar.update(1)
-                        #print(entity_uri)
-                        print("sending in ",entity_uri[0], relation_uri,entity_uri[1] if len(entity_uri) > 1 else None)
-                        result = self.one_hop_graph(entity_uri[0], relation_uri,
-                                                        entity_uri[1] if len(entity_uri) > 1 else None)
-                        #The result is a query answer, so idk why
-
-                        if result is not None:
-                            print(result)
-                            for item in result:
-                                m = int(item["m"]["value"])
-                                uri = entity_uri[1] if len(entity_uri) > 1 else 0
-                                if m == 0:
-                                    n_s = self.create_or_get_node(uri, True)
-                                    #print(entity_uri[0])
-                                    n_d = self.create_or_get_node(entity_uri[0])
-                                    e = Edge(n_s, relation_uri, n_d)
-                                    self.add_edge(e)
-                                elif m == 1:
-                                    n_s = self.create_or_get_node(entity_uri[0])
-                                    n_d = self.create_or_get_node(uri, True)
-                                    e = Edge(n_s, relation_uri, n_d)
-                                    self.add_edge(e)
-                                elif m == 2:
-                                    n_s = self.create_or_get_node(uri)
-                                    n_d = self.create_or_get_node(relation_uri)
-                                    #e = Edge(n_s, Uri(self.kb.type_uri, self.kb.parse_uri), n_d)
-                                    #not sure what to do about that
-                                    self.add_edge(e)
-            for edge in self.edges:
-                print("dest node",edge.dest_node)
-                print("source_node",edge.source_node.raw_variable)
-                print(edge)
-     '''       
 
                 
 

@@ -109,13 +109,15 @@ class QueryBuilder:
             #print(where_clause)
 
             #Prev : target_var = where_clause["suggested_id"]
-            raw_answer = self.query_fuseki_endpoint(fuseki_endpoint,where_clause,
+            response = self.query_fuseki_endpoint(fuseki_endpoint,where_clause,
                                               count=count_query,
                                               ask=ask_query)
-            #print(raw_answer)
-            #print("this is filtered output" ,filtered_output)
-            
-            if raw_answer is not None:
+                       
+            if response is not None:
+                raw_answer =response[0]
+                sparlq_q =response[1]
+                #print(raw_answer)
+                
             # Extract bindings
                 bindings = raw_answer['results']['bindings']
                 #Prev : answerset = AnswerSet(raw_answer, parser.parse_queryresult)
@@ -127,6 +129,7 @@ class QueryBuilder:
                     answer["target_var"] = bindings[0]
                     answer["answer"] = values
                     filtered_output.append(where_clause)
+                    filtered_output.append(sparlq_q)
 
         #print(filtered_output)
 
@@ -158,7 +161,7 @@ class QueryBuilder:
         
         
         if response.status_code == 200:
-            return response.json()
+            return response.json(), query
         else:
             return None
 

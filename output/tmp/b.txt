@@ -1,0 +1,2 @@
+SELECT * WHERE { ?u1 description 'Merge pull request #1 from izzyrybz/test1 Test1' }
+SELECT * WHERE { ?u1 author 'izzyrybz' }

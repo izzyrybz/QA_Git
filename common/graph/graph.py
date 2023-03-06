@@ -112,7 +112,7 @@ class Graph:
         set2_e_p_uri = set(itertools.product(all_entites,all_relations,['?u1']))
         set3_uri_p_e = set(itertools.product(['?u1'],all_relations,all_entites))
         all_sets = set1_e_p_e|set2_e_p_uri|set3_uri_p_e
-        print(all_sets)
+        #print(all_sets)
         #remove all the variables that are used twice aka izzyrybz <http://dbpedia.org/ontology/description> izzyrybz
         unique_set = set()
         for tup in all_sets:
@@ -189,7 +189,7 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
         #print("WE ARE IN ONE HOP WITH E R ",entity_items, relation_items)
 
         all_combinations = self.create_all_combinations(entity_items,relation_items)
-        print("THIS IS ALL THE COBINATIONS", all_combinations)
+        #print("THIS IS ALL THE COBINATIONS", all_combinations)
 
         with tqdm(total=len(all_combinations)) as progress_bar:
             for tripple in all_combinations:

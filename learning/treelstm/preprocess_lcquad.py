@@ -133,25 +133,36 @@ def build_vocab(filepaths, dst_path, lowercase=True):
             f.write(w + '\n')
 
 
-def generalize_question(a, b, parser=None):
+def generalize_question(question, sparql_query, parser=None):
+    a =question
+    b =sparql_query 
     # replace entity mention in question with a generic symbol
+    #print("we are in generalize_question, a ,b ", a ,b)
 
     if parser is None:
         parser = LC_Qaud_LinkedParser()
 
+    
     _, _, uris = parser.parse_sparql(b)
-    uris = [uri for uri in uris if uri.is_entity()]
+    #this is then the response from the sparql query
+    print(_, _, uris)
+
+    #uris = [uri for uri in uris if uri.is_entity()]
 
     i = 0
+    # if the question is in the answer
     for item in find_mentions(a, uris):
         a = "{} #en{} {}".format(a[:item["start"]], "t" * (i + 1), a[item["end"]:])
-        b = b.replace(item["uri"].raw_uri, "#en{}".format("t" * (i + 1)))
-
+        print("we are inside item",a,item,uris)
+        b = b.replace(item["uri"], "#en{}".format("t" * (i + 1)))
+        
     # remove extra info from the relation's uri and remaining entities
     for item in ["http://dbpedia.org/resource/", "http://dbpedia.org/ontology/",
                  "http://dbpedia.org/property/", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"]:
         b = b.replace(item, "")
     b = b.replace("<", "").replace(">", "")
+
+    print("We are done with generalization",a,b)
 
     return a, b
 
@@ -170,6 +181,7 @@ def split(data, parser=None):
     for item in tqdm(dataset):
         i = item["id"]
         a = item["question"]
+        print("started tqdm",i,a)
         for query in item["generated_queries"]:
             a, b = generalize_question(a, query["query"], parser)
 

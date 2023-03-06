@@ -47,8 +47,8 @@ class Trainer(object):
         indices = torch.arange(1, dataset.num_classes + 1, dtype=torch.float)
         for idx in tqdm(range(len(dataset)), desc='Testing epoch  ' + str(self.epoch) + ''):
             ltree, lsent, rtree, rsent, label = dataset[idx]
-            linput, rinput = Var(lsent, volatile=True), Var(rsent, volatile=True)
-            target = Var(map_label_to_target(label, dataset.num_classes), volatile=True)
+            linput, rinput = Var(lsent), Var(rsent)
+            target = Var(map_label_to_target(label, dataset.num_classes))
             if self.args.cuda:
                 linput, rinput = linput.cuda(), rinput.cuda()
                 target = target.cuda()

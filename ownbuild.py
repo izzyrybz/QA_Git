@@ -86,48 +86,11 @@ if __name__ == "__main__":
     # Load the spaCy model
     nlp = spacy.load("en_core_web_sm")
     
-##################################### LCQUAD BENCHMARK ##########################################3
-    '''
-    with open('json_files/data.json', 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    correct_count = 0
-    correct_count_question = []
-    count_q_question = []
-    count_q = 0
-    
-    #for question in data["corrected_question"]:
-    for question in data:
-        print(question["corrected_question"])
-        dependecy_tree,lemmizized_question,tokened_question = question_analysis(question["corrected_question"])
-        #print(questions_type)
-        classifier = QuestionClassifier()
-        question_type = classifier.classify_questions(question["corrected_question"])
-
-        phrasemapper = PhraseMapping()
-        phrasemapper.phrasemap_question(question["corrected_question"],tokened_question)
-        ### Check if count question is correct ##
-        print(question_type[0].upper())
-        if(question_type[0].upper() in question["sparql_query"]):
-            correct_count_question.append(question["corrected_question"])
-            correct_count+=1
-        if("COUNT" in question["sparql_query"]):
-            count_q_question.append(question["corrected_question"])
-            count_q +=1
-    
-    print("result of count question, total", count_q, "correct:", correct_count)
-    for question in count_q_question:
-        if question in correct_count_question:
-            continue
-        else:
-            print(question)
-
-        
-    '''
       
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question
-    question = "Which commit had the description 'initial commit'?"
+    question = "Which commits have the user izzyrybz made?"
 
 #Main focus : Which commits have the user izzyrybz made?
 #Secondary focus: How many commits have there been?

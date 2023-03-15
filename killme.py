@@ -32,12 +32,14 @@ def rank(args, question, generated_queries):
             checkpoint_filename = os.path.join(args.save, '%s.pt' % args.expname)
 
             #checkpoint_filename = '%s.pt' % os.path.join(args.save, args.expname)
+            #dataset_vocab_file is like city,did,direct,director,ent
             dataset_vocab_file = os.path.join(args.data, 'dataset.vocab')
             # metrics = Metrics(args.num_classes)
             vocab = Vocab(filename=dataset_vocab_file,
                           data=[Constants.PAD_WORD, Constants.UNK_WORD, Constants.BOS_WORD, Constants.EOS_WORD])
             
             similarity = DASimilarity(args.mem_dim, args.hidden_dim, args.num_classes)
+            
             model = SimilarityTreeLSTM(
                 vocab.size(),
                 args.input_dim,
@@ -46,31 +48,37 @@ def rank(args, question, generated_queries):
                 args.sparse)
             criterion = nn.KLDivLoss()
             optimizer = optim.Adagrad(model.parameters(), lr=args.lr, weight_decay=args.wd)
+            print("this is optimizer" ,optimizer)
             emb_file = os.path.join(args.data, 'dataset_embed.pth')
+            print(emb_file)
             if os.path.isfile(emb_file):
                 emb = torch.load(emb_file)
+            #print(model.emb.weight.data.copy_(emb))
             model.emb.weight.data.copy_(emb)
 
             
 
             checkpoint = torch.load(checkpoint_filename, map_location=lambda storage, loc: storage)
+            print("this is checkpoint",checkpoint_filename)
             model.load_state_dict(checkpoint['model'])
             trainer = Trainer(args, model, criterion, optimizer)
             #print()
             generated_queries_sparql = generated_queries[1::2]
+            #print(generated_queries_sparql)
             generated_queries = generated_queries[0::2]
             #print(generated_queries)
-
-            # Prepare the dataset
+            #print()
+            # Prepare the dataset with the sparql queries and not the natural lang questions
             json_data = [{"id": "test", "question": question,
                           "generated_queries": [{"query": query, "correct": False} for query in
                                                 generated_queries_sparql]}]
-            print(json_data)
+            #print(json_data)
             parser = LC_QaudParser()
             output_dir = "./output/tmp"
             
-            # This is weird
+            #we need to fix this, it is fucked
             preprocess_lcquad.save_split(output_dir, *preprocess_lcquad.split(json_data, parser))
+            #preprocess_lcquad.correct_data(generated_queries)
 
             dep_tree_cache_file_path = './json_files/dep_tree_cache_lcquadtest.json'
             if os.path.exists(dep_tree_cache_file_path):
@@ -80,24 +88,33 @@ def rank(args, question, generated_queries):
                 dep_tree_cache = dict()
 
             if question in dep_tree_cache:
+                #print(question)
+                
                 preprocess_lcquad.parse(output_dir, dep_parse=False)
 
                 cache_item = dep_tree_cache[question]
                 with open(os.path.join(output_dir, 'a.parents'), 'w') as f_parent, open(
                         os.path.join(output_dir, 'a.toks'), 'w') as f_token:
+                   
                     for i in range(len(generated_queries)):
                         f_token.write(cache_item[0])
                         f_parent.write(cache_item[1])
+
+                    
             else:
                 preprocess_lcquad.parse(output_dir)
                 with open(os.path.join(output_dir, 'a.parents')) as f:
                     parents = f.readline()
                 with open(os.path.join(output_dir, 'a.toks')) as f:
+                    print("this is token",f.readline())
                     tokens = f.readline()
+                
                 dep_tree_cache[question] = [tokens, parents]
 
                 with open(dep_tree_cache_file_path, 'w') as f:
                     ujson.dump(dep_tree_cache, f)
+            
+            
             test_dataset = QGDataset(output_dir, vocab, args.num_classes)
 
             test_loss, test_pred = trainer.test(test_dataset)
@@ -143,12 +160,12 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
                                 sort_query=sort_query, h1_threshold=h1_threshold)
     valid_walks_with_sparql = query_builder.to_where_statement(graph, ask_query=ask_query,
                                                     count_query=count_query, sort_query=sort_query)
-    #print("these are the valid paths found:" ,valid_walks_with_sparql)
+    print("these are the valid paths found:" ,valid_walks_with_sparql)
 
     
 
-    '''
-    I DONT UNDERSTAND WHY WE ARE DOING THIS AGAIN SO SKIPPING IT
+    
+    #I DONT UNDERSTAND WHY WE ARE DOING THIS 
 
     if question_type == 0 and len(relations) == 1:
         double_relation = True
@@ -158,16 +175,16 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
                                     sort_query=sort_query, h1_threshold=h1_threshold)
         
         
-        valid_walks_new = query_builder.to_where_statement(graph, parser.parse_queryresult,
+        valid_walks_new = query_builder.to_where_statement(graph,
                                                             ask_query=ask_query,
                                                             count_query=count_query, sort_query=sort_query)
-        valid_walks.extend(valid_walks_new)'''
+        valid_walks_with_sparql.extend(valid_walks_new)
 
     args = Struct()
     base_path = "./learning/treelstm/"
     args.save = os.path.join(base_path, "checkpoints/")
     #changed the checkpoint_filename from lc_quad,epoch=5,train_loss=0.08340245485305786
-    args.expname = "lc_quad,epoch=5,train_loss=0.4255748689174652"
+    args.expname = "lc_quad,epoch=5,train_loss=0.08747495710849762"
     args.mem_dim = 150
     args.hidden_dim = 50
     args.num_classes = 2
@@ -190,11 +207,14 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     
     #trim the valid_walks_with_sparql so it only includes SELECT * where... 
     valid_walks_with_sparql =valid_walks_with_sparql[1::2]
+    
     valid_walks_dicts = {}
     all_valid_walks= []
     for query in valid_walks_with_sparql:
-        valid_walks_dicts["query"] = query
-        all_valid_walks.append(valid_walks_dicts)
+        if query not in [item["query"] for item in all_valid_walks]:
+            valid_walks_dicts = {"query": query}
+            all_valid_walks.append(valid_walks_dicts)
+
     
     #print(all_valid_walks)
     #valid_walks_with_sparql = [json.loads(s) for s in valid_walks_with_sparql]
@@ -206,9 +226,11 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
             #hardcode
             item["confidence"] = 0.3
         else:
-            print("this is scores[idx]",scores[idx]) 
+            #print("this is scores[idx]",scores[idx]) 
             item["confidence"] = float(scores[idx] - 1)
     
-    print("this is the valid walks when we are done",all_valid_walks)
+    return valid_walks_dicts
+    
+    #print("this is the valid walks when we are done",all_valid_walks)
 
    

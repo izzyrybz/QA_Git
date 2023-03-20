@@ -117,7 +117,7 @@ if __name__ == "__main__":
       
 ################################ ONE SINGLE QUESTION ###########################################
 
-# Define the input question
+# Define the input question 
     question = "Did a commit have the description 'Initial commit'?"
 
 #Main focus : Which commits have the user izzyrybz made? -works

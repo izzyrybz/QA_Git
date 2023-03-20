@@ -202,7 +202,7 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
         with tqdm(total=len(all_combinations)) as progress_bar:
             for tripple in all_combinations:
                 progress_bar.update(1)
-                print("sending in ",tripple[0], tripple[1],tripple[2])
+                #print("sending in ",tripple[0], tripple[1],tripple[2])
                 result = self.one_hop_graph(tripple[0], tripple[1],tripple[2])
                 if result is not None:
                             #print("THIS IS RESLUT", result)

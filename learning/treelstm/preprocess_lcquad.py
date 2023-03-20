@@ -294,9 +294,9 @@ def split(data, parser=None):
             
             b = query["query"]
             b = re.sub(r'^SELECT\s*\*\s*WHERE\s*{\s*', '', b)
-            print("sending in a and b",a,b)
+            #print("sending in a and b",a,b)
             a, b = generalize_question(a,b, parser)
-            print("outcome",a)
+            #print("outcome",a)
             
 
             # Empty query should be ignored

@@ -1,2 +1,3 @@
-* SELECT WHERE
-* SELECT WHERE
+description ?u1 'Initial
+type ?u1 http://example.org/entity/commit
+description ?u1 'This

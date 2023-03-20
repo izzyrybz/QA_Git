@@ -4,34 +4,94 @@
             {
                 "surface": [
                     35,
-                    28
+                    7
                 ],
                 "uris": [
                     {
-                        "confidence": 0.75,
-                        "uri": "Merge pull request #1 from izzyrybz/test1 Test1"
+                        "confidence": 0.9877550988801812,
+                        "uri": "http://dbpedia.org/resource/Initial"
                     }
                 ]
             },
             {
                 "surface": [
-                    35,
-                    28
+                    11,
+                    6
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "izzyrybz"
+                        "uri": "Initial commit"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    11,
+                    6
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commit"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    4
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "This is a long description to see if it works Whe I was young pumbaaaaa"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    6,
+                    6
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.7228889205238965,
+                        "uri": "http://dbpedia.org/resource/Involuntary_commitment"
                     }
                 ]
             }
         ],
-        "question": "Which commits have the user izzyrybz made?",
+        "question": "Did a commit have the description 'Initial commit'?",
         "relations": [
             {
                 "surface": [
-                    35,
-                    28
+                    32,
+                    22
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "description"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    11,
+                    6
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    4
                 ],
                 "uris": [
                     {
@@ -42,80 +102,32 @@
             },
             {
                 "surface": [
-                    35,
-                    28
+                    22,
+                    10
                 ],
                 "uris": [
                     {
-                        "confidence": 0.75,
-                        "uri": "http://dbpedia.org/ontology/author"
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/property/description"
                     }
                 ]
             },
             {
                 "surface": [
-                    28,
-                    7
+                    22,
+                    10
                 ],
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "http://dbpedia.org/ontology/author"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    23,
-                    3
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/property/user"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    23,
-                    3
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/ontology/computingInput"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    23,
-                    3
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/property/used"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    23,
-                    3
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/property/computingInput"
+                        "uri": "http://dbpedia.org/ontology/description"
                     }
                 ]
             },
             {
                 "surface": [
                     6,
-                    6
+                    5
                 ],
                 "uris": [
                     {

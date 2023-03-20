@@ -2,6 +2,7 @@ import os
 import json
 import logging.config
 import pickle
+import re
 
 
 class PersistanceDict(dict):
@@ -58,11 +59,13 @@ def closest_string(text, list_of_text):
 
 
 def find_mentions(text, uris):
-    output = []
+    output = {}
     for uri in uris:
-        s, e, dist = __substring_with_min_levenshtein_distance(str(uri), text)
-        if dist <= 5:
-            output.append({"uri": uri, "start": s, "end": e})
+        s, e, dist = __substring_with_min_levenshtein_distance(str(uri),text)
+        output['start'] = s
+        output['end'] = e
+        output['dist'] = dist
+        output['uri'] = uri
     return output
 
 
@@ -127,33 +130,96 @@ def __levenshtein(s1, s2):
     return previous_row[-1]
 
 
-def __substring_with_min_levenshtein_distance(n, h):
-    n = n.lower().replace("_", " ")
-    h = h.lower()
-    row = __fuzzy_substring(n, h)
-    end = min(__min_farest(row), len(h) - 1)
-    row_rev = __fuzzy_substring(n[::-1], h[::-1])
-    start = max(0, len(h) - __min_nearest(row_rev) - 1)
+def __substring_with_min_levenshtein_distance(uri, text):
+    #trim the uri
+    #print("wtf is going on")
+    uri = uri.lower().replace("_", " ")
+    uri = uri.lower().replace("<", "")
+    uri = uri.lower().replace(">", "")
+    uri = uri.lower().replace("}", "")
+    
+    pattern = r'\([^)]*\)'
+    uri = re.sub(pattern, "", uri)
+    uri = uri.rstrip()
+    text = text.replace("?","")
+    text = text.lower()
+    #print("we are in find mentions:",text,"this is uri:",uri)
+
+    res = re.search(uri,text)
+    if res is not None:
+        #print("we have an answer",res.start(),res.end(),(res.end()-res.start()))
+        return (res.start(),res.end(), (res.end()-res.start()))
+    
+    
+    row = __fuzzy_substring(uri, text)
+    end = min(__min_farest(row), len(text) - 1)
+    row_rev = __fuzzy_substring(uri[::-1], text[::-1])
+    start = max(0, len(text) - __min_nearest(row_rev) - 1)
 
     strip = [" ", "?", ".", ",", "'"]
     # stretch the token to be whole word[s]
-    while h[start] not in strip and start >= 0:
+    while text[start] not in strip and start >= 0:
         start -= 1
 
-    while h[end - 1] not in strip and end < (len(h) - 1):
+    while text[end - 1] not in strip and end < (len(text) - 1):
         end += 1
 
     # remove invalid chars in head or tail
     for i in range(start, end):
-        if h[start] in strip:
+        if text[start] in strip:
             start += 1
         else:
             break
 
     for i in range(end, start, -1):
-        if h[end - 1] in strip:
+        if text[end - 1] in strip:
             end -= 1
         else:
             break
 
     return start, end, row[end]
+
+'''
+def __substring_with_min_levenshtein_distance(uri, question):
+    
+    uri = uri.lower().replace("_", " ")
+    uri = uri.lower().replace("<", "")
+    uri = uri.lower().replace(">", "")
+    print("substring with min levenshtein ",uri, question)
+    question = question.lower()
+    m, n = len(question), len(uri)
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    
+    
+    for i in range(m + 1):
+        dp[i][0] = i
+        
+    for j in range(n + 1):
+        dp[0][j] = j
+    
+    #print(dp)
+    #m = len(question) and n= len(uri)
+    for i in range(1, m+1):
+        for j in range(1, n+1):
+            #print(uri[j-1],question[i-1])
+            if uri[j-1] == question[i-1]:
+                #print("uri and question matches")
+                dp[i][j] = dp[i-1][j-1]
+            else:
+                dp[i][j] = 1 + min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1])
+    
+    min_dist = float('inf')
+    start = -1
+    end = -1
+    
+    for j in range(n - m + 1):
+        if dp[m][j+m-1] < min_dist:
+            min_dist = dp[m][j+m-1]
+            start = j
+            end = j + m
+    
+    print(start,end)
+    return start, end, min_dist
+'''
+
+ 

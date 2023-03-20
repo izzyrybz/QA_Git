@@ -42,11 +42,12 @@ class QueryBuilder:
         #dont think generalize_nodes is needed
         #graph.generalize_nodes()
         graph.merge_edges()
+        #print("Do we even go in here")
 
         paths = self.__find_paths_start_with_entities(graph, graph.entity_items, graph.relation_items, graph.edges)
         for path in paths:
             for edge in path:
-                print(edge)
+                print("this is edge",edge)
 
         paths = paths.remove_duplicates()
 
@@ -105,31 +106,39 @@ class QueryBuilder:
 
         # Remove queries with no answer
         filtered_output = []
+        
         for where_clause in output:
-            #print(where_clause)
+            #print("HELLOOOO",where_clause)
 
             #Prev : target_var = where_clause["suggested_id"]
             response = self.query_fuseki_endpoint(fuseki_endpoint,where_clause,
                                               count=count_query,
+                                
                                               ask=ask_query)
+            #print(response)
                        
             if response is not None:
                 raw_answer =response[0]
                 sparlq_q =response[1]
                 #print(raw_answer)
-                
-            # Extract bindings
                 bindings = raw_answer['results']['bindings']
                 #Prev : answerset = AnswerSet(raw_answer, parser.parse_queryresult)
                 answer={}
+                target_vars = 'u1','u2'
+                
                 # Do not include the query if it does not return any answer, except for boolean query
                 if len(bindings) > 0 or ask_query:
                     # Extract values from bindings
-                    values = [binding['u1']['value'] for binding in bindings]
-                    answer["target_var"] = bindings[0]
-                    answer["answer"] = values
-                    filtered_output.append(where_clause)
-                    filtered_output.append(sparlq_q)
+                    for target_var in target_vars:
+                        try:
+                            values = [binding[target_var]['value'] for binding in bindings]
+                            answer["target_var"] = bindings[0]
+                            answer["answer"] = values
+                            filtered_output.append(where_clause)
+                            filtered_output.append(sparlq_q)
+                        except:
+                            continue
+                
 
         #print(filtered_output)
 
@@ -178,9 +187,9 @@ class QueryBuilder:
 
         used_relations = []
         for relation_item in relation_items:
-            print(relation_item)
+            #print(relation_item)
             for relation in relation_item.uris:
-                print(relation)
+                #print(relation)
                 used_relations = used_relations + [relation]
                 for edge in self.find_edges(edges, relation, used_edges):
                     entities = MyList()
@@ -205,57 +214,109 @@ class QueryBuilder:
 
     def __find_paths_start_with_entities(self, graph, entity_items, relation_items, edges, output_paths=Paths(), used_edges=set()):
         new_output_paths = Paths([])
-        for entity_item in entity_items:
-            
-            entity = entity_item['uri']
-            
-            #Prev for entity in entity_item.uris:
-            for edge in self.find_edges_by_entity(edges, entity, used_edges):
-                  
-                if not self.is_w3_type(edge.uri):
-                    used_relations = [edge.uri]
-                   
-                else:
+        #print("wtfw",relation_items)
+        if len(entity_items) > 0:
+            for entity_item in entity_items:
+                
+                entity = entity_item['uri']
+                
+                #Prev for entity in entity_item.uris:
+                for edge in self.find_edges_by_entity(edges, entity, used_edges):
                     
-                    used_relations = edge.dest_node.uris
-                entities = MyList()
-                
+                    if not self.is_w3_type(edge.uri):
+                        used_relations = [edge.uri]
 
-                # I think edge.source_node.are_all_uris_generic() looks to see if source node is <type> changed it
-
-                #if not (edge.source_node.are_all_uris_generic() or edge.uri.is_type()):
-                if not (self.is_w3_type(edge.source_node.uris) or self.is_w3_type(edge.uri)):
+                    else:
+                        
+                        used_relations = edge.dest_node.uris
+                    entities = MyList()
                     
-                    entities.extend(edge.source_node.uris)
+                    # I think edge.source_node.are_all_uris_generic() looks to see if source node is <type> changed it
 
-
-                #if not (edge.dest_node.are_all_uris_generic() or edge.uri.is_type()):
-                if not (self.is_w3_type(edge.dest_node.uris) or self.is_w3_type(edge.uri)):    
+                    #if not (edge.source_node.are_all_uris_generic() or edge.uri.is_type()):
+                    if not (self.is_w3_type(edge.source_node.uris) or self.is_w3_type(edge.uri)):
+                        
+                        entities.extend(edge.source_node.uris)
+                    #if not (edge.dest_node.are_all_uris_generic() or edge.uri.is_type()):
+                    if not (self.is_w3_type(edge.dest_node.uris) or self.is_w3_type(edge.uri)):    
+                        
+                        entities.extend(edge.dest_node.uris)
                     
-                    entities.extend(edge.dest_node.uris)
-                
-                
-                #we remove the entities and relations we just checked 
-                
-                entity_use = entity_items - LinkedItem.list_contains_uris(entity_items, entities)
-                
-                relation_use = relation_items - LinkedItem.list_contains_uris(relation_items, used_relations)
-                
-                edge_use = edges - {edge}
+                    #we remove the entities and relations we just checked 
+                    
+                    entity_use = entity_items - LinkedItem.list_contains_uris(entity_items, entities)
+                    
+                    relation_use = relation_items - LinkedItem.list_contains_uris(relation_items, used_relations)
+                    
+                    edge_use = edges - {edge}
 
-                #unsure if edge_use is trying to be smaller here?
+                    #unsure if edge_use is trying to be smaller here?
 
-                new_paths = self.__find_paths(graph,
-                                                entity_use,
-                                                relation_use,
-                                                edge_use,
-                                                output_paths=output_paths.extend(edge),
-                                                used_edges=used_edges | set([edge]))
+                    new_paths = self.__find_paths(graph,
+                                                    entity_use,
+                                                    relation_use,
+                                                    edge_use,
+                                                    output_paths=output_paths.extend(edge),
+                                                    used_edges=used_edges | set([edge]))
+                    
+                    #why does the path need to be bigger than the relationship_items
+                    new_output_paths.add(new_paths)#, lambda path: len(path) >= len(graph.relation_items))
+                    #print(new_output_paths)
+            return new_output_paths
+        else:
+            if len(relation_items) > 0:
+                for entity_item in relation_items:
                 
-                #why does the path need to be bigger than the relationship_items
-                new_output_paths.add(new_paths)#, lambda path: len(path) >= len(graph.relation_items))
-                #print(new_output_paths)
-        return new_output_paths
+                    entity = entity_item['uri']
+                    
+                    #Prev for entity in entity_item.uris:
+                    for edge in self.find_edges_by_entity(edges, entity, used_edges):
+                        
+                        if not self.is_w3_type(edge.uri):
+                            used_relations = [edge.uri]
+                        
+                        else:
+                            
+                            used_relations = edge.dest_node.uris
+                        entities = MyList()
+                        
+
+                        # I think edge.source_node.are_all_uris_generic() looks to see if source node is <type> changed it
+
+                        #if not (edge.source_node.are_all_uris_generic() or edge.uri.is_type()):
+                        if not (self.is_w3_type(edge.source_node.uris) or self.is_w3_type(edge.uri)):
+                            
+                            entities.extend(edge.source_node.uris)
+
+
+                        #if not (edge.dest_node.are_all_uris_generic() or edge.uri.is_type()):
+                        if not (self.is_w3_type(edge.dest_node.uris) or self.is_w3_type(edge.uri)):    
+                            
+                            entities.extend(edge.dest_node.uris)
+                        
+                        
+                        #we remove the entities and relations we just checked 
+                        
+                        entity_use = entity_items - LinkedItem.list_contains_uris(entity_items, entities)
+                        
+                        relation_use = relation_items - LinkedItem.list_contains_uris(relation_items, used_relations)
+                        
+                        edge_use = edges - {edge}
+
+                        #unsure if edge_use is trying to be smaller here?
+
+                        new_paths = self.__find_paths(graph,
+                                                        entity_use,
+                                                        relation_use,
+                                                        edge_use,
+                                                        output_paths=output_paths.extend(edge),
+                                                        used_edges=used_edges | set([edge]))
+                        
+                        #why does the path need to be bigger than the relationship_items
+                        new_output_paths.add(new_paths)#, lambda path: len(path) >= len(graph.relation_items))
+                    #print(new_output_paths)    
+            return new_output_paths
+        
 
     def find_edges(self, edges, uri, used_edges):
         outputs = [edge for edge in edges if edge.uri == uri or (self.is_w3_type(edge.uri)) and edge.dest_node.has_uri(uri)]

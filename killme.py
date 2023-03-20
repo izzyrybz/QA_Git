@@ -15,6 +15,7 @@ from learning.treelstm.vocab import Vocab
 import torch.optim as optim
 from myclassifier import QuestionClassifier
 from parser.lc_quad import LC_Qaud, LC_QaudParser
+from parser.lc_quad_linked import LC_Qaud_LinkedParser
 from svmclassifier import SVMClassifier
 import ujson
 
@@ -73,12 +74,12 @@ def rank(args, question, generated_queries):
                           "generated_queries": [{"query": query, "correct": False} for query in
                                                 generated_queries_sparql]}]
             #print(json_data)
-            parser = LC_QaudParser()
+            parser = LC_Qaud_LinkedParser()
             output_dir = "./output/tmp"
             
-            #
+            #we need to fix this, it is fucked
             preprocess_lcquad.save_split(output_dir, *preprocess_lcquad.split(json_data, parser))
-            preprocess_lcquad.correct_data(generated_queries)
+            #preprocess_lcquad.correct_data(generated_queries)
 
             dep_tree_cache_file_path = './json_files/dep_tree_cache_lcquadtest.json'
             if os.path.exists(dep_tree_cache_file_path):
@@ -88,29 +89,17 @@ def rank(args, question, generated_queries):
                 dep_tree_cache = dict()
 
             if question in dep_tree_cache:
-                print(question)
+                #print(question)
                 
                 preprocess_lcquad.parse(output_dir, dep_parse=False)
 
                 cache_item = dep_tree_cache[question]
                 with open(os.path.join(output_dir, 'a.parents'), 'w') as f_parent, open(
                         os.path.join(output_dir, 'a.toks'), 'w') as f_token:
-                    #testing
-                    '''f_token.write("this is like pooop")
-                    f_token.write("does this work")
-                    print("this is token",f_token)'''
-                    flag=True
-                    
+                   
                     for i in range(len(generated_queries)):
                         f_token.write(cache_item[0])
                         f_parent.write(cache_item[1])
-                        '''if(flag):
-                            f_token.write("please kill me")
-                            print("WE GO IN HERE")
-                            flag=False
-                        else:
-                            f_token.write("pedro pascal crush kill me")'''
-                
 
                     
             else:
@@ -120,11 +109,7 @@ def rank(args, question, generated_queries):
                 with open(os.path.join(output_dir, 'a.toks')) as f:
                     print("this is token",f.readline())
                     tokens = f.readline()
-                #testing
-                '''tokens=[]
-                tokens.append("this is like pooop")
-                tokens.append("does this work")
-                print("this is token",tokens)'''
+                
                 dep_tree_cache[question] = [tokens, parents]
 
                 with open(dep_tree_cache_file_path, 'w') as f:
@@ -152,7 +137,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
 
     '''type_confidence = question_type_classifier.predict_proba([question])[0][question_type]
     if isinstance(QuestionClassifier.predict_proba([question])[0][question_type], (np.ndarray, list)):
-        type_confidence = type_confidence[0]'''
+        type_confidence = type_confidence[0]
     
     #question_type_classifier = SVMClassifier("question_type_classifier/svm.model")
     double_relation_classifier = SVMClassifier("/home/bell/rdf_code/question_type_classifier/svm.model")
@@ -161,7 +146,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         double_relation = double_relation_classifier.predict([question])
         print(double_relation_classifier.predict([question]))
         if double_relation == 1:
-            double_relation = True
+            double_relation = True'''
         
         #i dont think we can use svm models build on other data??? 
         #it is throwing errors like crazy too 
@@ -200,7 +185,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     base_path = "./learning/treelstm/"
     args.save = os.path.join(base_path, "checkpoints/")
     #changed the checkpoint_filename from lc_quad,epoch=5,train_loss=0.08340245485305786
-    args.expname = "lc_quad,epoch=5,train_loss=0.08747495710849762"
+    args.expname = "lc_quad,epoch=5,train_loss=0.07691806554794312"
     args.mem_dim = 150
     args.hidden_dim = 50
     args.num_classes = 2
@@ -244,6 +229,10 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         else:
             #print("this is scores[idx]",scores[idx]) 
             item["confidence"] = float(scores[idx] - 1)
+    
+    item_with_highest_confidence = max(all_valid_walks, key=lambda x: x["confidence"])
+    
+    return item_with_highest_confidence
     
     #print("this is the valid walks when we are done",all_valid_walks)
 

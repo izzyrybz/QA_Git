@@ -32,7 +32,7 @@ class LC_Qaud_Linked:
 class LC_Qaud_LinkedParser(AnswerParser):
     def __init__(self):
         #print("we are sopposed to do something here")
-        super(LC_Qaud_LinkedParser, self).__init__("localhost:3030")
+        super(LC_Qaud_LinkedParser, self)
 
     def parse_question(self, raw_question):
         return raw_question
@@ -42,5 +42,9 @@ class LC_Qaud_LinkedParser(AnswerParser):
 
     def parse_sparql(self, raw_query):
         raw_query = raw_query.replace("https://", "http://")
-        print("i think query here")
+        print("we are in lc_quad_linked and this is raw_quer",raw_query)
+        uris=[]
+        for uri in raw_query.split():
+            #print(uri)
+            uris.append(uri)
         return raw_query, True, uris

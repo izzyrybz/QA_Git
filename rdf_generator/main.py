@@ -88,14 +88,18 @@ with open(path,'r') as f:
 
 ############################################ TO CREATE THE RDF TRIPPLES #############################################
 
-commits = URIRef("http://dbpedia.org/resource/Commit_(version_control)")
+#commits = URIRef("http://dbpedia.org/resource/Commit_(version_control)")
+commits = URIRef("http://example.org/entity/commit")
+
+# there is a chance that this ^^ will cause issues with the property ttl file
+
 # I think we can create namespace for like entity or ontology 
 # https://dbpedia.org/ontology/author ???
 #
 Author = URIRef("http://dbpedia.org/ontology/author")
 Description = URIRef("http://dbpedia.org/ontology/description")
 Calendar_date = URIRef("http://dbpedia.org/ontology/Calendar_date")
-
+Entity_uri = URIRef("http://example.org/entity/")
 
 data=[]
 g = Graph()
@@ -107,12 +111,12 @@ for commit in history:
     commit_uri = URIRef(urirefstring)
     #commit_uri = commits[commit['commit_ref']]
     g.add((commit_uri, RDF.type, commits))
-    g.add((commit_uri, Author, Literal(commit['author'])))
+    g.add((commit_uri, Author, Entity_uri+commit['author']))
     g.add((commit_uri, Description, Literal(commit['description'])))
     g.add((commit_uri, Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
 
 # To save the graph to a file
-g.serialize(destination='bigger_history.ttl', format='turtle')
+g.serialize(destination='commit7.ttl', format='turtle')
 
 
 

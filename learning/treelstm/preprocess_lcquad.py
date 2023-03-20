@@ -1,10 +1,12 @@
 import os
+import re
 import sys
 import glob
 import json
 import anytree
 from tqdm import tqdm
 import sys
+import requests
 import spacy
 path = os.getcwd()
 sys.path.insert(0, path)
@@ -13,12 +15,134 @@ from parser.lc_quad_linked import LC_Qaud_LinkedParser
 # sys.path.append('/cluster/home/xlig/kg/')
 # sys.path.insert(0, '/cluster/home/xlig/kg/')
 
+def contains_ent(string):
+    return "#ent" in string
+    
+
+def generalize_question(a, b, parser=None):
+
+    
+    # replace entity mention in question with a generic symbol
+
+    if parser is None:
+        parser = LC_Qaud_LinkedParser()
+    print("generalize_question, this is b",b)
+    _, _, uris = parser.parse_sparql(b)
+    print("we are in generlize and this is our uris",uris )
+
+    entity_uris=[]
+    for uri in uris:
+        #check if the dbpedia is a entity
+        
+        if not uri.startswith("?"):
+            query = f'''ASK {{
+            {uri} a ?type .
+            FILTER (?type IN (dbo:Person, dbo:Organisation, dbo:Place, dbo:Event, dbo:Work))
+        }}'''
+            response = requests.post('https://dbpedia.org/sparql', data={'query': query}, headers = {'Accept': 'application/json'})
+            if response.status_code == 200:
+                if response.json()['boolean']:
+                    for item in ["http://dbpedia.org/resource/", "http://dbpedia.org/ontology/",
+                 "http://dbpedia.org/property/", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"]:
+                        if item in uri:
+                            uri = uri.replace(item, "")
+                            entity_uris.append(uri)
+
+        #check if the knowledge domain specific thing is an entity
+        if "example.org/entity" in uri:
+            uri = uri.replace("http://example.org/entity/", "")
+            #print("we are appending",uri)
+            entity_uris.append(uri)
+        
+    #uris = [uri for uri in uris if uri-is_entity()]
+
+    i = 0
+    print("THIS IS ENTITY URIS",entity_uris)
+
+    
+    for uri in entity_uris:
+    #print("WHAT IS THIS BULLSHIT",find_mentions(a, uri))
+        output = find_mentions(a, entity_uris)
+        #output contains start,end, dist,uri
+        if len(output)> 4:
+            for result in output:
+                #print(result)
+                a = a[:result['start']]+ '#ent' + a[result['end']:]
+                #a = "{} #en{} {}".format(a[:item[start]], "t" * (i + 1), a[item[end]:])
+                #print("this is back from find mentions",a)
+                b = b.replace(result['uri'], "#en{}".format("t" * (i + 1)))
+        else:
+            a = a[:output['start']]+ '#ent' + a[output['end']:]
+            #a = "{} #en{} {}".format(a[:item[start]], "t" * (i + 1), a[item[end]:])
+            #print("this is back from find mentions",a)
+            b = b.replace(output['uri'], "#en{}".format("t" * (i + 1)))
+
+
+    # remove extra info from the relation's uri and remaining entities
+    for item in ["http://dbpedia.org/resource/", "http://dbpedia.org/ontology/",
+                "http://dbpedia.org/property/", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"]:
+        b = b.replace(item, "")
+    b = b.replace("<", "").replace(">", "")
+
+    return a, b
+    
+
+
+    '''if parser is None:
+        parser = LC_Qaud_LinkedParser()
+    
+    #question= contains_fucked_ent(question)
+    
+    # Parse the question with spaCy
+    nlp = spacy.load("en_core_web_sm")
+    doc = nlp(question)
+
+    # Replace named entities with placeholders based on POS tags
+    generalized_words = []
+    for token in doc:
+        #print(token.pos_)
+        if token.ent_type_ != "":  # named entity
+            generalized_words.append("#ent")
+        elif token.pos_ in ["NOUN", "PROPN", "ADJ","ADV"]:  # common nouns or adjectives
+                generalized_words.append("#ent")
+        else:
+            generalized_words.append(token.text)
+
+    # Reconstruct the generalized question from the generalized words
+    generalized_words= ' '.join(generalized_words)
+    #print(generalized_words)
+
+    # Remove extra info from the relation's URI and remaining entities
+    prefixes = ["http://dbpedia.org/resource/", "http://dbpedia.org/ontology/",
+                "http://dbpedia.org/property/", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"]
+    for prefix in prefixes:
+        sparql_query = sparql_query.replace(prefix, "")
+    sparql_query = sparql_query.replace("<", "").replace(">", "")
+
+    return generalized_words, sparql_query'''
+
 
 def make_dirs(dirs):
     for d in dirs:
         if not os.path.exists(d):
             os.makedirs(d)
 
+def correct_data(data):
+    if isinstance(data, str):
+        with open(data) as datafile:
+            dataset = json.load(datafile)
+    else:
+        dataset = data
+    b_list = []
+ 
+    for item in tqdm(dataset):
+        #print("started tqdm",i,a)
+        b = item
+        print(b)
+        #print()
+        #print("sending in a",a)
+        b_list.append(b.encode('ascii', 'ignore').decode('ascii') + '\n')
+    return b_list
 
 def dependency_parse(filepath):
     spacy.prefer_gpu()
@@ -55,6 +179,7 @@ def dependency_parse(filepath):
                 length = json_doc['sents'][0]['end'] + 1
                 for t in token:
                     if t['pos'] != 'SPACE':
+                        #print("we are appeneding ",doc[t['id']].text)
                         tok.append(doc[t['id']].text)
                         pos.append(t['pos'])
                         tag.append(t['tag'])
@@ -65,7 +190,22 @@ def dependency_parse(filepath):
                         else:
                             head = head + 1
                         parent.append(head)
-                tokfile.write(' '.join(tok) + '\n')
+                ent_list=[]
+
+                #it became # ent with the space so we trim:
+
+                for i in range(len(tok)):
+                    if i < len(tok)-1 and tok[i] == "#" and tok[i+1] == "ent":
+                        ent_list.append("#ent")
+                    elif i > 0 and tok[i] == "ent" and tok[i-1] == "#":
+                        # do nothing, as we already combined the "#ent" with the preceding "#" symbol
+                        pass
+                    else:
+                        ent_list.append(tok[i])
+                
+
+                #print("we are trying to make sure that the #ent is one",ent_list)
+                tokfile.write(' '.join(ent_list) + '\n')
                 posfile.write(' '.join(pos) + '\n')
                 tagfile.write(' '.join(tag) + '\n')
                 relfile.write(' '.join(dep) + '\n')
@@ -132,41 +272,6 @@ def build_vocab(filepaths, dst_path, lowercase=True):
         for w in sorted(vocab):
             f.write(w + '\n')
 
-
-def generalize_question(question, sparql_query, parser=None):
-    a =question
-    b =sparql_query 
-    # replace entity mention in question with a generic symbol
-    #print("we are in generalize_question, a ,b ", a ,b)
-
-    if parser is None:
-        parser = LC_Qaud_LinkedParser()
-
-    
-    _, _, uris = parser.parse_sparql(b)
-    #this is then the response from the sparql query
-    print(_, _, uris)
-
-    #uris = [uri for uri in uris if uri.is_entity()]
-
-    i = 0
-    # if the question is in the answer
-    for item in find_mentions(a, uris):
-        a = "{} #en{} {}".format(a[:item["start"]], "t" * (i + 1), a[item["end"]:])
-        print("we are inside item",a,item,uris)
-        b = b.replace(item["uri"], "#en{}".format("t" * (i + 1)))
-        
-    # remove extra info from the relation's uri and remaining entities
-    for item in ["http://dbpedia.org/resource/", "http://dbpedia.org/ontology/",
-                 "http://dbpedia.org/property/", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"]:
-        b = b.replace(item, "")
-    b = b.replace("<", "").replace(">", "")
-
-    print("We are done with generalization",a,b)
-
-    return a, b
-
-
 def split(data, parser=None):
     if isinstance(data, str):
         with open(data) as datafile:
@@ -179,11 +284,20 @@ def split(data, parser=None):
     id_list = []
     sim_list = []
     for item in tqdm(dataset):
+        #print("this is the answer from json",dataset)
         i = item["id"]
-        a = item["question"]
-        print("started tqdm",i,a)
+        
+        #print("started tqdm",i,a)
         for query in item["generated_queries"]:
-            a, b = generalize_question(a, query["query"], parser)
+            a = item["question"]
+            #print(query)
+            
+            b = query["query"]
+            b = re.sub(r'^SELECT\s*\*\s*WHERE\s*{\s*', '', b)
+            print("sending in a and b",a,b)
+            a, b = generalize_question(a,b, parser)
+            print("outcome",a)
+            
 
             # Empty query should be ignored
             if len(b) < 5:
@@ -191,9 +305,21 @@ def split(data, parser=None):
             sim = str(2 if query["correct"] else 1)
 
             id_list.append(i + '\n')
+            
             a_list.append(a.encode('ascii', 'ignore').decode('ascii') + '\n')
+            
             b_list.append(b.encode('ascii', 'ignore').decode('ascii') + '\n')
             sim_list.append(sim + '\n')
+    
+        # Convert the array to a set to remove duplicates
+    '''unique_set = set(a_list)
+    [unique_set.append(x) for x in unique_set if x not in unique_set]
+
+    # Convert the set back to a list
+    a_list = list(unique_set)'''
+
+    
+    #print("we are in preprocess",a_list,b_list,id_list)
     return a_list, b_list, id_list, sim_list
 
 
@@ -235,7 +361,9 @@ if __name__ == '__main__':
     trail_filepath = os.path.join(lc_quad_dir, 'LCQuad_trial.json')
     test_filepath = os.path.join(lc_quad_dir, 'LCQuad_test.json')
 
-    ds = json.load(open("output/lcquad_gold.json"))
+    print('loading the data from json_files/gold.json')
+
+    ds = json.load(open("json_files/gold.json"))
 
     total = len(ds)
     train_size = int(.7 * total)
@@ -267,6 +395,7 @@ if __name__ == '__main__':
     print("parse test set")
     parse(test_dir)
 
+    print("building vocab")
     # get vocabulary
     build_vocab(
         glob.glob(os.path.join(lc_quad_dir, '*/*.toks')),

@@ -10,6 +10,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable as Var
+from fasttext import load_model, FastText
 
 import sys
 # IMPORT CONSTANTS
@@ -38,26 +39,14 @@ from fasttext import load_model
 def main():
     global args
     args = parse_args()
-    # global logger
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging.DEBUG)
-    formatter = logging.Formatter("[%(asctime)s] %(levelname)s:%(name)s:%(message)s")
-    # file logger
-    fh = logging.FileHandler(os.path.join(args.save, args.expname) + '.log', mode='w')
-    fh.setLevel(logging.INFO)
-    fh.setFormatter(formatter)
-    logger.addHandler(fh)
-    # console logger
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.DEBUG)
-    ch.setFormatter(formatter)
-    logger.addHandler(ch)
+
     # argument validation
     args.cuda = args.cuda and torch.cuda.is_available()
     if args.sparse and args.wd != 0:
-        logger.error('Sparsity and weight decay are incompatible, pick one!')
+        print('Sparsity and weight decay are incompatible, pick one!')
         exit()
-    logger.debug(args)
+    print("we are setting these ",args," and using the data from learning/treelstm/data/lc_quad/ and saving in learning/treelstm/checkpoints/")
+
     args.data = 'learning/treelstm/data/lc_quad/'
     args.save = 'learning/treelstm/checkpoints/'
     torch.manual_seed(args.seed)
@@ -69,23 +58,27 @@ def main():
         os.makedirs(args.save)
 
     train_dir = os.path.join(args.data, 'train/')
-    dev_dir = os.path.join(args.data, 'dev/')
-    test_dir = os.path.join(args.data, 'test/')
+    dev_dir = os.path.join(args.data, 'train/')
+    test_dir = os.path.join(args.data, 'train/')
 
     # write unique words from all token files
 
     dataset_vocab_file = os.path.join(args.data, 'dataset.vocab')
+    #create the a and b toks in train,dev,test
+    print("creating words from the a.toks and b.toks into datset.vocab")
     if not os.path.isfile(dataset_vocab_file):
+        
         token_files_a = [os.path.join(split, 'a.toks') for split in [train_dir, dev_dir, test_dir]]
         token_files_b = [os.path.join(split, 'b.toks') for split in [train_dir, dev_dir, test_dir]]
         token_files = token_files_a + token_files_b
         dataset_vocab_file = os.path.join(args.data, 'dataset.vocab')
+        
         build_vocab(token_files, dataset_vocab_file)
 
     # get vocab object from vocab file previously written
     vocab = Vocab(filename=dataset_vocab_file,
                   data=[Constants.PAD_WORD, Constants.UNK_WORD, Constants.BOS_WORD, Constants.EOS_WORD])
-    logger.debug('==> Dataset vocabulary size : %d ' % vocab.size())
+    print('==> Dataset vocabulary size : %d ' % vocab.size())
 
     # load dataset splits
     train_file = os.path.join(args.data, 'dataset_train.pth')
@@ -94,21 +87,21 @@ def main():
     else:
         train_dataset = QGDataset(train_dir, vocab, args.num_classes)
         torch.save(train_dataset, train_file)
-    logger.debug('==> Size of train data   : %d ' % len(train_dataset))
+    print('==> Size of train data   : %d ' % len(train_dataset))
     dev_file = os.path.join(args.data, 'dataset_dev.pth')
     if os.path.isfile(dev_file):
         dev_dataset = torch.load(dev_file)
     else:
         dev_dataset = QGDataset(dev_dir, vocab, args.num_classes)
         torch.save(dev_dataset, dev_file)
-    logger.debug('==> Size of dev data     : %d ' % len(dev_dataset))
+    print('==> Size of dev data     : %d ' % len(dev_dataset))
     test_file = os.path.join(args.data, 'dataset_test.pth')
     if os.path.isfile(test_file):
         test_dataset = torch.load(test_file)
     else:
         test_dataset = QGDataset(test_dir, vocab, args.num_classes)
         torch.save(test_dataset, test_file)
-    logger.debug('==> Size of test data    : %d ' % len(test_dataset))
+    print('==> Size of test data    : %d ' % len(test_dataset))
 
     similarity = DASimilarity(args.mem_dim, args.hidden_dim, args.num_classes)
     # if args.sim == "cos":
@@ -129,7 +122,7 @@ def main():
         model.cuda(), criterion.cuda()
     else:
         torch.set_num_threads(4)
-    logger.info("number of available cores: {}".format(torch.get_num_threads()))
+    print("number of available cores: {}".format(torch.get_num_threads()))
     if args.optim == 'adam':
         optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.wd)
     elif args.optim == 'adagrad':
@@ -148,14 +141,18 @@ def main():
     else:
         EMBEDDING_DIM = 300
         emb = torch.zeros(vocab.size(), EMBEDDING_DIM, dtype=torch.float)
-        #print(fasttext.load_model("/home/bell/Documents/QAsparql-master/data/fasttext/wiki.en.bin"))
-        
-        #prev text
-        fasttext_model = load_model("data/fasttext/wiki.en.bin")
+        #fasttext_model= fasttext.load_model("/home/bell/Documents/QAsparql-master/data/fasttext/wiki.en.bin")
+        if os.path.isfile('data/fasttext/wiki.en.bin'):   
+            #DOES THIS ONE ACTUALLY WORK?????????
+            print("making a model out of the fastText this can crash if you have too small of a RAM")
+            fasttext_model = FastText.load_model("data/fasttext/wiki.en.bin")
+        else:
+            print("no fasttext found")
         
        	
         print('Use Fasttext Embedding')
         for word in vocab.labelToIdx.keys():
+            #print("POOP",word)
             word_vector = fasttext_model.get_word_vector(word)
             if word_vector.all() != None and len(word_vector) == EMBEDDING_DIM:
                 emb[vocab.getIndex(word)] = torch.Tensor(word_vector)
@@ -167,7 +164,7 @@ def main():
         '''args.glove = 'learning/treelstm/data/glove/'
         print('Use Glove Embedding')
         glove_vocab, glove_emb = load_word_vectors(os.path.join(args.glove, 'glove.840B.300d'))
-        logger.debug('==> GLOVE vocabulary size: %d ' % glove_vocab.size())
+        print('==> GLOVE vocabulary size: %d ' % glove_vocab.size())
         emb = torch.Tensor(vocab.size(), glove_emb.size(1)).normal_(-0.05, 0.05)
         # # zero out the embeddings for padding and other special words if they are absent in vocab
         for idx, item in enumerate([Constants.PAD_WORD, Constants.UNK_WORD, Constants.BOS_WORD, Constants.EOS_WORD]):
@@ -189,14 +186,23 @@ def main():
 
     # create trainer object for training and testing
     trainer = Trainer(args, model, criterion, optimizer)
+   
 
     for epoch in range(args.epochs):
         if args.mode == "train":
-
-
+            #print(train_dataset)
             train_loss = trainer.train(train_dataset)
             train_loss, train_pred = trainer.test(train_dataset)
-            logger.info(
+            #currently all the train_pred is the same and the datasets.lsentences
+            with open('trash.txt', 'a') as f:
+                f.write(f"\n")
+                f.write(f"(train) a.toks: {train_dataset.lsentences}\n")
+                f.write(f"(train) b.toks: {train_dataset.rsentences}\n")
+                
+
+            print("THIS PRE EPOCH IS TRAIN PRED:",train_pred,"and sent in",train_dataset.lsentences)
+
+            print(
                 '==> Epoch {}, Train \tLoss: {} {}'.format(epoch, train_loss,
                                                            metrics.all(train_pred, train_dataset.labels)))
             checkpoint = {'model': trainer.model.state_dict(), 'optim': trainer.optimizer,
@@ -205,14 +211,24 @@ def main():
                                                          args.expname + ',epoch={},train_loss={}'.format(epoch + 1,
                                                                                                        train_loss))
             torch.save(checkpoint, checkpoint_filename)
+            #print("THIS IS TRAIN PRED:",train_pred,"and sent in",train_dataset.labels)
             scheduler.step()
+
 
         dev_loss, dev_pred = trainer.test(dev_dataset)
         test_loss, test_pred = trainer.test(test_dataset)
-        logger.info(
+        print(
             '==> Epoch {}, Dev \tLoss: {} {}'.format(epoch, dev_loss, metrics.all(dev_pred, dev_dataset.labels)))
-        logger.info(
+        print(
             '==> Epoch {}, Test \tLoss: {} {}'.format(epoch, test_loss, metrics.all(test_pred, test_dataset.labels)))
+        
+        with open('trash.txt', 'a') as f:
+            f.write(f"train_pred: {train_pred}\n")
+            f.write(f"test_pred: {test_pred}\n")
+            f.write(f"dev_pred: {dev_pred}\n")
+        #print(train_pred)
+        #print(test_pred)
+        #print(dev_pred)
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
     When was the initial commit created?
     Was there a commit on the 27th of Jan 2021?
+    How many commits have there been?
 
 DOUBLE ?uri
     What are the descriptions of the commits?

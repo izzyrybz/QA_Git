@@ -1,2 +1,3 @@
-SELECT * WHERE { ?u1 description 'Merge pull request #1 from izzyrybz/test1 Test1' }
-SELECT * WHERE { ?u1 author 'izzyrybz' }
+?u1 description 'Initial commit' }
+?u1 type http://example.org/entity/commit }
+?u1 description 'This is a long description to see if it works Whe I was young pumbaaaaa' }

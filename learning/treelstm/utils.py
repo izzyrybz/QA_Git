@@ -60,10 +60,7 @@ def build_vocab(filenames, vocabfile):
 # mapping from scalar to vector
 def map_label_to_target(label, num_classes):
     target = torch.zeros(1, num_classes)
-    # if label == -1:
-    #     target[0][0] = 1
-    # else:
-    #     target[0][1] = 1
+    
     ceil = int(math.ceil(label))
     floor = int(math.floor(label))
     if ceil == floor:

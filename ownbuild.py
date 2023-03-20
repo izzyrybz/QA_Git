@@ -81,6 +81,34 @@ def prepare_data(question_type):
 
     return entity_uris, relations_uris, question_type
 
+def build_query(query_params, question_type):
+    query = query_params["query"]
+
+    #remove the SELECT * WHERE
+    query = re.sub(r'^SELECT\s*\*\s*WHERE\s*{\s*', '', query)
+    if query[-1] == '}':
+        query=query[:-1]
+    #print("this is query",query)
+
+    for item in query.split():
+        if item.startswith('?'):
+            target_var =item
+            
+                           
+
+    if question_type == 'count':
+        where_clause = "SELECT COUNT ("+target_var+") WHERE {"
+    
+    if question_type == 'boolean':
+        where_clause = "ASK WHERE {"
+    
+    else:
+        where_clause = "SELECT "+target_var+" WHERE {"
+    
+    sparlq_query = where_clause +  query + "}"
+    return sparlq_query
+    #print(sparlq_query)
+
 
 if __name__ == "__main__":
     # Load the spaCy model
@@ -90,10 +118,13 @@ if __name__ == "__main__":
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question
-    question = "Which commits have the user izzyrybz made?"
+    question = "Did a commit have the description 'Initial commit'?"
 
-#Main focus : Which commits have the user izzyrybz made?
+#Main focus : Which commits have the user izzyrybz made? -works
+
 #Secondary focus: How many commits have there been?
+#Third : Did a commit have the description 'Initial commit'? - has the wrong type
+#Fourth: What commits were made in Feburary?
     print("Question:" ,question)
 
     #Parse the input question using spaCy and then create representation and dependency tree
@@ -124,7 +155,17 @@ if __name__ == "__main__":
     entites,relations,num_question_type = prepare_data(question_type)
     h1_threshold=999999
 
-    question_generator = generate_query(question,entites,relations,h1_threshold,num_question_type)
+    #the file for generate_query contains ranking too
+    query_generator = generate_query(question,entites,relations,h1_threshold,num_question_type)
+    print("the query ranked highest and most probable:", query_generator)
+
+    finished_query = build_query(query_generator,question_type)
+
+    jena_response = requests.get("http://localhost:3030/dbpedia/query", params={"query": finished_query})
+    if jena_response.status_code == 200:
+            results = jena_response.json()
+            output = results["results"]["bindings"]
+            print("The answer is",output)
     
 
     #generate all possible queries and check if they are within the knowledgegraph

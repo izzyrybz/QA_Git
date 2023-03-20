@@ -129,13 +129,21 @@ class Graph:
         return all_sets
     
     def jena_formatting(self,item):
+        
+        if item.startswith("'") and item.endswith("'"):
+            #print("we remove the stuff for item", item)
+            item = item[1:-1]
+         
         if self.is_uri(item):
             item = "<"+item+">"
             return item
         elif self.is_var(item):
             return item
+        elif item.startswith("<") and item.endswith(">"):
+            return item
         else: 
             item = "'"+item+"'"
+            #print("we add thing on", item)
             return item
 
 #this used to be in the kb file, but since we dont use kbpedia as endpoint put it here.,

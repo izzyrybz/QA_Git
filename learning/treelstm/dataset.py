@@ -17,13 +17,18 @@ class QGDataset(data.Dataset):
         self.vocab = vocab
         self.num_classes = num_classes
 
+        #a.toks is the sentence with entities with ent b.toks is the representing items in the sparql query
         self.lsentences = self.read_sentences(os.path.join(path, 'a.toks'))
         self.rsentences = self.read_sentences(os.path.join(path, 'b.toks'))
 
+        #a/b.parents is the tree noted with 0 as root and then i belive it is the layers
         self.ltrees = self.read_trees(os.path.join(path, 'a.parents'))
         self.rtrees = self.read_trees(os.path.join(path, 'b.parents'))
 
         self.labels = self.read_labels(os.path.join(path, 'sim.txt'))
+
+        
+            
 
         self.size = len(self.lsentences)
 
@@ -45,6 +50,10 @@ class QGDataset(data.Dataset):
 
     def read_sentence(self, line):
         indices = self.vocab.convertToIdx(line.split(), Constants.UNK_WORD)
+        #print("we are taking this line:", line,"and tunring it into this tensor",torch.LongTensor(indices))
+        with open('trash.txt', 'a') as f:
+                f.write(f"read_sentence in dataset LINE: {line}\n")
+                f.write(f"turning it into this tensor: {torch.LongTensor(indices)}\n")
         return torch.LongTensor(indices)
 
     def read_trees(self, filename):
@@ -53,15 +62,18 @@ class QGDataset(data.Dataset):
         return trees
 
     def read_tree(self, line):
+        #print("LINE",line)
         parents = list(map(int, line.split()))
         trees = dict()
         root = None
         for i in range(1, len(parents) + 1):
             if i - 1 not in trees.keys() and parents[i - 1] != -1:
+                #print("THIS IS TREE KEYS",trees.keys())
                 idx = i
                 prev = None
                 while True:
                     parent = parents[idx - 1]
+                    #print("this is parent",parent)
                     if parent == -1:
                         break
                     tree = Tree()

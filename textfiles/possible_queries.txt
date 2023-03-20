@@ -34,6 +34,16 @@ WHERE
 Provide the commits between 2023-01-27 and 2023-01-30?
 -------------------------------------------------------------
 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (COUNT(DISTINCT ?s) AS ?count)
+WHERE {
+  ?s ?p ?date .
+  FILTER ( ?date >= "2023-01-01T00:00:00+01:00"^^xsd:dateTime && ?date <= "2023-02-01T00:00:00+01:00"^^xsd:dateTime)
+}
+
+How many commits was generated in Feburary?
+-------------------------------------------------------------
+
 What is the latest commit in the master branch?
 Which files were modified in the commit with hash "a1b2c3d4"?
 How many lines of code were added and removed in the commit with message "Update README.md"?

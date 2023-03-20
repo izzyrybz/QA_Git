@@ -32,12 +32,12 @@ class Paths(list):
         graph = Graph()
 
         for batch_edges in self:
-            print(batch_edges)
+            #print(batch_edges)
             #sparql_where = [self.sparql_format_jena(edge) for edge in batch_edges]
             for edge in batch_edges:
                 edge_elements = [edge.source_node, edge, edge.dest_node]
                 sparql_where = self.sparql_format_jena(graph,edge_elements)
-                print("Where",sparql_where)
+                #print("Where",sparql_where)
                 output.append(sparql_where)
         
 
@@ -54,7 +54,7 @@ class Paths(list):
                 else:
                     sparql_q_varible_num = '?u1'
 
-                print(sparql_q_varible_num)
+                #print(sparql_q_varible_num)
 
                 #Prev if ask_query:
                 output.append({"suggested_id": sparql_q_varible_num, "where": sparql_where})
@@ -77,10 +77,10 @@ class Paths(list):
     def sparql_format_jena(self,graph,edge_elements):
         #graph = Graph()
         
-        #print("before",source_node,edge,destination_node)
-        source_node = graph.jena_formatting(edge_elements[0].uris.strip("'"))
-        edge = graph.jena_formatting(edge_elements[1].uri.strip("'"))
-        destination_node = graph.jena_formatting(edge_elements[2].uris.strip("'"))
+        #print("before",edge_elements[0],edge_elements[1],edge_elements[2])
+        source_node = graph.jena_formatting(edge_elements[0].uris)
+        edge = graph.jena_formatting(edge_elements[1].uri)
+        destination_node = graph.jena_formatting(edge_elements[2].uris)
         #print("after",source_node,edge,destination_node)
         where_clause = str(source_node) + " " + str(edge) + " " + str(destination_node) 
 

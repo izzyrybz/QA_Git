@@ -32,7 +32,7 @@ train_data = [
     {"question": "Are all reptiles cold-blooded?", "type": "boolean"},
     {"question": "How many days are there in a week?", "type": "count"},
     {"question": "which country has the most islands?", "type": "list"},
-    {"question": "Are there more dogs or cats as pets in the world?", "type": "boolean"},
+    {"question": "Are there more dogs or cats as pets in the world?", "type": "list"},
     {"question": "What are the plantes with life?", "type": "list"},
     {"question": "When did the queen die?", "type": "list"},
     {"question": "Count the kings of England?", "type": "count"},
@@ -44,10 +44,12 @@ train_data = [
     {"question": "Will Smith has been in what types of movie genres?", "type": "list"},
     {"question": "Are all snakes dangerous to humans?", "type": "boolean"},
     {"question": "Ducks are dangerous?", "type": "boolean"},
+    {"question": "Did the two towers collapase?", "type": "boolean"},
     {"question": "How many oceans are there on Earth?", "type": "count"},
     {"question": "How many commits are there on Github?", "type": "count"},
     {"question": "Does it snow in Portugal?", "type": "boolean"},
     {"question": "Count everyone who studied at Karlstad University?", "type": "count"},
+    {"question": "Did the vikings have tattoos?", "type": "boolean"},
     {"question": "What is the capital of France?", "type": "list"}
 ]
 

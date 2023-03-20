@@ -1,18 +1,639 @@
-leaderName ?u_0 #ent
+leaderName ?u_0 Justin_Trudeau
 majorShrine ?u_1 ?u_0
 leaderName majorShrine ?u_1 ?u_0 Justin_Trudeau
 leaderName ?u_1 Justin_Trudeau
-leaderName #ent ?u_0
-sisterStation ?u_0 #ent
-city ?u_0 ?u_1
-sisterStation city ?u_0 ?u_1 KTXY
+birthPlace ?u_1 Houston
+debutTeam ?u_0 ?u_1
+type ?u_0 BaseballPlayer
+debutTeam type ?u_0 BaseballPlayer ?u_1
+birthPlace ?u_0 Houston
+birthPlace debutTeam ?u_0 ?u_1 Houston
+debutTeam ?u_0 type ?u_1 BaseballPlayer
+type ?u_1 BaseballPlayer
+birthPlace type ?u_1 BaseballPlayer Houston
+birthPlace type ?u_0 BaseballPlayer Houston
+birthPlace debutTeam type ?u_0 BaseballPlayer ?u_1 Houston
+birthPlace debutTeam ?u_1 ?u_0 Houston
+debutTeam ?u_1 type ?u_0 BaseballPlayer
+debutTeam type ?u_1 BaseballPlayer ?u_0
+birthPlace debutTeam type ?u_1 BaseballPlayer ?u_0 Houston
+debutTeam ?u_1 ?u_0
+international ?u_1 Muslim_Brotherhood
+religion ?u_0 ?u_1
+international type ?u_1 PoliticalParty Muslim_Brotherhood
+international ?u_0 Muslim_Brotherhood
+type ?u_0 PoliticalParty
+international religion ?u_0 ?u_1 Muslim_Brotherhood
+international type ?u_0 PoliticalParty Muslim_Brotherhood
+religion type ?u_0 PoliticalParty ?u_1
+international religion type ?u_0 PoliticalParty ?u_1 Muslim_Brotherhood
+international ?u_1 Muslim_Brotherhood
+type ?u_1 PoliticalParty
+international ?u_0 Muslim_Brotherhood
+knownFor Sam_Loyd ?u_0
+knownFor Eric_Schiller ?u_0
+knownFor ?u_1 ?u_0
+knownFor Sam_Loyd knownFor Eric_Schiller ?u_0
+knownFor Sam_Loyd knownFor ?u_1 ?u_0
+knownFor Eric_Schiller knownFor ?u_1 ?u_0
+knownFor Sam_Loyd knownFor Eric_Schiller knownFor ?u_1 ?u_0
+knownFor ?u_0 ?u_1
+knownFor Sam_Loyd ?u_1
+knownFor Sam_Loyd ?u_1
+knownFor Eric_Schiller ?u_1
+knownFor Sam_Loyd ?u_0
+knownFor Sam_Loyd knownFor ?u_0 ?u_1
+knownFor Eric_Schiller knownFor ?u_0 ?u_1
+deputy ?u_0 Neil_Brown_(Australian_politician)
+deputy ?u_0 Andrew_Peacock
+deputy Andrew_Peacock ?u_0
+deputy deputy ?u_0 Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy deputy Andrew_Peacock ?u_0 Neil_Brown_(Australian_politician)
+deputy type ?u_0 OfficeHolder Neil_Brown_(Australian_politician)
+deputy deputy Andrew_Peacock ?u_0 Andrew_Peacock
+deputy type ?u_0 OfficeHolder Andrew_Peacock
+deputy Andrew_Peacock type ?u_0 OfficeHolder
+deputy deputy deputy Andrew_Peacock ?u_0 Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy deputy type ?u_0 OfficeHolder Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy deputy Andrew_Peacock type ?u_0 OfficeHolder Neil_Brown_(Australian_politician)
+deputy deputy Andrew_Peacock type ?u_0 OfficeHolder Andrew_Peacock
+deputy deputy deputy Andrew_Peacock type ?u_0 OfficeHolder Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy ?u_1 Neil_Brown_(Australian_politician)
+type ?u_1 OfficeHolder
+deputy ?u_1 Neil_Brown_(Australian_politician)
+deputy deputy ?u_1 ?u_0 Neil_Brown_(Australian_politician)
+deputy type ?u_1 OfficeHolder Neil_Brown_(Australian_politician)
+deputy deputy ?u_1 ?u_0 Andrew_Peacock
+deputy type ?u_1 OfficeHolder Neil_Brown_(Australian_politician)
+deputy deputy type ?u_1 OfficeHolder ?u_0 Neil_Brown_(Australian_politician)
+deputy deputy type ?u_1 OfficeHolder ?u_0 Andrew_Peacock
+deputy ?u_1 Andrew_Peacock
+deputy ?u_1 ?u_0
+deputy ?u_0 Neil_Brown_(Australian_politician)
+deputy deputy ?u_1 ?u_0 Neil_Brown_(Australian_politician)
+deputy ?u_0 Neil_Brown_(Australian_politician)
+deputy deputy ?u_1 ?u_0 Andrew_Peacock
+deputy type ?u_1 OfficeHolder Andrew_Peacock
+deputy type ?u_1 OfficeHolder ?u_0
+deputy ?u_0 Neil_Brown_(Australian_politician)
+deputy deputy type ?u_1 OfficeHolder ?u_0 Neil_Brown_(Australian_politician)
+deputy deputy type ?u_1 OfficeHolder ?u_0 Andrew_Peacock
+type ?u_0 OfficeHolder
+deputy ?u_1 type ?u_0 OfficeHolder
+deputy deputy deputy ?u_1 ?u_0 Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy deputy ?u_1 type ?u_0 OfficeHolder Neil_Brown_(Australian_politician)
+deputy deputy ?u_1 type ?u_0 OfficeHolder Andrew_Peacock
+deputy deputy deputy ?u_1 type ?u_0 OfficeHolder Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy ?u_1 Neil_Brown_(Australian_politician)
+deputy ?u_1 Neil_Brown_(Australian_politician)
+deputy deputy ?u_1 ?u_0 Neil_Brown_(Australian_politician)
+deputy ?u_1 Andrew_Peacock
+deputy type ?u_0 OfficeHolder Neil_Brown_(Australian_politician)
+deputy deputy ?u_1 ?u_0 Andrew_Peacock
+deputy deputy deputy type ?u_1 OfficeHolder ?u_0 Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy deputy ?u_0 ?u_1 Neil_Brown_(Australian_politician)
+deputy deputy ?u_0 ?u_1 Andrew_Peacock
+deputy type ?u_0 OfficeHolder ?u_1
+deputy deputy type ?u_0 OfficeHolder ?u_1 Neil_Brown_(Australian_politician)
+deputy deputy type ?u_0 OfficeHolder ?u_1 Andrew_Peacock
+deputy deputy ?u_0 ?u_1 Neil_Brown_(Australian_politician)
+deputy deputy ?u_0 ?u_1 Andrew_Peacock
+deputy deputy type ?u_0 OfficeHolder ?u_1 Neil_Brown_(Australian_politician)
+deputy deputy type ?u_0 OfficeHolder ?u_1 Andrew_Peacock
+deputy ?u_0 type ?u_1 OfficeHolder
+deputy deputy deputy ?u_0 ?u_1 Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy deputy ?u_0 ?u_1 Neil_Brown_(Australian_politician)
+deputy deputy ?u_0 ?u_1 Andrew_Peacock
+deputy deputy deputy ?u_0 ?u_1 Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy deputy ?u_0 type ?u_1 OfficeHolder Neil_Brown_(Australian_politician)
+deputy deputy ?u_0 type ?u_1 OfficeHolder Andrew_Peacock
+deputy ?u_0 ?u_1
+deputy deputy deputy type ?u_0 OfficeHolder ?u_1 Andrew_Peacock Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock ?u_0
+deputy ?u_1 Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy ?u_1 ?u_0
+deputy Andrew_Peacock ?u_0
+deputy type ?u_1 OfficeHolder Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy type ?u_1 OfficeHolder ?u_0
+deputy Andrew_Peacock ?u_1
+deputy ?u_0 Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy ?u_1 ?u_0
+deputy Andrew_Peacock type ?u_1 OfficeHolder
+deputy ?u_0 Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy type ?u_1 OfficeHolder ?u_0
+deputy Andrew_Peacock type ?u_0 OfficeHolder
+deputy deputy Andrew_Peacock deputy ?u_1 ?u_0 Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy ?u_1 type ?u_0 OfficeHolder
+deputy deputy Andrew_Peacock deputy ?u_1 type ?u_0 OfficeHolder Neil_Brown_(Australian_politician)
+deputy ?u_1 Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock ?u_1
+deputy type ?u_0 OfficeHolder Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy ?u_1 ?u_0
+deputy deputy Andrew_Peacock ?u_0 Neil_Brown_(Australian_politician)
+deputy deputy Andrew_Peacock deputy type ?u_1 OfficeHolder ?u_0 Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy ?u_0 ?u_1
+deputy Andrew_Peacock deputy type ?u_0 OfficeHolder ?u_1
+deputy Andrew_Peacock deputy ?u_0 ?u_1
+deputy Andrew_Peacock deputy type ?u_0 OfficeHolder ?u_1
+deputy deputy Andrew_Peacock deputy ?u_0 ?u_1 Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy ?u_0 ?u_1
+deputy deputy Andrew_Peacock deputy ?u_0 ?u_1 Neil_Brown_(Australian_politician)
+deputy Andrew_Peacock deputy ?u_0 type ?u_1 OfficeHolder
+deputy deputy Andrew_Peacock deputy type ?u_0 OfficeHolder ?u_1 Neil_Brown_(Australian_politician)
+nationalOrigin Focke-Wulf_Fw_260 ?u_0
+nationalOrigin Start_+_Flug_H-101 ?u_0
+nationalOrigin ?u_1 ?u_0
+nationalOrigin Focke-Wulf_Fw_260 nationalOrigin Start_+_Flug_H-101 ?u_0
+nationalOrigin Focke-Wulf_Fw_260 nationalOrigin ?u_1 ?u_0
+nationalOrigin Start_+_Flug_H-101 nationalOrigin ?u_1 ?u_0
+nationalOrigin Focke-Wulf_Fw_260 nationalOrigin Start_+_Flug_H-101 nationalOrigin ?u_1 ?u_0
+nationalOrigin ?u_0 ?u_1
+nationalOrigin Focke-Wulf_Fw_260 ?u_1
+nationalOrigin Focke-Wulf_Fw_260 ?u_1
+nationalOrigin Start_+_Flug_H-101 ?u_1
+nationalOrigin Focke-Wulf_Fw_260 ?u_0
+nationalOrigin Focke-Wulf_Fw_260 nationalOrigin ?u_0 ?u_1
+nationalOrigin Start_+_Flug_H-101 nationalOrigin ?u_0 ?u_1
+artist ?u_0 Christopher_Franke
+network ?u_0 Prime_Time_Entertainment_Network
+type ?u_0 TelevisionShow
+artist network ?u_0 Prime_Time_Entertainment_Network Christopher_Franke
+artist type ?u_0 TelevisionShow Christopher_Franke
+network type ?u_0 TelevisionShow Prime_Time_Entertainment_Network
+artist network type ?u_0 TelevisionShow Prime_Time_Entertainment_Network Christopher_Franke
+battles ?u_0 World_War_II
+battles ?u_0 ?u_1
+battles ?u_1 ?u_0
+battles battles ?u_0 ?u_1 World_War_II
+battles battles ?u_1 ?u_0 World_War_II
+battles ?u_0 battles ?u_1 ?u_0
+battles ?u_1 World_War_II
+battles battles ?u_0 ?u_1 World_War_II
+battles battles ?u_1 ?u_0 World_War_II
+network ?u_0 Comcast
+parentOrganisation ?u_0 Comcast
+network ?u_0 Comcast
+parentOrganisation ?u_0 ?u_1
+parentOrganisation ?u_1 ?u_0
+parentOrganisation ?u_0 Comcast
+network ?u_0 ?u_1
+network ?u_1 ?u_0
+parentOrganisation network ?u_1 ?u_0 Comcast
+network ?u_1 Comcast
+parentOrganisation ?u_1 Comcast
+parentOrganisation network ?u_0 ?u_1 Comcast
+genre Battle_Chess ?u_0
+sport Vishwajyot_High_School ?u_0
+genre Battle_Chess sport Vishwajyot_High_School ?u_0
+tenant ?u_0 Raptors_905
+tenant ?u_1 ?u_0
+tenant ?u_0 ?u_1
+tenant tenant ?u_0 ?u_1 Raptors_905
+tenant ?u_1 tenant ?u_0 ?u_1
+tenant ?u_1 Raptors_905
+tenant tenant ?u_1 ?u_0 Raptors_905
+location Dzogchen_Ponlop_Rinpoche ?u_0
+operator ?u_0 Massachusetts_Department_of_Transportation
+owner ?u_0 Massachusetts_Department_of_Transportation
+type ?u_0 RoadTunnel
+operator type ?u_0 RoadTunnel Massachusetts_Department_of_Transportation
+operator ?u_1 Massachusetts_Department_of_Transportation
+owner ?u_1 ?u_0
+type ?u_0 RoadTunnel
+operator owner ?u_1 ?u_0 Massachusetts_Department_of_Transportation
+operator ?u_1 Massachusetts_Department_of_Transportation
+operator ?u_0 Massachusetts_Department_of_Transportation
+type ?u_1 RoadTunnel
+operator ?u_0 Massachusetts_Department_of_Transportation
+owner type ?u_1 RoadTunnel ?u_0
+operator type ?u_1 RoadTunnel Massachusetts_Department_of_Transportation
+operator owner type ?u_1 RoadTunnel ?u_0 Massachusetts_Department_of_Transportation
+operator type ?u_0 RoadTunnel Massachusetts_Department_of_Transportation
+owner ?u_0 ?u_1
+owner type ?u_0 RoadTunnel ?u_1
+operator owner ?u_0 ?u_1 Massachusetts_Department_of_Transportation
+operator owner type ?u_0 RoadTunnel ?u_1 Massachusetts_Department_of_Transportation
+owner ?u_1 Massachusetts_Department_of_Transportation
+operator ?u_1 ?u_0
+owner operator ?u_1 ?u_0 Massachusetts_Department_of_Transportation
+owner ?u_1 Massachusetts_Department_of_Transportation
+owner ?u_0 Massachusetts_Department_of_Transportation
+owner ?u_0 Massachusetts_Department_of_Transportation
+operator type ?u_1 RoadTunnel ?u_0
+operator ?u_0 ?u_1
+operator type ?u_0 RoadTunnel ?u_1
+owner operator ?u_0 ?u_1 Massachusetts_Department_of_Transportation
+director Saraband ?u_0
+awards ?u_0 ?u_1
+director Saraband awards ?u_0 ?u_1
+director Saraband ?u_1
+routeEnd Birmingham_and_Oxford_Junction_Railway ?u_0
+species ?u_1 Vitis_vinifera
+origin ?u_1 ?u_0
+type ?u_0 Grape
+species origin ?u_1 ?u_0 Vitis_vinifera
+species ?u_1 Vitis_vinifera
+origin ?u_1 type ?u_0 Grape
+species origin ?u_1 ?u_0 Vitis_vinifera
+species ?u_0 Vitis_vinifera
+type ?u_1 Grape
+species origin ?u_1 ?u_0 Vitis_vinifera
+species ?u_0 Vitis_vinifera
+origin type ?u_1 Grape ?u_0
+species origin type ?u_1 Grape ?u_0 Vitis_vinifera
+species type ?u_1 Grape Vitis_vinifera
+species origin type ?u_1 Grape ?u_0 Vitis_vinifera
+species type ?u_0 Grape Vitis_vinifera
+species origin ?u_1 type ?u_0 Grape Vitis_vinifera
+origin ?u_0 ?u_1
+species origin ?u_0 ?u_1 Vitis_vinifera
+origin type ?u_0 Grape ?u_1
+species origin type ?u_0 Grape ?u_1 Vitis_vinifera
+species origin ?u_0 ?u_1 Vitis_vinifera
+origin ?u_0 type ?u_1 Grape
+species origin ?u_0 ?u_1 Vitis_vinifera
+species origin ?u_0 type ?u_1 Grape Vitis_vinifera
+species origin type ?u_0 Grape ?u_1 Vitis_vinifera
+deathPlace ?u_1 Indiana
+child ?u_0 ?u_1
+type ?u_0 Person
+deathPlace child ?u_0 ?u_1 Indiana
+child type ?u_0 Person ?u_1
+deathPlace child type ?u_0 Person ?u_1 Indiana
+deathPlace ?u_0 Indiana
+type ?u_1 Person
+deathPlace child ?u_0 ?u_1 Indiana
+child ?u_0 type ?u_1 Person
+deathPlace child ?u_0 ?u_1 Indiana
+deathPlace type ?u_1 Person Indiana
+deathPlace child ?u_0 type ?u_1 Person Indiana
+deathPlace type ?u_0 Person Indiana
+deathPlace child type ?u_0 Person ?u_1 Indiana
+child ?u_1 ?u_0
+deathPlace child ?u_1 ?u_0 Indiana
+child ?u_1 type ?u_0 Person
+deathPlace child ?u_1 ?u_0 Indiana
+deathPlace child ?u_1 ?u_0 Indiana
+child type ?u_1 Person ?u_0
+deathPlace child type ?u_1 Person ?u_0 Indiana
+deathPlace child type ?u_1 Person ?u_0 Indiana
+deathPlace child ?u_1 type ?u_0 Person Indiana
+managerclubs ?u_0 England_national_under-20_football_team
+managerclubs ?u_0 England_national_under-21_football_team
+managerclubs ?u_0 ?u_1
+managerclubs managerclubs ?u_0 England_national_under-21_football_team England_national_under-20_football_team
+managerclubs managerclubs ?u_0 ?u_1 England_national_under-20_football_team
+managerclubs managerclubs ?u_0 ?u_1 England_national_under-21_football_team
+managerclubs managerclubs managerclubs ?u_0 ?u_1 England_national_under-21_football_team England_national_under-20_football_team
+managerclubs ?u_1 ?u_0
+managerclubs ?u_1 England_national_under-20_football_team
+managerclubs ?u_1 England_national_under-20_football_team
+managerclubs ?u_1 England_national_under-21_football_team
+managerclubs ?u_0 England_national_under-20_football_team
+managerclubs managerclubs ?u_1 ?u_0 England_national_under-20_football_team
+managerclubs managerclubs ?u_1 ?u_0 England_national_under-21_football_team
+inflow Fig_Tree_Bay ?u_1
+cities ?u_0 ?u_1
+type ?u_0 Sea
+inflow Fig_Tree_Bay ?u_1
+cities type ?u_0 Sea ?u_1
+inflow Fig_Tree_Bay ?u_0
+type ?u_1 Sea
+inflow Fig_Tree_Bay cities ?u_0 ?u_1
+inflow Fig_Tree_Bay ?u_0
+inflow Fig_Tree_Bay type ?u_1 Sea
+inflow Fig_Tree_Bay type ?u_0 Sea
+inflow Fig_Tree_Bay cities type ?u_0 Sea ?u_1
+archipelago Blue_Lagoon_Island The_Bahamas
+distributor ?u_0 RKO_Pictures
+musicComposer ?u_0 Bernard_Herrmann
+distributor musicComposer ?u_0 Bernard_Herrmann RKO_Pictures
+distributor type ?u_0 Film RKO_Pictures
+musicComposer type ?u_0 Film Bernard_Herrmann
+distributor musicComposer type ?u_0 Film Bernard_Herrmann RKO_Pictures
+poleDriver ?u_0 Damon_Hill
+firstDriver ?u_0 Damon_Hill
+type ?u_0 FormulaOneRacer
+poleDriver firstDriver ?u_0 Damon_Hill Damon_Hill
+poleDriver ?u_1 Damon_Hill
+firstDriver ?u_1 ?u_0
+type ?u_0 FormulaOneRacer
+poleDriver firstDriver ?u_1 ?u_0 Damon_Hill
+poleDriver ?u_1 Damon_Hill
+firstDriver ?u_1 type ?u_0 FormulaOneRacer
+poleDriver firstDriver ?u_1 ?u_0 Damon_Hill
+poleDriver ?u_0 Damon_Hill
+type ?u_1 FormulaOneRacer
+poleDriver ?u_0 Damon_Hill
+firstDriver ?u_0 ?u_1
+poleDriver firstDriver ?u_0 ?u_1 Damon_Hill
+firstDriver ?u_0 type ?u_1 FormulaOneRacer
+poleDriver firstDriver ?u_0 ?u_1 Damon_Hill
+firstDriver ?u_1 Damon_Hill
+poleDriver ?u_1 ?u_0
+firstDriver poleDriver ?u_1 ?u_0 Damon_Hill
+firstDriver ?u_1 Damon_Hill
+poleDriver ?u_1 type ?u_0 FormulaOneRacer
+firstDriver poleDriver ?u_1 ?u_0 Damon_Hill
+firstDriver ?u_0 Damon_Hill
+firstDriver ?u_0 Damon_Hill
+poleDriver ?u_0 ?u_1
+firstDriver poleDriver ?u_0 ?u_1 Damon_Hill
+poleDriver ?u_0 type ?u_1 FormulaOneRacer
+firstDriver poleDriver ?u_0 ?u_1 Damon_Hill
+race ?u_1 Dubai_World_Cup
+birthPlace ?u_0 ?u_1
+type ?u_1 Jockey
+race type ?u_1 Jockey Dubai_World_Cup
+race ?u_0 Dubai_World_Cup
+type ?u_0 Jockey
+race birthPlace ?u_0 ?u_1 Dubai_World_Cup
+race type ?u_0 Jockey Dubai_World_Cup
+birthPlace type ?u_0 Jockey ?u_1
+race birthPlace type ?u_0 Jockey ?u_1 Dubai_World_Cup
+race ?u_1 Dubai_World_Cup
+race ?u_0 Dubai_World_Cup
+headquarters ?u_0 United_Kingdom
+destinations ?u_0 United_Kingdom
+type ?u_0 Airline
+headquarters type ?u_0 Airline United_Kingdom
+destinations type ?u_0 Airline United_Kingdom
+headquarters ?u_1 United_Kingdom
+destinations ?u_0 ?u_1
+type ?u_1 Airline
+headquarters type ?u_1 Airline United_Kingdom
+destinations ?u_0 type ?u_1 Airline
+headquarters ?u_0 United_Kingdom
+type ?u_0 Airline
+headquarters destinations ?u_0 ?u_1 United_Kingdom
+headquarters type ?u_0 Airline United_Kingdom
+destinations type ?u_0 Airline ?u_1
+headquarters destinations type ?u_0 Airline ?u_1 United_Kingdom
+headquarters ?u_1 United_Kingdom
+headquarters ?u_0 United_Kingdom
+destinations ?u_1 ?u_0
+headquarters destinations ?u_1 ?u_0 United_Kingdom
+destinations type ?u_1 Airline ?u_0
+headquarters destinations type ?u_1 Airline ?u_0 United_Kingdom
+destinations ?u_1 type ?u_0 Airline
+destinations ?u_1 United_Kingdom
+headquarters ?u_0 ?u_1
+destinations type ?u_1 Airline United_Kingdom
+destinations ?u_0 United_Kingdom
+destinations headquarters ?u_0 ?u_1 United_Kingdom
+destinations type ?u_0 Airline United_Kingdom
+headquarters type ?u_0 Airline ?u_1
+destinations headquarters type ?u_0 Airline ?u_1 United_Kingdom
+destinations ?u_1 United_Kingdom
+destinations ?u_0 United_Kingdom
+headquarters ?u_1 ?u_0
+destinations headquarters ?u_1 ?u_0 United_Kingdom
+headquarters type ?u_1 Airline ?u_0
+destinations headquarters type ?u_1 Airline ?u_0 United_Kingdom
+founder ?u_0 Ralph_J._Gleason
+type ?u_0 Magazine
+founder type ?u_0 Magazine Ralph_J._Gleason
+largestCity Albania Tirana
+related Barq's ?u_0
+locationCity ?u_0 ?u_1
+related Barq's locationCity ?u_0 ?u_1
+related Barq's ?u_1
+mission ?u_1 Vostok_programme
+birthPlace ?u_0 ?u_1
+type ?u_0 Astronaut
+mission ?u_1 Vostok_programme
+birthPlace type ?u_0 Astronaut ?u_1
+mission ?u_0 Vostok_programme
+type ?u_1 Astronaut
+mission birthPlace ?u_0 ?u_1 Vostok_programme
+mission ?u_0 Vostok_programme
+mission type ?u_1 Astronaut Vostok_programme
+mission type ?u_0 Astronaut Vostok_programme
+mission birthPlace type ?u_0 Astronaut ?u_1 Vostok_programme
+campus ?u_0 Suburb
+education ?u_1 ?u_0
+campus education ?u_1 ?u_0 Suburb
+campus ?u_1 Suburb
+channel ?u_0 Fox_Broadcasting_Company
+type ?u_0 TelevisionShow
+channel type ?u_0 TelevisionShow Fox_Broadcasting_Company
+primeminister ?u_0 Chung_Il-kwon
+commander ?u_0 Chung_Il-kwon
+type ?u_0 MilitaryConflict
+commander type ?u_0 MilitaryConflict Chung_Il-kwon
+primeminister ?u_1 Chung_Il-kwon
+commander ?u_0 ?u_1
+type ?u_1 MilitaryConflict
+primeminister commander ?u_0 ?u_1 Chung_Il-kwon
+commander ?u_0 type ?u_1 MilitaryConflict
+primeminister ?u_0 Chung_Il-kwon
+type ?u_0 MilitaryConflict
+commander type ?u_0 MilitaryConflict ?u_1
+primeminister ?u_1 Chung_Il-kwon
+primeminister commander type ?u_0 MilitaryConflict ?u_1 Chung_Il-kwon
+primeminister ?u_0 Chung_Il-kwon
+commander ?u_1 ?u_0
+commander type ?u_1 MilitaryConflict ?u_0
+primeminister commander ?u_1 ?u_0 Chung_Il-kwon
+commander ?u_1 type ?u_0 MilitaryConflict
+primeminister commander type ?u_1 MilitaryConflict ?u_0 Chung_Il-kwon
+commander ?u_1 Chung_Il-kwon
+primeminister ?u_0 ?u_1
+commander type ?u_1 MilitaryConflict Chung_Il-kwon
+primeminister ?u_0 type ?u_1 MilitaryConflict
+commander ?u_0 Chung_Il-kwon
+commander type ?u_0 MilitaryConflict Chung_Il-kwon
+primeminister type ?u_0 MilitaryConflict ?u_1
+commander ?u_1 Chung_Il-kwon
+commander ?u_0 Chung_Il-kwon
+primeminister ?u_1 ?u_0
+primeminister type ?u_1 MilitaryConflict ?u_0
+primeminister ?u_1 type ?u_0 MilitaryConflict
+role ?u_0 Air_interdiction
+militaryUnit ?u_1 ?u_0
+role militaryUnit ?u_1 ?u_0 Air_interdiction
+role ?u_1 Air_interdiction
+currentMembers Insects_vs_Robots ?u_0
+nationalteam Trn_Vit_Hng ?u_0
+education Joshua_A._Siegel ?u_0
+notableWork ?u_0 Novelas_ejemplares
+author Novelas_ejemplares ?u_0
+type ?u_0 Book
+notableWork author Novelas_ejemplares ?u_0 Novelas_ejemplares
+notableWork ?u_1 Novelas_ejemplares
+author ?u_1 ?u_0
+type ?u_0 Book
+notableWork ?u_1 Novelas_ejemplares
+author ?u_1 type ?u_0 Book
+notableWork ?u_0 Novelas_ejemplares
+type ?u_1 Book
+notableWork author ?u_1 ?u_0 Novelas_ejemplares
+notableWork ?u_0 Novelas_ejemplares
+author type ?u_1 Book ?u_0
+notableWork author type ?u_1 Book ?u_0 Novelas_ejemplares
+author ?u_0 ?u_1
+notableWork author ?u_0 ?u_1 Novelas_ejemplares
+author type ?u_0 Book ?u_1
+notableWork author type ?u_0 Book ?u_1 Novelas_ejemplares
+author ?u_0 type ?u_1 Book
+author Novelas_ejemplares ?u_1
+notableWork ?u_0 ?u_1
+author Novelas_ejemplares ?u_1
+notableWork type ?u_0 Book ?u_1
+author Novelas_ejemplares ?u_0
+author Novelas_ejemplares notableWork ?u_0 ?u_1
+author Novelas_ejemplares ?u_0
+notableWork ?u_0 type ?u_1 Book
+author Novelas_ejemplares notableWork ?u_0 ?u_1
+notableWork ?u_1 ?u_0
+author Novelas_ejemplares notableWork ?u_1 ?u_0
+notableWork ?u_1 type ?u_0 Book
+author Novelas_ejemplares notableWork ?u_1 ?u_0
+notableWork type ?u_1 Book ?u_0
+mouthPlace ?u_0 Essex
+type ?u_0 River
+mouthPlace type ?u_0 River Essex
+university Stanford_Cardinal ?u_0
+institution Gerald_Reaven ?u_0
+university Stanford_Cardinal institution Gerald_Reaven ?u_0
+nearestCity David_W._Brown_House ?u_0
+debutteam Deion_Sanders ?u_0
+nearestCity Fountain_Lake_Farm ?u_0
+characters Batman_Live ?u_0
+training ?u_0 San_Francisco_Art_Institute
+type ?u_0 Artist
+training type ?u_0 Artist San_Francisco_Art_Institute
+currency ?u_0 Aureus
+type ?u_0 Country
+currency type ?u_0 Country Aureus
+award A._Peter_Dewey ?u_0
+recordLabel ?u_1 Motown
+associatedActs ?u_1 ?u_0
+type ?u_1 Band
+recordLabel associatedActs ?u_1 ?u_0 Motown
+recordLabel type ?u_1 Band Motown
+associatedActs type ?u_1 Band ?u_0
+recordLabel associatedActs type ?u_1 Band ?u_0 Motown
+recordLabel ?u_0 Motown
+type ?u_0 Band
+recordLabel associatedActs ?u_1 ?u_0 Motown
+recordLabel type ?u_0 Band Motown
+associatedActs ?u_1 type ?u_0 Band
+recordLabel associatedActs ?u_1 type ?u_0 Band Motown
+recordLabel associatedActs ?u_1 ?u_0 Motown
+recordLabel associatedActs type ?u_1 Band ?u_0 Motown
+associatedActs ?u_0 ?u_1
+recordLabel associatedActs ?u_0 ?u_1 Motown
+associatedActs ?u_0 type ?u_1 Band
+recordLabel associatedActs ?u_0 type ?u_1 Band Motown
+recordLabel associatedActs ?u_0 ?u_1 Motown
+associatedActs type ?u_0 Band ?u_1
+recordLabel associatedActs type ?u_0 Band ?u_1 Motown
+recordLabel associatedActs type ?u_0 Band ?u_1 Motown
+recordLabel associatedActs ?u_0 ?u_1 Motown
+garrison ?u_0 Arlington_County,_Virginia
+type ?u_0 MilitaryUnit
+garrison type ?u_0 MilitaryUnit Arlington_County,_Virginia
+religion Kwai_Chang_Caine ?u_0
+leaderTitle Pullaiahgaripalli ?u_1
+houses ?u_1 ?u_0
+type ?u_1 Legislature
+leaderTitle Pullaiahgaripalli houses ?u_1 ?u_0
+leaderTitle Pullaiahgaripalli type ?u_1 Legislature
+houses type ?u_1 Legislature ?u_0
+leaderTitle Pullaiahgaripalli houses type ?u_1 Legislature ?u_0
+leaderTitle Pullaiahgaripalli ?u_0
+type ?u_0 Legislature
+leaderTitle Pullaiahgaripalli type ?u_0 Legislature
+houses ?u_1 type ?u_0 Legislature
+leaderTitle Pullaiahgaripalli ?u_1
+leaderTitle Pullaiahgaripalli houses ?u_1 ?u_0
+leaderTitle Pullaiahgaripalli ?u_0
+houses ?u_0 ?u_1
+houses ?u_0 type ?u_1 Legislature
+leaderTitle Pullaiahgaripalli houses ?u_0 ?u_1
+houses type ?u_0 Legislature ?u_1
+leaderTitle Pullaiahgaripalli houses type ?u_0 Legislature ?u_1
+leaderTitle Pullaiahgaripalli houses ?u_0 ?u_1
+subsidiary ?u_0 Viacom_Productions
+company ?u_0 Viacom_Productions
+type ?u_0 TelevisionShow
+company type ?u_0 TelevisionShow Viacom_Productions
+subsidiary ?u_1 Viacom_Productions
+company ?u_1 ?u_0
+type ?u_0 TelevisionShow
+subsidiary ?u_1 Viacom_Productions
+company ?u_1 type ?u_0 TelevisionShow
+subsidiary ?u_0 Viacom_Productions
+type ?u_1 TelevisionShow
+subsidiary company ?u_1 ?u_0 Viacom_Productions
+subsidiary ?u_0 Viacom_Productions
+company type ?u_1 TelevisionShow ?u_0
+subsidiary company type ?u_1 TelevisionShow ?u_0 Viacom_Productions
+company ?u_0 ?u_1
+subsidiary company ?u_0 ?u_1 Viacom_Productions
+company type ?u_0 TelevisionShow ?u_1
+subsidiary company type ?u_0 TelevisionShow ?u_1 Viacom_Productions
+company ?u_0 type ?u_1 TelevisionShow
+company ?u_1 Viacom_Productions
+subsidiary ?u_0 ?u_1
+subsidiary type ?u_0 TelevisionShow ?u_1
+company ?u_0 Viacom_Productions
+subsidiary ?u_0 type ?u_1 TelevisionShow
+company type ?u_1 TelevisionShow Viacom_Productions
+company type ?u_0 TelevisionShow Viacom_Productions
+subsidiary ?u_1 ?u_0
+subsidiary ?u_1 type ?u_0 TelevisionShow
+subsidiary type ?u_1 TelevisionShow ?u_0
+architecturalStyle Sanggar_Agung ?u_1
+religion ?u_0 ?u_1
+type ?u_0 EthnicGroup
+architecturalStyle Sanggar_Agung ?u_1
+religion type ?u_0 EthnicGroup ?u_1
+architecturalStyle Sanggar_Agung ?u_0
+type ?u_1 EthnicGroup
+architecturalStyle Sanggar_Agung religion ?u_0 ?u_1
+architecturalStyle Sanggar_Agung ?u_0
+religion ?u_0 type ?u_1 EthnicGroup
+architecturalStyle Sanggar_Agung religion ?u_0 ?u_1
+architecturalStyle Sanggar_Agung type ?u_1 EthnicGroup
+architecturalStyle Sanggar_Agung type ?u_0 EthnicGroup
+architecturalStyle Sanggar_Agung religion type ?u_0 EthnicGroup ?u_1
+religion ?u_1 ?u_0
+architecturalStyle Sanggar_Agung religion ?u_1 ?u_0
+religion ?u_1 type ?u_0 EthnicGroup
+architecturalStyle Sanggar_Agung religion ?u_1 ?u_0
+religion type ?u_1 EthnicGroup ?u_0
+architecturalStyle Sanggar_Agung religion type ?u_1 EthnicGroup ?u_0
+programmingLanguage ?u_0 C++
+hubs PLUS_Expressways ?u_0
+music ?u_0 Geoffrey_Burgon
+distributor ?u_0 Cinema_International_Corporation
+music distributor ?u_0 Cinema_International_Corporation Geoffrey_Burgon
+music type ?u_0 Film Geoffrey_Burgon
+distributor type ?u_0 Film Cinema_International_Corporation
+music distributor type ?u_0 Film Cinema_International_Corporation Geoffrey_Burgon
+mainInterests Henry_David_Thoreau Politics
+language ?u_0 Swedish_language
+type ?u_0 Film
+language type ?u_0 Film Swedish_language
+trainer Christina_Crawford_(wrestler) Booker_T_(wrestler)
+currency Kerguelen_Islands ?u_0
+leaderName ?u_0 Justin_Trudeau
+majorShrine ?u_1 ?u_0
+leaderName majorShrine ?u_1 ?u_0 Justin_Trudeau
+leaderName ?u_1 Justin_Trudeau
+leaderName Hackweiser ?u_0
+sisterStation ?u_0 KTXY
 city ?u_1 ?u_0
 sisterStation ?u_0 KTXY
 city KTXY ?u_0
+city ?u_0 ?u_1
+sisterStation city ?u_0 ?u_1 KTXY
 city KTXY ?u_0
 sisterStation ?u_0 ?u_1
-sisterStation KTXY ?u_0
 sisterStation ?u_1 ?u_0
+sisterStation KTXY ?u_0
 sisterStation KTXY ?u_0
 sisterStation KTXY city ?u_0 ?u_1
 sisterStation ?u_1 KTXY
@@ -20,116 +641,116 @@ sisterStation city ?u_1 ?u_0 KTXY
 city KTXY ?u_1
 sisterStation KTXY ?u_1
 sisterStation KTXY city ?u_1 ?u_0
-birthPlace #ent ?u_0
+birthPlace Hank_Brown ?u_0
 successor ?u_1 ?u_0
 birthPlace Hank_Brown ?u_0
 successor ?u_0 Hank_Brown
+successor Hank_Brown ?u_0
 successor ?u_0 ?u_1
 successor Hank_Brown ?u_0
-successor ?u_0 Hank_Brown
 birthPlace ?u_1 ?u_0
 birthPlace ?u_0 ?u_1
-successor birthPlace ?u_0 ?u_1 Hank_Brown
-successor Hank_Brown ?u_0
 successor Hank_Brown birthPlace ?u_0 ?u_1
+successor ?u_0 Hank_Brown
+successor birthPlace ?u_0 ?u_1 Hank_Brown
 birthPlace Hank_Brown ?u_1
-successor ?u_1 Hank_Brown
-successor birthPlace ?u_1 ?u_0 Hank_Brown
 successor Hank_Brown ?u_1
 successor Hank_Brown birthPlace ?u_1 ?u_0
+successor ?u_1 Hank_Brown
+successor birthPlace ?u_1 ?u_0 Hank_Brown
 religion Katyayana_(Buddhist) ?u_0
 managerclubs ?u_0 England_national_under-21_football_team
 constituency ?u_0 Mumbai_North_(Lok_Sabha_constituency)
 party ?u_0 ?u_1
 constituency party ?u_0 ?u_1 Mumbai_North_(Lok_Sabha_constituency)
 constituency ?u_1 Mumbai_North_(Lok_Sabha_constituency)
-associatedBand ?u_0 #ent
+associatedBand ?u_0 Phish
 themeMusicComposer ?u_1 ?u_0
-associatedBand themeMusicComposer ?u_1 ?u_0 #ent
+associatedBand themeMusicComposer ?u_1 ?u_0 Phish
 associatedBand Phish ?u_0
 associatedBand ?u_1 Phish
 associatedBand Phish ?u_1
-associatedBand #ent #ent
-manufacturer ?u_0 #ent
+associatedBand Morrissey The_Smiths
+manufacturer ?u_1 Refriango
 origin ?u_0 ?u_1
+type ?u_1 Beverage
+manufacturer type ?u_1 Beverage Refriango
+manufacturer ?u_0 Refriango
 type ?u_0 Beverage
 manufacturer origin ?u_0 ?u_1 Refriango
 manufacturer type ?u_0 Beverage Refriango
 origin type ?u_0 Beverage ?u_1
 manufacturer origin type ?u_0 Beverage ?u_1 Refriango
 manufacturer ?u_1 Refriango
-type ?u_1 Beverage
-manufacturer type ?u_1 Beverage Refriango
-manufacturer ?u_1 Refriango
 manufacturer ?u_0 Refriango
-creator ?u_1 #ent
-format ?u_1 ?u_0
-type ?u_0 RadioProgram
-creator format ?u_1 ?u_0 Timoteo_Jeffries
 creator ?u_1 Timoteo_Jeffries
-format ?u_1 type ?u_0 RadioProgram
-creator ?u_0 Timoteo_Jeffries
-type ?u_1 RadioProgram
-creator ?u_0 Timoteo_Jeffries
-format type ?u_1 RadioProgram ?u_0
-creator type ?u_0 RadioProgram Timoteo_Jeffries
-creator type ?u_1 RadioProgram Timoteo_Jeffries
-creator format type ?u_1 RadioProgram ?u_0 Timoteo_Jeffries
 format ?u_0 ?u_1
-format type ?u_0 RadioProgram ?u_1
-creator format ?u_0 ?u_1 Timoteo_Jeffries
+type ?u_1 RadioProgram
+creator type ?u_1 RadioProgram Timoteo_Jeffries
 format ?u_0 type ?u_1 RadioProgram
+creator ?u_0 Timoteo_Jeffries
+type ?u_0 RadioProgram
+creator format ?u_0 ?u_1 Timoteo_Jeffries
+creator type ?u_0 RadioProgram Timoteo_Jeffries
+format type ?u_0 RadioProgram ?u_1
 creator format type ?u_0 RadioProgram ?u_1 Timoteo_Jeffries
-location ?u_0 #ent
+creator ?u_1 Timoteo_Jeffries
+creator ?u_0 Timoteo_Jeffries
+format ?u_1 ?u_0
+creator format ?u_1 ?u_0 Timoteo_Jeffries
+format type ?u_1 RadioProgram ?u_0
+creator format type ?u_1 RadioProgram ?u_0 Timoteo_Jeffries
+format ?u_1 type ?u_0 RadioProgram
+location ?u_0 Bend,_Oregon
 nearestCity ?u_0 Bend,_Oregon
 type ?u_0 ProtectedArea
 nearestCity type ?u_0 ProtectedArea Bend,_Oregon
+location ?u_1 Bend,_Oregon
+nearestCity ?u_1 ?u_0
+type ?u_1 ProtectedArea
+nearestCity type ?u_1 ProtectedArea ?u_0
+location ?u_0 Bend,_Oregon
+type ?u_0 ProtectedArea
+nearestCity ?u_1 type ?u_0 ProtectedArea
+location ?u_1 Bend,_Oregon
 location ?u_0 Bend,_Oregon
 nearestCity ?u_0 ?u_1
-type ?u_0 ProtectedArea
-nearestCity type ?u_0 ProtectedArea ?u_1
-location ?u_1 Bend,_Oregon
-type ?u_1 ProtectedArea
 nearestCity ?u_0 type ?u_1 ProtectedArea
-location ?u_1 Bend,_Oregon
-location ?u_0 Bend,_Oregon
-nearestCity ?u_1 ?u_0
-nearestCity ?u_1 type ?u_0 ProtectedArea
-nearestCity type ?u_1 ProtectedArea ?u_0
-nearestCity ?u_0 Bend,_Oregon
-location ?u_0 ?u_1
-nearestCity location ?u_0 ?u_1 Bend,_Oregon
-nearestCity type ?u_0 ProtectedArea Bend,_Oregon
-location type ?u_0 ProtectedArea ?u_1
-nearestCity location type ?u_0 ProtectedArea ?u_1 Bend,_Oregon
+nearestCity type ?u_0 ProtectedArea ?u_1
 nearestCity ?u_1 Bend,_Oregon
-nearestCity location ?u_0 ?u_1 Bend,_Oregon
-nearestCity type ?u_1 ProtectedArea Bend,_Oregon
-location ?u_0 type ?u_1 ProtectedArea
-nearestCity location ?u_0 type ?u_1 ProtectedArea Bend,_Oregon
-nearestCity ?u_1 Bend,_Oregon
-nearestCity location type ?u_0 ProtectedArea ?u_1 Bend,_Oregon
-nearestCity ?u_0 Bend,_Oregon
-nearestCity location ?u_0 ?u_1 Bend,_Oregon
 location ?u_1 ?u_0
 nearestCity location ?u_1 ?u_0 Bend,_Oregon
-location ?u_1 type ?u_0 ProtectedArea
-nearestCity location ?u_1 type ?u_0 ProtectedArea Bend,_Oregon
-nearestCity location ?u_1 ?u_0 Bend,_Oregon
+nearestCity type ?u_1 ProtectedArea Bend,_Oregon
 location type ?u_1 ProtectedArea ?u_0
 nearestCity location type ?u_1 ProtectedArea ?u_0 Bend,_Oregon
+nearestCity ?u_0 Bend,_Oregon
+nearestCity location ?u_1 ?u_0 Bend,_Oregon
+nearestCity type ?u_0 ProtectedArea Bend,_Oregon
+location ?u_1 type ?u_0 ProtectedArea
+nearestCity location ?u_1 type ?u_0 ProtectedArea Bend,_Oregon
+nearestCity ?u_1 Bend,_Oregon
 nearestCity location ?u_1 ?u_0 Bend,_Oregon
 nearestCity location type ?u_1 ProtectedArea ?u_0 Bend,_Oregon
-literaryGenre #ent #ent
-distributor ?u_0 #ent
-academicDiscipline ?u_0 #ent
+location ?u_0 ?u_1
+nearestCity location ?u_0 ?u_1 Bend,_Oregon
+location ?u_0 type ?u_1 ProtectedArea
+nearestCity location ?u_0 type ?u_1 ProtectedArea Bend,_Oregon
+nearestCity location ?u_0 ?u_1 Bend,_Oregon
+location type ?u_0 ProtectedArea ?u_1
+nearestCity location type ?u_0 ProtectedArea ?u_1 Bend,_Oregon
+nearestCity location type ?u_0 ProtectedArea ?u_1 Bend,_Oregon
+nearestCity ?u_0 Bend,_Oregon
+nearestCity location ?u_0 ?u_1 Bend,_Oregon
+literaryGenre True_Grit_(novel) Western_(genre)
+distributor ?u_0 Cinema_International_Corporation
+academicDiscipline ?u_0 Neuroimaging
 academicDiscipline ?u_0 ?u_1
 academicDiscipline ?u_1 ?u_0
 academicDiscipline academicDiscipline ?u_0 ?u_1 Neuroimaging
 academicDiscipline ?u_1 Neuroimaging
 academicDiscipline academicDiscipline ?u_1 ?u_0 Neuroimaging
-award #ent ?u_0
-award #ent ?u_0
+award Charles_LeMaire ?u_0
+award Nick_Park ?u_0
 award ?u_0 ?u_1
 award Charles_LeMaire award Nick_Park ?u_0
 award ?u_1 ?u_0
@@ -142,17 +763,17 @@ award Charles_LeMaire award ?u_0 ?u_1
 award Nick_Park ?u_1
 award Charles_LeMaire ?u_0
 award Nick_Park award ?u_0 ?u_1
-buildingType ?u_0 #ent
+buildingType ?u_0 Ferris_wheel
 locationTown ?u_0 ?u_1
 buildingType locationTown ?u_0 ?u_1 Ferris_wheel
 buildingType ?u_1 Ferris_wheel
-language ?u_0 #ent
+language ?u_0 Swedish_language
 type ?u_0 Film
 language type ?u_0 Film Swedish_language
-themeMusicComposer ?u_0 #ent
-creator ?u_0 #ent
+themeMusicComposer ?u_0 Julian_Gingell
+creator ?u_0 Simon_Fuller
 themeMusicComposer creator ?u_0 Simon_Fuller Julian_Gingell
-kingdom ?u_0 #ent
+kingdom ?u_0 Animal
 family ?u_0 ?u_1
 kingdom family ?u_0 ?u_1 Animal
 family ?u_1 ?u_0
@@ -160,46 +781,45 @@ kingdom family ?u_1 ?u_0 Animal
 kingdom ?u_1 Animal
 kingdom family ?u_0 ?u_1 Animal
 kingdom family ?u_1 ?u_0 Animal
-successor #ent ?u_0
+successor A._K._Singh ?u_1
 party ?u_0 ?u_1
 type ?u_0 Person
-successor A._K._Singh party ?u_0 ?u_1
-successor A._K._Singh type ?u_0 Person
 party type ?u_0 Person ?u_1
-successor A._K._Singh party type ?u_0 Person ?u_1
-successor A._K._Singh ?u_1
+successor A._K._Singh ?u_0
 type ?u_1 Person
-successor A._K._Singh type ?u_1 Person
+successor A._K._Singh party ?u_0 ?u_1
 party ?u_0 type ?u_1 Person
+successor A._K._Singh type ?u_1 Person
+successor A._K._Singh type ?u_0 Person
+successor A._K._Singh party type ?u_0 Person ?u_1
 party ?u_1 ?u_0
-party ?u_1 type ?u_0 Person
 successor A._K._Singh party ?u_1 ?u_0
+party ?u_1 type ?u_0 Person
 party type ?u_1 Person ?u_0
 successor A._K._Singh party type ?u_1 Person ?u_0
+successor ?u_1 A._K._Singh
+successor ?u_1 A._K._Singh
 successor ?u_0 A._K._Singh
 successor party ?u_0 ?u_1 A._K._Singh
+successor ?u_0 A._K._Singh
+successor type ?u_1 Person A._K._Singh
 successor type ?u_0 Person A._K._Singh
 successor party type ?u_0 Person ?u_1 A._K._Singh
-successor ?u_1 A._K._Singh
-successor type ?u_1 Person A._K._Singh
-successor ?u_1 A._K._Singh
-successor ?u_0 A._K._Singh
 successor party ?u_1 ?u_0 A._K._Singh
 successor party type ?u_1 Person ?u_0 A._K._Singh
-manager #ent ?u_0
-club ?u_0 ?u_1
-club ?u_1 ?u_0
+club ?u_0 Middlesbrough_F.C.
+manager ?u_1 ?u_0
+club ?u_0 Middlesbrough_F.C.
 manager Middlesbrough_F.C. ?u_0
-club ?u_0 Middlesbrough_F.C.
-club ?u_0 Middlesbrough_F.C.
 manager ?u_0 ?u_1
 club manager ?u_0 ?u_1 Middlesbrough_F.C.
-manager ?u_1 ?u_0
-manager Middlesbrough_F.C. ?u_1
+manager Middlesbrough_F.C. ?u_0
+club ?u_0 ?u_1
 club ?u_1 Middlesbrough_F.C.
 club manager ?u_1 ?u_0 Middlesbrough_F.C.
+manager Middlesbrough_F.C. ?u_1
 education Sidney_Catlin_Partridge ?u_0
-education #ent ?u_0
+education Cyril_Hume ?u_0
 education ?u_0 ?u_1
 education Sidney_Catlin_Partridge education Cyril_Hume ?u_0
 education ?u_1 ?u_0
@@ -212,189 +832,188 @@ education Sidney_Catlin_Partridge education ?u_0 ?u_1
 education Cyril_Hume ?u_1
 education Sidney_Catlin_Partridge ?u_0
 education Cyril_Hume education ?u_0 ?u_1
-mother #ent #ent
-music ?u_1 #ent
+mother Lorenzo_de'_Medici Lucrezia_Tornabuoni
+music ?u_1 Gary_Chang
 producer ?u_1 ?u_0
-type ?u_0 Film
+type ?u_1 Film
 music producer ?u_1 ?u_0 Gary_Chang
-producer ?u_1 type ?u_0 Film
-music ?u_0 Gary_Chang
-type ?u_1 Film
-producer type ?u_1 Film ?u_0
-music type ?u_0 Film Gary_Chang
 music type ?u_1 Film Gary_Chang
+producer type ?u_1 Film ?u_0
 music producer type ?u_1 Film ?u_0 Gary_Chang
-producer ?u_0 ?u_1
-producer type ?u_0 Film ?u_1
-music producer ?u_0 ?u_1 Gary_Chang
-producer ?u_0 type ?u_1 Film
-music producer type ?u_0 Film ?u_1 Gary_Chang
-recorded #ent ?u_0
-associatedActs ?u_1 #ent
-musicComposer ?u_1 ?u_0
+music ?u_0 Gary_Chang
 type ?u_0 Film
+music type ?u_0 Film Gary_Chang
+producer ?u_1 type ?u_0 Film
+producer ?u_0 ?u_1
+producer ?u_0 type ?u_1 Film
+music producer ?u_0 ?u_1 Gary_Chang
+producer type ?u_0 Film ?u_1
+music producer type ?u_0 Film ?u_1 Gary_Chang
+recorded Special_26 ?u_0
 associatedActs ?u_1 Demis_Roussos
-musicComposer ?u_1 type ?u_0 Film
-associatedActs ?u_0 Demis_Roussos
+musicComposer ?u_1 ?u_0
 type ?u_1 Film
-associatedActs musicComposer ?u_1 ?u_0 Demis_Roussos
-associatedActs ?u_0 Demis_Roussos
 musicComposer type ?u_1 Film ?u_0
+associatedActs ?u_0 Demis_Roussos
+type ?u_0 Film
+associatedActs musicComposer ?u_1 ?u_0 Demis_Roussos
+musicComposer ?u_1 type ?u_0 Film
+associatedActs ?u_1 Demis_Roussos
+associatedActs ?u_0 Demis_Roussos
 associatedActs musicComposer type ?u_1 Film ?u_0 Demis_Roussos
 musicComposer ?u_0 ?u_1
 associatedActs musicComposer ?u_0 ?u_1 Demis_Roussos
+musicComposer ?u_0 type ?u_1 Film
 musicComposer type ?u_0 Film ?u_1
 associatedActs musicComposer type ?u_0 Film ?u_1 Demis_Roussos
-musicComposer ?u_0 type ?u_1 Film
-allegiance #ent ?u_0
-starring #ent ?u_0
+allegiance David_Animle_Hansen ?u_0
+starring The_God_Who_Wasn't_There ?u_0
 almaMater ?u_0 ?u_1
 starring The_God_Who_Wasn't_There almaMater ?u_0 ?u_1
 starring The_God_Who_Wasn't_There ?u_1
-operator ?u_1 #ent
-hubAirport ?u_0 ?u_1
-type ?u_0 Airline
-operator hubAirport ?u_0 ?u_1 Los_Angeles_World_Airports
 operator ?u_1 Los_Angeles_World_Airports
+hubAirport ?u_1 ?u_0
+type ?u_1 Airline
+hubAirport type ?u_1 Airline ?u_0
+operator ?u_0 Los_Angeles_World_Airports
+type ?u_0 Airline
+operator hubAirport ?u_1 ?u_0 Los_Angeles_World_Airports
+hubAirport ?u_1 type ?u_0 Airline
+operator ?u_1 Los_Angeles_World_Airports
+operator ?u_0 Los_Angeles_World_Airports
+operator hubAirport type ?u_1 Airline ?u_0 Los_Angeles_World_Airports
+hubAirport ?u_0 ?u_1
+operator hubAirport ?u_0 ?u_1 Los_Angeles_World_Airports
+hubAirport ?u_0 type ?u_1 Airline
 hubAirport type ?u_0 Airline ?u_1
 operator hubAirport type ?u_0 Airline ?u_1 Los_Angeles_World_Airports
-operator ?u_0 Los_Angeles_World_Airports
-type ?u_1 Airline
-operator ?u_0 Los_Angeles_World_Airports
-hubAirport ?u_0 type ?u_1 Airline
-hubAirport ?u_1 ?u_0
-hubAirport ?u_1 type ?u_0 Airline
-operator hubAirport ?u_1 ?u_0 Los_Angeles_World_Airports
-hubAirport type ?u_1 Airline ?u_0
-operator hubAirport type ?u_1 Airline ?u_0 Los_Angeles_World_Airports
 director The_Haunted_House_(1929_film) ?u_0
 type ?u_0 Non-governmental_organization
 purpose ?u_0 ?u_1
 type purpose ?u_0 ?u_1 Non-governmental_organization
 type ?u_1 Non-governmental_organization
-birthPlace ?u_0 #ent
-team ?u_0 ?u_1
+birthPlace ?u_0 Bellaire,_Ohio
 birthPlace team ?u_0 ?u_1 Bellaire,_Ohio
 birthPlace ?u_1 Bellaire,_Ohio
 religion Katyayana_(Buddhist) ?u_0
-ideology #ent ?u_0
+ideology Palang_Dharma_Party ?u_0
 religion Katyayana_(Buddhist) ideology Palang_Dharma_Party ?u_0
-writer ?u_1 #ent
-starring ?u_1 ?u_0
-type ?u_0 Film
-writer starring ?u_1 ?u_0 Mark_Sandrich
 writer ?u_1 Mark_Sandrich
-starring ?u_1 type ?u_0 Film
-writer ?u_0 Mark_Sandrich
-type ?u_1 Film
-writer ?u_0 Mark_Sandrich
-starring type ?u_1 Film ?u_0
-writer type ?u_0 Film Mark_Sandrich
-writer type ?u_1 Film Mark_Sandrich
-writer starring type ?u_1 Film ?u_0 Mark_Sandrich
 starring ?u_0 ?u_1
-starring type ?u_0 Film ?u_1
-writer starring ?u_0 ?u_1 Mark_Sandrich
+type ?u_1 Film
+writer type ?u_1 Film Mark_Sandrich
 starring ?u_0 type ?u_1 Film
+writer ?u_0 Mark_Sandrich
+type ?u_0 Film
+writer starring ?u_0 ?u_1 Mark_Sandrich
+writer type ?u_0 Film Mark_Sandrich
+starring type ?u_0 Film ?u_1
 writer starring type ?u_0 Film ?u_1 Mark_Sandrich
-birthName #ent ?u_0
+writer ?u_1 Mark_Sandrich
+writer ?u_0 Mark_Sandrich
+starring ?u_1 ?u_0
+writer starring ?u_1 ?u_0 Mark_Sandrich
+starring type ?u_1 Film ?u_0
+writer starring type ?u_1 Film ?u_0 Mark_Sandrich
+starring ?u_1 type ?u_0 Film
+birthName Putri_Raemawasti ?u_0
 deathPlace ?u_0 Tampa,_Florida
 occupation ?u_0 ?u_1
 deathPlace occupation ?u_0 ?u_1 Tampa,_Florida
 deathPlace ?u_1 Tampa,_Florida
-branch ?u_0 #ent
-associatedActs #ent ?u_1
+branch ?u_0 Indiana_Territory
+associatedActs ?u_1 Ren_&_Angela
 birthPlace ?u_1 ?u_0
-type ?u_0 MusicalArtist
-associatedActs Ren_&_Angela birthPlace ?u_1 ?u_0
-associatedActs Ren_&_Angela ?u_1
-birthPlace ?u_1 type ?u_0 MusicalArtist
-associatedActs Ren_&_Angela ?u_0
 type ?u_1 MusicalArtist
-associatedActs Ren_&_Angela ?u_0
+associatedActs birthPlace ?u_1 ?u_0 Ren_&_Angela
+associatedActs type ?u_1 MusicalArtist Ren_&_Angela
 birthPlace type ?u_1 MusicalArtist ?u_0
-associatedActs Ren_&_Angela type ?u_0 MusicalArtist
+associatedActs birthPlace type ?u_1 MusicalArtist ?u_0 Ren_&_Angela
+associatedActs ?u_0 Ren_&_Angela
+type ?u_0 MusicalArtist
+associatedActs type ?u_0 MusicalArtist Ren_&_Angela
+birthPlace ?u_1 type ?u_0 MusicalArtist
+associatedActs ?u_1 Ren_&_Angela
+associatedActs ?u_0 Ren_&_Angela
+birthPlace ?u_0 ?u_1
+birthPlace ?u_0 type ?u_1 MusicalArtist
+associatedActs birthPlace ?u_0 ?u_1 Ren_&_Angela
+birthPlace type ?u_0 MusicalArtist ?u_1
+associatedActs birthPlace type ?u_0 MusicalArtist ?u_1 Ren_&_Angela
+associatedActs Ren_&_Angela ?u_1
+associatedActs Ren_&_Angela birthPlace ?u_1 ?u_0
 associatedActs Ren_&_Angela type ?u_1 MusicalArtist
 associatedActs Ren_&_Angela birthPlace type ?u_1 MusicalArtist ?u_0
-birthPlace ?u_0 ?u_1
-birthPlace type ?u_0 MusicalArtist ?u_1
+associatedActs Ren_&_Angela ?u_0
+associatedActs Ren_&_Angela type ?u_0 MusicalArtist
+associatedActs Ren_&_Angela ?u_1
+associatedActs Ren_&_Angela ?u_0
 associatedActs Ren_&_Angela birthPlace ?u_0 ?u_1
-birthPlace ?u_0 type ?u_1 MusicalArtist
 associatedActs Ren_&_Angela birthPlace type ?u_0 MusicalArtist ?u_1
-associatedActs ?u_1 Ren_&_Angela
-associatedActs birthPlace ?u_1 ?u_0 Ren_&_Angela
-associatedActs ?u_1 Ren_&_Angela
-associatedActs ?u_0 Ren_&_Angela
-associatedActs ?u_0 Ren_&_Angela
-associatedActs type ?u_0 MusicalArtist Ren_&_Angela
-associatedActs type ?u_1 MusicalArtist Ren_&_Angela
-associatedActs birthPlace type ?u_1 MusicalArtist ?u_0 Ren_&_Angela
-associatedActs birthPlace ?u_0 ?u_1 Ren_&_Angela
-associatedActs birthPlace type ?u_0 MusicalArtist ?u_1 Ren_&_Angela
-designer #ent ?u_0
-debutTeam #ent ?u_0
-poleDriver #ent ?u_0
+designer Language_Integrated_Query ?u_0
+debutTeam Dan_Otero ?u_0
+poleDriver 1997_Canadian_Grand_Prix ?u_0
 poleDriver 1994_Spanish_Grand_Prix ?u_0
-poleDriver ?u_0 ?u_1
-poleDriver 1997_Canadian_Grand_Prix poleDriver 1994_Spanish_Grand_Prix ?u_0
 poleDriver ?u_1 ?u_0
+poleDriver 1997_Canadian_Grand_Prix poleDriver 1994_Spanish_Grand_Prix ?u_0
 poleDriver 1997_Canadian_Grand_Prix poleDriver ?u_1 ?u_0
 poleDriver 1994_Spanish_Grand_Prix poleDriver ?u_1 ?u_0
 poleDriver 1997_Canadian_Grand_Prix poleDriver 1994_Spanish_Grand_Prix poleDriver ?u_1 ?u_0
+poleDriver ?u_0 ?u_1
 poleDriver 1997_Canadian_Grand_Prix ?u_1
 poleDriver 1997_Canadian_Grand_Prix ?u_1
-poleDriver 1997_Canadian_Grand_Prix poleDriver ?u_0 ?u_1
 poleDriver 1994_Spanish_Grand_Prix ?u_1
 poleDriver 1997_Canadian_Grand_Prix ?u_0
+poleDriver 1997_Canadian_Grand_Prix poleDriver ?u_0 ?u_1
 poleDriver 1994_Spanish_Grand_Prix poleDriver ?u_0 ?u_1
 foundedBy Not_on_Our_Watch_(organization) ?u_0
-owningCompany #ent ?u_0
-deathPlace ?u_0 #ent
+owningCompany Sony_Bank ?u_0
+deathPlace ?u_0 Tampa,_Florida
 occupation ?u_0 ?u_1
 deathPlace occupation ?u_0 ?u_1 Tampa,_Florida
 deathPlace ?u_1 Tampa,_Florida
-music ?u_0 #ent
+music ?u_0 Geoffrey_Burgon
 editing ?u_0 Julian_Doyle_(filmmaker)
 type ?u_0 Film
 music editing ?u_0 Julian_Doyle_(filmmaker) Geoffrey_Burgon
 music type ?u_0 Film Geoffrey_Burgon
 editing type ?u_0 Film Julian_Doyle_(filmmaker)
 music editing type ?u_0 Film Julian_Doyle_(filmmaker) Geoffrey_Burgon
-screenplay ?u_0 #ent
+screenplay ?u_0 Eric_Roth
 type ?u_0 Film
 screenplay type ?u_0 Film Eric_Roth
-recordedIn ?u_0 #ent
+recordedIn ?u_0 Miami
 writer ?u_0 ?u_1
 recordedIn writer ?u_0 ?u_1 Miami
 recordedIn ?u_1 Miami
-architecturalStyle #ent ?u_0
+architecturalStyle Sanggar_Agung ?u_0
 religion ?u_0 ?u_1
 architecturalStyle Sanggar_Agung religion ?u_0 ?u_1
 architecturalStyle Sanggar_Agung ?u_1
-producer Money_(Pink_Floyd_song) ?u_0
-album ?u_0 ?u_1
-album Money_(Pink_Floyd_song) ?u_0
-album ?u_1 ?u_0
 album Money_(Pink_Floyd_song) ?u_0
 producer ?u_1 ?u_0
 producer ?u_0 ?u_1
 album Money_(Pink_Floyd_song) producer ?u_0 ?u_1
-producer Money_(Pink_Floyd_song) ?u_1
+album Money_(Pink_Floyd_song) ?u_0
+producer Money_(Pink_Floyd_song) ?u_0
+album ?u_0 ?u_1
+album ?u_1 ?u_0
 album Money_(Pink_Floyd_song) ?u_1
 album Money_(Pink_Floyd_song) producer ?u_1 ?u_0
+producer Money_(Pink_Floyd_song) ?u_1
 genre ?u_0 Science_fiction
-themeMusicComposer ?u_0 #ent
+themeMusicComposer ?u_0 Ron_Grainer
 type ?u_0 TelevisionShow
 genre themeMusicComposer ?u_0 Ron_Grainer Science_fiction
 genre type ?u_0 TelevisionShow Science_fiction
 themeMusicComposer type ?u_0 TelevisionShow Ron_Grainer
 genre themeMusicComposer type ?u_0 TelevisionShow Ron_Grainer Science_fiction
-foundedBy ?u_0 #ent
+foundedBy ?u_0 Fusajiro_Yamauchi
 type ?u_0 Company
 foundedBy type ?u_0 Company Fusajiro_Yamauchi
-membership #ent ?u_0
-state #ent ?u_0
-state #ent ?u_0
+membership European_Go_Federation ?u_0
+state Daniel_L._D._Granger ?u_0
+state Job_Durfee ?u_0
 state ?u_1 ?u_0
 state Daniel_L._D._Granger state Job_Durfee ?u_0
 state Daniel_L._D._Granger state ?u_1 ?u_0
@@ -407,123 +1026,1192 @@ state Job_Durfee ?u_1
 state Daniel_L._D._Granger ?u_0
 state Daniel_L._D._Granger state ?u_0 ?u_1
 state Job_Durfee state ?u_0 ?u_1
-league ?u_1 #ent
-mascot ?u_0 ?u_1
-type ?u_0 HandballTeam
 league ?u_1 Turkish_Handball_Super_League
-mascot type ?u_0 HandballTeam ?u_1
-league ?u_0 Turkish_Handball_Super_League
+mascot ?u_0 ?u_1
 type ?u_1 HandballTeam
-league mascot ?u_0 ?u_1 Turkish_Handball_Super_League
-league ?u_0 Turkish_Handball_Super_League
-league type ?u_0 HandballTeam Turkish_Handball_Super_League
-league mascot type ?u_0 HandballTeam ?u_1 Turkish_Handball_Super_League
 league type ?u_1 HandballTeam Turkish_Handball_Super_League
-artist ?u_0 #ent
-language ?u_0 ?u_1
-artist language ?u_0 ?u_1 Marika_Gombitov
-artist ?u_1 Marika_Gombitov
-recordLabel ?u_1 #ent
-associatedMusicalArtist ?u_1 ?u_0
-type ?u_0 MusicalArtist
-recordLabel associatedMusicalArtist ?u_1 ?u_0 #ent
-associatedMusicalArtist ?u_1 type ?u_0 MusicalArtist
-recordLabel associatedMusicalArtist ?u_1 ?u_0 #ent
-recordLabel ?u_0 #ent
-type ?u_1 MusicalArtist
-recordLabel associatedMusicalArtist ?u_1 ?u_0 #ent
-associatedMusicalArtist type ?u_1 MusicalArtist ?u_0
-recordLabel associatedMusicalArtist type ?u_1 MusicalArtist ?u_0 EMI
-recordLabel type ?u_0 MusicalArtist EMI
-recordLabel associatedMusicalArtist ?u_1 type ?u_0 MusicalArtist EMI
-recordLabel type ?u_1 MusicalArtist EMI
-recordLabel associatedMusicalArtist type ?u_1 MusicalArtist ?u_0 EMI
+league ?u_0 Turkish_Handball_Super_League
+type ?u_0 HandballTeam
+league mascot ?u_0 ?u_1 Turkish_Handball_Super_League
+league type ?u_0 HandballTeam Turkish_Handball_Super_League
+mascot type ?u_0 HandballTeam ?u_1
+league mascot type ?u_0 HandballTeam ?u_1 Turkish_Handball_Super_League
+league ?u_1 Turkish_Handball_Super_League
+league ?u_0 Turkish_Handball_Super_League
+birthPlace ?u_1 Houston
+debutTeam ?u_0 ?u_1
+type ?u_0 BaseballPlayer
+debutTeam type ?u_0 BaseballPlayer ?u_1
+birthPlace ?u_0 Houston
+type ?u_1 BaseballPlayer
+birthPlace debutTeam ?u_0 ?u_1 Houston
+debutTeam ?u_0 type ?u_1 BaseballPlayer
+birthPlace type ?u_1 BaseballPlayer Houston
+birthPlace type ?u_0 BaseballPlayer Houston
+birthPlace debutTeam type ?u_0 BaseballPlayer ?u_1 Houston
+debutTeam ?u_1 ?u_0
+birthPlace debutTeam ?u_1 ?u_0 Houston
+debutTeam ?u_1 type ?u_0 BaseballPlayer
+debutTeam type ?u_1 BaseballPlayer ?u_0
+birthPlace debutTeam type ?u_1 BaseballPlayer ?u_0 Houston
+hubAirport Cascade_Airways Seattle
+editor British_Gazette ?u_0
+associatedActs ?u_0 Divertis
 associatedMusicalArtist ?u_0 ?u_1
-recordLabel associatedMusicalArtist ?u_0 ?u_1 EMI
-associatedMusicalArtist type ?u_0 MusicalArtist ?u_1
-recordLabel associatedMusicalArtist type ?u_0 MusicalArtist ?u_1 EMI
-recordLabel associatedMusicalArtist ?u_0 ?u_1 EMI
-associatedMusicalArtist ?u_0 type ?u_1 MusicalArtist
-recordLabel associatedMusicalArtist ?u_0 ?u_1 EMI
-recordLabel associatedMusicalArtist type ?u_0 MusicalArtist ?u_1 EMI
-recordLabel associatedMusicalArtist ?u_0 type ?u_1 MusicalArtist EMI
-doctoralAdvisor ?u_0 #ent
-doctoralStudents ?u_0 Mary_Ainsworth
-type ?u_0 Scientist
-doctoralAdvisor type ?u_0 Scientist Mary_Ainsworth
-doctoralStudents type ?u_0 Scientist Mary_Ainsworth
-doctoralAdvisor Mary_Ainsworth ?u_0
-doctoralAdvisor Mary_Ainsworth doctoralStudents ?u_0 Mary_Ainsworth
-doctoralAdvisor Mary_Ainsworth type ?u_0 Scientist
-doctoralAdvisor Mary_Ainsworth doctoralStudents type ?u_0 Scientist Mary_Ainsworth
-doctoralAdvisor ?u_1 Mary_Ainsworth
-doctoralStudents ?u_0 ?u_1
-type ?u_0 Scientist
-doctoralAdvisor ?u_1 Mary_Ainsworth
-doctoralStudents type ?u_0 Scientist ?u_1
-doctoralAdvisor ?u_0 Mary_Ainsworth
-type ?u_1 Scientist
-doctoralAdvisor ?u_0 Mary_Ainsworth
-doctoralStudents ?u_0 type ?u_1 Scientist
-doctoralAdvisor type ?u_0 Scientist Mary_Ainsworth
-doctoralAdvisor type ?u_1 Scientist Mary_Ainsworth
-doctoralStudents ?u_1 ?u_0
-doctoralStudents ?u_1 type ?u_0 Scientist
-doctoralStudents type ?u_1 Scientist ?u_0
-doctoralAdvisor Mary_Ainsworth ?u_1
-doctoralAdvisor Mary_Ainsworth ?u_1
-doctoralAdvisor Mary_Ainsworth ?u_0
-doctoralAdvisor Mary_Ainsworth doctoralStudents ?u_0 ?u_1
-doctoralAdvisor Mary_Ainsworth ?u_0
-doctoralAdvisor Mary_Ainsworth doctoralStudents ?u_0 ?u_1
-doctoralAdvisor Mary_Ainsworth type ?u_0 Scientist
-doctoralAdvisor Mary_Ainsworth doctoralStudents type ?u_0 Scientist ?u_1
-doctoralAdvisor Mary_Ainsworth type ?u_1 Scientist
-doctoralAdvisor Mary_Ainsworth doctoralStudents ?u_1 ?u_0
-doctoralAdvisor Mary_Ainsworth doctoralStudents ?u_1 ?u_0
-doctoralAdvisor Mary_Ainsworth doctoralStudents type ?u_1 Scientist ?u_0
-doctoralStudents ?u_1 Mary_Ainsworth
-doctoralAdvisor ?u_1 ?u_0
-doctoralStudents doctoralAdvisor ?u_1 ?u_0 Mary_Ainsworth
-doctoralStudents ?u_1 Mary_Ainsworth
-doctoralAdvisor ?u_1 type ?u_0 Scientist
-doctoralStudents doctoralAdvisor ?u_1 ?u_0 Mary_Ainsworth
-doctoralStudents ?u_0 Mary_Ainsworth
-doctoralStudents doctoralAdvisor ?u_1 ?u_0 Mary_Ainsworth
-doctoralStudents ?u_0 Mary_Ainsworth
-doctoralAdvisor type ?u_1 Scientist ?u_0
-doctoralStudents doctoralAdvisor type ?u_1 Scientist ?u_0 Mary_Ainsworth
-doctoralStudents type ?u_0 Scientist Mary_Ainsworth
-doctoralStudents doctoralAdvisor ?u_1 type ?u_0 Scientist Mary_Ainsworth
-doctoralStudents type ?u_1 Scientist Mary_Ainsworth
-doctoralStudents doctoralAdvisor type ?u_1 Scientist ?u_0 Mary_Ainsworth
-doctoralAdvisor ?u_0 ?u_1
-doctoralStudents doctoralAdvisor ?u_0 ?u_1 Mary_Ainsworth
-doctoralAdvisor type ?u_0 Scientist ?u_1
-doctoralStudents doctoralAdvisor type ?u_0 Scientist ?u_1 Mary_Ainsworth
-doctoralStudents doctoralAdvisor ?u_0 ?u_1 Mary_Ainsworth
-doctoralAdvisor ?u_0 type ?u_1 Scientist
-doctoralStudents doctoralAdvisor ?u_0 ?u_1 Mary_Ainsworth
-doctoralStudents doctoralAdvisor type ?u_0 Scientist ?u_1 Mary_Ainsworth
-doctoralStudents doctoralAdvisor ?u_0 type ?u_1 Scientist Mary_Ainsworth
-party #ent ?u_0
-awards ?u_0 #ent
-type ?u_0 Scientist
-awards type ?u_0 Scientist Copley_Medal
-headquarters ?u_1 #ent
-presenter ?u_1 ?u_0
-type ?u_0 Award
-headquarters ?u_1 Beverly_Hills,_California
-presenter ?u_1 type ?u_0 Award
-headquarters ?u_0 Beverly_Hills,_California
-type ?u_1 Award
-headquarters presenter ?u_1 ?u_0 Beverly_Hills,_California
-headquarters ?u_0 Beverly_Hills,_California
-presenter type ?u_1 Award ?u_0
-headquarters presenter type ?u_1 Award ?u_0 Beverly_Hills,_California
+associatedActs associatedMusicalArtist ?u_0 ?u_1 Divertis
+associatedMusicalArtist ?u_1 ?u_0
+associatedActs ?u_0 Divertis
+associatedMusicalArtist ?u_0 Divertis
+associatedActs associatedMusicalArtist ?u_0 Divertis Divertis
+associatedMusicalArtist ?u_0 Divertis
+associatedActs ?u_1 ?u_0
+associatedActs ?u_0 ?u_1
+associatedMusicalArtist associatedActs ?u_0 ?u_1 Divertis
+associatedActs ?u_1 Divertis
+associatedActs associatedMusicalArtist ?u_1 ?u_0 Divertis
+associatedMusicalArtist ?u_1 Divertis
+associatedMusicalArtist associatedActs ?u_1 ?u_0 Divertis
+composer ?u_1 Gerard_Marino
+developer ?u_1 ?u_0
+type ?u_0 VideoGame
+composer developer ?u_1 ?u_0 Gerard_Marino
+composer ?u_1 Gerard_Marino
+developer ?u_1 type ?u_0 VideoGame
+composer ?u_0 Gerard_Marino
+type ?u_1 VideoGame
+composer ?u_0 Gerard_Marino
+developer type ?u_1 VideoGame ?u_0
+composer type ?u_1 VideoGame Gerard_Marino
+composer developer type ?u_1 VideoGame ?u_0 Gerard_Marino
+composer type ?u_0 VideoGame Gerard_Marino
+developer ?u_0 ?u_1
+developer type ?u_0 VideoGame ?u_1
+composer developer ?u_0 ?u_1 Gerard_Marino
+developer ?u_0 type ?u_1 VideoGame
+composer developer type ?u_0 VideoGame ?u_1 Gerard_Marino
+operatingSystem ?u_1 Unix-like
+developer ?u_1 ?u_0
+type ?u_0 Software
+operatingSystem developer ?u_1 ?u_0 Unix-like
+developer ?u_1 type ?u_0 Software
+operatingSystem developer ?u_1 ?u_0 Unix-like
+operatingSystem ?u_0 Unix-like
+type ?u_1 Software
+operatingSystem developer ?u_1 ?u_0 Unix-like
+developer type ?u_1 Software ?u_0
+operatingSystem developer type ?u_1 Software ?u_0 Unix-like
+operatingSystem type ?u_1 Software Unix-like
+operatingSystem developer type ?u_1 Software ?u_0 Unix-like
+operatingSystem type ?u_0 Software Unix-like
+operatingSystem developer ?u_1 type ?u_0 Software Unix-like
+developer ?u_0 ?u_1
+operatingSystem developer ?u_0 ?u_1 Unix-like
+developer type ?u_0 Software ?u_1
+operatingSystem developer type ?u_0 Software ?u_1 Unix-like
+operatingSystem developer ?u_0 ?u_1 Unix-like
+developer ?u_0 type ?u_1 Software
+operatingSystem developer ?u_0 ?u_1 Unix-like
+operatingSystem developer ?u_0 type ?u_1 Software Unix-like
+operatingSystem developer type ?u_0 Software ?u_1 Unix-like
+headquarter ?u_1 Berlin
+leader ?u_0 ?u_1
+type ?u_1 PoliticalParty
+headquarter leader ?u_0 ?u_1 Berlin
+headquarter type ?u_1 PoliticalParty Berlin
+leader ?u_0 type ?u_1 PoliticalParty
+headquarter leader ?u_0 type ?u_1 PoliticalParty Berlin
+headquarter ?u_0 Berlin
+type ?u_0 PoliticalParty
+headquarter leader ?u_0 ?u_1 Berlin
+headquarter type ?u_0 PoliticalParty Berlin
+leader type ?u_0 PoliticalParty ?u_1
+headquarter leader type ?u_0 PoliticalParty ?u_1 Berlin
+headquarter leader ?u_0 ?u_1 Berlin
+leader ?u_1 ?u_0
+headquarter leader ?u_1 ?u_0 Berlin
+leader type ?u_1 PoliticalParty ?u_0
+headquarter leader type ?u_1 PoliticalParty ?u_0 Berlin
+headquarter leader ?u_1 ?u_0 Berlin
+leader ?u_1 type ?u_0 PoliticalParty
+headquarter leader ?u_1 type ?u_0 PoliticalParty Berlin
+headquarter leader ?u_1 ?u_0 Berlin
+managerclubs ?u_0 Middlesbrough_F.C.
+managerClub ?u_0 England_national_under-21_football_team
+type ?u_0 SportsManager
+managerclubs managerClub ?u_0 England_national_under-21_football_team Middlesbrough_F.C.
+managerclubs type ?u_0 SportsManager Middlesbrough_F.C.
+managerClub type ?u_0 SportsManager England_national_under-21_football_team
+managerclubs managerClub type ?u_0 SportsManager England_national_under-21_football_team Middlesbrough_F.C.
+managerClub ?u_0 Middlesbrough_F.C.
+managerclubs ?u_0 England_national_under-21_football_team
+managerClub managerclubs ?u_0 England_national_under-21_football_team Middlesbrough_F.C.
+managerClub type ?u_0 SportsManager Middlesbrough_F.C.
+managerclubs type ?u_0 SportsManager England_national_under-21_football_team
+managerClub managerclubs type ?u_0 SportsManager England_national_under-21_football_team Middlesbrough_F.C.
+league ?u_1 La_Liga
+youthclubs ?u_0 ?u_1
+type ?u_1 SoccerPlayer
+league youthclubs ?u_0 ?u_1 La_Liga
+youthclubs ?u_0 type ?u_1 SoccerPlayer
+league ?u_0 La_Liga
+type ?u_0 SoccerPlayer
+youthclubs type ?u_0 SoccerPlayer ?u_1
+league youthclubs type ?u_0 SoccerPlayer ?u_1 La_Liga
+youthclubs ?u_1 ?u_0
+youthclubs type ?u_1 SoccerPlayer ?u_0
+league youthclubs ?u_1 ?u_0 La_Liga
+youthclubs ?u_1 type ?u_0 SoccerPlayer
+league youthclubs type ?u_1 SoccerPlayer ?u_0 La_Liga
+employer Michael_M._Sears ?u_0
+manufacturer Delta_III ?u_0
+employer Michael_M._Sears manufacturer Delta_III ?u_0
+county Cy-Fair_High_School ?u_0
+largestCity ?u_0 ?u_1
+county Cy-Fair_High_School largestCity ?u_0 ?u_1
+county Cy-Fair_High_School ?u_1
+allegiance Peter_Blay ?u_0
+successor ?u_0 Derick_Heathcoat-Amory,_1st_Viscount_Amory
+primeminister ?u_0 ?u_1
+successor primeminister ?u_0 ?u_1 Derick_Heathcoat-Amory,_1st_Viscount_Amory
+primeminister ?u_1 ?u_0
+successor ?u_0 Derick_Heathcoat-Amory,_1st_Viscount_Amory
+primeminister Derick_Heathcoat-Amory,_1st_Viscount_Amory ?u_0
+successor Derick_Heathcoat-Amory,_1st_Viscount_Amory ?u_0
+successor Derick_Heathcoat-Amory,_1st_Viscount_Amory primeminister ?u_0 ?u_1
+successor Derick_Heathcoat-Amory,_1st_Viscount_Amory ?u_0
+primeminister Derick_Heathcoat-Amory,_1st_Viscount_Amory ?u_0
+successor ?u_1 ?u_0
+primeminister Derick_Heathcoat-Amory,_1st_Viscount_Amory successor ?u_1 ?u_0
+successor ?u_0 ?u_1
+primeminister Derick_Heathcoat-Amory,_1st_Viscount_Amory successor ?u_0 ?u_1
+successor ?u_1 Derick_Heathcoat-Amory,_1st_Viscount_Amory
+successor primeminister ?u_1 ?u_0 Derick_Heathcoat-Amory,_1st_Viscount_Amory
+successor Derick_Heathcoat-Amory,_1st_Viscount_Amory ?u_1
+successor Derick_Heathcoat-Amory,_1st_Viscount_Amory primeminister ?u_1 ?u_0
+primeminister Derick_Heathcoat-Amory,_1st_Viscount_Amory ?u_1
+primeminister Derick_Heathcoat-Amory,_1st_Viscount_Amory successor ?u_1 ?u_0
+primeminister Derick_Heathcoat-Amory,_1st_Viscount_Amory successor ?u_0 ?u_1
+designer ?u_0 ASC_Creative_Services
+designCompany ?u_0 ASC_Creative_Services
+type ?u_0 Automobile
+designer designCompany ?u_0 ASC_Creative_Services ASC_Creative_Services
+designer type ?u_0 Automobile ASC_Creative_Services
+designCompany type ?u_0 Automobile ASC_Creative_Services
+designer designCompany type ?u_0 Automobile ASC_Creative_Services ASC_Creative_Services
+designer ?u_1 ASC_Creative_Services
+designCompany ?u_1 ?u_0
+type ?u_1 Automobile
+designer designCompany ?u_1 ?u_0 ASC_Creative_Services
+designer type ?u_1 Automobile ASC_Creative_Services
+designCompany type ?u_1 Automobile ?u_0
+designer designCompany type ?u_1 Automobile ?u_0 ASC_Creative_Services
+designer ?u_0 ASC_Creative_Services
+type ?u_0 Automobile
+designer type ?u_0 Automobile ASC_Creative_Services
+designCompany ?u_1 type ?u_0 Automobile
+designer ?u_1 ASC_Creative_Services
+designer ?u_0 ASC_Creative_Services
+designCompany ?u_0 ?u_1
+designCompany ?u_0 type ?u_1 Automobile
+designer designCompany ?u_0 ?u_1 ASC_Creative_Services
+designCompany type ?u_0 Automobile ?u_1
+designer designCompany type ?u_0 Automobile ?u_1 ASC_Creative_Services
+designCompany ?u_1 ASC_Creative_Services
+designer ?u_0 ?u_1
+designCompany type ?u_1 Automobile ASC_Creative_Services
+designer ?u_0 type ?u_1 Automobile
+designCompany ?u_0 ASC_Creative_Services
+designCompany designer ?u_0 ?u_1 ASC_Creative_Services
+designCompany type ?u_0 Automobile ASC_Creative_Services
+designer type ?u_0 Automobile ?u_1
+designCompany designer type ?u_0 Automobile ?u_1 ASC_Creative_Services
+designCompany ?u_1 ASC_Creative_Services
+designCompany ?u_0 ASC_Creative_Services
+designer ?u_1 ?u_0
+designCompany designer ?u_1 ?u_0 ASC_Creative_Services
+designer type ?u_1 Automobile ?u_0
+designCompany designer type ?u_1 Automobile ?u_0 ASC_Creative_Services
+designer ?u_1 type ?u_0 Automobile
+family ?u_0 Orthonychidae
+type ?u_0 Bird
+family type ?u_0 Bird Orthonychidae
+poleDriver 1994_Spanish_Grand_Prix ?u_0
+child Jack_Ferguson ?u_0
+primeminister ?u_0 ?u_1
+child Jack_Ferguson primeminister ?u_0 ?u_1
+child Jack_Ferguson ?u_1
+team Michael_Springer ?u_0
+education Donald_Brooks ?u_0
+team Michael_Springer education Donald_Brooks ?u_0
+pastteams Marv_McFadden Pittsburgh_Steelers
+writer ?u_1 Erik_Jendresen
+writer ?u_0 John_Orloff
+writer ?u_1 ?u_0
+type ?u_1 TelevisionShow
+writer ?u_1 Erik_Jendresen
+writer writer ?u_1 ?u_0 Erik_Jendresen
+writer type ?u_1 TelevisionShow Erik_Jendresen
+writer ?u_0 John_Orloff
+writer type ?u_1 TelevisionShow ?u_0
+writer type ?u_1 TelevisionShow Erik_Jendresen
+writer writer type ?u_1 TelevisionShow ?u_0 Erik_Jendresen
+writer ?u_0 Erik_Jendresen
+writer ?u_1 John_Orloff
+writer ?u_0 Erik_Jendresen
+writer ?u_0 Erik_Jendresen
+writer writer ?u_1 ?u_0 John_Orloff
+writer type ?u_1 TelevisionShow John_Orloff
+writer ?u_0 Erik_Jendresen
+writer writer type ?u_1 TelevisionShow ?u_0 John_Orloff
+type ?u_0 TelevisionShow
+writer writer ?u_0 John_Orloff Erik_Jendresen
+writer type ?u_0 TelevisionShow Erik_Jendresen
+writer type ?u_0 TelevisionShow John_Orloff
+writer ?u_1 type ?u_0 TelevisionShow
+writer writer type ?u_0 TelevisionShow John_Orloff Erik_Jendresen
+writer ?u_1 Erik_Jendresen
+writer ?u_1 Erik_Jendresen
+writer ?u_1 John_Orloff
+writer type ?u_0 TelevisionShow Erik_Jendresen
+writer writer ?u_0 John_Orloff Erik_Jendresen
+writer ?u_0 ?u_1
+writer writer ?u_0 ?u_1 John_Orloff
+writer type ?u_0 TelevisionShow ?u_1
+writer writer type ?u_0 TelevisionShow ?u_1 John_Orloff
+writer writer ?u_0 ?u_1 Erik_Jendresen
+writer writer type ?u_0 TelevisionShow ?u_1 Erik_Jendresen
+writer ?u_0 type ?u_1 TelevisionShow
+writer writer writer ?u_0 ?u_1 John_Orloff Erik_Jendresen
+writer writer writer type ?u_0 TelevisionShow ?u_1 John_Orloff Erik_Jendresen
+nickname List_of_The_Wolves_of_Mercy_Falls_characters ?u_0
+religiousAffiliation Neungin_High_School ?u_0
+silverMedalist Tennis_at_the_2012_Summer_Olympics__Women's_singles Maria_Sharapova
+owners The_South_End ?u_0
+colour Xocolatlite ?u_0
+formerTeam ?u_0 Atlant_Moscow_Oblast
+playedFor ?u_0 ?u_1
+formerTeam playedFor ?u_0 ?u_1 Atlant_Moscow_Oblast
+formerTeam ?u_0 Atlant_Moscow_Oblast
+playedFor ?u_0 Atlant_Moscow_Oblast
+formerTeam playedFor ?u_0 Atlant_Moscow_Oblast Atlant_Moscow_Oblast
+playedFor ?u_1 ?u_0
+playedFor ?u_0 Atlant_Moscow_Oblast
+formerTeam ?u_0 ?u_1
+playedFor formerTeam ?u_0 ?u_1 Atlant_Moscow_Oblast
+formerTeam ?u_1 ?u_0
+formerTeam ?u_1 Atlant_Moscow_Oblast
+formerTeam playedFor ?u_1 ?u_0 Atlant_Moscow_Oblast
+playedFor ?u_1 Atlant_Moscow_Oblast
+playedFor formerTeam ?u_1 ?u_0 Atlant_Moscow_Oblast
+publisher ?u_1 Interplay_Entertainment
+genre ?u_1 ?u_0
+type ?u_0 VideoGame
+publisher genre ?u_1 ?u_0 Interplay_Entertainment
+genre ?u_1 type ?u_0 VideoGame
+publisher genre ?u_1 ?u_0 Interplay_Entertainment
+publisher ?u_0 Interplay_Entertainment
+type ?u_1 VideoGame
+genre type ?u_1 VideoGame ?u_0
+publisher type ?u_1 VideoGame Interplay_Entertainment
+publisher genre type ?u_1 VideoGame ?u_0 Interplay_Entertainment
+publisher type ?u_0 VideoGame Interplay_Entertainment
+genre ?u_0 ?u_1
+genre type ?u_0 VideoGame ?u_1
+publisher genre ?u_0 ?u_1 Interplay_Entertainment
+genre ?u_0 type ?u_1 VideoGame
+publisher genre ?u_0 ?u_1 Interplay_Entertainment
+publisher genre type ?u_0 VideoGame ?u_1 Interplay_Entertainment
+engine Purvis_Eureka ?u_0
+company Ford_Theatre ?u_0
+engine Purvis_Eureka company Ford_Theatre ?u_0
+timeZone Pong_Pha ?u_0
+starring ?u_1 Craig_Robinson_(actor)
+series ?u_0 ?u_1
+type ?u_1 FictionalCharacter
+starring series ?u_0 ?u_1 Craig_Robinson_(actor)
+series ?u_0 type ?u_1 FictionalCharacter
+starring ?u_0 Craig_Robinson_(actor)
+type ?u_0 FictionalCharacter
+series type ?u_0 FictionalCharacter ?u_1
+starring ?u_1 Craig_Robinson_(actor)
+starring series type ?u_0 FictionalCharacter ?u_1 Craig_Robinson_(actor)
+starring ?u_0 Craig_Robinson_(actor)
+series ?u_1 ?u_0
+series type ?u_1 FictionalCharacter ?u_0
+starring series ?u_1 ?u_0 Craig_Robinson_(actor)
+series ?u_1 type ?u_0 FictionalCharacter
+starring series type ?u_1 FictionalCharacter ?u_0 Craig_Robinson_(actor)
+city ?u_1 Paphos_District
+owner ?u_1 ?u_0
+type ?u_1 Airport
+city owner ?u_1 ?u_0 Paphos_District
+city type ?u_1 Airport Paphos_District
+owner type ?u_1 Airport ?u_0
+city owner type ?u_1 Airport ?u_0 Paphos_District
+city ?u_0 Paphos_District
+type ?u_0 Airport
+city type ?u_0 Airport Paphos_District
+owner ?u_1 type ?u_0 Airport
+city ?u_1 Paphos_District
+city ?u_0 Paphos_District
+owner ?u_0 ?u_1
+owner ?u_0 type ?u_1 Airport
+city owner ?u_0 ?u_1 Paphos_District
+owner type ?u_0 Airport ?u_1
+city owner type ?u_0 Airport ?u_1 Paphos_District
+class ?u_0 Bacilli
+type ?u_0 Bacteria
+class type ?u_0 Bacteria Bacilli
+honours Reigh_Count ?u_0
+related Doctor_Who_Confidential ?u_0
+type ?u_0 TelevisionShow
+related Doctor_Who_Confidential type ?u_0 TelevisionShow
+related ?u_0 Doctor_Who_Confidential
+related type ?u_0 TelevisionShow Doctor_Who_Confidential
+recorded Live_at_The_Triple_Door_(The_Courage_album) ?u_0
+nearestCity Jurgens_Site ?u_0
+deathPlace Jimmie_Heuga ?u_0
+nearestCity Jurgens_Site deathPlace Jimmie_Heuga ?u_0
+battles Ali_Habib_Mahmud ?u_0
+foundationPlace ?u_0 United_States
+type ?u_0 Company
+foundationPlace type ?u_0 Company United_States
+doctoralStudent James_Chadwick Charles_Drummond_Ellis
+distributor ?u_0 Cinema_International_Corporation
+type ?u_0 Film
+distributor type ?u_0 Film Cinema_International_Corporation
+parentCompany Cornell_University_Press ?u_0
+mainIngredient Ham ?u_0
+country ?u_0 ?u_1
+mainIngredient ?u_0 Ham
+mainIngredient country ?u_0 ?u_1 Ham
+mainIngredient Ham ?u_1
+mainIngredient ?u_1 Ham
+operatingSystem ?u_0 Microsoft_Windows
+license ?u_0 Software_as_a_service
+type ?u_0 Software
+operatingSystem license ?u_0 Software_as_a_service Microsoft_Windows
+operatingSystem type ?u_0 Software Microsoft_Windows
+license type ?u_0 Software Software_as_a_service
+operatingSystem license type ?u_0 Software Software_as_a_service Microsoft_Windows
+channel ?u_0 NBC
+presenter ?u_0 NBC
+type ?u_0 TelevisionShow
+channel presenter ?u_0 NBC NBC
+channel type ?u_0 TelevisionShow NBC
+presenter type ?u_0 TelevisionShow NBC
+channel presenter type ?u_0 TelevisionShow NBC NBC
+channel ?u_1 NBC
 presenter ?u_0 ?u_1
-headquarters presenter ?u_0 ?u_1 Beverly_Hills,_California
-presenter type ?u_0 Award ?u_1
-headquarters presenter type ?u_0 Award ?u_1 Beverly_Hills,_California
-presenter ?u_0 type ?u_1 Award
-narrator #ent ?u_0
+type ?u_1 TelevisionShow
+channel type ?u_1 TelevisionShow NBC
+presenter ?u_0 type ?u_1 TelevisionShow
+channel ?u_0 NBC
+type ?u_0 TelevisionShow
+channel presenter ?u_0 ?u_1 NBC
+channel type ?u_0 TelevisionShow NBC
+presenter type ?u_0 TelevisionShow ?u_1
+channel presenter type ?u_0 TelevisionShow ?u_1 NBC
+channel presenter ?u_0 ?u_1 NBC
+presenter ?u_1 ?u_0
+channel presenter ?u_1 ?u_0 NBC
+presenter ?u_1 type ?u_0 TelevisionShow
+channel presenter ?u_1 ?u_0 NBC
+presenter type ?u_1 TelevisionShow ?u_0
+channel presenter type ?u_1 TelevisionShow ?u_0 NBC
+presenter ?u_1 NBC
+channel ?u_1 ?u_0
+presenter channel ?u_1 ?u_0 NBC
+presenter type ?u_1 TelevisionShow NBC
+channel type ?u_1 TelevisionShow ?u_0
+presenter channel type ?u_1 TelevisionShow ?u_0 NBC
+presenter ?u_0 NBC
+presenter type ?u_0 TelevisionShow NBC
+channel ?u_1 type ?u_0 TelevisionShow
+presenter ?u_1 NBC
+presenter ?u_0 NBC
+channel ?u_0 ?u_1
+channel type ?u_0 TelevisionShow ?u_1
+presenter channel ?u_0 ?u_1 NBC
+channel ?u_0 type ?u_1 TelevisionShow
+presenter channel type ?u_0 TelevisionShow ?u_1 NBC
+predecessor ?u_0 Full-size_car
+class ?u_0 Full-size_car
+type ?u_0 Automobile
+predecessor type ?u_0 Automobile Full-size_car
+class type ?u_0 Automobile Full-size_car
+predecessor ?u_1 Full-size_car
+class ?u_1 ?u_0
+type ?u_1 Automobile
+predecessor type ?u_1 Automobile Full-size_car
+class type ?u_1 Automobile ?u_0
+predecessor ?u_0 Full-size_car
+type ?u_0 Automobile
+predecessor type ?u_0 Automobile Full-size_car
+class ?u_1 type ?u_0 Automobile
+predecessor ?u_1 Full-size_car
+predecessor ?u_0 Full-size_car
+class ?u_0 ?u_1
+class ?u_0 type ?u_1 Automobile
+class type ?u_0 Automobile ?u_1
+class ?u_1 Full-size_car
+predecessor ?u_1 ?u_0
+class predecessor ?u_1 ?u_0 Full-size_car
+class type ?u_1 Automobile Full-size_car
+predecessor type ?u_1 Automobile ?u_0
+class predecessor type ?u_1 Automobile ?u_0 Full-size_car
+class ?u_0 Full-size_car
+class predecessor ?u_1 ?u_0 Full-size_car
+class type ?u_0 Automobile Full-size_car
+predecessor ?u_1 type ?u_0 Automobile
+class predecessor ?u_1 type ?u_0 Automobile Full-size_car
+class ?u_1 Full-size_car
+class predecessor ?u_1 ?u_0 Full-size_car
+class ?u_0 Full-size_car
+class predecessor type ?u_1 Automobile ?u_0 Full-size_car
+predecessor ?u_0 ?u_1
+class predecessor ?u_0 ?u_1 Full-size_car
+predecessor ?u_0 type ?u_1 Automobile
+class predecessor ?u_0 type ?u_1 Automobile Full-size_car
+class predecessor ?u_0 ?u_1 Full-size_car
+predecessor type ?u_0 Automobile ?u_1
+class predecessor type ?u_0 Automobile ?u_1 Full-size_car
+class predecessor type ?u_0 Automobile ?u_1 Full-size_car
+class predecessor ?u_0 ?u_1 Full-size_car
+operatingSystem ?u_0 Unix-like
+programmingLanguage ?u_0 Unix-like
+type ?u_0 Software
+operatingSystem programmingLanguage ?u_0 Unix-like Unix-like
+operatingSystem type ?u_0 Software Unix-like
+programmingLanguage type ?u_0 Software Unix-like
+operatingSystem programmingLanguage type ?u_0 Software Unix-like Unix-like
+operatingSystem ?u_1 Unix-like
+programmingLanguage ?u_1 ?u_0
+type ?u_0 Software
+operatingSystem programmingLanguage ?u_1 ?u_0 Unix-like
+programmingLanguage ?u_1 type ?u_0 Software
+operatingSystem programmingLanguage ?u_1 ?u_0 Unix-like
+operatingSystem ?u_0 Unix-like
+type ?u_1 Software
+operatingSystem programmingLanguage ?u_1 ?u_0 Unix-like
+programmingLanguage type ?u_1 Software ?u_0
+operatingSystem programmingLanguage type ?u_1 Software ?u_0 Unix-like
+operatingSystem type ?u_1 Software Unix-like
+operatingSystem programmingLanguage type ?u_1 Software ?u_0 Unix-like
+operatingSystem type ?u_0 Software Unix-like
+operatingSystem programmingLanguage ?u_1 type ?u_0 Software Unix-like
+programmingLanguage ?u_0 ?u_1
+operatingSystem programmingLanguage ?u_0 ?u_1 Unix-like
+programmingLanguage type ?u_0 Software ?u_1
+operatingSystem programmingLanguage type ?u_0 Software ?u_1 Unix-like
+operatingSystem programmingLanguage ?u_0 ?u_1 Unix-like
+programmingLanguage ?u_0 type ?u_1 Software
+operatingSystem programmingLanguage ?u_0 ?u_1 Unix-like
+operatingSystem programmingLanguage ?u_0 type ?u_1 Software Unix-like
+operatingSystem programmingLanguage type ?u_0 Software ?u_1 Unix-like
+programmingLanguage ?u_1 Unix-like
+operatingSystem ?u_0 ?u_1
+programmingLanguage ?u_1 Unix-like
+operatingSystem type ?u_0 Software ?u_1
+programmingLanguage ?u_0 Unix-like
+programmingLanguage operatingSystem ?u_0 ?u_1 Unix-like
+programmingLanguage ?u_0 Unix-like
+operatingSystem ?u_0 type ?u_1 Software
+programmingLanguage operatingSystem ?u_0 ?u_1 Unix-like
+programmingLanguage type ?u_1 Software Unix-like
+programmingLanguage type ?u_0 Software Unix-like
+programmingLanguage operatingSystem type ?u_0 Software ?u_1 Unix-like
+operatingSystem ?u_1 ?u_0
+programmingLanguage operatingSystem ?u_1 ?u_0 Unix-like
+operatingSystem ?u_1 type ?u_0 Software
+programmingLanguage operatingSystem ?u_1 ?u_0 Unix-like
+operatingSystem type ?u_1 Software ?u_0
+programmingLanguage operatingSystem type ?u_1 Software ?u_0 Unix-like
+birthPlace ?u_0 Kenosha,_Wisconsin
+director ?u_1 ?u_0
+birthPlace director ?u_1 ?u_0 Kenosha,_Wisconsin
+birthPlace ?u_1 Kenosha,_Wisconsin
+branch ?u_0 Continental_Army
+president ?u_0 ?u_1
+branch president ?u_0 ?u_1 Continental_Army
+branch ?u_1 Continental_Army
+governingBody ?u_0 Philadelphia_City_Council
+music ?u_0 Elliot_Goldenthal
+screenplay ?u_0 Akiva_Goldsman
+type ?u_0 Film
+music screenplay ?u_0 Akiva_Goldsman Elliot_Goldenthal
+music type ?u_0 Film Elliot_Goldenthal
+screenplay type ?u_0 Film Akiva_Goldsman
+music screenplay type ?u_0 Film Akiva_Goldsman Elliot_Goldenthal
+relative ?u_0 Duck_family_(Disney)
+relatives ?u_0 Clan_McDuck
+type ?u_0 FictionalCharacter
+relative relatives ?u_0 Clan_McDuck Duck_family_(Disney)
+relative type ?u_0 FictionalCharacter Duck_family_(Disney)
+relatives type ?u_0 FictionalCharacter Clan_McDuck
+relative relatives type ?u_0 FictionalCharacter Clan_McDuck Duck_family_(Disney)
+relatives ?u_0 Duck_family_(Disney)
+relative ?u_0 Clan_McDuck
+relatives relative ?u_0 Clan_McDuck Duck_family_(Disney)
+relatives type ?u_0 FictionalCharacter Duck_family_(Disney)
+relative type ?u_0 FictionalCharacter Clan_McDuck
+relatives relative type ?u_0 FictionalCharacter Clan_McDuck Duck_family_(Disney)
+state Jerome_B._Chaffee ?u_0
+screenplay Lucky_You_(film) ?u_0
+award ?u_0 ?u_1
+screenplay Lucky_You_(film) award ?u_0 ?u_1
+screenplay Lucky_You_(film) ?u_1
+poleDriver 1994_Spanish_Grand_Prix ?u_0
+hubs ?u_1 Detroit
+parentCompany ?u_1 ?u_0
+type ?u_1 Airline
+hubs parentCompany ?u_1 ?u_0 Detroit
+hubs type ?u_1 Airline Detroit
+parentCompany type ?u_1 Airline ?u_0
+hubs parentCompany type ?u_1 Airline ?u_0 Detroit
+hubs ?u_0 Detroit
+type ?u_0 Airline
+hubs type ?u_0 Airline Detroit
+parentCompany ?u_1 type ?u_0 Airline
+hubs ?u_1 Detroit
+hubs ?u_0 Detroit
+parentCompany ?u_0 ?u_1
+parentCompany ?u_0 type ?u_1 Airline
+hubs parentCompany ?u_0 ?u_1 Detroit
+parentCompany type ?u_0 Airline ?u_1
+hubs parentCompany type ?u_0 Airline ?u_1 Detroit
+deathPlace ?u_1 Berkeley,_California
+founder ?u_1 ?u_0
+type ?u_1 Magazine
+founder type ?u_1 Magazine ?u_0
+deathPlace ?u_0 Berkeley,_California
+type ?u_0 Magazine
+deathPlace founder ?u_1 ?u_0 Berkeley,_California
+founder ?u_1 type ?u_0 Magazine
+deathPlace ?u_1 Berkeley,_California
+deathPlace ?u_0 Berkeley,_California
+deathPlace founder type ?u_1 Magazine ?u_0 Berkeley,_California
+founder ?u_0 ?u_1
+deathPlace founder ?u_0 ?u_1 Berkeley,_California
+founder ?u_0 type ?u_1 Magazine
+founder type ?u_0 Magazine ?u_1
+deathPlace founder type ?u_0 Magazine ?u_1 Berkeley,_California
+manufacturer ?u_0 Foxconn
+type ?u_0 InformationAppliance
+manufacturer type ?u_0 InformationAppliance Foxconn
+deputy ?u_0 Jenny_Macklin
+predecessor ?u_0 Jenny_Macklin
+predecessor Jenny_Macklin ?u_0
+deputy predecessor Jenny_Macklin ?u_0 Jenny_Macklin
+deputy ?u_0 Jenny_Macklin
+predecessor ?u_0 ?u_1
+deputy predecessor ?u_0 ?u_1 Jenny_Macklin
+predecessor ?u_1 ?u_0
+deputy predecessor ?u_1 ?u_0 Jenny_Macklin
+predecessor ?u_0 Jenny_Macklin
+deputy ?u_1 ?u_0
+predecessor deputy ?u_1 ?u_0 Jenny_Macklin
+deputy ?u_0 ?u_1
+predecessor deputy ?u_0 ?u_1 Jenny_Macklin
+predecessor Jenny_Macklin ?u_0
+predecessor Jenny_Macklin deputy ?u_1 ?u_0
+predecessor Jenny_Macklin deputy ?u_0 ?u_1
+deputy ?u_1 Jenny_Macklin
+deputy predecessor ?u_0 ?u_1 Jenny_Macklin
+deputy predecessor ?u_1 ?u_0 Jenny_Macklin
+predecessor ?u_1 Jenny_Macklin
+predecessor deputy ?u_1 ?u_0 Jenny_Macklin
+predecessor deputy ?u_0 ?u_1 Jenny_Macklin
+predecessor Jenny_Macklin ?u_1
+predecessor Jenny_Macklin deputy ?u_1 ?u_0
+predecessor Jenny_Macklin deputy ?u_0 ?u_1
+assembly ?u_0 Jefferson_North_Assembly
+related ?u_1 ?u_0
+assembly related ?u_1 ?u_0 Jefferson_North_Assembly
+related ?u_0 ?u_1
+assembly related ?u_0 ?u_1 Jefferson_North_Assembly
+assembly ?u_1 Jefferson_North_Assembly
+assembly related ?u_1 ?u_0 Jefferson_North_Assembly
+assembly related ?u_0 ?u_1 Jefferson_North_Assembly
+firstAscentPerson Cathedral_Peak_(California) John_Muir
+institution ?u_0 Harvard_Medical_School
+birthPlace ?u_0 ?u_1
+institution birthPlace ?u_0 ?u_1 Harvard_Medical_School
+institution ?u_1 Harvard_Medical_School
+music ?u_1 Jerry_Bock
+basedOn ?u_1 ?u_0
+type ?u_0 Musical
+music basedOn ?u_1 ?u_0 Jerry_Bock
+music ?u_1 Jerry_Bock
+basedOn ?u_1 type ?u_0 Musical
+music ?u_0 Jerry_Bock
+type ?u_1 Musical
+music basedOn ?u_1 ?u_0 Jerry_Bock
+music ?u_0 Jerry_Bock
+basedOn type ?u_1 Musical ?u_0
+music basedOn type ?u_1 Musical ?u_0 Jerry_Bock
+music type ?u_1 Musical Jerry_Bock
+music basedOn type ?u_1 Musical ?u_0 Jerry_Bock
+music type ?u_0 Musical Jerry_Bock
+music basedOn ?u_1 type ?u_0 Musical Jerry_Bock
+basedOn ?u_0 ?u_1
+music basedOn ?u_0 ?u_1 Jerry_Bock
+basedOn type ?u_0 Musical ?u_1
+music basedOn type ?u_0 Musical ?u_1 Jerry_Bock
+music basedOn ?u_0 ?u_1 Jerry_Bock
+basedOn ?u_0 type ?u_1 Musical
+music basedOn ?u_0 type ?u_1 Musical Jerry_Bock
+music basedOn type ?u_0 Musical ?u_1 Jerry_Bock
+locatedInArea ?u_0 Yosemite_National_Park
+firstAscentPerson ?u_0 ?u_1
+locatedInArea firstAscentPerson ?u_0 ?u_1 Yosemite_National_Park
+locatedInArea ?u_1 Yosemite_National_Park
+successor PlayStation_4 ?u_0
+successor ?u_0 PlayStation_4
+deathCause ?u_0 Suicide
+occupation ?u_0 ?u_1
+deathCause occupation ?u_0 ?u_1 Suicide
+deathCause ?u_1 Suicide
+college ?u_0 Arizona_State_Sun_Devils
+type ?u_0 GolfPlayer
+college type ?u_0 GolfPlayer Arizona_State_Sun_Devils
+characters Batman_Live ?u_0
+type ?u_0 ComicsCharacter
+characters Batman_Live type ?u_0 ComicsCharacter
+homeStadium ?u_0 Camp_Nou
+homeStadium name ?u_0 ?u_1 Camp_Nou
+homeStadium ?u_0 Camp_Nou
+name Camp_Nou ?u_0
+name Camp_Nou ?u_0
+homeStadium ?u_0 ?u_1
+homeStadium ?u_1 ?u_0
+homeStadium ?u_1 Camp_Nou
+homeStadium name ?u_1 ?u_0 Camp_Nou
+name Camp_Nou ?u_1
+nickname Tulane_Green_Wave ?u_0
+type ?u_0 University
+nickname ?u_0 Tulane_Green_Wave
+nickname type ?u_0 University Tulane_Green_Wave
+locationCountry Teperberg_1870 ?u_0
+developer ?u_0 Shawn_Fanning
+type ?u_0 Software
+developer type ?u_0 Software Shawn_Fanning
+instruments ?u_1 Bass_guitar
+stylisticOrigin ?u_0 ?u_1
+type ?u_1 MusicGenre
+instruments stylisticOrigin ?u_0 ?u_1 Bass_guitar
+instruments type ?u_1 MusicGenre Bass_guitar
+stylisticOrigin ?u_0 type ?u_1 MusicGenre
+instruments stylisticOrigin ?u_0 type ?u_1 MusicGenre Bass_guitar
+instruments ?u_0 Bass_guitar
+type ?u_0 MusicGenre
+instruments stylisticOrigin ?u_0 ?u_1 Bass_guitar
+instruments type ?u_0 MusicGenre Bass_guitar
+stylisticOrigin type ?u_0 MusicGenre ?u_1
+instruments stylisticOrigin type ?u_0 MusicGenre ?u_1 Bass_guitar
+instruments ?u_1 Bass_guitar
+instruments stylisticOrigin type ?u_0 MusicGenre ?u_1 Bass_guitar
+instruments ?u_0 Bass_guitar
+instruments stylisticOrigin ?u_0 ?u_1 Bass_guitar
+stylisticOrigin ?u_1 ?u_0
+instruments stylisticOrigin ?u_1 ?u_0 Bass_guitar
+stylisticOrigin type ?u_1 MusicGenre ?u_0
+instruments stylisticOrigin type ?u_1 MusicGenre ?u_0 Bass_guitar
+instruments stylisticOrigin ?u_1 ?u_0 Bass_guitar
+stylisticOrigin ?u_1 type ?u_0 MusicGenre
+instruments stylisticOrigin ?u_1 type ?u_0 MusicGenre Bass_guitar
+instruments stylisticOrigin ?u_1 ?u_0 Bass_guitar
+instruments stylisticOrigin type ?u_1 MusicGenre ?u_0 Bass_guitar
+voice Allen_Walker ?u_0
+voice Kimihiro_Watanuki ?u_0
+voice ?u_1 ?u_0
+voice Allen_Walker voice Kimihiro_Watanuki ?u_0
+voice Allen_Walker voice ?u_1 ?u_0
+voice Kimihiro_Watanuki voice ?u_1 ?u_0
+voice Allen_Walker voice Kimihiro_Watanuki voice ?u_1 ?u_0
+voice ?u_0 ?u_1
+voice Allen_Walker ?u_1
+voice Allen_Walker ?u_1
+voice Kimihiro_Watanuki ?u_1
+voice Allen_Walker ?u_0
+voice Allen_Walker voice ?u_0 ?u_1
+voice Kimihiro_Watanuki voice ?u_0 ?u_1
+engine Purvis_Eureka ?u_0
+battles Jonathan_Haskell ?u_0
+combatant ?u_0 ?u_1
+battles Jonathan_Haskell combatant ?u_0 ?u_1
+battles Jonathan_Haskell ?u_1
+team Ryan_Powell_(lacrosse) ?u_0
+draftTeam ?u_1 Detroit_Pistons
+placeOfDeath ?u_1 ?u_0
+type ?u_1 Location
+draftTeam ?u_0 Detroit_Pistons
+type ?u_0 Location
+placeOfDeath ?u_1 type ?u_0 Location
+club Julie_Hastings ?u_0
+riverMouth Upper_Neretva ?u_0
+headquarter ?u_0 1211_Avenue_of_the_Americas
+type ?u_0 Newspaper
+headquarter type ?u_0 Newspaper 1211_Avenue_of_the_Americas
+formerBandMember The_Smiths Morrissey
+university Phillippe_Cabot Columbia_University
+style Providence_Chapel,_Charlwood ?u_0
+primeminister Kingsley_Wood ?u_0
+successor ?u_0 Kingsley_Wood
+type ?u_0 OfficeHolder
+primeminister Kingsley_Wood type ?u_0 OfficeHolder
+primeminister Kingsley_Wood ?u_1
+successor ?u_1 ?u_0
+type ?u_1 OfficeHolder
+primeminister Kingsley_Wood type ?u_1 OfficeHolder
+successor type ?u_1 OfficeHolder ?u_0
+primeminister Kingsley_Wood ?u_0
+type ?u_0 OfficeHolder
+primeminister Kingsley_Wood successor ?u_1 ?u_0
+primeminister Kingsley_Wood type ?u_0 OfficeHolder
+successor ?u_1 type ?u_0 OfficeHolder
+primeminister Kingsley_Wood successor ?u_1 type ?u_0 OfficeHolder
+primeminister Kingsley_Wood ?u_1
+primeminister Kingsley_Wood ?u_0
+successor ?u_0 ?u_1
+primeminister Kingsley_Wood successor ?u_0 ?u_1
+successor ?u_0 type ?u_1 OfficeHolder
+primeminister Kingsley_Wood successor ?u_0 type ?u_1 OfficeHolder
+successor type ?u_0 OfficeHolder ?u_1
+successor ?u_1 Kingsley_Wood
+primeminister ?u_0 ?u_1
+primeminister ?u_0 type ?u_1 OfficeHolder
+successor ?u_0 Kingsley_Wood
+primeminister type ?u_0 OfficeHolder ?u_1
+successor ?u_1 Kingsley_Wood
+successor ?u_0 Kingsley_Wood
+primeminister ?u_1 ?u_0
+primeminister type ?u_1 OfficeHolder ?u_0
+primeminister ?u_1 type ?u_0 OfficeHolder
+foundedBy ?u_0 Jim_Harris_(entrepreneur)
+voice Lightning_McQueen ?u_0
+developer ?u_0 ?u_1
+voice Lightning_McQueen developer ?u_0 ?u_1
+voice Lightning_McQueen ?u_1
+recordLabel ?u_0 Jazz_fusion
+genre ?u_1 ?u_0
+genre ?u_0 ?u_1
+recordLabel ?u_0 Jazz_fusion
+genre ?u_0 Jazz_fusion
+genre ?u_0 Jazz_fusion
+recordLabel ?u_0 ?u_1
+genre recordLabel ?u_0 ?u_1 Jazz_fusion
+recordLabel ?u_1 ?u_0
+genre recordLabel ?u_1 ?u_0 Jazz_fusion
+recordLabel ?u_1 Jazz_fusion
+genre ?u_1 Jazz_fusion
+genre recordLabel ?u_0 ?u_1 Jazz_fusion
+genre recordLabel ?u_1 ?u_0 Jazz_fusion
+writers ?u_1 Robert_Bernstein_(comics)
+writers ?u_1 ?u_0
+writers ?u_0 ?u_1
+type ?u_0 Comic
+writers writers ?u_1 ?u_0 Robert_Bernstein_(comics)
+writers ?u_1 Robert_Bernstein_(comics)
+writers ?u_1 type ?u_0 Comic
+writers type ?u_0 Comic ?u_1
+writers ?u_0 Robert_Bernstein_(comics)
+type ?u_1 Comic
+writers writers ?u_0 ?u_1 Robert_Bernstein_(comics)
+writers ?u_0 Robert_Bernstein_(comics)
+writers type ?u_1 Comic ?u_0
+writers ?u_0 type ?u_1 Comic
+writers type ?u_1 Comic Robert_Bernstein_(comics)
+writers writers type ?u_1 Comic ?u_0 Robert_Bernstein_(comics)
+writers type ?u_0 Comic Robert_Bernstein_(comics)
+writers writers type ?u_0 Comic ?u_1 Robert_Bernstein_(comics)
+neighboringMunicipalities Lancy ?u_0
+type ?u_0 Settlement
+neighboringMunicipalities Lancy type ?u_0 Settlement
+neighboringMunicipalities ?u_0 Lancy
+neighboringMunicipalities type ?u_0 Settlement Lancy
+hometown ?u_0 Russia
+hometown ?u_0 ?u_1
+hometown ?u_1 ?u_0
+hometown hometown ?u_0 ?u_1 Russia
+hometown ?u_1 Russia
+hometown hometown ?u_1 ?u_0 Russia
+prizes ?u_0 National_Medal_of_Science
+doctoralStudents ?u_0 ?u_1
+prizes doctoralStudents ?u_0 ?u_1 National_Medal_of_Science
+doctoralStudents ?u_1 ?u_0
+prizes doctoralStudents ?u_1 ?u_0 National_Medal_of_Science
+prizes ?u_1 National_Medal_of_Science
+prizes doctoralStudents ?u_0 ?u_1 National_Medal_of_Science
+prizes doctoralStudents ?u_1 ?u_0 National_Medal_of_Science
+starring ?u_0 Joey_McIntyre
+starring ?u_0 ?u_1
+starring ?u_1 ?u_0
+starring starring ?u_0 ?u_1 Joey_McIntyre
+starring ?u_0 starring ?u_1 ?u_0
+starring ?u_1 Joey_McIntyre
+starring starring ?u_1 ?u_0 Joey_McIntyre
+award ?u_0 SIGGRAPH
+award ?u_0 ?u_1
+award ?u_1 ?u_0
+award award ?u_0 ?u_1 SIGGRAPH
+award ?u_0 award ?u_1 ?u_0
+award ?u_1 SIGGRAPH
+award award ?u_1 ?u_0 SIGGRAPH
+training David_Scherman ?u_0
+battles Raoul_Magrin-Vernerey ?u_0
+type ?u_0 MilitaryConflict
+battles Raoul_Magrin-Vernerey type ?u_0 MilitaryConflict
+flagbearer Switzerland_at_the_2004_Summer_Olympics ?u_0
+flagbearer Switzerland_at_the_2008_Summer_Olympics ?u_0
+flagbearer ?u_0 ?u_1
+flagbearer Switzerland_at_the_2004_Summer_Olympics flagbearer Switzerland_at_the_2008_Summer_Olympics ?u_0
+flagbearer ?u_1 ?u_0
+flagbearer Switzerland_at_the_2004_Summer_Olympics flagbearer ?u_1 ?u_0
+flagbearer Switzerland_at_the_2008_Summer_Olympics flagbearer ?u_1 ?u_0
+flagbearer Switzerland_at_the_2004_Summer_Olympics flagbearer Switzerland_at_the_2008_Summer_Olympics flagbearer ?u_1 ?u_0
+flagbearer Switzerland_at_the_2004_Summer_Olympics ?u_1
+flagbearer Switzerland_at_the_2004_Summer_Olympics ?u_1
+flagbearer Switzerland_at_the_2004_Summer_Olympics flagbearer ?u_0 ?u_1
+flagbearer Switzerland_at_the_2008_Summer_Olympics ?u_1
+flagbearer Switzerland_at_the_2004_Summer_Olympics ?u_0
+flagbearer Switzerland_at_the_2008_Summer_Olympics flagbearer ?u_0 ?u_1
+children ?u_0 Angelina_Jolie
+award ?u_1 ?u_0
+award ?u_0 ?u_1
+children award ?u_0 ?u_1 Angelina_Jolie
+children ?u_0 Angelina_Jolie
+award Angelina_Jolie ?u_0
+award Angelina_Jolie ?u_0
+children ?u_1 ?u_0
+children ?u_0 ?u_1
+children Angelina_Jolie ?u_0
+children Angelina_Jolie ?u_0
+children ?u_1 Angelina_Jolie
+children award ?u_1 ?u_0 Angelina_Jolie
+award Angelina_Jolie ?u_1
+children Angelina_Jolie ?u_1
+language ?u_1 Multilingualism
+programmingLanguage ?u_1 ?u_0
+type ?u_0 Software
+language programmingLanguage ?u_1 ?u_0 Multilingualism
+programmingLanguage ?u_1 type ?u_0 Software
+language programmingLanguage ?u_1 ?u_0 Multilingualism
+language ?u_0 Multilingualism
+type ?u_1 Software
+language programmingLanguage ?u_1 ?u_0 Multilingualism
+programmingLanguage type ?u_1 Software ?u_0
+language programmingLanguage type ?u_1 Software ?u_0 Multilingualism
+language type ?u_1 Software Multilingualism
+language programmingLanguage type ?u_1 Software ?u_0 Multilingualism
+language type ?u_0 Software Multilingualism
+language programmingLanguage ?u_1 type ?u_0 Software Multilingualism
+programmingLanguage ?u_0 ?u_1
+language programmingLanguage ?u_0 ?u_1 Multilingualism
+programmingLanguage type ?u_0 Software ?u_1
+language programmingLanguage type ?u_0 Software ?u_1 Multilingualism
+language programmingLanguage ?u_0 ?u_1 Multilingualism
+programmingLanguage ?u_0 type ?u_1 Software
+language programmingLanguage ?u_0 ?u_1 Multilingualism
+language programmingLanguage ?u_0 type ?u_1 Software Multilingualism
+language programmingLanguage type ?u_0 Software ?u_1 Multilingualism
+coverArtist American_Psycho Marshall_Arisman
+citizenship ?u_0 Statelessness
+commander ?u_1 Zuo_Zongtang
+territory ?u_0 ?u_1
+type ?u_1 MilitaryConflict
+commander type ?u_1 MilitaryConflict Zuo_Zongtang
+territory ?u_0 type ?u_1 MilitaryConflict
+commander ?u_0 Zuo_Zongtang
+type ?u_0 MilitaryConflict
+commander territory ?u_0 ?u_1 Zuo_Zongtang
+commander type ?u_0 MilitaryConflict Zuo_Zongtang
+territory type ?u_0 MilitaryConflict ?u_1
+commander territory type ?u_0 MilitaryConflict ?u_1 Zuo_Zongtang
+commander ?u_1 Zuo_Zongtang
+commander ?u_0 Zuo_Zongtang
+territory ?u_1 ?u_0
+commander territory ?u_1 ?u_0 Zuo_Zongtang
+territory type ?u_1 MilitaryConflict ?u_0
+commander territory type ?u_1 MilitaryConflict ?u_0 Zuo_Zongtang
+territory ?u_1 type ?u_0 MilitaryConflict
+knownFor Barbara_Bestor ?u_1
+location ?u_1 ?u_0
+type ?u_0 Company
+knownFor Barbara_Bestor location ?u_1 ?u_0
+knownFor Barbara_Bestor ?u_1
+location ?u_1 type ?u_0 Company
+knownFor Barbara_Bestor ?u_0
+type ?u_1 Company
+knownFor Barbara_Bestor ?u_0
+location type ?u_1 Company ?u_0
+knownFor Barbara_Bestor type ?u_1 Company
+knownFor Barbara_Bestor location type ?u_1 Company ?u_0
+knownFor Barbara_Bestor type ?u_0 Company
+location ?u_0 ?u_1
+location type ?u_0 Company ?u_1
+knownFor Barbara_Bestor location ?u_0 ?u_1
+location ?u_0 type ?u_1 Company
+knownFor Barbara_Bestor location type ?u_0 Company ?u_1
+literaryGenre ?u_0 Utopian_and_dystopian_fiction
+writer ?u_0 Nick_Castle
+type ?u_0 Film
+writer type ?u_0 Film Nick_Castle
+owner ?u_0 Zambezi_River_Authority
+river ?u_0 ?u_1
+owner river ?u_0 ?u_1 Zambezi_River_Authority
+owner ?u_1 Zambezi_River_Authority
+languageFamily Egyptian_Arabic Central_Semitic_languages
+commander ?u_0 Arthur_St._Clair
+combatant ?u_0 ?u_1
+commander combatant ?u_0 ?u_1 Arthur_St._Clair
+commander ?u_1 Arthur_St._Clair
+executiveProducer ?u_0 Glen_and_Les_Charles
+company ?u_0 Paramount_Television
+type ?u_0 TelevisionShow
+executiveProducer company ?u_0 Paramount_Television Glen_and_Les_Charles
+executiveProducer type ?u_0 TelevisionShow Glen_and_Les_Charles
+company type ?u_0 TelevisionShow Paramount_Television
+executiveProducer company type ?u_0 TelevisionShow Paramount_Television Glen_and_Les_Charles
+team ?u_0 Chicago_Bulls
+type ?u_0 BasketballPlayer
+team type ?u_0 BasketballPlayer Chicago_Bulls
+artist A_Todo_Romantic_Style ?u_0
+origin ?u_0 ?u_1
+artist A_Todo_Romantic_Style origin ?u_0 ?u_1
+artist A_Todo_Romantic_Style ?u_1
+sire ?u_1 Karinga_Bay
+race ?u_0 ?u_1
+type ?u_1 Horse
+sire type ?u_1 Horse Karinga_Bay
+race ?u_0 type ?u_1 Horse
+sire ?u_0 Karinga_Bay
+type ?u_0 Horse
+sire race ?u_0 ?u_1 Karinga_Bay
+sire type ?u_0 Horse Karinga_Bay
+race type ?u_0 Horse ?u_1
+sire race type ?u_0 Horse ?u_1 Karinga_Bay
+sire ?u_1 Karinga_Bay
+race ?u_1 ?u_0
+sire race ?u_1 ?u_0 Karinga_Bay
+race type ?u_1 Horse ?u_0
+sire race type ?u_1 Horse ?u_0 Karinga_Bay
+race ?u_1 type ?u_0 Horse
+sire ?u_0 Karinga_Bay
+knownFor ?u_1 String_theory
+almaMater ?u_0 ?u_1
+type ?u_1 Scientist
+knownFor type ?u_1 Scientist String_theory
+almaMater ?u_0 type ?u_1 Scientist
+knownFor ?u_0 String_theory
+type ?u_0 Scientist
+knownFor almaMater ?u_0 ?u_1 String_theory
+knownFor type ?u_0 Scientist String_theory
+knownFor almaMater type ?u_0 Scientist ?u_1 String_theory
+knownFor ?u_1 String_theory
+almaMater type ?u_0 Scientist ?u_1
+knownFor ?u_0 String_theory
+almaMater ?u_1 ?u_0
+knownFor almaMater ?u_1 ?u_0 String_theory
+almaMater type ?u_1 Scientist ?u_0
+knownFor almaMater type ?u_1 Scientist ?u_0 String_theory
+almaMater ?u_1 type ?u_0 Scientist
+hairColor ?u_0 Brown_hair
+residence ?u_0 ?u_1
+hairColor residence ?u_0 ?u_1 Brown_hair
+hairColor ?u_1 Brown_hair
+appointer William_Clark ?u_0
+currency Benelux ?u_0
+currency Kerguelen_Islands ?u_0
+currency Benelux currency Kerguelen_Islands ?u_0
+currency Benelux ?u_0
+currency Kerguelen_Islands ?u_0
+currency Benelux currency Kerguelen_Islands ?u_0
+order ?u_0 Diprotodontia
+phylum ?u_0 Chordate
+type ?u_0 Mammal
+order phylum ?u_0 Chordate Diprotodontia
+order type ?u_0 Mammal Diprotodontia
+phylum type ?u_0 Mammal Chordate
+order phylum type ?u_0 Mammal Chordate Diprotodontia
+keyPeople Clinton_Foundation ?u_0
+music ?u_0 Akira_Ifukube
+deathCause ?u_0 Suicide
+occupation ?u_0 ?u_1
+deathCause occupation ?u_0 ?u_1 Suicide
+deathCause ?u_1 Suicide
+distributor ?u_1 FremantleMedia
+producer ?u_0 ?u_1
+type ?u_0 TelevisionShow
+producer type ?u_0 TelevisionShow ?u_1
+distributor ?u_0 FremantleMedia
+type ?u_1 TelevisionShow
+distributor producer ?u_0 ?u_1 FremantleMedia
+producer ?u_0 type ?u_1 TelevisionShow
+distributor type ?u_1 TelevisionShow FremantleMedia
+distributor type ?u_0 TelevisionShow FremantleMedia
+distributor producer type ?u_0 TelevisionShow ?u_1 FremantleMedia
+producer ?u_1 ?u_0
+distributor producer ?u_1 ?u_0 FremantleMedia
+producer ?u_1 type ?u_0 TelevisionShow
+producer type ?u_1 TelevisionShow ?u_0
+distributor producer type ?u_1 TelevisionShow ?u_0 FremantleMedia
+producer Marie_Sisters ?u_0
+bronzeMedalist ?u_0 Yang_Yilin
+silverMedalist ?u_0 ?u_1
+bronzeMedalist silverMedalist ?u_0 ?u_1 Yang_Yilin
+bronzeMedalist ?u_1 Yang_Yilin
+successor ?u_0 Hayden,_Stone_&_Co.
+successor ?u_0 ?u_1
+successor ?u_1 ?u_0
+successor successor ?u_0 ?u_1 Hayden,_Stone_&_Co.
+successor ?u_0 successor ?u_1 ?u_0
+successor Hayden,_Stone_&_Co. ?u_0
+successor Hayden,_Stone_&_Co. successor ?u_0 ?u_1
+successor Hayden,_Stone_&_Co. successor ?u_1 ?u_0
+successor ?u_1 Hayden,_Stone_&_Co.
+successor successor ?u_1 ?u_0 Hayden,_Stone_&_Co.
+successor ?u_1 Hayden,_Stone_&_Co.
+successor Hayden,_Stone_&_Co. ?u_1
+successor ?u_0 Hayden,_Stone_&_Co.
+successor Hayden,_Stone_&_Co. successor ?u_0 ?u_1
+successor successor ?u_0 ?u_1 Hayden,_Stone_&_Co.
+successor successor ?u_1 ?u_0 Hayden,_Stone_&_Co.
+successor Hayden,_Stone_&_Co. successor ?u_1 ?u_0
+battles ?u_0 Morocco
+battles ?u_0 ?u_1
+battles ?u_1 ?u_0
+battles battles ?u_0 ?u_1 Morocco
+battles ?u_0 battles ?u_1 ?u_0
+battles ?u_1 Morocco
+battles battles ?u_1 ?u_0 Morocco
+origin Xynisteri ?u_0
+currentclub ?u_0 FC_Barcelona
+narrator Million_Dollar_Traders Andrew_Lincoln
+owner Saumarez_(horse) ?u_0
+keyPerson ?u_0 Deborah_Turness
+network ?u_1 ?u_0
+keyPerson network ?u_1 ?u_0 Deborah_Turness
+keyPerson ?u_1 Deborah_Turness
+chairman ?u_0 Merritt_Paulson
+homeStadium ?u_0 ?u_1
+chairman homeStadium ?u_0 ?u_1 Merritt_Paulson
+chairman ?u_1 Merritt_Paulson
+almaMater Ernest_de_Saisset ?u_0
+company ?u_0 Limited_liability_company
+type ?u_0 Magazine
+company type ?u_0 Magazine Limited_liability_company
+poleDriver 1999_San_Marino_Grand_Prix ?u_0
+firstDriver 1997_Canadian_Grand_Prix ?u_0
+firstDriver 1999_San_Marino_Grand_Prix ?u_0
+poleDriver 1997_Canadian_Grand_Prix ?u_0
+firstDriver 1999_San_Marino_Grand_Prix poleDriver 1997_Canadian_Grand_Prix ?u_0
+office John_A._Danaher_III ?u_0
+director ?u_0 Tim_Burton
+type ?u_0 Film
+director type ?u_0 Film Tim_Burton
+associatedBand ?u_0 QDT
+bandMember ?u_1 ?u_0
+associatedBand bandMember ?u_1 ?u_0 QDT
+associatedBand ?u_0 QDT
+bandMember QDT ?u_0
+associatedBand bandMember QDT ?u_0 QDT
+bandMember ?u_0 ?u_1
+bandMember QDT ?u_0
+associatedBand ?u_0 ?u_1
+bandMember QDT associatedBand ?u_0 ?u_1
+associatedBand ?u_1 ?u_0
+bandMember QDT associatedBand ?u_1 ?u_0
+associatedBand ?u_1 QDT
+associatedBand bandMember ?u_0 ?u_1 QDT
+bandMember QDT ?u_1
+bandMember QDT associatedBand ?u_0 ?u_1
+bandMember QDT associatedBand ?u_1 ?u_0
+league ?u_1 2012_Campeonato_Brasileiro_Srie_A
+type ?u_1 SoccerClubSeason
+league name ?u_1 ?u_0 2012_Campeonato_Brasileiro_Srie_A
+league type ?u_1 SoccerClubSeason 2012_Campeonato_Brasileiro_Srie_A
+name type ?u_1 SoccerClubSeason ?u_0
+league name type ?u_1 SoccerClubSeason ?u_0 2012_Campeonato_Brasileiro_Srie_A
+league ?u_0 2012_Campeonato_Brasileiro_Srie_A
+type ?u_0 SoccerClubSeason
+league type ?u_0 SoccerClubSeason 2012_Campeonato_Brasileiro_Srie_A
+name ?u_1 type ?u_0 SoccerClubSeason
+league ?u_1 2012_Campeonato_Brasileiro_Srie_A
+league ?u_0 2012_Campeonato_Brasileiro_Srie_A
+name ?u_0 type ?u_1 SoccerClubSeason
+league name ?u_0 ?u_1 2012_Campeonato_Brasileiro_Srie_A
+name type ?u_0 SoccerClubSeason ?u_1
+league name type ?u_0 SoccerClubSeason ?u_1 2012_Campeonato_Brasileiro_Srie_A
+successor Philippine_Ports_Authority ?u_0
+stateOfOrigin Ruben_J._Villote ?u_0
+successor Philippine_Ports_Authority stateOfOrigin Ruben_J._Villote ?u_0
+executiveProducer Timmy_Time ?u_0
+award ?u_0 ?u_1
+executiveProducer Timmy_Time award ?u_0 ?u_1
+executiveProducer Timmy_Time ?u_1
+primeminister Michael_Jeffery ?u_0
+primeMinister William_Deane ?u_0
+primeminister Michael_Jeffery primeMinister William_Deane ?u_0
+owner Cobham_Training_Centre ?u_1
+owner ?u_0 ?u_1
+owner ?u_1 ?u_0
+owner Cobham_Training_Centre owner ?u_0 ?u_1
+owner Cobham_Training_Centre owner ?u_1 ?u_0
+owner Cobham_Training_Centre type ?u_1 SoccerClub
+owner ?u_0 owner ?u_1 ?u_0
+owner ?u_0 type ?u_1 SoccerClub
+owner type ?u_1 SoccerClub ?u_0
+owner Cobham_Training_Centre owner ?u_0 type ?u_1 SoccerClub
+owner Cobham_Training_Centre owner type ?u_1 SoccerClub ?u_0
+owner ?u_0 owner type ?u_1 SoccerClub ?u_0
+owner Cobham_Training_Centre ?u_0
+type ?u_0 SoccerClub
+owner Cobham_Training_Centre owner ?u_0 ?u_1
+owner Cobham_Training_Centre owner ?u_1 ?u_0
+owner Cobham_Training_Centre type ?u_0 SoccerClub
+owner type ?u_0 SoccerClub ?u_1
+owner ?u_1 type ?u_0 SoccerClub
+owner Cobham_Training_Centre owner type ?u_0 SoccerClub ?u_1
+owner Cobham_Training_Centre owner ?u_1 type ?u_0 SoccerClub
+owner type ?u_0 SoccerClub owner ?u_1 ?u_0
+owner Cobham_Training_Centre ?u_1
+owner Cobham_Training_Centre ?u_0
+citizenship ?u_0 United_States
+deathCause ?u_0 ?u_1
+citizenship deathCause ?u_0 ?u_1 United_States
+citizenship ?u_1 United_States
+garrison ?u_0 Arlington_County,_Virginia
+garrison ?u_0 The_Pentagon
+garrison garrison ?u_0 The_Pentagon Arlington_County,_Virginia
+garrison type ?u_0 MilitaryUnit Arlington_County,_Virginia
+garrison type ?u_0 MilitaryUnit The_Pentagon
+garrison garrison type ?u_0 MilitaryUnit The_Pentagon Arlington_County,_Virginia
+garrison ?u_0 Arlington_County,_Virginia
+garrison ?u_0 The_Pentagon
+type ?u_0 MilitaryUnit
+garrison garrison ?u_0 The_Pentagon Arlington_County,_Virginia
+garrison type ?u_0 MilitaryUnit Arlington_County,_Virginia
+garrison type ?u_0 MilitaryUnit The_Pentagon
+garrison garrison type ?u_0 MilitaryUnit The_Pentagon Arlington_County,_Virginia
+product ?u_0 United_States_dollar
+product ?u_0 ?u_1
+product product ?u_0 ?u_1 United_States_dollar
+product ?u_0 product ?u_1 ?u_0
+product ?u_1 United_States_dollar
+product product ?u_1 ?u_0 United_States_dollar
+launchSite Aquarius_(rocket) ?u_0
+formerTeam ?u_0 Carolina_Panthers
+formerTeam ?u_0 Indianapolis_Colts
+formerTeam ?u_1 ?u_0
+formerTeam formerTeam ?u_0 Indianapolis_Colts Carolina_Panthers
+formerTeam ?u_0 ?u_1
+formerTeam formerTeam ?u_0 ?u_1 Carolina_Panthers
+formerTeam formerTeam ?u_0 ?u_1 Indianapolis_Colts
+formerTeam formerTeam formerTeam ?u_0 ?u_1 Indianapolis_Colts Carolina_Panthers
+formerTeam ?u_1 Carolina_Panthers
+formerTeam ?u_1 Carolina_Panthers
+formerTeam formerTeam ?u_1 ?u_0 Carolina_Panthers
+formerTeam ?u_1 Indianapolis_Colts
+formerTeam ?u_0 Carolina_Panthers
+formerTeam formerTeam ?u_1 ?u_0 Indianapolis_Colts

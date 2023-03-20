@@ -116,29 +116,41 @@ class QueryBuilder:
                                               count=count_query,
                                 
                                               ask=ask_query)
+            print(response)
             
-                       
+               
             if response is not None:
                 raw_answer =response[0]
-                sparlq_q =response[1]
-                #print(raw_answer)
-                bindings = raw_answer['results']['bindings']
-                #Prev : answerset = AnswerSet(raw_answer, parser.parse_queryresult)
-                answer={}
-                target_vars = 'u1','u2'
-                
-                # Do not include the query if it does not return any answer, except for boolean query
-                if len(bindings) > 0 or ask_query:
-                    # Extract values from bindings
-                    for target_var in target_vars:
-                        try:
-                            values = [binding[target_var]['value'] for binding in bindings]
-                            answer["target_var"] = bindings[0]
-                            answer["answer"] = values
-                            filtered_output.append(where_clause)
-                            filtered_output.append(sparlq_q)
-                        except:
-                            continue
+                #check if we got a select * where
+                if not ask_query:
+                    sparlq_q =response[1]
+                    #print(raw_answer)
+                    bindings = raw_answer['results']['bindings']
+                    #Prev : answerset = AnswerSet(raw_answer, parser.parse_queryresult)
+                    answer={}
+                    target_vars = 'u1','u2'
+                    
+                    # Do not include the query if it does not return any answer:
+                    if len(bindings) > 0 :
+                        # Extract values from bindings
+                        for target_var in target_vars:
+                            try:
+                                values = [binding[target_var]['value'] for binding in bindings]
+                                answer["target_var"] = bindings[0]
+                                answer["answer"] = values
+                                filtered_output.append(where_clause)
+                                filtered_output.append(sparlq_q)
+                            except:
+                                continue
+                # or a boolean
+                else:
+                    answer={}
+                    sparlq_q =response[1]
+                    answer["answer"] = raw_answer['boolean']
+                    print("did this work", answer["answer"])
+                    filtered_output.append(where_clause)
+                    filtered_output.append(sparlq_q)
+
                 
 
         #print(filtered_output)
@@ -155,7 +167,7 @@ class QueryBuilder:
         :return: The results of the query, or None if the query failed
         """
         if(ask):
-            query_template= "ASK * WHERE {{ {} }}"
+            query_template= "ASK WHERE {{ {} }}"
 
         elif(count):
             query_template = "SELECT (COUNT(*) AS ?count) WHERE {{ {} }}"

@@ -1,3 +1,2 @@
-aux det nmod dobj ROOT det dobj punct amod appos punct punct
-aux det nsubj ROOT det dobj punct amod appos punct punct
-aux det nsubj ROOT det dobj punct amod appos punct punct
+advmod amod nsubj ROOT det nsubj nsubj ccomp punct
+advmod amod nsubj ROOT det nsubj compound appos ccomp punct

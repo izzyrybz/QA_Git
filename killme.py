@@ -49,9 +49,9 @@ def rank(args, question, generated_queries):
                 args.sparse)
             criterion = nn.KLDivLoss()
             optimizer = optim.Adagrad(model.parameters(), lr=args.lr, weight_decay=args.wd)
-            print("this is optimizer" ,optimizer)
+            #print("this is optimizer" ,optimizer)
             emb_file = os.path.join(args.data, 'dataset_embed.pth')
-            print(emb_file)
+            #print(emb_file)
             if os.path.isfile(emb_file):
                 emb = torch.load(emb_file)
             #print(model.emb.weight.data.copy_(emb))
@@ -60,7 +60,7 @@ def rank(args, question, generated_queries):
             
 
             checkpoint = torch.load(checkpoint_filename, map_location=lambda storage, loc: storage)
-            print("this is checkpoint",checkpoint_filename)
+            #print("this is checkpoint",checkpoint_filename)
             model.load_state_dict(checkpoint['model'])
             trainer = Trainer(args, model, criterion, optimizer)
             #print()

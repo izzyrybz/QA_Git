@@ -1,3 +1,2 @@
-Did a commit have the description 'Initial commit'?
-Did a #ent have the description 'Initial commit'?
-Did a commit have the description 'Initial commit'?
+How many commits have the user izzyrybz made?
+How many commits have the user #ent made?

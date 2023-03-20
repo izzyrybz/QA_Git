@@ -189,8 +189,8 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
             output = results["results"]["bindings"]
             return output
             # Process the results
-        else:
-            print("Query failed with status code", response.status_code)
+        #else:
+            #print("Query failed with status code", response.status_code)
 
 
     def __one_hop_graph(self, entity_items, relation_items, threshold=None, number_of_entities=1):

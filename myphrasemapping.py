@@ -309,6 +309,9 @@ def spacy_parse(question, properties):
                     relationships.append(relation)
 
     return entities, relationships
+
+#def use_example_entity(question):
+
    
 #maybe possible to use nltk to find dates and such
 

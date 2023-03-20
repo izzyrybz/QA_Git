@@ -94,12 +94,12 @@ def build_query(query_params, question_type):
         if item.startswith('?'):
             target_var =item
             
-                           
+    
 
-    if question_type == 'count':
+    if question_type[0] == 'count':
         where_clause = "SELECT COUNT ("+target_var+") WHERE {"
     
-    if question_type == 'boolean':
+    elif question_type[0] == 'boolean':
         where_clause = "ASK WHERE {"
     
     else:
@@ -118,13 +118,17 @@ if __name__ == "__main__":
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question 
-    question = "Did a commit have the description 'Initial commit'?"
+    question = "How many commits have there been?"
 
 #Main focus : Which commits have the user izzyrybz made? -works
 
-#Secondary focus: How many commits have there been?
-#Third : Did a commit have the description 'Initial commit'? - has the wrong type
-#Fourth: What commits were made in Feburary?
+#Secondary focus: How many commits have there been? - not working
+
+#Third : Did a commit have the description 'Initial commit'? - works with list but not the others
+
+#Fourth: How many commits have the user izzyrybz made? - works
+
+#Fifth: What commits were made in Feburary?
     print("Question:" ,question)
 
     #Parse the input question using spaCy and then create representation and dependency tree
@@ -139,16 +143,18 @@ if __name__ == "__main__":
     classifier = QuestionClassifier()
     question_type = classifier.classify_questions(question)
     print("Type of question:",question_type)
+    print("#"*80)
 
     #Knowledge Graph generator to a ttl file that we can use a properties
     KnowledgeGraphGenerator()
     print("Knowledge graph generated")
+    print("#"*80)
 
     #We create a phrase mapping
     phrasemapper = PhraseMapping()
     phrasemapper.phrasemap_question(question,tokened_question)
     print("phrasemapping generated in file that can be found under json_files")
-
+    print("#"*80)
 
 
    #prepare the data for the question_generator
@@ -158,8 +164,10 @@ if __name__ == "__main__":
     #the file for generate_query contains ranking too
     query_generator = generate_query(question,entites,relations,h1_threshold,num_question_type)
     print("the query ranked highest and most probable:", query_generator)
+    print("#"*80)
 
     finished_query = build_query(query_generator,question_type)
+    print("finished query",finished_query)
 
     jena_response = requests.get("http://localhost:3030/dbpedia/query", params={"query": finished_query})
     if jena_response.status_code == 200:

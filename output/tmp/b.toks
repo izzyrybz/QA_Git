@@ -1,3 +1,2 @@
-description ?u1 'Initial
-type ?u1 http://example.org/entity/commit
-description ?u1 'This
+description ?u1 'Merge
+author ?u1 http://example.org/entity/izzyrybz

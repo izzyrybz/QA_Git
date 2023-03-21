@@ -260,9 +260,21 @@ def add_item(item,list,question,word):
     
     return list
 
+def remove_duplicates(list):
+    i = 0
+    while i < len(list):
+        j = i + 1
+        while j < len(list):
+            if list[i] == list[j]:
+                del list[j]
+            else:
+                j += 1
+        i += 1
+    return list
 
-def spacy_parse(question, properties):
+def spacy_parse(question, properties,lemma_q):
     nlp = spacy.load("en_core_web_sm")
+    #the question gets tokenized
     doc = nlp(question)
     entities = []
     relationships = []
@@ -273,44 +285,61 @@ def spacy_parse(question, properties):
             if re.search(r'\b'+re.escape(token.text)+r'\b', line['subject']):
                 # add entity if it does not exist
                 entity_uri = token.text
-                if not any(entity['uris'] == entity_uri for entity in entities):
-                    entity = {'uris': entity_uri}
-                    add_item(entity_uri, entity, question, token.text)
-                    entities.append(entity)
-                
+                entity = {'uris': entity_uri}
+                add_item(entity_uri, entity, question, token.text)
+                entities.append(entity)
+            
                 # add relationship if it does not exist
                 relation_uri = line['subject']
-                if not any(relation['uris'] == relation_uri for relation in relationships):
-                    relation = {'uris': relation_uri}
-                    add_item(relation_uri, relation, question, token.text)
-                    relationships.append(relation)
+                
+                relation = {'uris': relation_uri}
+                add_item(relation_uri, relation, question, token.text)
+                relationships.append(relation)
 
             if re.search(r'\b'+re.escape(token.text)+r'\b', line['predicate']):
                 # add relationship if it does not exist
                 relation_uri = token.text
-                if not any(relation['uris'] == relation_uri for relation in relationships):
-                    relation = {'uris': relation_uri}
-                    add_item(relation_uri, relation, question, token.text)
-                    relationships.append(relation)
+                
+                relation = {'uris': relation_uri}
+                add_item(relation_uri, relation, question, token.text)
+                relationships.append(relation)
 
             if re.search(r'\b'+re.escape(token.text)+r'\b', line['object']):
                 object_value = line['object'].strip('"')
-                # add entity if it does not exist
-                if not any(entity['uris'] == object_value for entity in entities):
-                    entity = {'uris': object_value}
-                    add_item(object_value, entity, question, token.text)
-                    entities.append(entity)
+                
+                
+                entity = {'uris': object_value}
+                add_item(object_value, entity, question, token.text)
+                entities.append(entity)
                 
                 # add relationship if it does not exist
                 relation_uri = line['predicate']
-                if not any(relation['uris'] == relation_uri for relation in relationships):
-                    relation = {'uris': relation_uri}
-                    add_item(relation_uri, relation, question, token.text)
-                    relationships.append(relation)
+                
+                relation = {'uris': relation_uri}
+                add_item(relation_uri, relation, question, token.text)
+                relationships.append(relation)
+    
+    #check if any lemmized word matches one that is under the example.org/entity domain
+    for dict in properties: 
+        for key, value in dict.items():
+            if 'example.org/entity' in value:
+                for lemma in lemma_q:
+                    #print(lemma,value)
+                    if str(lemma) in value:
+                        value = value.strip('"')
+                        entity = {'uris': value}
+                        add_item(value, entity, question, str(lemma))
+                        entities.append(entity)
+                        #testing this, since some relations can be entities too
+                        relationships.append(entity)
+
+    entities = remove_duplicates(entities)
+    relationships = remove_duplicates(relationships)
+    
 
     return entities, relationships
 
-#def use_example_entity(question):
+
 
    
 #maybe possible to use nltk to find dates and such
@@ -331,13 +360,13 @@ class PhraseMapping:
                 self.properties[key] = self.properties_knowledgegraph[key]
         
 
-    def phrasemap_question(self, question,tokened_question):
+    def phrasemap_question(self, question,tokened_question,lemmizized_question):
         phrasemap_data=[]
         print('properties: ', len(self.properties))
 
         earl = get_earl_entities(question)
-        print("This is earl",earl)
-        print("#"*20)
+        #print("This is earl",earl)
+        #print("#"*20)
         
         nliwod = get_nliwod_entities(question, self.properties)
         print("This is nliwod" ,nliwod)
@@ -353,7 +382,7 @@ class PhraseMapping:
             earl['entities'] = merge_entity(earl['entities'], spot_e)
 
         #spacy is used to check if the knowledge graph contains relations or entities that the question does. 
-        spacy_e, spacy_r= spacy_parse(question,self.knowledgeG_s_p_o)
+        spacy_e, spacy_r= spacy_parse(question,self.knowledgeG_s_p_o,lemmizized_question)
         print("THIS IS SPACY ENITIY",spacy_e)
         print("#"*20)
         print("THIS IS SPACY RELATIONS",spacy_r)

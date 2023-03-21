@@ -44,6 +44,18 @@ WHERE {
 How many commits was generated in Feburary?
 -------------------------------------------------------------
 
+
+"""PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?s
+WHERE
+  {
+    ?s ?p ?date . FILTER ( ?date >= "2023-01-27T12:22:12+01:00"^^xsd:dateTime && ?date <= "2023-01-30T11:08:55+01:00"^^xsd:dateTime). ?s <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz>.
+  }"""
+  
+What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30
+
+-------------------------------------------------------------
+
 What is the latest commit in the master branch?
 Which files were modified in the commit with hash "a1b2c3d4"?
 How many lines of code were added and removed in the commit with message "Update README.md"?

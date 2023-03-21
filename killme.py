@@ -137,7 +137,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
 
     '''type_confidence = question_type_classifier.predict_proba([question])[0][question_type]
     if isinstance(QuestionClassifier.predict_proba([question])[0][question_type], (np.ndarray, list)):
-        type_confidence = type_confidence[0]
+        type_confidence = type_confidence[0]'''
     
     #question_type_classifier = SVMClassifier("question_type_classifier/svm.model")
     double_relation_classifier = SVMClassifier("/home/bell/rdf_code/question_type_classifier/svm.model")
@@ -146,7 +146,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         double_relation = double_relation_classifier.predict([question])
         print(double_relation_classifier.predict([question]))
         if double_relation == 1:
-            double_relation = True'''
+            double_relation = True
         
         #i dont think we can use svm models build on other data??? 
         #it is throwing errors like crazy too 

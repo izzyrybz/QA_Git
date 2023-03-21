@@ -1,2 +1,1 @@
-advmod amod nsubj ROOT det nsubj nsubj ccomp punct
-advmod amod nsubj ROOT det nsubj compound appos ccomp punct
+advmod amod nmod nsubj aux expl ROOT punct

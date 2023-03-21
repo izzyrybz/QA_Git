@@ -86,6 +86,9 @@ def build_query(query_params, question_type):
 
     #remove the SELECT * WHERE
     query = re.sub(r'^SELECT\s*\*\s*WHERE\s*{\s*', '', query)
+    
+    #or 
+    query = re.sub(r'\bASK WHERE\b', '', query)
     if query[-1] == '}':
         query=query[:-1]
     #print("this is query",query)
@@ -118,17 +121,21 @@ if __name__ == "__main__":
 ################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question 
-    question = "How many commits have there been?"
+    question = "Did a commit have the description 'Initial commit'?"
 
 #Main focus : Which commits have the user izzyrybz made? -works
 
-#Secondary focus: How many commits have there been? - not working
+#2: How many commits have the user izzyrybz made? - works
 
-#Third : Did a commit have the description 'Initial commit'? - works with list but not the others
+#3 focus: How many commits have there been? - works
 
-#Fourth: How many commits have the user izzyrybz made? - works
+#4 : Did a commit have the description 'Initial commit'? - does not work
 
-#Fifth: What commits were made in Feburary?
+#5: What commits were made in 2022-01-01?
+
+#6: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
+
+
     print("Question:" ,question)
 
     #Parse the input question using spaCy and then create representation and dependency tree
@@ -145,6 +152,8 @@ if __name__ == "__main__":
     print("Type of question:",question_type)
     print("#"*80)
 
+    #INSERT DATE TEST HERE
+
     #Knowledge Graph generator to a ttl file that we can use a properties
     KnowledgeGraphGenerator()
     print("Knowledge graph generated")
@@ -152,7 +161,7 @@ if __name__ == "__main__":
 
     #We create a phrase mapping
     phrasemapper = PhraseMapping()
-    phrasemapper.phrasemap_question(question,tokened_question)
+    phrasemapper.phrasemap_question(question,tokened_question,lemmizized_question)
     print("phrasemapping generated in file that can be found under json_files")
     print("#"*80)
 

@@ -177,6 +177,7 @@ class Graph:
                            prefix = ""
                            ))
         where = where[6:]
+        #print(where)
         #where = self.transform_q_into_jena(where)
 
         query = u"""{prefix}

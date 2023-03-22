@@ -8,8 +8,8 @@
 <http://dbpedia.org/ontology/populationMetro> <http://www.w3.org/2000/01/rdf-schema#label> "metropolitan population" .
 <http://dbpedia.org/ontology/populationMetro> <http://www.w3.org/2000/01/rdf-schema#label> "population" .
 <http://dbpedia.org/ontology/commissioningDate> <http://www.w3.org/2000/01/rdf-schema#label> "commissioned on" .
-<http://dbpedia.org/resource/Commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
-<http://dbpedia.org/resource/Commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
+#<http://dbpedia.org/resource/Commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
+#<http://dbpedia.org/resource/Commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
 <http://dbpedia.org/ontology/absoluteMagnitude> <http://www.w3.org/2000/01/rdf-schema#label> "absolute magnitude" .
 <http://dbpedia.org/ontology/requirement> <http://www.w3.org/2000/01/rdf-schema#label> "requirement of" .
 <http://dbpedia.org/ontology/requirement> <http://www.w3.org/2000/01/rdf-schema#label> "require" .

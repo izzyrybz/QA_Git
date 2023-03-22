@@ -117,23 +117,23 @@ if __name__ == "__main__":
     # Load the spaCy model
     nlp = spacy.load("en_core_web_sm")
     
-      
-################################ ONE SINGLE QUESTION ###########################################
 
 # Define the input question 
-    question = "Did a commit have the description 'Initial commit'?"
+    question = "Which commits modified file myphrasemapping.py?"
 
 #Main focus : Which commits have the user izzyrybz made? -works
 
 #2: How many commits have the user izzyrybz made? - works
 
-#3 focus: How many commits have there been? - works
+#3 How many commits have there been? - works
 
-#4 : Did a commit have the description 'Initial commit'? - does not work
+#4: How many files have been deleted?
 
-#5: What commits were made in 2022-01-01?
+#5 : Did a commit have the description 'Initial commit'? - does not work
 
-#6: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
+#6: What commits were made in 2022-01-01?
+
+#7: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
 
 
     print("Question:" ,question)

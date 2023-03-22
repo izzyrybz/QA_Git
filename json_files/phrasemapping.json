@@ -3,172 +3,316 @@
         "entities": [
             {
                 "surface": [
-                    35,
+                    6,
                     7
                 ],
                 "uris": [
                     {
-                        "confidence": 0.9877550988801812,
-                        "uri": "http://dbpedia.org/resource/Initial"
+                        "confidence": 0.9239816818240237,
+                        "uri": "http://dbpedia.org/resource/Commit_(version_control)"
                     }
                 ]
             },
             {
                 "surface": [
-                    4,
-                    4
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/izzyrybz"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    11,
-                    6
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "Initial commit"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    11,
-                    6
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commit"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    4
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "This is a long description to see if it works Whe I was young pumbaaaaa"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    6,
-                    6
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.7228889205238965,
-                        "uri": "http://dbpedia.org/resource/Involuntary_commitment"
-                    }
-                ]
-            }
-        ],
-        "question": "Did a commit have the description 'Initial commit'?",
-        "relations": [
-            {
-                "surface": [
-                    4,
-                    4
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/izzyrybz"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    4
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commit"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    32,
-                    22
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "description"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    11,
-                    6
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    4
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://dbpedia.org/ontology/description"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    22,
-                    10
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/ontology/description"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    22,
-                    10
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://dbpedia.org/property/description"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    6,
+                    0,
                     5
                 ],
                 "uris": [
                     {
+                        "confidence": 0.8956483894223672,
+                        "uri": "http://dbpedia.org/resource/Langues_d'o\u00efl"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/dmump.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commits2.ttl"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commit"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/myphrasemapping.py"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    14,
+                    8
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.538216407980285,
+                        "uri": "http://dbpedia.org/resource/Modified_stock_car_racing"
+                    }
+                ]
+            }
+        ],
+        "question": "Which commits modified file myphrasemapping.py?",
+        "relations": [
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/dmump.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commits2.ttl"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/myphrasemapping.py"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commit"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    26,
+                    23
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/action/modify"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/action/modify"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    28,
+                    18
+                ],
+                "uris": [
+                    {
                         "confidence": 0.5,
-                        "uri": "http://dbpedia.org/resource/Commit_(version_control)"
+                        "uri": "http://dbpedia.org/property/map"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    28,
+                    18
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://dbpedia.org/ontology/map"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    6,
+                    6
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "#http://dbpedia.org/resource/Commit_(version_control)"
                     }
                 ]
             }

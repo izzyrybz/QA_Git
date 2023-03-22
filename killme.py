@@ -144,7 +144,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     double_relation = False
     if double_relation_classifier is not None:
         double_relation = double_relation_classifier.predict([question])
-        print(double_relation_classifier.predict([question]))
+        print("this is our double relation classifier, 1 is double relations",double_relation_classifier.predict([question]))
         if double_relation == 1:
             double_relation = True
         

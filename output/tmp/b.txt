@@ -1,9 +1,19 @@
- Initial type http://example.org/entity/commit }
- http://example.org/entity/izzyrybz type http://example.org/entity/commit }
- 'Initial commit' type http://example.org/entity/commit }
- ?u1 description 'Initial commit' }
+ Commit_(version_control) type http://example.org/entity/commit }
+ Langues_d'ol type http://example.org/entity/commit }
+ ?u1 http://example.org/action/modify http://example.org/entity/textfiles/working_queries.txt }
+ http://example.org/entity/textfiles/working_queries.txt type http://example.org/entity/commit }
+ ?u1 http://example.org/action/modify http://example.org/entity/textfiles/not_working_queries.txt }
+ http://example.org/entity/textfiles/not_working_queries.txt type http://example.org/entity/commit }
+ ?u1 http://example.org/action/modify http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json }
+ http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json type http://example.org/entity/commit }
+ ?u1 http://example.org/action/modify http://example.org/entity/textfiles/possible_queries.txt }
+ http://example.org/entity/textfiles/possible_queries.txt type http://example.org/entity/commit }
+ http://example.org/entity/json_files/dmump.json type http://example.org/entity/commit }
+ ?u1 http://example.org/action/modify http://example.org/entity/json_files/dmump.json }
+ http://example.org/entity/commits2.ttl type http://example.org/entity/commit }
  ?u1 type http://example.org/entity/commit }
- Involuntary_commitment type http://example.org/entity/commit }
- ?u1 type http://example.org/entity/commit }
- 'This is a long description to see if it works Whe I was young pumbaaaaa' type http://example.org/entity/commit }
- ?u1 description 'This is a long description to see if it works Whe I was young pumbaaaaa' }
+ http://example.org/entity/json_files/phrasemapping.json type http://example.org/entity/commit }
+ http://example.org/entity/myphrasemapping.py type http://example.org/entity/commit }
+ Modified_stock_car_racing type http://example.org/entity/commit }
+ ?u1 http://example.org/action/modify http://example.org/entity/json_files/phrasemapping.json }
+ ?u1 http://example.org/action/modify http://example.org/entity/myphrasemapping.py }

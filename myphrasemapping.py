@@ -332,6 +332,17 @@ def spacy_parse(question, properties,lemma_q):
                         entities.append(entity)
                         #testing this, since some relations can be entities too
                         relationships.append(entity)
+            if 'example.org/action' in value:
+                for lemma in lemma_q:
+                    #print(lemma,value)
+                    if str(lemma) in value:
+                        value = value.strip('"')
+                        relation = {'uris': value}
+                        add_item(value, relation, question, str(lemma))
+                        
+                        #testing this, since some relations can be entities too
+                        relationships.append(relation)
+                
 
     entities = remove_duplicates(entities)
     relationships = remove_duplicates(relationships)

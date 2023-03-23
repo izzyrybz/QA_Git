@@ -15,6 +15,7 @@ import string
 
 def question_analysis(question):
         # Parse the input text using spaCy
+        nlp = spacy.load("en_core_web_sm")
         question = nlp(question)
 
         #find the lemmas, the tokens and 
@@ -113,32 +114,11 @@ def build_query(query_params, question_type):
     #print(sparlq_query)
 
 
-#if __name__ == "__main__":
-def main(question):
+if __name__ == "__main__":
+#def main(question):
     # Load the spaCy model
-    nlp = spacy.load("en_core_web_sm")
     
-
-# Define the input question 
-    #question = "How many users have made commits that changed file <x>?"
-
-#Main focus : Which commits have the user izzyrybz made? -works
-
-#2: How many commits have the user izzyrybz made? - works
-
-#3 How many commits have there been? - works
-
-#4 Which commits modified file myphrasemapping.py?
-
-#5 How many files have been deleted? - double related
-
-#6 : Did a commit have the description 'Initial commit'? - does not work
-
-#7: What commits were made in 2022-01-01?
-
-#8: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-
-
+    question= 'Which commits modified files?'
     print("Question:" ,question)
 
     #Parse the input question using spaCy and then create representation and dependency tree
@@ -179,13 +159,15 @@ def main(question):
     print("#"*80)
 
     finished_query = build_query(query_generator,question_type)
-    print("finished query",finished_query)
+    #print("finished query",finished_query)
+    #return str(finished_query)
+    exit()
 
     jena_response = requests.get("http://localhost:3030/dbpedia/query", params={"query": finished_query})
     if jena_response.status_code == 200:
             results = jena_response.json()
             output = results["results"]["bindings"]
-            print("The answer is",output)
+            #print("The answer is",output)
     
 
     #generate all possible queries and check if they are within the knowledgegraph
@@ -201,3 +183,28 @@ def main(question):
     #print(lemmas) 
     #print(build_sparql_query(dep_tree))
 
+
+q1='Which commits have the user izzyrybz made?' #-works
+
+q2= 'How many commits have the user izzyrybz made?' #- works
+
+q3 ='How many commits have there been?'# - giving division by zero???? - the dataset is empty - lets hope training can fix this
+
+q4 ='Which commits modified file killme.py?' #-works
+
+q4_x ='Which commits modified files?' #finds the query but does not rank it high enough
+
+q5 ='How many files have been deleted?'# - works
+
+q6 = 'How many users have made commits that changed file <x>?' # double relation #2
+
+#7 : Did a commit have the description 'Initial commit'? - does not work
+
+#8: What commits were made in 2022-01-01?
+
+#9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
+
+if main(q1) == 'SELECT ?u1 WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
+    print("q1 works")
+if main(q2) == 'SELECT COUNT (?u1) WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
+    print("q2 works")

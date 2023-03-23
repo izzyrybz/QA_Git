@@ -117,6 +117,7 @@ def rank(args, question, generated_queries):
             
             
             test_dataset = QGDataset(output_dir, vocab, args.num_classes)
+            print("length of dataset" ,len(test_dataset))
 
             test_loss, test_pred = trainer.test(test_dataset)
             return test_pred
@@ -150,7 +151,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         
         #i dont think we can use svm models build on other data??? 
         #it is throwing errors like crazy too 
-    double_relation = False
+    double_relation = True
     graph = Graph()
     #print(graph)
     query_builder = QueryBuilder()

@@ -1,3 +1,9 @@
-advmod advmod ROOT nsubj nsubj nmod npadvmod punct
-advmod advmod ROOT nsubj nsubj nmod npadvmod punct
-advmod advmod aux compound compound nsubj ROOT punct
+nsubj ROOT nmod dobj punct
+nsubj ROOT nmod dobj punct
+nsubj ROOT nmod dobj punct
+nsubj ROOT nmod dobj punct
+nsubj ROOT nmod dobj punct
+det nmod nsubj ROOT dobj punct
+nsubj ROOT nmod dobj punct
+nsubj ROOT amod dobj punct
+nsubj ROOT amod dobj punct

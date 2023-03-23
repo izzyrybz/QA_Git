@@ -1,3 +1,9 @@
+http://example.org/action/modify ?u1 http://example.org/entity/textfiles/working_queries.txt
+http://example.org/action/modify ?u1 http://example.org/entity/textfiles/possible_queries.txt
+http://example.org/action/modify ?u1 http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json
+http://example.org/action/modify ?u1 http://example.org/entity/json_files/dmump.json
+http://example.org/action/modify ?u1 http://example.org/entity/textfiles/not_working_queries.txt
 type ?u1 http://example.org/entity/commit
-type ?u1 http://example.org/entity/commit
-author ?u1 http://example.org/entity/izzyrybz
+http://example.org/action/modify ?u1 http://example.org/entity/json_files/phrasemapping.json
+http://example.org/action/modify ?u1 ?u2
+http://example.org/action/modify ?u1 ?u2

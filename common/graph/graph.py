@@ -161,7 +161,9 @@ class Graph:
 
         query_types = [u"{ent2} {rel} {ent1}",
                        u"{ent1} {rel} {ent2}",
-                       u"?u1 {type} {rel} "]
+                       u"?u1 {type} {rel}",
+                       u"?u2 {rel} ?u1",
+                       ]
         where = ""
         for i in range(len(query_types)):
             #print("THIS IS I", i)
@@ -177,7 +179,8 @@ class Graph:
                            prefix = ""
                            ))
         where = where[6:]
-        #print(where)
+        
+        #print("THIS IS WHERE WE HAVE THE UNION THING DO WE SEND IN MORE THAN ONE THING?",where)
         #where = self.transform_q_into_jena(where)
 
         query = u"""{prefix}
@@ -227,10 +230,18 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
                                     e = Edge(n_s, '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', n_d)
                                     #not sure what to do about that
                                     self.add_edge(e)
-            for edge in self.edges:
-                print("dest node",edge.dest_node)
-                print("source_node",edge.source_node)
-                print(edge)
+                                elif m == 3:
+                                    #print(tripple[1],uri,tripple[2],tripple[0])
+                                    
+                                    n_s = self.create_or_get_node('?u1')
+                                    n_d = self.create_or_get_node('?u2')
+                                    e = Edge(n_s, tripple[1], n_d)
+                                    
+                                    #not sure what to do about that
+                                    self.add_edge(e)
+                            
+
+            
 
     
 
@@ -247,34 +258,44 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
         
         self.__one_hop_graph(self.entity_items, self.relation_items, number_of_entities=int(ask_query) + 1,
                              threshold=h1_threshold)
-    
+        for edge in self.edges:
+            print("dest node",edge.dest_node)
+            print("source_node",edge.source_node)
+            print('edge',edge)
+            print('\n')
 
         if len(self.edges) > 100:
             return
         
 
-    
-
         # Extend the existing edges with another hop
 
-        #self.__extend_edges(self.edges, relation_items)
+        
+
+        '''self.__extend_edges(self.edges, relation_items)
+        with open('trash2.txt', 'a') as f:
+                for edge in self.edges:
+                    f.write("dest node",edge.dest_node)
+                    f.write("source_node",edge.source_node)
+                    f.write('edge',edge)
+                    f.write('\n')'''
 
 
 
     def __extend_edges(self, edges, relation_items):
+        print('we are extending our edges')
         new_edges = set()
         total = 0
         for relation_item in relation_items:
-            print(relation_item)
             for relation_uri in relation_item['uri']:
                 total += len(edges)
         with tqdm(total=total) as progress_bar:
             for relation_item in relation_items:
-                #for relation_uri in relation_item['uri']:
+                print("this is extend edges relation item",relation_item, len(edges))
                 relation_uri = relation_item['uri']
                 for edge in edges:
                     progress_bar.update(1)
-                    print(edge,relation_uri)
+                    print("thisis the edge and relation uri",edge,relation_uri,edge.dest_node,edge.source_node)
                     new_edges.update(self.__extend_edge(edge, relation_uri))
         for e in new_edges:
             self.add_edge(e)
@@ -282,14 +303,18 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
     def __extend_edge(self, edge, relation_uri):
         output = set()
         var_node = None
-        if edge.source_node.are_all_uris_generic():
-            var_node = edge.source_node
-        if edge.dest_node.are_all_uris_generic():
-            var_node = edge.dest_node
+        #prev: if edge.source_node.are_all_uris_generic():
+            #var_node = edge.source_node
+        var_node = edge.source_node
+        #Prev: if edge.dest_node.are_all_uris_generic():
+            #var_node = edge.dest_node
+        var_node = edge.dest_node
         ent1 = edge.source_node.first_uri_if_only()
         ent2 = edge.dest_node.first_uri_if_only()
+        print("THis is the objects we are working with in extend edge",var_node,ent1,ent2,edge.source_node)
+        
         if not (var_node is None or ent1 is None or ent2 is None):
-            result = self.kb.two_hop_graph(ent1, edge.uri, ent2, relation_uri)
+            result = self.two_hop_graph(ent1, edge.uri, ent2, relation_uri)
             if result is not None:
                 for item in result:
                     if item[1]:
@@ -319,7 +344,43 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
                             n_s = self.create_or_get_node(1, True)
                             e = Edge(n_s, Uri(self.kb.type_uri, self.kb.parse_uri), n_d)
                             output.add(e)
+            print(result)
+        
         print(output)
+        #exit()
+        return output
+
+    def two_hop_graph_template(self, entity1_uri, relation1_uri, entity2_uri, relation2_uri):
+        # print('kb two_hop_graph_template')
+        query_types = [[0, u"{ent1} {rel1} {ent2} . ?u1 {rel2} {ent1}"],
+                       [1, u"{ent1} {rel1} {ent2} . {ent1} {rel2} ?u1"],
+                       [2, u"{ent1} {rel1} {ent2} . {ent2} {rel2} ?u1"],
+                       [3, u"{ent1} {rel1} {ent2} . ?u1 {rel2} {ent2}"],
+                       [4, u"{ent1} {rel1} {ent2} . ?u1 {type} {rel2}"]]
+        output = [[item[0], item[1].format(rel1=relation1_uri, ent1=entity1_uri,
+                                           ent2=entity2_uri, rel2=relation2_uri,
+                                           type=self.type_uri)] for item in query_types]
+        # print('entity1_uri: ', entity1_uri)
+        # print('entity2_uri: ', entity2_uri)
+        # print('relation1_uri: ', relation1_uri)
+        # print('relation2_uri: ', relation2_uri)
+        print('output: ', output)
+        
+        return output
+
+    def two_hop_graph(self, entity1_uri, relation1_uri, entity2_uri, relation2_uri):
+        # print('kb two_hop_graph')
+        relation1_uri = self.uri_to_sparql(relation1_uri)
+        relation2_uri = self.uri_to_sparql(relation2_uri)
+        entity1_uri = self.uri_to_sparql(entity1_uri)
+        entity2_uri = self.uri_to_sparql(entity2_uri)
+
+        queries = self.two_hop_graph_template(entity1_uri, relation1_uri, entity2_uri, relation2_uri)
+        output = None
+        if len(queries) > 0:
+            output = self.parallel_query(queries)
+        # print('queries: ', queries)
+        # print('output: ', output)
         return output
 
     def __get_generic_uri(self, uri, edges):

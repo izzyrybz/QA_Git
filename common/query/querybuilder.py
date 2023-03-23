@@ -45,14 +45,31 @@ class QueryBuilder:
         #print("Do we even go in here")
 
         paths = self.__find_paths_start_with_entities(graph, graph.entity_items, graph.relation_items, graph.edges)
-        for path in paths:
+        #print("this is the paths",paths)
+        '''for path in paths:
             for edge in path:
-                print("this is edge",edge)
+                #print("this is edge",edge)'''
+
+        #sometimes we are not doing entities so idk, this is all confusing
+        
+        for edge in graph.edges:
+            if graph.is_var(edge.source_node.uris.strip("'")) and graph.is_var(edge.dest_node.uris.strip("'")):
+                #print("we need to add paths")
+                path = Path([edge])
+                paths.append(path)
+                #print(paths)
+                
+                #print(new_output_paths)
+                
 
         paths = paths.remove_duplicates()
+        print(paths)
+        
 
         # Expand coverage by changing generic ids
         new_paths = []
+        
+        
         for path in paths:
             to_be_updated_edges = []
             generic_nodes = set()
@@ -79,7 +96,7 @@ class QueryBuilder:
                         new_path = None
                         if edge_info["type"] == "source":
                             new_path = path.replace_edge(edge_info["edge"],
-                                                         edge_info["edge"].copy(source_node=new_node))
+                                                            edge_info["edge"].copy(source_node=new_node))
                         if edge_info["type"] == "dest":
                             new_path = path.replace_edge(edge_info["edge"], edge_info["edge"].copy(dest_node=new_node))
                         if new_path is not None:
@@ -92,11 +109,11 @@ class QueryBuilder:
             paths.append(new_path)
         paths = paths.remove_duplicates()
 
-        for path in paths:
+        '''for path in paths:
             for edge in path:
                 print("DEST NODE" ,edge.dest_node)
                 print("SOURCe NODE" ,edge.source_node)
-                print("edge" ,edge)
+                print("edge" ,edge)'''
 
         #Prev : paths.sort(key=lambda x: x.confidence, reverse=True)
         fuseki_endpoint="http://localhost:3030/dbpedia/sparql"
@@ -227,15 +244,16 @@ class QueryBuilder:
 
     def __find_paths_start_with_entities(self, graph, entity_items, relation_items, edges, output_paths=Paths(), used_edges=set()):
         new_output_paths = Paths([])
-        #print("wtfw",relation_items)
+        
         if len(entity_items) > 0:
             for entity_item in entity_items:
                 
                 entity = entity_item['uri']
-                
+                #print("we are in __find_paths_start_with_entities and looking at the entity",entity)
                 #Prev for entity in entity_item.uris:
                 for edge in self.find_edges_by_entity(edges, entity, used_edges):
-                    
+
+                    #print("we are in __find_paths_start_with_entities and looking at the edge",edge)
                     if not self.is_w3_type(edge.uri):
                         used_relations = [edge.uri]
 
@@ -243,6 +261,7 @@ class QueryBuilder:
                         
                         used_relations = edge.dest_node.uris
                     entities = MyList()
+                    #print("past the check type used relations is this ",used_relations)
                     
                     # I think edge.source_node.are_all_uris_generic() looks to see if source node is <type> changed it
 
@@ -257,11 +276,14 @@ class QueryBuilder:
                     
                     #we remove the entities and relations we just checked 
                     
+                    
+                    
                     entity_use = entity_items - LinkedItem.list_contains_uris(entity_items, entities)
                     
                     relation_use = relation_items - LinkedItem.list_contains_uris(relation_items, used_relations)
                     
                     edge_use = edges - {edge}
+                    #print("this is the entites and relations that are left:",entities,used_relations,edge_use)
 
                     #unsure if edge_use is trying to be smaller here?
 

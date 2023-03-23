@@ -15,6 +15,18 @@
             },
             {
                 "surface": [
+                    33,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.9099073188624662,
+                        "uri": "http://dbpedia.org/resource/File_deletion"
+                    }
+                ]
+            },
+            {
+                "surface": [
                     0,
                     5
                 ],
@@ -33,31 +45,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commits2.ttl"
+                        "uri": "http://example.org/entity/json_files/dmump.json"
                     }
                 ]
             },
@@ -81,7 +69,31 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dmump.json"
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commits2.ttl"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    31,
+                    29
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
                     }
                 ]
             },
@@ -105,7 +117,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/commit"
+                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
                     }
                 ]
             },
@@ -123,18 +135,18 @@
             },
             {
                 "surface": [
-                    14,
-                    8
+                    4,
+                    0
                 ],
                 "uris": [
                     {
-                        "confidence": 0.5018219818025093,
-                        "uri": "http://dbpedia.org/resource/Modified_stock_car_racing"
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commit"
                     }
                 ]
             }
         ],
-        "question": "Which commits modified files?",
+        "question": "Which commits had both added and deleted files??",
         "relations": [
             {
                 "surface": [
@@ -144,31 +156,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commits2.ttl"
+                        "uri": "http://example.org/entity/json_files/dmump.json"
                     }
                 ]
             },
@@ -192,7 +180,43 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dmump.json"
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commits2.ttl"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    31,
+                    29
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/action/delete"
                     }
                 ]
             },
@@ -216,7 +240,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/commit"
+                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
                     }
                 ]
             },
@@ -240,19 +264,19 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/action/modify"
+                        "uri": "http://example.org/action/add"
                     }
                 ]
             },
             {
                 "surface": [
-                    6,
-                    6
+                    4,
+                    0
                 ],
                 "uris": [
                     {
-                        "confidence": 0.5,
-                        "uri": "#http://dbpedia.org/resource/Commit_(version_control)"
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commit"
                     }
                 ]
             }

@@ -160,6 +160,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     #I think this is where we need to focus
     graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
                                 sort_query=sort_query, h1_threshold=h1_threshold)
+    
     valid_walks_with_sparql = query_builder.to_where_statement(graph, ask_query=ask_query,
                                                     count_query=count_query, sort_query=sort_query)
     print("these are the valid paths found:" ,valid_walks_with_sparql)

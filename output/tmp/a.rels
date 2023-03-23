@@ -1,9 +1,6 @@
-nsubj ROOT nmod dobj punct
-nsubj ROOT nmod dobj punct
-nsubj ROOT nmod dobj punct
-nsubj ROOT nmod dobj punct
-nsubj ROOT nmod dobj punct
-det nmod nsubj ROOT dobj punct
-nsubj ROOT nmod dobj punct
-nsubj ROOT amod dobj punct
-nsubj ROOT amod dobj punct
+det nmod npadvmod preconj ROOT cc conj dobj punct punct
+det nmod nsubj aux preconj ROOT cc conj dobj punct punct
+nsubj csubj aux preconj ROOT cc conj dobj punct punct
+nsubj csubj aux preconj ROOT cc conj dobj punct punct
+nsubj csubj aux preconj ROOT cc conj dobj punct punct
+nsubj csubj aux preconj ROOT cc conj dobj punct punct

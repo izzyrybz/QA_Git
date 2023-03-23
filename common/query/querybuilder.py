@@ -126,14 +126,14 @@ class QueryBuilder:
         
         for where_clause in output:
             #print("HELLOOOO",where_clause)
-            print("this is the where clause",where_clause)
+           # print("this is the where clause",where_clause)
 
             #Prev : target_var = where_clause["suggested_id"]
             response = self.query_fuseki_endpoint(fuseki_endpoint,where_clause,
                                               count=count_query,
                                 
                                               ask=ask_query)
-            print(response)
+            #print(response)
             
                
             if response is not None:

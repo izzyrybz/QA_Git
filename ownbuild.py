@@ -118,7 +118,7 @@ if __name__ == "__main__":
 #def main(question):
     # Load the spaCy model
     
-    question= 'Which commits modified files?'
+    question= 'Which commits had both added and deleted files??'
     print("Question:" ,question)
 
     #Parse the input question using spaCy and then create representation and dependency tree
@@ -198,6 +198,7 @@ q5 ='How many files have been deleted?'# - works
 
 q6 = 'How many users have made commits that changed file <x>?' # double relation #2
 
+q8 = 'Which commits had both added and deleted files?'
 #7 : Did a commit have the description 'Initial commit'? - does not work
 
 #8: What commits were made in 2022-01-01?

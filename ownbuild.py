@@ -113,13 +113,14 @@ def build_query(query_params, question_type):
     #print(sparlq_query)
 
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
+def main(question):
     # Load the spaCy model
     nlp = spacy.load("en_core_web_sm")
     
 
 # Define the input question 
-    question = "Which commits modified file myphrasemapping.py?"
+    #question = "How many users have made commits that changed file <x>?"
 
 #Main focus : Which commits have the user izzyrybz made? -works
 
@@ -127,13 +128,15 @@ if __name__ == "__main__":
 
 #3 How many commits have there been? - works
 
-#4: How many files have been deleted?
+#4 Which commits modified file myphrasemapping.py?
 
-#5 : Did a commit have the description 'Initial commit'? - does not work
+#5 How many files have been deleted? - double related
 
-#6: What commits were made in 2022-01-01?
+#6 : Did a commit have the description 'Initial commit'? - does not work
 
-#7: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
+#7: What commits were made in 2022-01-01?
+
+#8: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
 
 
     print("Question:" ,question)

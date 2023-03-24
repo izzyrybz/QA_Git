@@ -26,9 +26,9 @@ def generalize_question(a, b, parser=None):
 
     if parser is None:
         parser = LC_Qaud_LinkedParser()
-    print("generalize_question, this is b",b)
+    #print("generalize_question, this is b",b)
     _, _, uris = parser.parse_sparql(b)
-    print("we are in generlize and this is our uris",uris )
+    #print("we are in generlize and this is our uris",uris )
 
     entity_uris=[]
     for uri in uris:
@@ -57,7 +57,7 @@ def generalize_question(a, b, parser=None):
     #uris = [uri for uri in uris if uri-is_entity()]
 
     i = 0
-    print("THIS IS ENTITY URIS",entity_uris)
+    #print("THIS IS ENTITY URIS",entity_uris)
 
     
     for uri in entity_uris:
@@ -138,7 +138,7 @@ def correct_data(data):
     for item in tqdm(dataset):
         #print("started tqdm",i,a)
         b = item
-        print(b)
+        #print(b)
         #print()
         #print("sending in a",a)
         b_list.append(b.encode('ascii', 'ignore').decode('ascii') + '\n')

@@ -1,7 +1,7 @@
 from contextlib import closing
 from multiprocessing import Pool
 import requests
-import tqdm
+from tqdm import tqdm
 
 from common.graph.graph import Graph
 
@@ -35,18 +35,54 @@ def mutli_var_complex_query(valid_walks):
     #print(edge_list)
 
     #all_combinations_of_edges = self.create_all_combinations_for_edges(edge_list)
-    for subject1,predicate1,object1 in subject_predicate_object_list:
-        for subject2,predicate2,object2 in subject_predicate_object_list:
-            #print(edge2,source2,dest2,subject1,predicate1,dest1)
-            if subject1 is subject2 and predicate1 is predicate2 and object1 is object2:
-                continue
-            else:
-                #print("we are going into extended egde with",subject1,predicate2,object1, subject2,predicate2,object2)
-                list_with_elements_and_sparql =complex_query_process(subject1,predicate2,object1, subject2,predicate2,object2)
+    count=0
+    used_triples=[]
+    total = len(tripples)*len(tripples)
+    
+    list_with_elements_and_sparql_final=[]
+    with tqdm(total=total)as pbar:
+        for subject1,predicate1,object1 in subject_predicate_object_list:
+            for subject2,predicate2,object2 in subject_predicate_object_list:
+                #print(edge2,source2,dest2,subject1,predicate1,dest1)
+                if (subject1 == subject2 and predicate1 == predicate2 and object1 == object2) or ((subject1, predicate1, object1, subject2, predicate2, object2) in used_triples) or ((subject2, predicate2, object2, subject1, predicate1, object1) in used_triples):
+                    # If the two triples are the same or have been used before, skip to the next iteration
+                    pbar.update(1)
+                    continue
+                else:
+                    # If the two triples are different and have not been used before, add them to the used triples list and process them
+                    print(subject1, predicate1, object1, subject2, predicate2, object2)
+                    used_triples.append((subject1, predicate1, object1, subject2, predicate2, object2))
+                    list_with_elements_and_sparql_final.append(complex_query_process(subject1,predicate1,object1, subject2,predicate2,object2))
+                    pbar.update(1)
 
-        #self.__extend_edge
+                '''if subject1 == subject2 and predicate1 == predicate2 and object1 == object2:
+                    #for the ones where it is u1 <action> u2 
+                    print("if",subject1 , subject2 , predicate1 , predicate2 , object1 , object2)
+                    pbar.update(1)
+                    continue
+                else:
+                    #print("we are going into extended egde with",subject1,predicate2,object1, subject2,predicate2,object2)
+                    if (subject1, predicate1, object1, subject2, predicate2, object2) not in used_triples and (subject2, predicate2, object2,subject1, predicate1, object1) not in used_triples:  
+                        print("else",subject1 , predicate1 , object1 , subject2 , predicate2 , object2)
+                        print(count)
+                        count=count+1
+                        pbar.update(1)
+                        
+                        list_with_elements_and_sparql_final.append(complex_query_process(subject1,predicate2,object1, subject2,predicate2,object2))
+                        used_triples.append((subject1, predicate1, object1, subject2, predicate2, object2))
+                    else:
+                        pbar.update(1)
+                        continue'''
+            #self.__extend_edge
+        #print(used_triples)
+        #print(list_with_elements_and_sparql_final)
+    with open('trash2.txt','w') as fp:
+        for item in list_with_elements_and_sparql_final:
+            for sparql in item:
 
-    return list_with_elements_and_sparql
+                fp.writelines(sparql)
+                fp.writelines('\n')
+    return list_with_elements_and_sparql_final
      
 
 def complex_query_process(subject1,predicate1,object1, subject2,predicate2,object2):
@@ -69,24 +105,21 @@ def complex_query_process(subject1,predicate1,object1, subject2,predicate2,objec
             if modified_query[-1] is '}':
                 modified_query = modified_query.replace('}','')
             #print(str(modified_query))
-            list_with_elements_and_sparql.append(str(modified_query))
-            
             list_with_elements_and_sparql.append(str(modified_query_with_sparlq))
-            
-        
-    
+            list_with_elements_and_sparql.append(str(modified_query))
+  
     return list_with_elements_and_sparql
 
 def two_hop_graph_template(subject1,predicate1,object1,subject2,predicate2,object2):
     # print('kb two_hop_graph_template')
     query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}"],
-                [1, u"{object1} {predicate1} {subject1} . {object2} {predicate2} {subject2}"],
+                #[1, u"{object1} {predicate1} {subject1} . {object2} {predicate2} {subject2}"],
                 [2, u"{subject1} {predicate1} {object1} . {object2} {predicate2} {subject2}"],
-                [3, u"{object1} {predicate1} {subject1} . {subject2} {predicate2} {object2}"],
+                #[3, u"{object1} {predicate1} {subject1} . {subject2} {predicate2} {object2}"],
                 [4, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} ?u3 "],
-                [5, u"{object1} {predicate1} {subject1} . {object2} {predicate2} ?u3"],
+                #[5, u"{object1} {predicate1} {subject1} . {object2} {predicate2} ?u3"],
                 [6, u"{subject1} {predicate1} ?u3 . {subject2} {predicate2} {object2}"],
-                [7, u"{object1} {predicate1} ?u3' . {subject2} {predicate2} {object2}"]
+                #[7, u"{object1} {predicate1} ?u3' . {subject2} {predicate2} {object2}"]
                 ]
     #could use extension
     output = [[item[0], item[1].format(predicate1=predicate1, subject1=subject1,

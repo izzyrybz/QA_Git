@@ -45,7 +45,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
+                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
                     }
                 ]
             },
@@ -75,6 +75,18 @@
             },
             {
                 "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
                     31,
                     29
                 ],
@@ -93,7 +105,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
+                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
                     }
                 ]
             },
@@ -132,18 +144,6 @@
                         "uri": "http://example.org/entity/commit"
                     }
                 ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
-                    }
-                ]
             }
         ],
         "question": "Which commits had both added and deleted files??",
@@ -156,7 +156,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
+                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
                     }
                 ]
             },
@@ -186,37 +186,13 @@
             },
             {
                 "surface": [
-                    31,
-                    29
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
                     4,
                     0
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
                     }
                 ]
             },
@@ -234,13 +210,13 @@
             },
             {
                 "surface": [
-                    4,
-                    0
+                    31,
+                    29
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
+                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
                     }
                 ]
             },
@@ -252,7 +228,31 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/action/add"
+                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
                     }
                 ]
             },
@@ -276,7 +276,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
+                        "uri": "http://example.org/action/add"
                     }
                 ]
             }

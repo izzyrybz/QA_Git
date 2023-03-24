@@ -164,19 +164,21 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     #multi_var_queries= graph.mutli_var_complex_query(graph.edges)
     valid_walks_with_sparql = query_builder.to_where_statement(graph, ask_query=ask_query,
                                                     count_query=count_query, sort_query=sort_query)
-    print("these are the valid paths found:" ,valid_walks_with_sparql)
+    #print("these are the valid paths found:" ,valid_walks_with_sparql)
 
     #use these valid paths to combine to multi var to check if <path1><path2> works within a query, (what I call double relation)
 
     complex_walks = mutli_var_complex_query(valid_walks_with_sparql)
+    
     #print()
     #print("this is complex walk",complex_walks)
     #print()
-    for walk in complex_walks:
-        valid_walks_with_sparql.append(walk)
+    for array_with_walks in complex_walks:
+        for walk in array_with_walks:
+            #print(walk)
+            valid_walks_with_sparql.append(walk)
     #print(valid_walks_with_sparql)
-    print("these are the valid paths with more complex queries found:" ,valid_walks_with_sparql)
-    
+    #print("these are the valid paths with more complex queries found:" ,valid_walks_with_sparql)
 
     
 

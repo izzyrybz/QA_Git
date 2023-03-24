@@ -4,3 +4,10 @@ http://example.org/action/delete ?u1 ?u2
 http://example.org/action/delete ?u1 ?u2
 http://example.org/action/add ?u1 ?u2
 http://example.org/action/add ?u1 ?u2
+SELECT  *
+SELECT  *
+SELECT  *
+SELECT  *
+SELECT  *
+SELECT  *
+SELECT  *

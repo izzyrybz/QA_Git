@@ -374,6 +374,7 @@ class PhraseMapping:
     def phrasemap_question(self, question,tokened_question,lemmizized_question):
         phrasemap_data=[]
         print('properties: ', len(self.properties))
+        #earl={'entities':'','relations':''}
 
         earl = get_earl_entities(question)
         #print("This is earl",earl)

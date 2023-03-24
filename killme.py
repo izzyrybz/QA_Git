@@ -6,6 +6,7 @@ import torch.nn as nn
 import torch
 from common.graph.graph import Graph
 from common.query.querybuilder import QueryBuilder
+from complex_queries import mutli_var_complex_query
 import kb
 from learning.treelstm import Constants, preprocess_lcquad
 from learning.treelstm.dataset import QGDataset
@@ -160,10 +161,22 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     #I think this is where we need to focus
     graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
                                 sort_query=sort_query, h1_threshold=h1_threshold)
-    
+    #multi_var_queries= graph.mutli_var_complex_query(graph.edges)
     valid_walks_with_sparql = query_builder.to_where_statement(graph, ask_query=ask_query,
                                                     count_query=count_query, sort_query=sort_query)
     print("these are the valid paths found:" ,valid_walks_with_sparql)
+
+    #use these valid paths to combine to multi var to check if <path1><path2> works within a query, (what I call double relation)
+
+    complex_walks = mutli_var_complex_query(valid_walks_with_sparql)
+    #print()
+    #print("this is complex walk",complex_walks)
+    #print()
+    for walk in complex_walks:
+        valid_walks_with_sparql.append(walk)
+    #print(valid_walks_with_sparql)
+    print("these are the valid paths with more complex queries found:" ,valid_walks_with_sparql)
+    
 
     
 
@@ -176,11 +189,10 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         query_builder = QueryBuilder()
         graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
                                     sort_query=sort_query, h1_threshold=h1_threshold)
-        
-        
         valid_walks_new = query_builder.to_where_statement(graph,
                                                             ask_query=ask_query,
                                                             count_query=count_query, sort_query=sort_query)
+        
         valid_walks_with_sparql.extend(valid_walks_new)
 
     args = Struct()

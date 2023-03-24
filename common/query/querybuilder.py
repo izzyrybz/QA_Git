@@ -63,7 +63,7 @@ class QueryBuilder:
                 
 
         paths = paths.remove_duplicates()
-        print(paths)
+        #print(paths)
         
 
         # Expand coverage by changing generic ids

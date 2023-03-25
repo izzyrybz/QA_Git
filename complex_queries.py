@@ -55,33 +55,11 @@ def mutli_var_complex_query(valid_walks):
                     list_with_elements_and_sparql_final.append(complex_query_process(subject1,predicate1,object1, subject2,predicate2,object2))
                     pbar.update(1)
 
-                '''if subject1 == subject2 and predicate1 == predicate2 and object1 == object2:
-                    #for the ones where it is u1 <action> u2 
-                    print("if",subject1 , subject2 , predicate1 , predicate2 , object1 , object2)
-                    pbar.update(1)
-                    continue
-                else:
-                    #print("we are going into extended egde with",subject1,predicate2,object1, subject2,predicate2,object2)
-                    if (subject1, predicate1, object1, subject2, predicate2, object2) not in used_triples and (subject2, predicate2, object2,subject1, predicate1, object1) not in used_triples:  
-                        print("else",subject1 , predicate1 , object1 , subject2 , predicate2 , object2)
-                        print(count)
-                        count=count+1
-                        pbar.update(1)
-                        
-                        list_with_elements_and_sparql_final.append(complex_query_process(subject1,predicate2,object1, subject2,predicate2,object2))
-                        used_triples.append((subject1, predicate1, object1, subject2, predicate2, object2))
-                    else:
-                        pbar.update(1)
-                        continue'''
+                
             #self.__extend_edge
         #print(used_triples)
         #print(list_with_elements_and_sparql_final)
-    with open('trash2.txt','w') as fp:
-        for item in list_with_elements_and_sparql_final:
-            for sparql in item:
-
-                fp.writelines(sparql)
-                fp.writelines('\n')
+    
     return list_with_elements_and_sparql_final
      
 

@@ -1,30 +1,7 @@
-Which #ent both added and deleted files??
-Which #ents had both added and deleted files??
-Which commits had both added and deleted files??
-Which commits had both added and deleted files??
-Which commits had both added and deleted files??
-Which commits had both added and deleted files??
-Which #ents had #ent added and deleted files??
-Which #ents had #ent added and deleted files??
-Which #ent both added and deleted files??
-Which #ents had both added and deleted files??
-Which #ent both added and deleted files??
-Which #ent both added and deleted files??
-Which #ent both added and deleted files??
-Which commits had both added and deleted files??
-Which #ent both added and deleted files??
-Which #ent both added and deleted files??
-Which #ent both added and deleted files??
-Which commits had both added and deleted files??
-Which #ents had both added and deleted files??
-Which #ents had both added and deleted files??
-Which #ents had both added and deleted files??
-Which commits had both added and deleted files??
-Which #ents had both added and deleted files??
-Which #ents had both added and deleted files??
-Which #ents had both added and deleted files??
-Which commits had both added and deleted files??
-Which commits had both added and deleted files??
-Which commits had both added and deleted files??
-Which commits had both added and deleted files??
-Which commits had both added and deleted files??
+Which #ents had both added and changed files?
+Which commits had both added and changed files?
+Which commits had both added and changed files?
+Which #ents had both added and changed files?
+Which #ents had both added and changed files?
+Which #ents had both added and changed files?
+Which commits had both added and changed files?

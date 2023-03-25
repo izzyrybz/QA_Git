@@ -15,6 +15,7 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 train_data = [
     {"question": "How many apples are there?", "type": "count"},
     {"question": "What are the names of the books?", "type": "list"},
+    {"question": "List all the authors in this repository?", "type": "list"},
     {"question": "Which books of JK Rowling are of the fantasy genre?", "type": "list"},
     {"question": "Count the stars in the sky?", "type": "list"},
     {"question": "Is the sky blue?", "type": "boolean"},

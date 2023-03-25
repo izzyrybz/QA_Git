@@ -1,29 +1,6 @@
-http://example.org/action/delete ?u1 http://example.org/entity/commits2.ttl
 type ?u1 http://example.org/entity/commit
 http://example.org/action/add ?u1 ?u2
 http://example.org/action/add ?u1 ?u2
-http://example.org/action/delete ?u1 ?u2
-http://example.org/action/delete ?u1 ?u2
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
-  ?u1
   ?u1
   ?u1
   ?u1

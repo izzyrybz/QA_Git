@@ -117,8 +117,25 @@ def build_query(query_params, question_type):
 if __name__ == "__main__":
 #def main(question):
     # Load the spaCy model
-    
-    question= 'Which commits had both added and deleted files??'
+    q1='Which commits have the user izzyrybz made?' #-works
+
+    q2= 'How many commits have the user izzyrybz made?' #- works
+
+    q3 ='How many commits have there been?'# - giving division by zero???? - the dataset is empty - lets hope training can fix this
+
+    q4 ='Which commits modified file killme.py?' #-works
+
+    q4_x ='Which commits modified files?' #finds the query but does not rank it high enough
+
+    q5 ='How many files have been deleted?'# - works
+
+    q6 = 'How many users have made commits that changed files?' # double relation #2
+
+    q8 = 'Which commits had both added and deleted files?'
+
+    q9 = 'List all the authors?' #-works
+    question= "Which commits had both added and changed files?"
+
     print("Question:" ,question)
 
     #Parse the input question using spaCy and then create representation and dependency tree
@@ -161,6 +178,7 @@ if __name__ == "__main__":
     finished_query = build_query(query_generator,question_type)
     #print("finished query",finished_query)
     #return str(finished_query)
+    print("this is the q",question)
     exit()
 
     jena_response = requests.get("http://localhost:3030/dbpedia/query", params={"query": finished_query})
@@ -184,21 +202,7 @@ if __name__ == "__main__":
     #print(build_sparql_query(dep_tree))
 
 
-q1='Which commits have the user izzyrybz made?' #-works
 
-q2= 'How many commits have the user izzyrybz made?' #- works
-
-q3 ='How many commits have there been?'# - giving division by zero???? - the dataset is empty - lets hope training can fix this
-
-q4 ='Which commits modified file killme.py?' #-works
-
-q4_x ='Which commits modified files?' #finds the query but does not rank it high enough
-
-q5 ='How many files have been deleted?'# - works
-
-q6 = 'How many users have made commits that changed file <x>?' # double relation #2
-
-q8 = 'Which commits had both added and deleted files?'
 #7 : Did a commit have the description 'Initial commit'? - does not work
 
 #8: What commits were made in 2022-01-01?

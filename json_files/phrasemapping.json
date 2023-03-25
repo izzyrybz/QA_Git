@@ -15,18 +15,6 @@
             },
             {
                 "surface": [
-                    33,
-                    7
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.9099073188624662,
-                        "uri": "http://dbpedia.org/resource/File_deletion"
-                    }
-                ]
-            },
-            {
-                "surface": [
                     0,
                     5
                 ],
@@ -39,13 +27,25 @@
             },
             {
                 "surface": [
+                    31,
+                    29
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
                     4,
                     0
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
                     }
                 ]
             },
@@ -81,31 +81,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    31,
-                    29
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
+                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
                     }
                 ]
             },
@@ -129,7 +105,19 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
+                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
                     }
                 ]
             },
@@ -142,12 +130,36 @@
                     {
                         "confidence": 0.75,
                         "uri": "http://example.org/entity/commit"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    33,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.2871869112027945,
+                        "uri": "http://dbpedia.org/resource/Posttraumatic_stress_disorder"
                     }
                 ]
             }
         ],
-        "question": "Which commits had both added and deleted files??",
+        "question": "Which commits had both added and changed files?",
         "relations": [
+            {
+                "surface": [
+                    31,
+                    29
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
+                    }
+                ]
+            },
             {
                 "surface": [
                     4,
@@ -156,7 +168,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
                     }
                 ]
             },
@@ -192,43 +204,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/action/delete"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    31,
-                    29
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
+                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
                     }
                 ]
             },
@@ -252,19 +228,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commit"
+                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
                     }
                 ]
             },
@@ -277,6 +241,30 @@
                     {
                         "confidence": 0.75,
                         "uri": "http://example.org/action/add"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/commit"
                     }
                 ]
             }

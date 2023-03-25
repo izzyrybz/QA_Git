@@ -1,30 +1,7 @@
-?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl }
 ?u1 type http://example.org/entity/commit }
 ?u1 http://example.org/action/add ?u2 }
 ?u1 http://example.org/action/add ?u2 }
-?u1 http://example.org/action/delete ?u2 }
-?u1 http://example.org/action/delete ?u2 }
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . ?u1 type http://example.org/entity/commit 
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . http://example.org/entity/commit type ?u1 
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . ?u1 type ?u3  
-  ?u1 http://example.org/action/delete ?u3 . ?u1 type http://example.org/entity/commit 
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . ?u1 http://example.org/action/add ?u2 
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . ?u2 http://example.org/action/add ?u1 
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . ?u1 http://example.org/action/add ?u3  
-  ?u1 http://example.org/action/delete ?u3 . ?u1 http://example.org/action/add ?u2 
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . ?u1 http://example.org/action/delete ?u2 
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . ?u2 http://example.org/action/delete ?u1 
-  ?u1 http://example.org/action/delete http://example.org/entity/commits2.ttl . ?u1 http://example.org/action/delete ?u3  
-  ?u1 http://example.org/action/delete ?u3 . ?u1 http://example.org/action/delete ?u2 
   ?u1 type http://example.org/entity/commit . ?u1 http://example.org/action/add ?u2 
   ?u1 type http://example.org/entity/commit . ?u2 http://example.org/action/add ?u1 
   ?u1 type http://example.org/entity/commit . ?u1 http://example.org/action/add ?u3  
   ?u1 type ?u3 . ?u1 http://example.org/action/add ?u2 
-  ?u1 type http://example.org/entity/commit . ?u1 http://example.org/action/delete ?u2 
-  ?u1 type http://example.org/entity/commit . ?u2 http://example.org/action/delete ?u1 
-  ?u1 type http://example.org/entity/commit . ?u1 http://example.org/action/delete ?u3  
-  ?u1 type ?u3 . ?u1 http://example.org/action/delete ?u2 
-  ?u1 http://example.org/action/add ?u2 . ?u1 http://example.org/action/delete ?u2 
-  ?u1 http://example.org/action/add ?u2 . ?u2 http://example.org/action/delete ?u1 
-  ?u1 http://example.org/action/add ?u2 . ?u1 http://example.org/action/delete ?u3  
-  ?u1 http://example.org/action/add ?u3 . ?u1 http://example.org/action/delete ?u2 

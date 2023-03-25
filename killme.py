@@ -180,7 +180,12 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     #print(valid_walks_with_sparql)
     #print("these are the valid paths with more complex queries found:" ,valid_walks_with_sparql)
 
-    
+    with open('trash2.txt','w') as fp:
+        for item in valid_walks_with_sparql:
+      
+
+            fp.writelines(item)
+            fp.writelines('\n')
 
     
     #I DONT UNDERSTAND WHY WE ARE DOING THIS 

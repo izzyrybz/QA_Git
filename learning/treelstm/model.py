@@ -52,9 +52,11 @@ class ChildSumTreeLSTM(nn.Module):
         '''
         
         return c, h
+    
 
     def forward(self, tree, inputs):
         _ = [self.forward(tree.children[idx], inputs) for idx in range(tree.num_children)]
+        
 
         if tree.num_children == 0:
             child_c = Var(inputs[0].data.new(1, self.mem_dim).fill_(0.))
@@ -69,7 +71,7 @@ class ChildSumTreeLSTM(nn.Module):
         else:
             tree.state = self.node_forward(inputs[tree.idx], child_c, child_h)
         return tree.state
-
+    
     '''def forward(self, tree, inputs):
         _ = [self.forward(tree.children[idx], inputs) for idx in range(tree.num_children)]
 

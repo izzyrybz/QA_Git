@@ -42,7 +42,7 @@ class LC_Qaud_LinkedParser(AnswerParser):
 
     def parse_sparql(self, raw_query):
         raw_query = raw_query.replace("https://", "http://")
-        print("we are in lc_quad_linked and this is raw_quer",raw_query)
+        #print("we are in lc_quad_linked and this is raw_quer",raw_query)
         uris=[]
         for uri in raw_query.split():
             #print(uri)

@@ -69,6 +69,7 @@ def preprocess_relations(file, prop=False):
     with open(file, encoding='utf-8') as f:
         content = f.readlines()
         for line in content:
+            #print(line)
             split_line = line.split()
             #print(split_line)
 
@@ -77,8 +78,9 @@ def preprocess_relations(file, prop=False):
 
             if key not in relations:
                 relations[key] = []
-
-            uri = split_line[0].replace('<', '').replace('>', '')
+            
+            if(len(split_line)>0):
+                uri = split_line[0].replace('<', '').replace('>', '')
 
             if prop is True:
                 uri_property = uri.replace('/ontology/', '/property/')
@@ -331,7 +333,7 @@ def spacy_parse(question, properties,lemma_q):
                         add_item(value, entity, question, str(lemma))
                         entities.append(entity)
                         #testing this, since some relations can be entities too
-                        relationships.append(entity)
+                        #relationships.append(entity)
             if 'example.org/action' in value:
                 for lemma in lemma_q:
                     #print(lemma,value)
@@ -352,14 +354,11 @@ def spacy_parse(question, properties,lemma_q):
 
 
 
-   
-#maybe possible to use nltk to find dates and such
-
 class PhraseMapping:
     def __init__(self):
         self.properties = []
-        self.properties = preprocess_relations('turtle/dbpedia_3Eng_property.ttl', True)
-        self.properties_knowledgegraph = preprocess_relations('turtle/knowledge_graph.ttl')
+        self.properties = preprocess_relations('turtle/needed_information.ttl', True)
+        self.properties_knowledgegraph = preprocess_relations('turtle/knowledge_graph.ttl', True)
         self.knowledgeG_s_p_o = process_knowledge_graph('turtle/knowledge_graph.ttl')
         self.properties_s_p_o = process_knowledge_graph('turtle/dbpedia_3Eng_property.ttl')
 
@@ -367,8 +366,10 @@ class PhraseMapping:
         for key in self.properties_knowledgegraph.keys():
             if key in self.properties:
                 self.properties[key].extend(self.properties_knowledgegraph[key])
+                
             else:
                 self.properties[key] = self.properties_knowledgegraph[key]
+                
         
 
     def phrasemap_question(self, question,tokened_question,lemmizized_question):

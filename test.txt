@@ -1,0 +1,28 @@
+
+Which commits have the user izzyrybz made?
+SELECT ?u1 WHERE {?u1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }
+
+How many commits have the user izzyrybz made?
+SELECT COUNT (?u1) WHERE {?u1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }
+
+How many commits have there been?
+SELECT COUNT (?u1) WHERE
+ {?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit> }
+
+Which commits modified file killme.py?
+SELECT ?u1 WHERE {?u1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
+
+Which commits altered files?
+SELECT ?u1 WHERE {?u1 <http://example.org/action/modify> <http://example.org/entity/textfiles/not_working_queries.txt> }
+
+How many files have been deleted?
+SELECT COUNT (?u1) WHERE {<http://example.org/entity/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> <http://example.org/action/delete> ?u3 . <http://example.org/entity/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> <http://example.org/action/delete> ?u1 }
+
+How many users have made commits that changed files?
+SELECT COUNT (?u1) WHERE {?u1 <http://example.org/action/modify> <http://example.org/entity/textfiles/not_working_queries.txt> }
+
+Which commits had both added and deleted files?
+SELECT ?u1 WHERE {?u1 <http://example.org/action/delete> ?u3 . ?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit> }
+
+How many users have made commits that changed file killme.py?
+SELECT COUNT (?u1) WHERE {?u1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }

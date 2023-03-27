@@ -3,7 +3,7 @@ import json
 import requests, json, re, operator
 from myclassifier import QuestionClassifier
 from myphrasemapping import PhraseMapping
-from test_q_generator import QuestionGenerator
+
 from knowledgegraph_generator import KnowledgeGraphGenerator
 from killme import generate_query
 import spacy
@@ -114,27 +114,10 @@ def build_query(query_params, question_type):
     #print(sparlq_query)
 
 
-if __name__ == "__main__":
-#def main(question):
+#if __name__ == "__main__":
+def main(question):
     # Load the spaCy model
-    q1='Which commits have the user izzyrybz made?' #-works
-
-    q2= 'How many commits have the user izzyrybz made?' #- works
-
-    q3 ='How many commits have there been?'# - giving division by zero???? - the dataset is empty - lets hope training can fix this
-
-    q4 ='Which commits modified file killme.py?' #-works
-
-    q4_x ='Which commits modified files?' #finds the query but does not rank it high enough
-
-    q5 ='How many files have been deleted?'# - works
-
-    q6 = 'How many users have made commits that changed files?' # double relation #2
-
-    q8 = 'Which commits had both added and deleted files?'
-
-    q9 = 'List all the authors?' #-works
-    question= "Which commits had both added and changed files?"
+    
 
     print("Question:" ,question)
 
@@ -178,8 +161,8 @@ if __name__ == "__main__":
     finished_query = build_query(query_generator,question_type)
     #print("finished query",finished_query)
     #return str(finished_query)
-    print("this is the q",question)
-    exit()
+    
+    return finished_query
 
     jena_response = requests.get("http://localhost:3030/dbpedia/query", params={"query": finished_query})
     if jena_response.status_code == 200:
@@ -201,15 +184,73 @@ if __name__ == "__main__":
     #print(lemmas) 
     #print(build_sparql_query(dep_tree))
 
+q1='Which commits have the user izzyrybz made?' #-works
 
+q2= 'How many commits have the user izzyrybz made?' #- works
+
+q3 ='How many commits have there been?'# - giving division by zero???? - the dataset is empty - lets hope training can fix this
+
+q4 ='Which commits modified file killme.py?' #-works
+
+q4_x ='Which commits altered files?' #finds the query but does not rank it high enough
+
+q5 ='How many files have been deleted?'# - works
+
+q6 = 'How many users have made commits that changed files?' # division by zero
+
+q7 = 'Which commits had both added and deleted files?'
+
+q8='How many users have made commits that changed file killme.py?'
+
+q9 = 'List all the authors?' #-works
+
+q10= 'How many files were modified in more than 3 commits?'
+
+#question= q1
 
 #7 : Did a commit have the description 'Initial commit'? - does not work
 
 #8: What commits were made in 2022-01-01?
 
 #9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
+main(q4_x)
+exit()
+#main("How many users have made commits that changed files?")
 
-if main(q1) == 'SELECT ?u1 WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
-    print("q1 works")
-if main(q2) == 'SELECT COUNT (?u1) WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
-    print("q2 works")
+with open('test.txt','w') as fp:
+    fp.write('\n'+q1 + '\n')
+    fp.write(main(q1)+ '\n')
+with open('test.txt','a') as fp:
+    fp.write('\n'+q2+ '\n')
+    fp.write(main(q2)+ '\n')
+    fp.write('\n')
+
+    fp.write('\n'+q3+ '\n')
+    fp.write(main(q3)+ '\n')
+    
+
+    fp.write('\n'+q4+ '\n')
+    fp.write(main(q4)+ '\n')
+
+    fp.write('\n'+q4_x+ '\n')
+    fp.write(main(q4_x)+ '\n')
+
+    fp.write('\n'+q5+ '\n')
+    fp.write(main(q5)+ '\n')
+
+    fp.write('\n'+q6+ '\n')
+    fp.write(main(q6)+'\n')
+
+    fp.write('\n'+q7+ '\n')
+    fp.write(main(q7)+ '\n')
+
+    fp.write('\n'+q8+ '\n')
+    fp.write(main(q8)+ '\n')
+
+    fp.write(q9+ '\n')
+    fp.write(main(q9))
+    
+    #if main(q1) == 'SELECT ?u1 WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
+    #    print("q1 works")
+    #if main(q2) == 'SELECT COUNT (?u1) WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
+    #    print("q2 works")

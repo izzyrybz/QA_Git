@@ -1,7 +1,1 @@
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-nsubj csubj aux preconj amod cc conj ROOT punct
-nsubj csubj aux preconj amod cc conj ROOT punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-nsubj csubj aux preconj amod cc conj ROOT punct
+advmod amod nmod nsubj aux expl ROOT punct

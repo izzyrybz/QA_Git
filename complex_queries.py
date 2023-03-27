@@ -6,6 +6,7 @@ from tqdm import tqdm
 from common.graph.graph import Graph
 
 
+
 def query(args):
     q, idx = args
     payload = {'query': q, 'format': 'application/json'}
@@ -41,6 +42,7 @@ def mutli_var_complex_query(valid_walks):
     
     list_with_elements_and_sparql_final=[]
     with tqdm(total=total)as pbar:
+    
         for subject1,predicate1,object1 in subject_predicate_object_list:
             for subject2,predicate2,object2 in subject_predicate_object_list:
                 #print(edge2,source2,dest2,subject1,predicate1,dest1)
@@ -49,8 +51,9 @@ def mutli_var_complex_query(valid_walks):
                     pbar.update(1)
                     continue
                 else:
+                    
                     # If the two triples are different and have not been used before, add them to the used triples list and process them
-                    print(subject1, predicate1, object1, subject2, predicate2, object2)
+                    #print(subject1, predicate1, object1, subject2, predicate2, object2)
                     used_triples.append((subject1, predicate1, object1, subject2, predicate2, object2))
                     list_with_elements_and_sparql_final.append(complex_query_process(subject1,predicate1,object1, subject2,predicate2,object2))
                     pbar.update(1)
@@ -83,33 +86,76 @@ def complex_query_process(subject1,predicate1,object1, subject2,predicate2,objec
             if modified_query[-1] is '}':
                 modified_query = modified_query.replace('}','')
             #print(str(modified_query))
-            list_with_elements_and_sparql.append(str(modified_query_with_sparlq))
             list_with_elements_and_sparql.append(str(modified_query))
+            list_with_elements_and_sparql.append(str(modified_query_with_sparlq))
+            
   
     return list_with_elements_and_sparql
 
 def two_hop_graph_template(subject1,predicate1,object1,subject2,predicate2,object2):
-    # print('kb two_hop_graph_template')
-    query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}"],
-                #[1, u"{object1} {predicate1} {subject1} . {object2} {predicate2} {subject2}"],
-                [2, u"{subject1} {predicate1} {object1} . {object2} {predicate2} {subject2}"],
-                #[3, u"{object1} {predicate1} {subject1} . {subject2} {predicate2} {object2}"],
-                [4, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} ?u3 "],
-                #[5, u"{object1} {predicate1} {subject1} . {object2} {predicate2} ?u3"],
-                [6, u"{subject1} {predicate1} ?u3 . {subject2} {predicate2} {object2}"],
-                #[7, u"{object1} {predicate1} ?u3' . {subject2} {predicate2} {object2}"]
-                ]
-    #could use extension
-    output = [[item[0], item[1].format(predicate1=predicate1, subject1=subject1,
-                                    object1=object1, predicate2=predicate2,
-                                        subject2=subject2,object2=object2, 
-                                    type="<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>")] for item in query_types]
+    graph = Graph()
+    #check if one of the items are of the type ?u1 <something> ?u2 because then we need to have 
+    if graph.is_var(object2) and graph.is_var(subject2):
+        query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}"],
 
-    return output
+                    [1, u"{subject2} {predicate1} {object1} . {subject2} {predicate2} {object2} "],
+
+                    [3, u"{subject1} {predicate1} {subject2}  . {subject2} {predicate2} {object2}"],
+
+                    [4, u"{object2} {predicate1} {object1} . {subject2} {predicate2} {object2} "],
+
+                    [5, u"{subject1} {predicate1} {object2}  . {subject2} {predicate2} {object2}"],
+
+                    ]
+        #could use extension
+        output = [[item[0], item[1].format(predicate1=predicate1, subject1=subject1,
+                                        object1=object1, predicate2=predicate2,
+                                            subject2=subject2,object2=object2, 
+                                        type="<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>")] for item in query_types]
+
+        return output
+    elif(graph.is_var(subject1) and graph.is_var(object1)):
+        query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}"],
+
+                    [1, u"{subject1} {predicate1} {object1} . {subject1} {predicate2} {object2} "],
+
+                    [2, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {subject1}"],
+
+                    [3, u"{subject1} {predicate1} {object1} . {object1} {predicate2} {object2}"],
+
+                    [4, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object1}"],
+
+                    ]
+        #could use extension
+        output = [[item[0], item[1].format(predicate1=predicate1, subject1=subject1,
+                                        object1=object1, predicate2=predicate2,
+                                            subject2=subject2,object2=object2, 
+                                        type="<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>")] for item in query_types]
+
+        return output
+    
+    else:
+        
+        # print('kb two_hop_graph_template')
+        query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}"],
+
+                    [1, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} ?u3 "],
+
+                    [2, u"{subject1} {predicate1} ?u3 . {subject2} {predicate2} {object2}"],
+
+                    ]
+        #could use extension
+        output = [[item[0], item[1].format(predicate1=predicate1, subject1=subject1,
+                                        object1=object1, predicate2=predicate2,
+                                            subject2=subject2,object2=object2, 
+                                        type="<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>")] for item in query_types]
+
+        return output
 
 def two_hop_graph(subject1,predicate1,object1, subject2,predicate2,object2):
     # print('kb two_hop_graph')
     graph = Graph()
+    
     subject1 = graph.jena_formatting(subject1)
     predicate1 = graph.jena_formatting(predicate1)
     object1 = graph.jena_formatting(object1)

@@ -22,6 +22,13 @@ import ujson
 
 class Struct(object): pass
 
+def remove_duplicates(data: list) -> list:
+    unique_lines = []
+    for line in data:
+        if line not in unique_lines:
+            unique_lines.append(line)
+    return unique_lines
+
 def rank(args, question, generated_queries):
         #print("We are in rank and this is the params:",args, question, generated_queries)
         if len(generated_queries) == 0:
@@ -77,10 +84,11 @@ def rank(args, question, generated_queries):
             #print(json_data)
             parser = LC_Qaud_LinkedParser()
             output_dir = "./output/tmp"
-            
+            print("right before save")
             #we need to fix this, it is fucked
             preprocess_lcquad.save_split(output_dir, *preprocess_lcquad.split(json_data, parser))
             #preprocess_lcquad.correct_data(generated_queries)
+            print("it is saved split isnt it")
 
             dep_tree_cache_file_path = './json_files/dep_tree_cache_lcquadtest.json'
             if os.path.exists(dep_tree_cache_file_path):
@@ -169,28 +177,24 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     #use these valid paths to combine to multi var to check if <path1><path2> works within a query, (what I call double relation)
 
     complex_walks = mutli_var_complex_query(valid_walks_with_sparql)
+    print("we are outside the complex walk")
     
     #print()
     #print("this is complex walk",complex_walks)
     #print()
     for array_with_walks in complex_walks:
         for walk in array_with_walks:
-            #print(walk)
+            walk = walk.lstrip() 
             valid_walks_with_sparql.append(walk)
     #print(valid_walks_with_sparql)
     #print("these are the valid paths with more complex queries found:" ,valid_walks_with_sparql)
 
-    with open('trash2.txt','w') as fp:
-        for item in valid_walks_with_sparql:
-      
-
-            fp.writelines(item)
-            fp.writelines('\n')
 
     
     #I DONT UNDERSTAND WHY WE ARE DOING THIS 
 
     if question_type == 0 and len(relations) == 1:
+        print("is this the place we go and get a superlong tqdm")
         double_relation = True
         graph = Graph()
         query_builder = QueryBuilder()
@@ -202,11 +206,25 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         
         valid_walks_with_sparql.extend(valid_walks_new)
 
+    
+
+    valid_walks_with_sparql = remove_duplicates(valid_walks_with_sparql)
+    
+    
+    with open('trash2.txt','w') as fp:
+        for item in valid_walks_with_sparql:
+      
+
+            fp.writelines(item)
+            fp.writelines('\n')
+
     args = Struct()
     base_path = "./learning/treelstm/"
     args.save = os.path.join(base_path, "checkpoints/")
     #changed the checkpoint_filename from lc_quad,epoch=5,train_loss=0.08340245485305786
-    args.expname = "lc_quad,epoch=5,train_loss=0.07691806554794312"
+
+    
+    args.expname = "lc_quad,epoch=5,train_loss=0.3421219289302826"
     args.mem_dim = 150
     args.hidden_dim = 50
     args.num_classes = 2

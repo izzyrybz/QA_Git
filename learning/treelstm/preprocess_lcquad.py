@@ -32,27 +32,20 @@ def generalize_question(a, b, parser=None):
 
     entity_uris=[]
     for uri in uris:
-        #check if the dbpedia is a entity
-        
-        if not uri.startswith("?"):
-            query = f'''ASK {{
-            {uri} a ?type .
-            FILTER (?type IN (dbo:Person, dbo:Organisation, dbo:Place, dbo:Event, dbo:Work))
-        }}'''
-            response = requests.post('https://dbpedia.org/sparql', data={'query': query}, headers = {'Accept': 'application/json'})
-            if response.status_code == 200:
-                if response.json()['boolean']:
-                    for item in ["http://dbpedia.org/resource/", "http://dbpedia.org/ontology/",
-                 "http://dbpedia.org/property/", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"]:
-                        if item in uri:
-                            uri = uri.replace(item, "")
-                            entity_uris.append(uri)
-
+                
         #check if the knowledge domain specific thing is an entity
         if "example.org/entity" in uri:
+            
             uri = uri.replace("http://example.org/entity/", "")
             #print("we are appending",uri)
             entity_uris.append(uri)
+        
+        '''if "example.org/action" in uri:
+            
+            uri = uri.replace("http://example.org/action/", "")
+            #print("we are appending",uri)
+            entity_uris.append(uri)'''
+        
         
     #uris = [uri for uri in uris if uri-is_entity()]
 
@@ -63,6 +56,7 @@ def generalize_question(a, b, parser=None):
     for uri in entity_uris:
     #print("WHAT IS THIS BULLSHIT",find_mentions(a, uri))
         output = find_mentions(a, entity_uris)
+        #print(output,a,entity_uris)
         #output contains start,end, dist,uri
         if len(output)> 4:
             for result in output:
@@ -364,7 +358,7 @@ if __name__ == '__main__':
 
     print('loading the data from json_files/gold.json')
 
-    ds = json.load(open("json_files/gold.json"))
+    ds = json.load(open("json_files/gold_standard_git.json"))
 
     total = len(ds)
     train_size = int(.7 * total)

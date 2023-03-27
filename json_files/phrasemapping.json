@@ -27,37 +27,13 @@
             },
             {
                 "surface": [
-                    31,
-                    29
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
                     4,
                     0
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commits2.ttl"
+                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
                     }
                 ]
             },
@@ -81,7 +57,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
+                        "uri": "http://example.org/entity/commits2.ttl"
                     }
                 ]
             },
@@ -93,19 +69,7 @@
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
+                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
                     }
                 ]
             },
@@ -129,142 +93,70 @@
                 "uris": [
                     {
                         "confidence": 0.75,
+                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
                         "uri": "http://example.org/entity/commit"
                     }
                 ]
             },
             {
                 "surface": [
-                    33,
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    14,
                     7
                 ],
                 "uris": [
                     {
-                        "confidence": 0.2871869112027945,
-                        "uri": "http://dbpedia.org/resource/Posttraumatic_stress_disorder"
+                        "confidence": 0.38856944121435827,
+                        "uri": "http://dbpedia.org/resource/Altered_chord"
                     }
                 ]
             }
         ],
-        "question": "Which commits had both added and changed files?",
+        "question": "Which commits altered files?",
         "relations": [
             {
                 "surface": [
-                    31,
-                    29
+                    6,
+                    6
                 ],
                 "uris": [
                     {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/gold_standard_git.json-to-gold_standard_git.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commits2.ttl"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dmump.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/action/add"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
+                        "confidence": 0.5,
                         "uri": "http://example.org/entity/commit"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    14,
+                    6
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.5,
+                        "uri": "http://example.org/action/modify"
                     }
                 ]
             }

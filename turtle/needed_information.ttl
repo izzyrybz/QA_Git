@@ -1,10 +1,49 @@
-<http://dbpedia.org/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
-<http://dbpedia.org/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "Commit" .
-<http://dbpedia.org/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "Commits" .
-<http://dbpedia.org/commit_(version_control)> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
-<http://dbpedia.org/resource/Git> <http://www.w3.org/2000/01/rdf-schema#label> "Git" .
-<http://dbpedia.org/resource/Git> <http://www.w3.org/2000/01/rdf-schema#label> "git" .
-<http://dbpedia.org/resource/Calendar_date><http://www.w3.org/2000/01/rdf-schema#label> "dates" .
-<http://dbpedia.org/resource/Calendar_date><http://www.w3.org/2000/01/rdf-schema#label> "date" .
-<http://dbpedia.org/resource/Calendar_date><http://www.w3.org/2000/01/rdf-schema#label> "Dates" .
-<http://dbpedia.org/resource/Calendar_date><http://www.w3.org/2000/01/rdf-schema#label> "Date" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "change" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "changes" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "changed" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "changing" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "modified" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "modify" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "alter" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "altered" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "altering" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjust" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjusted" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjusting" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "add" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "added" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "adding" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "adds".
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "append" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "attach" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "insert" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "erase" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "remove" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "eliminate" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "clear" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "wipe" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "expunge" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label>"destroy" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "removed" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "delete" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "deleted" .
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "author".
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "authors".
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "users".
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "user".
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "creator".
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "creators".
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "developer".
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "developers".
+<http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "parents" .
+<http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "parent" .
+<http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "preceding" .
+<http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "proceeds" .
+<http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "proceeded" .
+<http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "previous" .
+<http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "earlier" .
+<http://example.org/entity/commit> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
+<http://example.org/entity/commit> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
+<http://example.org/ontology/Calendar_date> <http://www.w3.org/2000/01/rdf-schema#label> "date" .
+<http://example.org/ontology/Calendar_date> <http://www.w3.org/2000/01/rdf-schema#label> "dates".
+

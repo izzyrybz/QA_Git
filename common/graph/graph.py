@@ -146,6 +146,7 @@ class Graph:
                        u"{ent1} {rel} {ent2}",
                        u"?u1 {type} {rel}",
                        u"?u2 {rel} ?u1",
+                       u"?u1 {rel} ?u2",
                        ]
         where = ""
         for i in range(len(query_types)):

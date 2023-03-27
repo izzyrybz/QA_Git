@@ -87,4 +87,8 @@ class Trainer(object):
             #print(indices)
             predictions[idx] = torch.dot(indices, torch.exp(output))
             #print("this is our predications",predictions)
-        return loss / len(dataset), predictions
+        if len(dataset)== 0:
+            print("we have 0??")
+            return 0,predictions
+        else:
+            return loss / len(dataset), predictions

@@ -192,15 +192,18 @@
 <http://dbpedia.org/ontology/structuralSystem> <http://www.w3.org/2000/01/rdf-schema#label> "made of" .
 <http://dbpedia.org/ontology/computingInput> <http://www.w3.org/2000/01/rdf-schema#label> "play with" .
 <http://dbpedia.org/ontology/computingInput> <http://www.w3.org/2000/01/rdf-schema#label> "use" .
-<http://dbpedia.org/property/user> <http://www.w3.org/2000/01/rdf-schema#label> "user" .
-<http://dbpedia.org/ontology/developer> <http://www.w3.org/2000/01/rdf-schema#label> "develop" .
-<http://dbpedia.org/ontology/developer> <http://www.w3.org/2000/01/rdf-schema#label> "developer" .
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "user" .
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "users" .
+<http://dbpedia.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "develop" .
+<http://dbpedia.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "developer" .
+<http://dbpedia.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "developed" .
 <http://dbpedia.org/ontology/sisterStation> <http://www.w3.org/2000/01/rdf-schema#label> "sister station" .
 <http://dbpedia.org/ontology/sisterStation> <http://www.w3.org/2000/01/rdf-schema#label> "sister channel" .
 <http://dbpedia.org/ontology/sisterStation> <http://www.w3.org/2000/01/rdf-schema#label> "sister network" .
 <http://dbpedia.org/ontology/runningMate> <http://www.w3.org/2000/01/rdf-schema#label> "running mate" .
-<http://dbpedia.org/ontology/creator> <http://www.w3.org/2000/01/rdf-schema#label> "create" .
-<http://dbpedia.org/ontology/creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator" .
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "create" .
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "created" .
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "creator" .
 <http://dbpedia.org/ontology/mouthMountain> <http://www.w3.org/2000/01/rdf-schema#label> "flow into" .
 <http://dbpedia.org/ontology/mouthMountain> <http://www.w3.org/2000/01/rdf-schema#label> "run into" .
 <http://dbpedia.org/ontology/district> <http://www.w3.org/2000/01/rdf-schema#label> "located in" .
@@ -391,8 +394,8 @@
 <http://dbpedia.org/ontology/musicalBand> <http://www.w3.org/2000/01/rdf-schema#label> "record" .
 <http://dbpedia.org/ontology/musicalBand> <http://www.w3.org/2000/01/rdf-schema#label> "write" .
 <http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "part of" .
-<http://dbpedia.org/ontology/parentCompany> <http://www.w3.org/2000/01/rdf-schema#label> "parent company" .
-<http://dbpedia.org/ontology/parentCompany> <http://www.w3.org/2000/01/rdf-schema#label> "daughter company" .
+<http://example.org/ontology/parent> <http://www.w3.org/2000/01/rdf-schema#label> "parent" .
+<http://example.org/ontology/parent> <http://www.w3.org/2000/01/rdf-schema#label> "parents" .
 <http://dbpedia.org/ontology/parentCompany> <http://www.w3.org/2000/01/rdf-schema#label> "subsidiary" .
 <http://dbpedia.org/ontology/canonizedPlace> <http://www.w3.org/2000/01/rdf-schema#label> "canonize in" .
 <http://dbpedia.org/ontology/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "publisher" .
@@ -1898,7 +1901,26 @@
 <http://dbpedia.org/ontology/vicePrincipal> <http://www.w3.org/2000/01/rdf-schema#label> "vice principal" .
 <http://dbpedia.org/ontology/vicePrincipalLabel> <http://www.w3.org/2000/01/rdf-schema#label> "vice principal label" .
 <http://dbpedia.org/ontology/virtualChannel> <http://www.w3.org/2000/01/rdf-schema#label> "virtual channel" .
-<http://dbpedia.org/ontology/visitorsPercentageChange> <http://www.w3.org/2000/01/rdf-schema#label> "visitor percentage change" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "change" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "changes" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "changed" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "changing" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "modified" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "modify" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "alter" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "altered" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "altering" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjust" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjusted" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjusting" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "add" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "added" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "adding" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "adds".
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "remove" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "removed" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "delete" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "deleted" .
 <http://dbpedia.org/ontology/visitorsPerYear> <http://www.w3.org/2000/01/rdf-schema#label> "visitors per year" .
 <http://dbpedia.org/ontology/visitorStatisticsAsOf> <http://www.w3.org/2000/01/rdf-schema#label> "visitor statistics as of" .
 <http://dbpedia.org/ontology/voice> <http://www.w3.org/2000/01/rdf-schema#label> "voice" .
@@ -2084,7 +2106,7 @@
 <http://dbpedia.org/property/audioFormat> <http://www.w3.org/2000/01/rdf-schema#label> "audio format" .
 <http://dbpedia.org/property/aum> <http://www.w3.org/2000/01/rdf-schema#label> "aum" .
 <http://dbpedia.org/property/auswins> <http://www.w3.org/2000/01/rdf-schema#label> "auswins" .
-<http://dbpedia.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "author" .
+<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "author" .
 <http://dbpedia.org/property/authority> <http://www.w3.org/2000/01/rdf-schema#label> "authority" .
 <http://dbpedia.org/property/available> <http://www.w3.org/2000/01/rdf-schema#label> "available" .
 <http://dbpedia.org/property/averageSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "average speed" .

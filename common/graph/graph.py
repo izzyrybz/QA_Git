@@ -31,6 +31,11 @@ class Graph:
         else:
             return False
 
+    def is_entity_hash(self,entity):
+        if entity in 'http://example.org/entity/hash':
+            return True
+        else:
+            return False
     def create_or_get_node(self, uris, mergable=False):
         if isinstance(uris, (int)):
             uris = self.__get_generic_uri(uris, 0)
@@ -78,6 +83,7 @@ class Graph:
     def create_all_combinations(self,entites, relations):
         all_entites =[]
         all_relations=[]
+        hash_entities=[]
         
         #print(all_entites)
         if len(entites)<1:
@@ -94,28 +100,61 @@ class Graph:
         
         #print(all_entites)
         #print(all_relations)
-#this is taken from the first lines of the algorithm in the paper
+        for entity in all_entites:
+            if self.is_entity_hash(entity):
+                hash_entities.append(entity)
 
-        set1_e_p_e = set(itertools.product(all_entites,all_relations,all_entites))
-        set2_e_p_uri = set(itertools.product(all_entites,all_relations,['?u1']))
-        set3_uri_p_e = set(itertools.product(['?u1'],all_relations,all_entites))
-        all_sets = set1_e_p_e|set2_e_p_uri|set3_uri_p_e
-        #print(all_sets)
-        #remove all the variables that are used twice aka izzyrybz <http://dbpedia.org/ontology/description> izzyrybz
+
+
+        set1_s_p_o = set(itertools.product(hash_entities, all_relations, all_entites))
+        set2_s_p_uri = set(itertools.product(hash_entities, all_relations, ['?u1']))
+        set3_s_uri_o = set(itertools.product(hash_entities, ['?u1'], all_entites))
+        set4_uri_p_o = set(itertools.product(['?u1'], all_relations, all_entites))
+        ###################### ?u1 and ?u2###############################
+        set1_u1_p_u2 = set(itertools.product(['?u1'], all_relations, ['?u2']))
+        set2_u2_p_u1 = set(itertools.product(['?u2'], all_relations, ['?u1']))
+
+        set1_s_u1_u2 = set(itertools.product(hash_entities, ['?u1'], ['?u2']))
+        set2_s_u2_u1 = set(itertools.product(hash_entities, ['?u2'], ['?u1']))
+
+        set1_u1_u2_o = set(itertools.product(['?u1'], ['?u2'], all_entites))
+        set2_u2_u1_o = set(itertools.product(['?u2'], ['?u1'], all_entites))
+
+        ###########################?u1 and ?u3#################################
+        set1_u1_p_u3 = set(itertools.product(['?u1'], all_relations, ['?u3']))
+        set2_u3_p_u1 = set(itertools.product(['?u3'], all_relations, ['?u1']))
+
+        set1_s_u1_u3 = set(itertools.product(hash_entities, ['?u1'], ['?u3']))
+        set2_s_u3_u1 = set(itertools.product(hash_entities, ['?u3'], ['?u1']))
+
+        set1_u1_u3_o = set(itertools.product(['?u1'], ['?u3'], all_entites))
+        set2_u3_u1_o = set(itertools.product(['?u3'], ['?u1'], all_entites))
+        ######################?u2 and ?u3##################################
+
+        set1_u3_p_u2 = set(itertools.product(['?u3'], all_relations, ['?u2']))
+        set2_u2_p_u3 = set(itertools.product(['?u2'], all_relations, ['?u3']))
+
+        set1_s_u3_u2 = set(itertools.product(hash_entities, ['?u3'], ['?u2']))
+        set2_s_u2_u3 = set(itertools.product(hash_entities, ['?u2'], ['?u3']))
+
+        set1_u3_u2_o = set(itertools.product(['?u3'], ['?u2'], all_entites))
+        set2_u2_u3_o = set(itertools.product(['?u2'], ['?u3'], all_entites))
+
+
+        all_sets = set1_s_p_o | set2_s_p_uri | set3_s_uri_o | set4_uri_p_o | set1_u1_p_u2 | set2_u2_p_u1 | set1_s_u1_u2 | set2_s_u2_u1 | set1_u1_u2_o | set2_u2_u1_o | set1_u1_p_u3 | set2_u3_p_u1 | set1_s_u1_u3 | set2_s_u3_u1 | set1_u1_u3_o | set2_u3_u1_o | set1_u3_p_u2 | set2_u2_p_u3 | set1_s_u3_u2 | set2_s_u2_u3 | set1_u3_u2_o | set2_u2_u3_o
+
+
         unique_set = set()
         for tup in all_sets:
             if all(tup.count(item) == 1 for item in tup):
                 unique_set.add(tup)
         all_sets = unique_set
-
         with open('allcombi.txt','w') as fp:
             for sets in all_sets:
                 for tup in sets:
                     fp.write(str(tup))
                     fp.write(' ')
                 fp.write('\n')
-
-            
 
         return all_sets
     
@@ -150,11 +189,8 @@ class Graph:
         entity2_uri = self.jena_formatting(entity2_uri)
 
 
-        query_types = [u"{ent2} {rel} {ent1}",
-                       u"{ent1} {rel} {ent2}",
-                       u"?u1 {type} {rel}",
-                       u"?u2 {rel} ?u1",
-                       u"?u1 {rel} ?u2",
+        query_types = [u"{ent1} {rel} {ent2}",
+
                        ]
         where = ""
         for i in range(len(query_types)):
@@ -179,10 +215,12 @@ class Graph:
 SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
         
         response = requests.get("http://localhost:3030/dbpedia/sparql", params={"query": query})
+        #print("onehope results",query)
 
         if response.status_code == 200:
             results = response.json()
             output = results["results"]["bindings"]
+            
             return output
             # Process the results
         #else:
@@ -197,39 +235,20 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
         with tqdm(total=len(all_combinations)) as progress_bar:
             for tripple in all_combinations:
                 progress_bar.update(1)
-                #print("sending in ",tripple[0], tripple[1],tripple[2])
+                print("sending in ",tripple[0], tripple[1],tripple[2])
                 result = self.one_hop_graph(tripple[0], tripple[1],tripple[2])
                 if result is not None:
-                            #print("THIS IS RESLUT", result)
+                            #tripple[0] == subject  tripple[1] == predicate tripple[2] == object
                             for item in result:
                                 m = int(item["m"]["value"])
                                 uri = tripple[2] if tripple[2] is not None else 0
                                 if m == 0:
-                                    n_s = self.create_or_get_node(uri, True)
+                                    n_s = self.create_or_get_node(tripple[0], True)
                                     #print(entity_uri[0])
-                                    n_d = self.create_or_get_node(tripple[0])
-                                    e = Edge(n_s, tripple[1], n_d)
-                                    self.add_edge(e)
-                                elif m == 1:
-                                    n_s = self.create_or_get_node(tripple[0])
                                     n_d = self.create_or_get_node(uri, True)
                                     e = Edge(n_s, tripple[1], n_d)
                                     self.add_edge(e)
-                                elif m == 2:
-                                    n_s = self.create_or_get_node(uri)
-                                    n_d = self.create_or_get_node(tripple[1])
-                                    e = Edge(n_s, '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', n_d)
-                                    #not sure what to do about that
-                                    self.add_edge(e)
-                                elif m == 3:
-                                    #print(tripple[1],uri,tripple[2],tripple[0])
-                                    
-                                    n_s = self.create_or_get_node('?u1')
-                                    n_d = self.create_or_get_node('?u2')
-                                    e = Edge(n_s, tripple[1], n_d)
-                                    
-                                    #not sure what to do about that
-                                    self.add_edge(e)
+                                
                             
     def find_minimal_subgraph(self, entity_items, relation_items, double_relation=False, ask_query=False,
                               sort_query=False, h1_threshold=None):

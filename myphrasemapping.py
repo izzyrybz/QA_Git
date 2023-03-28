@@ -205,7 +205,7 @@ def get_nliwod_entities(query, properties):
                 r_e['surface'] = surface
                 r_en = {}
                 r_en['uri'] = e
-                r_en['confidence'] = 0.5
+                r_en['confidence'] = 0.75
                 r_e['uris'] = [r_en]
                 entities.append(r_e)
     return entities
@@ -392,12 +392,12 @@ class PhraseMapping:
         if len(nliwod) > 0:
             earl['relations'] = merge_entity(earl['relations'], nliwod)
             
-        spot_e = get_spotlight_entities(question)
+        '''spot_e = get_spotlight_entities(question)
         print("This is spot_e" ,spot_e)
         print("#"*20)
 
         if len(spot_e) > 0:
-            earl['entities'] = merge_entity(earl['entities'], spot_e)
+            earl['entities'] = merge_entity(earl['entities'], spot_e)'''
 
         #spacy is used to check if the knowledge graph contains relations or entities that the question does. 
         spacy_e, spacy_r= spacy_parse(question,self.knowledgeG_s_p_o,lemmizized_question)

@@ -19,7 +19,7 @@ def query(args):
         return 0, None, idx
     
   
-def mutli_var_complex_query(valid_walks):
+def mutli_var_complex_query(valid_walks,ask_query,count_query):
     tripples = valid_walks[0::2]
     total = 0
     
@@ -55,7 +55,7 @@ def mutli_var_complex_query(valid_walks):
                     # If the two triples are different and have not been used before, add them to the used triples list and process them
                     #print(subject1, predicate1, object1, subject2, predicate2, object2)
                     used_triples.append((subject1, predicate1, object1, subject2, predicate2, object2))
-                    list_with_elements_and_sparql_final.append(complex_query_process(subject1,predicate1,object1, subject2,predicate2,object2))
+                    list_with_elements_and_sparql_final.append(complex_query_process(subject1,predicate1,object1, subject2,predicate2,object2, ask_query,count_query))
                     pbar.update(1)
 
                 
@@ -66,10 +66,10 @@ def mutli_var_complex_query(valid_walks):
     return list_with_elements_and_sparql_final
      
 
-def complex_query_process(subject1,predicate1,object1, subject2,predicate2,object2):
+def complex_query_process(subject1,predicate1,object1, subject2,predicate2,object2,ask_query,count_query):
     output = set()
     var_node = None
-
+    
     results = two_hop_graph(subject1,predicate1,object1, subject2,predicate2,object2)
     #print(result)
     #with tqdm(total=len(results)) as pbar:
@@ -79,9 +79,17 @@ def complex_query_process(subject1,predicate1,object1, subject2,predicate2,objec
             #valid_walks which we are trying append to has the format of
             # elements within query, such as ?u1 <http://example.org/action/delete> ?u3 
             # the sparql query SELECT * WHERE { + elements + }
-            
-            modified_query = result[0].replace('ASK WHERE {', '')
-            modified_query_with_sparlq = result[0].replace('ASK WHERE {', 'SELECT * WHERE { ')
+
+            if(ask_query):
+                modified_query = result[0].replace('ASK WHERE {', '')
+                modified_query_with_sparlq=result[0]
+
+            elif(count_query):
+                modified_query = result[0].replace('ASK WHERE {', '')
+                modified_query_with_sparlq = result[0].replace('ASK WHERE {', 'SELECT (COUNT(*) AS ?count) WHERE { ')
+            else:
+                modified_query = result[0].replace('ASK WHERE {', '')
+                modified_query_with_sparlq = result[0].replace('ASK WHERE {', 'SELECT * WHERE { ')
             
             if modified_query[-1] is '}':
                 modified_query = modified_query.replace('}','')
@@ -93,9 +101,18 @@ def complex_query_process(subject1,predicate1,object1, subject2,predicate2,objec
     return list_with_elements_and_sparql
 
 def two_hop_graph_template(subject1,predicate1,object1,subject2,predicate2,object2):
-    graph = Graph()
+    
+    query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}"],
+                    ]
+        #could use extension
+    output = [[item[0], item[1].format(predicate1=predicate1, subject1=subject1,
+                                        object1=object1, predicate2=predicate2,
+                                            subject2=subject2,object2=object2, 
+                                        type="<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>")] for item in query_types]
+
+    return output
     #check if one of the items are of the type ?u1 <something> ?u2 because then we need to have 
-    if graph.is_var(object2) and graph.is_var(subject2):
+    '''if graph.is_var(object2) and graph.is_var(subject2):
         query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}"],
 
                     [1, u"{subject2} {predicate1} {object1} . {subject2} {predicate2} {object2} "],
@@ -150,7 +167,7 @@ def two_hop_graph_template(subject1,predicate1,object1,subject2,predicate2,objec
                                             subject2=subject2,object2=object2, 
                                         type="<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>")] for item in query_types]
 
-        return output
+        return output'''
 
 def two_hop_graph(subject1,predicate1,object1, subject2,predicate2,object2):
     # print('kb two_hop_graph')

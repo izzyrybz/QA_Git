@@ -176,7 +176,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
 
     #use these valid paths to combine to multi var to check if <path1><path2> works within a query, (what I call double relation)
 
-    complex_walks = mutli_var_complex_query(valid_walks_with_sparql)
+    complex_walks = mutli_var_complex_query(valid_walks_with_sparql,ask_query=ask_query,count_query=count_query)
     print("we are outside the complex walk")
     
     #print()
@@ -213,8 +213,6 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     
     with open('trash2.txt','w') as fp:
         for item in valid_walks_with_sparql:
-      
-
             fp.writelines(item)
             fp.writelines('\n')
 

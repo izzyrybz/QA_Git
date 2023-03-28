@@ -1,59 +1,30 @@
- Involuntary_commitment type http://example.org/entity/commit }
- ?u1 type http://example.org/entity/commit }
- http://example.org/entity/killme.py type http://example.org/entity/commit }
- ?u1 http://example.org/action/modify http://example.org/entity/killme.py }
- ?u1 http://example.org/action/modify ?u2 }
- ?u1 type ?u2 }
-Involuntary_commitment type http://example.org/entity/commit . ?u1 type http://example.org/entity/commit }
-Involuntary_commitment type http://example.org/entity/commit . ?u1 type ?u3  }
-Involuntary_commitment type ?u3 . ?u1 type http://example.org/entity/commit }
-Involuntary_commitment type http://example.org/entity/commit . http://example.org/entity/killme.py type http://example.org/entity/commit }
-Involuntary_commitment type http://example.org/entity/commit . http://example.org/entity/killme.py type ?u3  }
-Involuntary_commitment type ?u3 . http://example.org/entity/killme.py type http://example.org/entity/commit }
-Involuntary_commitment type http://example.org/entity/commit . ?u1 http://example.org/action/modify http://example.org/entity/killme.py }
-Involuntary_commitment type http://example.org/entity/commit . ?u1 http://example.org/action/modify ?u3  }
-Involuntary_commitment type ?u3 . ?u1 http://example.org/action/modify http://example.org/entity/killme.py }
-Involuntary_commitment type http://example.org/entity/commit . ?u1 http://example.org/action/modify ?u2 }
-?u1 type http://example.org/entity/commit . ?u1 http://example.org/action/modify ?u2  }
-Involuntary_commitment type ?u1  . ?u1 http://example.org/action/modify ?u2 }
-?u2 type http://example.org/entity/commit . ?u1 http://example.org/action/modify ?u2  }
-Involuntary_commitment type ?u2  . ?u1 http://example.org/action/modify ?u2 }
-Involuntary_commitment type http://example.org/entity/commit . ?u1 type ?u2 }
-?u1 type http://example.org/entity/commit . ?u1 type ?u2  }
-Involuntary_commitment type ?u1  . ?u1 type ?u2 }
-?u2 type http://example.org/entity/commit . ?u1 type ?u2  }
-Involuntary_commitment type ?u2  . ?u1 type ?u2 }
-?u1 type http://example.org/entity/commit . http://example.org/entity/killme.py type http://example.org/entity/commit }
-?u1 type http://example.org/entity/commit . http://example.org/entity/killme.py type ?u3  }
-?u1 type ?u3 . http://example.org/entity/killme.py type http://example.org/entity/commit }
-?u1 type http://example.org/entity/commit . ?u1 http://example.org/action/modify http://example.org/entity/killme.py }
-?u1 type http://example.org/entity/commit . ?u1 http://example.org/action/modify ?u3  }
-?u1 type ?u3 . ?u1 http://example.org/action/modify http://example.org/entity/killme.py }
-?u1 type http://example.org/entity/commit . ?u1 http://example.org/action/modify ?u2 }
-?u1 type ?u1  . ?u1 http://example.org/action/modify ?u2 }
-?u1 type ?u2  . ?u1 http://example.org/action/modify ?u2 }
-?u1 type http://example.org/entity/commit . ?u1 type ?u2 }
-?u1 type ?u1  . ?u1 type ?u2 }
-?u1 type ?u2  . ?u1 type ?u2 }
-http://example.org/entity/killme.py type http://example.org/entity/commit . ?u1 http://example.org/action/modify http://example.org/entity/killme.py }
-http://example.org/entity/killme.py type http://example.org/entity/commit . ?u1 http://example.org/action/modify ?u3  }
-http://example.org/entity/killme.py type ?u3 . ?u1 http://example.org/action/modify http://example.org/entity/killme.py }
-http://example.org/entity/killme.py type http://example.org/entity/commit . ?u1 http://example.org/action/modify ?u2 }
-http://example.org/entity/killme.py type ?u1  . ?u1 http://example.org/action/modify ?u2 }
-http://example.org/entity/killme.py type ?u2  . ?u1 http://example.org/action/modify ?u2 }
-http://example.org/entity/killme.py type http://example.org/entity/commit . ?u1 type ?u2 }
-http://example.org/entity/killme.py type ?u1  . ?u1 type ?u2 }
-http://example.org/entity/killme.py type ?u2  . ?u1 type ?u2 }
+?u1 http://example.org/action/modify http://example.org/entity/killme.py }
+?u1 http://example.org/action/delete http://example.org/entity/commits.txt }
+?u1 http://example.org/action/delete ?u2 }
+?u1 http://example.org/action/modify ?u2 }
+?u1 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 http://example.org/action/delete http://example.org/entity/commits.txt }
+?u1 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 http://example.org/action/delete ?u3  }
+?u1 http://example.org/action/modify ?u3 . ?u1 http://example.org/action/delete http://example.org/entity/commits.txt }
+?u1 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 http://example.org/action/delete ?u2 }
+?u1 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 http://example.org/action/delete ?u2  }
+?u1 http://example.org/action/modify ?u1  . ?u1 http://example.org/action/delete ?u2 }
+?u2 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 http://example.org/action/delete ?u2  }
+?u1 http://example.org/action/modify ?u2  . ?u1 http://example.org/action/delete ?u2 }
 ?u1 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 http://example.org/action/modify ?u2 }
 ?u1 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 http://example.org/action/modify ?u2  }
 ?u1 http://example.org/action/modify ?u1  . ?u1 http://example.org/action/modify ?u2 }
 ?u2 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 http://example.org/action/modify ?u2  }
 ?u1 http://example.org/action/modify ?u2  . ?u1 http://example.org/action/modify ?u2 }
-?u1 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 type ?u2 }
-?u1 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 type ?u2  }
-?u1 http://example.org/action/modify ?u1  . ?u1 type ?u2 }
-?u2 http://example.org/action/modify http://example.org/entity/killme.py . ?u1 type ?u2  }
-?u1 http://example.org/action/modify ?u2  . ?u1 type ?u2 }
-?u1 http://example.org/action/modify ?u2 . ?u1 type ?u2 }
-?u1 http://example.org/action/modify ?u2 . ?u1 type ?u2  }
-?u2 http://example.org/action/modify ?u2 . ?u1 type ?u2  }
+?u1 http://example.org/action/delete http://example.org/entity/commits.txt . ?u1 http://example.org/action/delete ?u2 }
+?u1 http://example.org/action/delete http://example.org/entity/commits.txt . ?u1 http://example.org/action/delete ?u2  }
+?u1 http://example.org/action/delete ?u1  . ?u1 http://example.org/action/delete ?u2 }
+?u2 http://example.org/action/delete http://example.org/entity/commits.txt . ?u1 http://example.org/action/delete ?u2  }
+?u1 http://example.org/action/delete ?u2  . ?u1 http://example.org/action/delete ?u2 }
+?u1 http://example.org/action/delete http://example.org/entity/commits.txt . ?u1 http://example.org/action/modify ?u2 }
+?u1 http://example.org/action/delete http://example.org/entity/commits.txt . ?u1 http://example.org/action/modify ?u2  }
+?u1 http://example.org/action/delete ?u1  . ?u1 http://example.org/action/modify ?u2 }
+?u2 http://example.org/action/delete http://example.org/entity/commits.txt . ?u1 http://example.org/action/modify ?u2  }
+?u1 http://example.org/action/delete ?u2  . ?u1 http://example.org/action/modify ?u2 }
+?u1 http://example.org/action/delete ?u2 . ?u1 http://example.org/action/modify ?u2 }
+?u1 http://example.org/action/delete ?u2 . ?u1 http://example.org/action/modify ?u2  }
+?u2 http://example.org/action/delete ?u2 . ?u1 http://example.org/action/modify ?u2  }

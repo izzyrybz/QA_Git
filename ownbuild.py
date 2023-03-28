@@ -206,8 +206,8 @@ q13 = "When was file killme.py added?"
 #8: What commits were made in 2022-01-01?
 
 #9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-main('Did file killme.py and file phrasemapping.py ever occur in the same commit?')
-exit()
+#main('Did file killme.py and file myphrasemapping.py ever occur in the same commit?')
+
 #main("How many users have made commits that changed files?")
 
 with open('test.txt','w') as fp:

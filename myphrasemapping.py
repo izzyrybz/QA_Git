@@ -285,6 +285,7 @@ def spacy_parse(question, properties,lemma_q):
         for line in properties:
             # check if token is in the subject, predicate or object of the knowledge graph
             if re.search(r'\b'+re.escape(token.text)+r'\b', line['subject']):
+                #print('subject',line['subject'],token.text)
                 # add entity if it does not exist
                 entity_uri = token.text
                 entity = {'uris': entity_uri}
@@ -300,6 +301,7 @@ def spacy_parse(question, properties,lemma_q):
 
             if re.search(r'\b'+re.escape(token.text)+r'\b', line['predicate']):
                 # add relationship if it does not exist
+                #print('predicate',line['predicate'],token.text)
                 relation_uri = token.text
                 
                 relation = {'uris': relation_uri}
@@ -307,6 +309,7 @@ def spacy_parse(question, properties,lemma_q):
                 relationships.append(relation)
 
             if re.search(r'\b'+re.escape(token.text)+r'\b', line['object']):
+                #print('object',line['object'],token.text)
                 object_value = line['object'].strip('"')
                 
                 
@@ -324,11 +327,12 @@ def spacy_parse(question, properties,lemma_q):
     #check if any lemmized word matches one that is under the example.org/entity domain
     for dict in properties: 
         for key, value in dict.items():
-            '''if 'example.org/entity' in value:
+            '''if 'http://example.org/entity' in value:
                 value = value.replace('http://example.org/entity','')
                 for lemma in lemma_q:
-                    #print(lemma,value)
+                    
                     if str(lemma) in value:
+                        print(lemma,value)
                         value = value.strip('"')
                         entity = {'uris': 'http://example.org/entity'+value}
                         add_item(value, entity, question, str(lemma))

@@ -1,0 +1,6 @@
+http://dbpedia.org/resource/Author http://example.org/property/author ?u1 
+http://dbpedia.org/resource/Author http://example.org/property/author http://dbpedia.org/resource/List_A_cricket 
+http://dbpedia.org/resource/List_A_cricket http://example.org/property/author http://dbpedia.org/resource/Author 
+http://dbpedia.org/resource/List_A_cricket http://example.org/property/author ?u1 
+?u1 http://example.org/property/author http://dbpedia.org/resource/Author 
+?u1 http://example.org/property/author http://dbpedia.org/resource/List_A_cricket 

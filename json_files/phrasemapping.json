@@ -3,76 +3,40 @@
         "entities": [
             {
                 "surface": [
-                    68,
-                    6
+                    13,
+                    7
                 ],
                 "uris": [
                     {
-                        "confidence": 0.8846593524032935,
-                        "uri": "http://dbpedia.org/resource/Involuntary_commitment"
+                        "confidence": 0.9715798652094367,
+                        "uri": "http://dbpedia.org/resource/Author"
                     }
                 ]
             },
             {
                 "surface": [
-                    2,
-                    0
+                    0,
+                    4
                 ],
                 "uris": [
                     {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commit"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    17,
-                    9
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/killme.py"
+                        "confidence": 0.9196132116983239,
+                        "uri": "http://dbpedia.org/resource/List_A_cricket"
                     }
                 ]
             }
         ],
-        "question": "Did file killme.py and file phrasemapping.py ever occur in the same commit?",
+        "question": "List all the authors?",
         "relations": [
             {
                 "surface": [
-                    2,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    17,
-                    9
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/action/modify"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    68,
-                    6
+                    13,
+                    7
                 ],
                 "uris": [
                     {
                         "confidence": 0.5,
-                        "uri": "http://example.org/entity/commit"
+                        "uri": "http://example.org/property/author"
                     }
                 ]
             }

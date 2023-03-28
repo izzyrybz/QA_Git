@@ -283,22 +283,22 @@
         "generated_queries": [
             {
                 "correct": true,
-                "query": "<http://example.org/entity/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u1",
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u1",
                 "target_var": "?u1"
             },
             {
                 "correct": false,
-                "query": "<http://example.org/entity/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> <http://example.org/entity/parents> ?u1 ",
+                "query": "<http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> <http://example.org/entity/parents> ?u1 ",
                 "target_var": "?u1"
             },
             {
                 "correct": false,
-                "query": "<http://example.org/entity/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://example.org/entity/parents> ?u1 ",
+                "query": "<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://example.org/entity/parents> ?u1 ",
                 "target_var": "?u1"
             }
         ],
         "id": "8",
-        "query": "ASK WHERE { <http://example.org/entity/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u1}",
+        "query": "ASK WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u1}",
         "question": "Is there a parent for the hash 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
     },
     {
@@ -330,7 +330,7 @@
         "generated_queries": [
             {
                 "correct": true,
-                "query": "<http://example.org/entity/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u1 ",
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u1 ",
                 "target_var": "?u1"
             },
             {
@@ -345,13 +345,13 @@
             },
             {
                 "correct": false,
-                "query": "?u2 <http://example.org/action/modify> ?u1 . <http://example.org/entity/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit>",
+                "query": "?u2 <http://example.org/action/modify> ?u1 . <http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit>",
                 "target_var": "?u1"
             }
 
         ],
         "id": "6",
-        "query": "SELECT ?u1 WHERE { <http://example.org/entity/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u1}",
+        "query": "SELECT ?u1 WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u1}",
         "question": "What files where changed in commit 0c8471e02d824de8485e1abcfcd00c5b20ae995e? "
     },
     {
@@ -392,7 +392,7 @@
             },
             {
                 "correct": false,
-                "query": "<http://example.org/entity/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> <http://example.org/action/delete> ?u3 . <http://example.org/entity/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> <http://example.org/action/delete> ?u1",
+                "query": "<http://example.org/entity/hash/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> <http://example.org/action/delete> ?u3 . <http://example.org/entity/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> <http://example.org/action/delete> ?u1",
                 "target_var": "?u1"
             },
             {

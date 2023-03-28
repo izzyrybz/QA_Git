@@ -78,6 +78,7 @@ class Graph:
     def create_all_combinations(self,entites, relations):
         all_entites =[]
         all_relations=[]
+        
         #print(all_entites)
         if len(entites)<1:
             all_entites.append('?u2')
@@ -107,7 +108,14 @@ class Graph:
                 unique_set.add(tup)
         all_sets = unique_set
 
-        
+        with open('allcombi.txt','w') as fp:
+            for sets in all_sets:
+                for tup in sets:
+                    fp.write(str(tup))
+                    fp.write(' ')
+                fp.write('\n')
+
+            
 
         return all_sets
     

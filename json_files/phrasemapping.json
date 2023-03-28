@@ -3,103 +3,19 @@
         "entities": [
             {
                 "surface": [
-                    6,
-                    7
+                    68,
+                    6
                 ],
                 "uris": [
                     {
-                        "confidence": 0.9239816818240237,
-                        "uri": "http://dbpedia.org/resource/Commit_(version_control)"
+                        "confidence": 0.8846593524032935,
+                        "uri": "http://dbpedia.org/resource/Involuntary_commitment"
                     }
                 ]
             },
             {
                 "surface": [
-                    0,
-                    5
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.8956483894223672,
-                        "uri": "http://dbpedia.org/resource/Langues_d'o\u00efl"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/not_working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dmump.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/commits2.ttl"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/working_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
-                    0
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/json_files/phrasemapping.json"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    4,
+                    2,
                     0
                 ],
                 "uris": [
@@ -111,52 +27,52 @@
             },
             {
                 "surface": [
-                    4,
-                    0
+                    17,
+                    9
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/textfiles/possible_queries.txt"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    14,
-                    7
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.38856944121435827,
-                        "uri": "http://dbpedia.org/resource/Altered_chord"
+                        "uri": "http://example.org/entity/killme.py"
                     }
                 ]
             }
         ],
-        "question": "Which commits altered files?",
+        "question": "Did file killme.py and file phrasemapping.py ever occur in the same commit?",
         "relations": [
             {
                 "surface": [
-                    6,
+                    2,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    17,
+                    9
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/action/modify"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    68,
                     6
                 ],
                 "uris": [
                     {
                         "confidence": 0.5,
                         "uri": "http://example.org/entity/commit"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    14,
-                    6
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.5,
-                        "uri": "http://example.org/action/modify"
                     }
                 ]
             }

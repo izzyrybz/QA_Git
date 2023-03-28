@@ -171,40 +171,33 @@ def main(question):
             #print("The answer is",output)
     
 
-    #generate all possible queries and check if they are within the knowledgegraph
-    #question_generator = QuestionGenerator()
-    #queries = question_generator.generate_sparql_queries(question_type,tokened_question)
+q1='Which commits have the user izzyrybz made?' 
 
+q2= 'How many commits have the user izzyrybz made?' 
 
+q3 ='How many commits have there been?'
 
-    
-    #displacy.serve(doc, style="dep", options={"compact": True})
+q4 ='Which commits modified file killme.py?' 
 
-    
-    #print(lemmas) 
-    #print(build_sparql_query(dep_tree))
+q4_x ='Which commits altered files?' 
 
-q1='Which commits have the user izzyrybz made?' #-works
+q5 ='How many files have been deleted?'
 
-q2= 'How many commits have the user izzyrybz made?' #- works
-
-q3 ='How many commits have there been?'# - giving division by zero???? - the dataset is empty - lets hope training can fix this
-
-q4 ='Which commits modified file killme.py?' #-works
-
-q4_x ='Which commits altered files?' #finds the query but does not rank it high enough
-
-q5 ='How many files have been deleted?'# - works
-
-q6 = 'How many users have made commits that changed files?' # division by zero
+q6 = 'How many users have made commits that changed files?' 
 
 q7 = 'Which commits had both added and deleted files?'
 
 q8='How many users have made commits that changed file killme.py?'
 
-q9 = 'List all the authors?' #-works
+q9 = 'List all the authors?' 
 
-q10= 'How many files were modified in more than 3 commits?'
+q10 = "Which commit deleted file killme.py?"
+
+q11= 'How many files were modified in more than 3 commits?'
+
+q12="Which users changed file killme.py or file phrasemapping.py?"
+
+q13 = "When was file killme.py added?"
 
 #question= q1
 
@@ -213,7 +206,7 @@ q10= 'How many files were modified in more than 3 commits?'
 #8: What commits were made in 2022-01-01?
 
 #9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-main(q4_x)
+main('Did file killme.py and file phrasemapping.py ever occur in the same commit?')
 exit()
 #main("How many users have made commits that changed files?")
 

@@ -1,1 +1,59 @@
-advmod amod nmod nsubj aux expl ROOT punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod dobj punct
+aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
+aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod dobj punct
+aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
+aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod nmod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux ROOT nmod dobj cc nmod nsubj advmod conj prep det amod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
+aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl nmod dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct
+aux advcl dobj cc conj nsubj advmod ROOT prep det amod pobj punct

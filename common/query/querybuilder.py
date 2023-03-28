@@ -164,7 +164,7 @@ class QueryBuilder:
                     answer={}
                     sparlq_q =response[1]
                     answer["answer"] = raw_answer['boolean']
-                    print("did this work", answer["answer"])
+                    #print("did this work", answer["answer"])
                     filtered_output.append(where_clause)
                     filtered_output.append(sparlq_q)
 

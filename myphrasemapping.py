@@ -324,16 +324,17 @@ def spacy_parse(question, properties,lemma_q):
     #check if any lemmized word matches one that is under the example.org/entity domain
     for dict in properties: 
         for key, value in dict.items():
-            if 'example.org/entity' in value:
+            '''if 'example.org/entity' in value:
+                value = value.replace('http://example.org/entity','')
                 for lemma in lemma_q:
                     #print(lemma,value)
                     if str(lemma) in value:
                         value = value.strip('"')
-                        entity = {'uris': value}
+                        entity = {'uris': 'http://example.org/entity'+value}
                         add_item(value, entity, question, str(lemma))
                         entities.append(entity)
                         #testing this, since some relations can be entities too
-                        #relationships.append(entity)
+                        #relationships.append(entity)'''
             if 'example.org/action' in value:
                 for lemma in lemma_q:
                     #print(lemma,value)

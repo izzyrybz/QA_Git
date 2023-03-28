@@ -51,9 +51,9 @@ class QGDataset(data.Dataset):
     def read_sentence(self, line):
         indices = self.vocab.convertToIdx(line.split(), Constants.UNK_WORD)
         #print("we are taking this line:", line,"and tunring it into this tensor",torch.LongTensor(indices))
-        with open('trash.txt', 'a') as f:
+        '''with open('trash.txt', 'a') as f:
                 f.write(f"read_sentence in dataset LINE: {line}\n")
-                f.write(f"turning it into this tensor: {torch.LongTensor(indices)}\n")
+                f.write(f"turning it into this tensor: {torch.LongTensor(indices)}\n")'''
         return torch.LongTensor(indices)
 
     def read_trees(self, filename):

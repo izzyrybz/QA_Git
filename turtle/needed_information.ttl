@@ -46,4 +46,5 @@
 <http://example.org/entity/commit> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
 <http://example.org/ontology/Calendar_date> <http://www.w3.org/2000/01/rdf-schema#label> "date" .
 <http://example.org/ontology/Calendar_date> <http://www.w3.org/2000/01/rdf-schema#label> "dates".
+<http://example.org/ontology/Calendar_date> <http://www.w3.org/2000/01/rdf-schema#label> "when".
 

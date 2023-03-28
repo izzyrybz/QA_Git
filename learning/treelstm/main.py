@@ -222,10 +222,10 @@ def main():
         print(
             '==> Epoch {}, Test \tLoss: {} {}'.format(epoch, test_loss, metrics.all(test_pred, test_dataset.labels)))
         
-        with open('trash.txt', 'a') as f:
+        '''with open('trash.txt', 'a') as f:
             f.write(f"train_pred: {train_pred}\n")
             f.write(f"test_pred: {test_pred}\n")
-            f.write(f"dev_pred: {dev_pred}\n")
+            f.write(f"dev_pred: {dev_pred}\n")'''
         #print(train_pred)
         #print(test_pred)
         #print(dev_pred)

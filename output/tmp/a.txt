@@ -1,71 +1,59 @@
-Which commits #ents?
-Which commits #ents?
-Which commits #ents?
-Which #ents?
-Which #ents?
-Which commits #ents?
-Which #ents altered files?
-Which commits altered files?
-Which commits #ents#ents?
-Which commits #ents?
-Which commits #ents?
-Which commits #ents#ents?
-Which commits #ents?
-Which #ents#ents?
-Which #ents?
-Which #ents#ents?
-Which #ents?
-Which #ents?
-Which commits #ents?
-Which #ents altered #ents?
-Which commits #ents?
-Which #ents altered files?
-Which commits #ents?
-Which commits #ents?
-Which commits altered files?
-Which commits #ents?
-Which commits altered files?
-Which commits #ents#ents?
-Which commits #ents?
-Which #ents#ents?
-Which #ents#ents?
-Which #ents?
-Which #ents altered #ents?
-Which commits #ents?
-Which commits #ents?
-Which commits #ents?
-Which commits #ents?
-Which #ents#ents?
-Which commits #ents?
-Which #ents#ents?
-Which #ents?
-Which #ents altered #ents?
-Which commits #ents?
-Which commits #ents?
-Which commits #ents?
-Which commits #ents?
-Which #ents#ents?
-Which #ents?
-Which #ents?
-Which #ents altered #ents?
-Which #ents?
-Which #ents?
-Which #ents?
-Which #ents?
-Which #ents?
-Which #ents?
-Which #ents altered #ents?
-Which #ents?
-Which #ents?
-Which #ents?
-Which #ents?
-Which #ents altered #ents?
-Which commits #ents?
-Which commits #ents?
-Which commits #ents?
-Which commits #ents?
-Which #ents altered files?
-Which #ents altered files?
-Which commits altered files?
-Which #ents altered files?
-Which commits altered files?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever #ent the same #ent?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever #ent the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever #ent the same #entt?
+Did file #ent and file #ent ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever #ent the same #ent?
+Did file #ent and file #ent ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever #ent the same #entt?
+Did file #ent and file #ent ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever #ent the same #ent?
+Did file #ent and file #ent ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same #ent?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file #ent and #ent ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever #ent the same #ent?
+Did file #ent and file #ent ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever #ent the same #ent?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever #ent the same #ent?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file #ent and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?
+Did file killme.py and file phrasemapping.py ever occur in the same commit?

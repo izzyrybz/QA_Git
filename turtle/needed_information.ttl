@@ -27,14 +27,14 @@
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "removed" .
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "delete" .
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "deleted" .
-<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "author".
-<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "authors".
-<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "users".
-<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "user".
-<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "creator".
-<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "creators".
-<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "developer".
-<http://example.org/property/author> <http://www.w3.org/2000/01/rdf-schema#label> "developers".
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "author".
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "authors".
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "users".
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "user".
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "creator".
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "creators".
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "developer".
+<http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "developers".
 <http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "parents" .
 <http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "parent" .
 <http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "preceding" .

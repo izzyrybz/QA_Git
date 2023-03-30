@@ -1,96 +1,582 @@
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod dobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod dobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod dobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod dobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod dobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod dobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT nmod dobj cc nmod nsubj advmod conj prep det amod pobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod nmod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT nmod dobj cc nmod nsubj advmod conj prep det amod pobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod nmod npadvmod det amod nmod npadvmod punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux csubj nmod dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux csubj dobj cc conj nmod dobj advmod ROOT prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT nmod dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
-aux ROOT dobj cc conj dobj advmod conj prep det amod pobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+nsubj ROOT amod compound nmod dobj punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+dep nmod compound compound compound compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+nsubj ROOT amod dobj nmod npadvmod punct
+det nmod npadvmod amod compound ROOT punct
+det nmod npadvmod amod compound ROOT punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct
+nsubj ROOT amod dobj dobj punct

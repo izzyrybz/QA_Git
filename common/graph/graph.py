@@ -105,11 +105,23 @@ class Graph:
                 hash_entities.append(entity)
 
 
-
+        ############################# ?u2 ###################################
         set1_s_p_o = set(itertools.product(hash_entities, all_relations, all_entites))
-        set2_s_p_uri = set(itertools.product(hash_entities, all_relations, ['?u1']))
-        set3_s_uri_o = set(itertools.product(hash_entities, ['?u1'], all_entites))
-        set4_uri_p_o = set(itertools.product(['?u1'], all_relations, all_entites))
+        set2_s_p_u1 = set(itertools.product(hash_entities, all_relations, ['?u1']))
+        set3_s_u1_o = set(itertools.product(hash_entities, ['?u1'], all_entites))
+        set4_u1_p_o = set(itertools.product(['?u1'], all_relations, all_entites))
+
+        ############################# ?u2 ###################################
+        set2_s_p_u2 = set(itertools.product(hash_entities, all_relations, ['?u2']))
+        set3_s_u2_o = set(itertools.product(hash_entities, ['?u2'], all_entites))
+        set4_u2_p_o = set(itertools.product(['?u2'], all_relations, all_entites))
+
+        ############################## ?u3##############################
+        set2_s_p_u3 = set(itertools.product(hash_entities, all_relations, ['?u3']))
+        set3_s_u3_o = set(itertools.product(hash_entities, ['?u3'], all_entites))
+        set4_u3_p_o = set(itertools.product(['?u3'], all_relations, all_entites))
+
+
         ###################### ?u1 and ?u2###############################
         set1_u1_p_u2 = set(itertools.product(['?u1'], all_relations, ['?u2']))
         set2_u2_p_u1 = set(itertools.product(['?u2'], all_relations, ['?u1']))
@@ -139,9 +151,15 @@ class Graph:
 
         set1_u3_u2_o = set(itertools.product(['?u3'], ['?u2'], all_entites))
         set2_u2_u3_o = set(itertools.product(['?u2'], ['?u3'], all_entites))
+        
+        set_u1 = set1_s_p_o | set2_s_p_u1 | set3_s_u1_o | set4_u1_p_o
+        set_u2 = set2_s_p_u2|set3_s_u2_o|set4_u2_p_o
+        set_u3 = set2_s_p_u3|set3_s_u3_o|set4_u3_p_o
+        set_s_p_o_u1_u2 =  set1_u1_p_u2 | set2_u2_p_u1 | set1_s_u1_u2 | set2_s_u2_u1 | set1_u1_u2_o | set2_u2_u1_o 
+        set_s_p_o_u1_u3 =  set1_u1_p_u3 | set2_u3_p_u1 | set1_s_u1_u3 | set2_s_u3_u1 | set1_u1_u3_o | set2_u3_u1_o
+        set_s_p_o_u2_u3 =  set1_u3_p_u2 | set2_u2_p_u3 |set1_s_u3_u2 | set2_s_u2_u3 | set1_u3_u2_o | set2_u2_u3_o
 
-
-        all_sets = set1_s_p_o | set2_s_p_uri | set3_s_uri_o | set4_uri_p_o | set1_u1_p_u2 | set2_u2_p_u1 | set1_s_u1_u2 | set2_s_u2_u1 | set1_u1_u2_o | set2_u2_u1_o | set1_u1_p_u3 | set2_u3_p_u1 | set1_s_u1_u3 | set2_s_u3_u1 | set1_u1_u3_o | set2_u3_u1_o | set1_u3_p_u2 | set2_u2_p_u3 | set1_s_u3_u2 | set2_s_u2_u3 | set1_u3_u2_o | set2_u2_u3_o
+        all_sets = set_u1|set_u2|set_u3|set_s_p_o_u1_u2|set_s_p_o_u1_u3 | set_s_p_o_u2_u3
 
 
         unique_set = set()
@@ -235,8 +253,9 @@ SELECT DISTINCT ?m WHERE {{ {where} }} """.format(prefix="", where=where)
         with tqdm(total=len(all_combinations)) as progress_bar:
             for tripple in all_combinations:
                 progress_bar.update(1)
-                print("sending in ",tripple[0], tripple[1],tripple[2])
+                #print("sending in ",tripple[0], tripple[1],tripple[2])
                 result = self.one_hop_graph(tripple[0], tripple[1],tripple[2])
+                #print(result)
                 if result is not None:
                             #tripple[0] == subject  tripple[1] == predicate tripple[2] == object
                             for item in result:

@@ -40,7 +40,7 @@
             
         ],
         "id": "18",
-        "query": "SELECT COUNT(?u1) WHERE {?u1 <http://example.org/ontology/author> <http://example.org/entity/izzrybz>  }",
+        "query": "SELECT COUNT(DISTINCT ?u1) WHERE {?u1 <http://example.org/ontology/author> <http://example.org/entity/izzrybz>  }",
         "question": "How often did user izzrybz commit?"
     },{
         "answer": "correct",
@@ -70,7 +70,7 @@
             
         ],
         "id": "16",
-        "query": "SELECT COUNT(?u1) WHERE {?u1 <http://example.org/action/modify> ?u2>  }",
+        "query": "SELECT COUNT(DISTINCT ?u1) WHERE {?u1 <http://example.org/action/modify> ?u2>  }",
         "question": "How many commits modified files?"
     },{
         "answer": "correct",
@@ -126,7 +126,7 @@
             
         ],
         "id": "14",
-        "query": "SELECT ?u1 WHERE {?u1 <http://example.org/action/modify> ?u3 . ?u1 <http://example.org/action/add> ?u2 }",
+        "query": "SELECT DISTINCT ?u1 WHERE {?u1 <http://example.org/action/modify> ?u3 . ?u1 <http://example.org/action/add> ?u2 }",
         "question": "Which commits had both added and changed files?"
     }
     ,{
@@ -157,7 +157,7 @@
             }
         ],
         "id": "12",
-        "query": "SELECT ?u1 WHERE {?u1 <http://example.org/entity/branches> ?u2}",
+        "query": "SELECT DISTINCT ?u1 WHERE {?u1 <http://example.org/entity/branches> ?u2}",
         "question": "What branches are there in the repository?"
     },
     {
@@ -198,7 +198,7 @@
             }
         ],
         "id": "11",
-        "query": "SELECT ?u1 WHERE {?u1 <http://example.org/action/delete> ?u3 . ?u1 <http://example.org/action/add> ?u2 }",
+        "query": "SELECT DISTINCT ?u1 WHERE {?u1 <http://example.org/action/delete> ?u3 . ?u1 <http://example.org/action/add> ?u2 }",
         "question": "Which commits had both added and deleted files?"
     },
     {
@@ -232,11 +232,10 @@
                 "target_var": "?u1"
             }
             
-        
-            
+
         ],
         "id": "10",
-        "query": "SELECT ?u1 WHERE { ?u1 <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "query": "SELECT DISTINCT ?u1 WHERE { ?u1 <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
         "question": "Which commits modified the file killme.py?"
     },
     {
@@ -273,7 +272,7 @@
             
         ],
         "id": "9",
-        "query": "SELECT COUNT (?u1) WHERE { ?u1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>}",
+        "query": "SELECT COUNT (DISTINCT ?u1) WHERE { ?u1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>}",
         "question": "How many commits have the user izzyrybz made?"
     },
     {
@@ -320,7 +319,7 @@
             
         ],
         "id": "7",
-        "query": "SELECT ?u1 WHERE { ?u2 <http://example.org/ontology/author> ?u1}",
+        "query": "SELECT DISTINCT?u1 WHERE { ?u2 <http://example.org/ontology/author> ?u1}",
         "question": "List all the authors in this repository?"
     },
     { 
@@ -351,7 +350,7 @@
 
         ],
         "id": "6",
-        "query": "SELECT ?u1 WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u1}",
+        "query": "SELECT DISTINCT?u1 WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u1}",
         "question": "What files where changed in commit 0c8471e02d824de8485e1abcfcd00c5b20ae995e? "
     },
     {
@@ -377,7 +376,7 @@
             
         ],
         "id": "5",
-        "query": "SELECT ?u1 WHERE { ?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit>}",
+        "query": "SELECT DISTINCT?u1 WHERE { ?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit>}",
         "question": "What are the hashes of all the commits?"
     },
     {
@@ -424,7 +423,7 @@
             
         ],
         "id": "3",
-        "query": "SELECT ?u1 WHERE { ?u2 <http://example.org/action/delete> ?u1 }",
+        "query": "SELECT DISTINCT?u1 WHERE { ?u2 <http://example.org/action/delete> ?u1 }",
         "question": "What files have been deleted?"
     },
     {

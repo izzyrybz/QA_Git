@@ -101,13 +101,13 @@ def build_query(query_params, question_type):
     
 
     if question_type[0] == 'count':
-        where_clause = "SELECT COUNT ("+target_var+") WHERE {"
+        where_clause = "SELECT COUNT (DISTINCT "+target_var+") WHERE {"
     
     elif question_type[0] == 'boolean':
         where_clause = "ASK WHERE {"
     
     else:
-        where_clause = "SELECT "+target_var+" WHERE {"
+        where_clause = "SELECT DISTINCT"+target_var+" WHERE {"
     
     sparlq_query = where_clause +  query + "}"
     return sparlq_query
@@ -206,7 +206,7 @@ q13 = "When was file killme.py added?"
 #8: What commits were made in 2022-01-01?
 
 #9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-main('Did file killme.py and file myphrasemapping.py ever occur in the same commit?')
+main('How many commits a specific user made?')
 exit()
 #main("How many users have made commits that changed files?")
 

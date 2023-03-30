@@ -284,7 +284,7 @@ def spacy_parse(question, properties,lemma_q):
     for token in doc:
         for line in properties:
             # check if token is in the subject, predicate or object of the knowledge graph
-            if token.text not in ['-',',','/'] and token.tag_ is not 'DT' :
+            if token.text not in ['-',',','/'] and token.tag_ not in ['DT','CC','IN'] :
                 #print(token.text)
                 if re.search(r'\b'+re.escape(token.text)+r'\b', line['subject']):
                     print('subject',line['subject'],token.text)
@@ -343,9 +343,8 @@ def spacy_parse(question, properties,lemma_q):
                         #relationships.append(entity)'''
             if 'example.org/action' in value:
                 for lemma in lemma_q:
-                    #print(lemma,value)
-                    
-                    if str(lemma) in value:
+                      
+                    if str(lemma) in value and lemma.tag_ not in ['DT','CC','IN'] :
                         #print("adding the relationship",str(lemma),value)
                         value = value.strip('"')
                         relation = {'uris': value}
@@ -414,6 +413,7 @@ class PhraseMapping:
             earl['entities'] = merge_entity(earl['entities'], spacy_e,)
         if len(spacy_r) > 0:
             earl['relations'] = merge_entity(earl['relations'], spacy_r)
+        
 
 
         esim = []

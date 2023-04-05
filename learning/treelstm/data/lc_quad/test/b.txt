@@ -1,9 +1,43 @@
-?u1 type http://example.org/entity/commit
-type ?u1 http://example.org/entity/commit
-?u1 http://example.org/ontology/description http://example.org/entity/commit
-type http://example.org/entity/commit ?u1  
-?u1 https://example.org/ontology/author http://example.org/entity/izzyrybz 
-?u1 https://example.org/ontology/user http://example.org/entity/izzyrybz 
-https://example.org/ontology/user  ?u1 http://example.org/entity/izzyrybz 
-https://example.org/ontology/author  ?u1 http://example.org/entity/izzyrybz 
-https://example.org/ontology/author  http://example.org/entity/izzyrybz  ?u1 
+?u_0 http://example.org/ontology/author ?u_1 .?u_0 http://example.org/action/modify ?u_3
+?u_1 <http://example.org/entity/branches> ?u_0
+?u_1 http://example.org/action/delete ?u_0 .?u_1 http://example.org/action/add ?u_3
+?u_1 http://example.org/action/delete ?u_3 .?u_1 http://example.org/action/add ?u_0 
+?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 
+?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 
+?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1
+?u_1 http://example.org/action/delete ?u_0 .?u_1 http://example.org/action/add ?u_0 
+?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> 
+?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>
+?u_1 <http://example.org/action/modify> <http://example.org/entity/textfiles/not_working_queries.txt> 
+?u_1 http://example.org/action/modify ?u_0
+?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> 
+?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>
+?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> 
+?u_1 http://example.org/ontology/author ?u_0 
+?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> 
+?u_1 type ?u_3 .?u_1 http://example.org/ontology/author ?u_0
+<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u_1
+<http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> <http://example.org/entity/parents> ?u_1 
+<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://example.org/entity/parents> ?u_1 
+?u_0 http://example.org/ontology/author ?u_1 
+?u_1 http://example.org/ontology/author ?u_0 
+<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u_1 
+?u_1 type ?u_0 
+?u_0 http://example.org/action/modify ?u_1 
+?u_0 <http://example.org/action/modify> ?u_1 .<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> 
+?u_1 type ?u_0 
+?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> 
+?u_0 type ?u_1 
+?u_0 http://example.org/action/delete ?u_1 
+<http://example.org/entity/hash/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> <http://example.org/action/delete> ?u_3 .<http://example.org/entity/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> <http://example.org/action/delete> ?u_1
+?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> 
+?u_0 http://example.org/action/delete ?u_1 
+?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> 
+?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> 
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 <http://example.org/entity/hash/> 
+?u_1 <http://example.org/ontology/description> <http://example.org/entity/hash/> 
+?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> 
+?u_1 <http://example.org/ontology/user> <http://example.org/entity/izzyrybz> 
+<http://example.org/ontology/user> ?u_1 <http://example.org/entity/izzyrybz> 
+<http://example.org/ontology/author> ?u_1 <http://example.org/entity/izzyrybz> 
+<http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ?u_1 

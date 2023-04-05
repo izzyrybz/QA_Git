@@ -1,0 +1,432 @@
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 http://example.org/entity/trash.py
+turning it into this tensor: tensor([1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 1])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 http://example.org/entity/trash.py
+turning it into this tensor: tensor([1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 1])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 http://example.org/entity/trash.py
+turning it into this tensor: tensor([1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 1])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7])
+
+read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: When was file #ent modified ?
+turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 http://example.org/entity/trash.py
+turning it into this tensor: tensor([1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 1])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
+turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+
+read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+
+read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
+turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])

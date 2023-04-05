@@ -171,6 +171,7 @@ def get_spotlight_entities(query):
     return entities
 
 def get_nliwod_entities(query, properties):
+
     ignore_list = []
     entities = []
     singular_query = [stemmer.stem(word) if p.singular_noun(word) == False else stemmer.stem(p.singular_noun(word)) for word in query.lower().split(' ')]
@@ -285,9 +286,9 @@ def spacy_parse(question, properties,lemma_q):
         for line in properties:
             # check if token is in the subject, predicate or object of the knowledge graph
             if token.text not in ['-',',','/'] and token.tag_ not in ['DT','CC','IN'] :
-                #print(token.text)
-                if re.search(r'\b'+re.escape(token.text)+r'\b', line['subject']):
-                    print('subject',line['subject'],token.text)
+                #print(line['object'])
+                if re.search(r'\b'+re.escape(token.text)+r'\b(?!\S)', line['subject'].replace('"','')):
+                    #print('subject',line['subject'],token.text)
                     # add entity if it does not exist
                     entity_uri = token.text
                     entity = {'uris': entity_uri}
@@ -301,17 +302,17 @@ def spacy_parse(question, properties,lemma_q):
                     add_item(relation_uri, relation, question, token.text)
                     relationships.append(relation)
 
-                if re.search(r'\b'+re.escape(token.text)+r'\b', line['predicate']):
+                if re.search(r'\b'+re.escape(token.text)+r'\b(?!\S)', line['predicate'].replace('"','')):
                     # add relationship if it does not exist
-                    print('predicate',line['predicate'],token.text)
+                    #print('predicate',line['predicate'],token.text)
                     relation_uri = token.text
                     
                     relation = {'uris': relation_uri}
                     add_item(relation_uri, relation, question, token.text)
                     relationships.append(relation)
 
-                if re.search(r'\b'+re.escape(token.text)+r'\b', line['object']):
-                    print('object',line['object'],token.text, token.tag_,line['predicate'])
+                if re.search(r'\b'+re.escape(token.text)+r'\b(?!\S)', line['object'].replace('"','')):
+                    #print('object',line['object'],token.text, token.tag_,line['predicate'])
                     object_value = line['object'].strip('"')
                 
                 
@@ -320,11 +321,11 @@ def spacy_parse(question, properties,lemma_q):
                     entities.append(entity)
                 
                     # add relationship if it does not exist
-                    relation_uri = line['predicate']
+                    '''relation_uri = line['predicate']
                     
                     relation = {'uris': relation_uri}
                     add_item(relation_uri, relation, question, token.text)
-                    relationships.append(relation)
+                    relationships.append(relation)'''
     
     #check if any lemmized word matches one that is under the example.org/entity domain
     for dict in properties: 
@@ -348,6 +349,7 @@ def spacy_parse(question, properties,lemma_q):
                         #print("adding the relationship",str(lemma),value)
                         value = value.strip('"')
                         relation = {'uris': value}
+                        #print("we are adding relation" ,str(lemma),value)
                         add_item(value, relation, question, str(lemma))
                         
                         #testing this, since some relations can be entities too
@@ -368,7 +370,7 @@ class PhraseMapping:
         self.properties = preprocess_relations('turtle/needed_information.ttl', True)
         self.properties_knowledgegraph = preprocess_relations('turtle/knowledge_graph.ttl', True)
         self.knowledgeG_s_p_o = process_knowledge_graph('turtle/knowledge_graph.ttl')
-        self.properties_s_p_o = process_knowledge_graph('turtle/dbpedia_3Eng_property.ttl')
+        #self.properties_s_p_o = process_knowledge_graph('turtle/dbpedia_3Eng_property.ttl')
 
     
         for key in self.properties_knowledgegraph.keys():

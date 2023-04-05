@@ -1,35 +1,273 @@
-det nsubj ROOT compound nmod dobj cc conj nmod dobj punct
-advmod amod nsubj aux ROOT dobj det amod dobj nmod npadvmod punct
-advmod advmod aux compound compound nsubj ROOT punct
-nsubj ROOT amod dobj nmod npadvmod punct
-advmod nsubj ROOT amod dobj nmod npadvmod punct
-nsubj ROOT amod dobj nmod npadvmod punct
-nsubj csubj aux preconj amod cc conj ROOT punct
-nsubj csubj aux preconj amod cc conj ROOT punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-nsubj csubj aux preconj amod cc conj ROOT punct
-advmod amod nsubj aux ROOT dobj det amod dobj punct
-det det nsubj ROOT advmod prep det pobj punct
-nsubj csubj aux preconj ROOT cc conj dobj punct
-nsubj csubj aux preconj ROOT cc conj dobj punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-det nmod nsubj aux preconj ROOT cc conj dobj punct
-nsubj csubj aux preconj ROOT cc conj dobj punct
-det nmod ROOT nmod npadvmod det appos punct
-nsubj ROOT xcomp det dobj nmod npadvmod punct
-nsubj ROOT compound dobj punct
-nsubj ROOT xcomp det dobj punct
-det nmod nsubj ROOT det dobj punct
-advmod amod nsubj ROOT det nsubj compound appos ccomp punct
-advmod amod nmod nsubj ROOT det nsubj appos ccomp punct
-advmod amod nsubj ROOT det nsubj nsubj ccomp punct
-advmod amod nsubj ROOT det compound dobj acl punct
-advmod amod nsubj ROOT det nsubj nsubj ccomp punct
-ROOT expl det nmod attr prep det compound pobj punct
-ROOT expl det nmod attr prep det compound pobj punct
-ROOT expl det nmod attr prep det compound pobj punct
-ROOT predet det dobj prep det pobj punct
-ROOT predet det dobj prep det pobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct
+nsubj ROOT amod cc conj dobj punct

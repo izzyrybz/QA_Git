@@ -5,15 +5,31 @@ from tqdm import tqdm
 
 from common.graph.graph import Graph
 
-def check_triples(subjects, objects, predicates, used_triples):
+def check_triples(subjects,predicates,objects, used_triples):
+    graph = Graph()
     for i in range(len(subjects)):
+        
         if (subjects[i], objects[i], predicates[i]) in used_triples:
             return False
         for j in range(i+1, len(subjects)):
+            #print(subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
             if subjects[i] == subjects[j] and objects[i] == objects[j] and predicates[i] == predicates[j]:
+                print("1.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
                 return False
-        if predicates[i] in objects or subjects[i] in objects or predicates[i] in subjects: # can predicates be in subjects?
-            return False
+            if predicates[i] == predicates[j] and objects[i] == objects[j] and graph.is_var(subjects[i]) and graph.is_var(subjects[j]):
+                print("2.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
+
+                return False
+            if graph.is_var(subjects[i]) and graph.is_var(subjects[j]) and predicates[i] == predicates[j] and graph.is_var(objects[i]) and graph.is_var(objects[j]):
+                print("2.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
+                return False
+        if predicates[i] in objects or subjects[i] in objects or predicates[i] in subjects: 
+            return False       
+        
+    #print(subjects)
+    if '?u_1' not in subjects and '?u_1' not in objects and '?u_1' not in predicates:
+        return False
+
         
     return True
 
@@ -31,17 +47,27 @@ def query(args):
   
 def mutli_var_complex_query(valid_walks,ask_query,count_query):
     tripples = valid_walks[0::2]
+    graph = Graph()
     total = 0
+    
+    entities=[]
+    rel = []
     
     #get all edges 
     subject_predicate_object_list=[]
     #in what commits did izzrybz make
     #subject = ?u1 predicate = <author> object = izzyrybz
+
+    
     
     for tripple in tripples:
         tripple = tripple.split()
-        #print(tripple)
-        subject_predicate_object_list.append([tripple[0], tripple[1], tripple[2]])
+        entities.append(tripple[2])
+        entities.append(tripple[0])
+        combination_of_tripples = (graph.create_all_combinations(entities, tripple[1],'3'))
+        #print("we are in complex queries",tripple)
+        #print("we are in complex queries",combination_of_tripples)
+        subject_predicate_object_list.append([tripple[0],tripple[1],tripple[2]])
     
     #print(edge_list)
 
@@ -72,7 +98,8 @@ def mutli_var_complex_query(valid_walks,ask_query,count_query):
 
         ########### tripple relation ########
 
-    tripple_statment=input("ideally we would put ranking here")
+    #tripple_statment=input("ideally we would put ranking here")
+    tripple_statment='0'
     
     if(tripple_statment=='1'):
         with tqdm(total=total*len(tripples))as pbar:
@@ -171,7 +198,7 @@ def two_hop_complex_query_process(subject1,predicate1,object1, subject2,predicat
 
 def two_hop_graph_template(subject1,predicate1,object1,subject2,predicate2,object2):
     
-    query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}"],
+    query_types = [[0, u"{subject1} {predicate1} {object1} .{subject2} {predicate2} {object2}"],
                     ]
         #could use extension
     output = [[item[0], item[1].format(predicate1=predicate1, subject1=subject1,
@@ -182,7 +209,7 @@ def two_hop_graph_template(subject1,predicate1,object1,subject2,predicate2,objec
     return output
 def three_hop_graph_template(subject1,predicate1,object1,subject2,predicate2,object2,subject3,predicate3,object3):
     
-    query_types = [[0, u"{subject1} {predicate1} {object1} . {subject2} {predicate2} {object2}. {subject3} {predicate3} {object3}"],
+    query_types = [[0, u"{subject1} {predicate1} {object1} .{subject2} {predicate2} {object2}. {subject3} {predicate3} {object3}"],
                     ]
         #could use extension
     output = [[item[0], item[1].format(predicate1=predicate1,

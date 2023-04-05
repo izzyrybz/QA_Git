@@ -1,5 +1,5 @@
 PAD = 0
-UNK = 1
+UNK = 1 #unknown token number
 BOS = 2
 EOS = 3
 

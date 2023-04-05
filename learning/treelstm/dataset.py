@@ -22,6 +22,7 @@ class QGDataset(data.Dataset):
         self.rsentences = self.read_sentences(os.path.join(path, 'b.toks'))
 
         #a/b.parents is the tree noted with 0 as root and then i belive it is the layers
+        #okay so if I self.rtrees = self.read_trees(os.path.join('learning/treelstm/data/lc_quad/train/', 'a.parents'))
         self.ltrees = self.read_trees(os.path.join(path, 'a.parents'))
         self.rtrees = self.read_trees(os.path.join(path, 'b.parents'))
 
@@ -49,11 +50,36 @@ class QGDataset(data.Dataset):
         return sentences
 
     def read_sentence(self, line):
-        indices = self.vocab.convertToIdx(line.split(), Constants.UNK_WORD)
+        new_line=''
+
+        for word in line.split():
+            #print("this is word",word)
+            if('<https://example.org/ontology/' in word):
+                word.replace('https://example.org/ontology/','')
+                word.replace('<','')
+                word.replace('>','')
+            elif('<https://example.org/action/' in word):
+                word.replace('https://example.org/action/','')
+                word.replace('<','')
+                word.replace('>','')
+            elif('<https://example.org/entity/' in word):
+                word.replace('https://example.org/entity/','')
+                word.replace('<','')
+                word.replace('>','')
+            
+   
+            new_line += word + " "
+        new_line = new_line.strip()
+        #print("this is line split",line.split())
+        #print("this is new line",new_line.split())
+   
+
+        indices=self.vocab.convertToIdx(new_line.split(), Constants.UNK_WORD)
+        #print("this is indices",indices)
         #print("we are taking this line:", line,"and tunring it into this tensor",torch.LongTensor(indices))
-        '''with open('trash.txt', 'a') as f:
-                f.write(f"read_sentence in dataset LINE: {line}\n")
-                f.write(f"turning it into this tensor: {torch.LongTensor(indices)}\n")'''
+        with open('trash.txt', 'a') as f:
+                f.write(f"\nread_sentence in dataset LINE: {line}")
+                f.write(f"turning it into this tensor: {torch.LongTensor(indices)}\n")
         return torch.LongTensor(indices)
 
     def read_trees(self, filename):

@@ -48,7 +48,7 @@ class QueryBuilder:
         #print("this is the paths",paths)
         '''for path in paths:
             for edge in path:
-                #print("this is edge",edge)'''
+                print("this is edge",edge)'''
 
         #sometimes we are not doing entities so idk, this is all confusing
         
@@ -126,7 +126,7 @@ class QueryBuilder:
         
         for where_clause in output:
             #print("HELLOOOO",where_clause)
-           # print("this is the where clause",where_clause)
+            #print("this is the where clause",where_clause)
 
             #Prev : target_var = where_clause["suggested_id"]
             response = self.query_fuseki_endpoint(fuseki_endpoint,where_clause,
@@ -145,7 +145,7 @@ class QueryBuilder:
                     bindings = raw_answer['results']['bindings']
                     #Prev : answerset = AnswerSet(raw_answer, parser.parse_queryresult)
                     answer={}
-                    target_vars = 'u1','u2'
+                    target_vars = 'u_1','u_0','u_3'
                     
                     # Do not include the query if it does not return any answer:
                     if len(bindings) > 0 :

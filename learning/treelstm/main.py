@@ -72,8 +72,10 @@ def main():
         token_files_b = [os.path.join(split, 'b.toks') for split in [train_dir, dev_dir, test_dir]]
         token_files = token_files_a + token_files_b
         dataset_vocab_file = os.path.join(args.data, 'dataset.vocab')
-        
+        #print("COWFUCKIBGBUNGADUDE")
         build_vocab(token_files, dataset_vocab_file)
+   
+    
 
     # get vocab object from vocab file previously written
     vocab = Vocab(filename=dataset_vocab_file,
@@ -139,12 +141,12 @@ def main():
     if os.path.isfile(emb_file):
         emb = torch.load(emb_file)
     else:
-        EMBEDDING_DIM = 300
+        EMBEDDING_DIM = 150
         emb = torch.zeros(vocab.size(), EMBEDDING_DIM, dtype=torch.float)
         #fasttext_model= fasttext.load_model("/home/bell/Documents/QAsparql-master/data/fasttext/wiki.en.bin")
         if os.path.isfile('data/fasttext/wiki.en.bin'):   
             #DOES THIS ONE ACTUALLY WORK?????????
-            print("making a model out of the fastText this can crash if you have too small of a RAM")
+            print("making a model out of the fastText, please ensure you have enough available RAM")
             fasttext_model = FastText.load_model("data/fasttext/wiki.en.bin")
         else:
             print("no fasttext found")
@@ -200,7 +202,7 @@ def main():
                 f.write(f"(train) b.toks: {train_dataset.rsentences}\n")
                 
 
-            print("THIS PRE EPOCH IS TRAIN PRED:",train_pred,"and sent in",train_dataset.lsentences)
+            #print("THIS PRE EPOCH IS TRAIN PRED:",train_pred,"and sent in",train_dataset.lsentences)
 
             print(
                 '==> Epoch {}, Train \tLoss: {} {}'.format(epoch, train_loss,

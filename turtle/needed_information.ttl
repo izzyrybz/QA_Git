@@ -4,19 +4,30 @@
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "changing" .
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "modified" .
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "modify" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "modifications" .
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "alter" .
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "altered" .
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "altering" .
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjust" .
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjusted" .
 <http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "adjusting" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "update" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "updated" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "updating".
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "edit" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "edited" .
+<http://example.org/action/modify> <http://www.w3.org/2000/01/rdf-schema#label> "editing".
 <http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "add" .
 <http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "added" .
 <http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "adding" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "additions" .
 <http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "adds".
 <http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "append" .
 <http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "attach" .
 <http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "insert" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "appended" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "attached" .
+<http://example.org/action/add> <http://www.w3.org/2000/01/rdf-schema#label> "inserted" .
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "erase" .
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "remove" .
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "eliminate" .
@@ -27,6 +38,7 @@
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "removed" .
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "delete" .
 <http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "deleted" .
+<http://example.org/action/delete> <http://www.w3.org/2000/01/rdf-schema#label> "deleting" .
 <http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "author".
 <http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "authors".
 <http://example.org/ontology/author> <http://www.w3.org/2000/01/rdf-schema#label> "users".
@@ -42,8 +54,6 @@
 <http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "proceeded" .
 <http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "previous" .
 <http://example.org/entity/parents> <http://www.w3.org/2000/01/rdf-schema#label> "earlier" .
-<http://example.org/entity/commit> <http://www.w3.org/2000/01/rdf-schema#label> "commits" .
-<http://example.org/entity/commit> <http://www.w3.org/2000/01/rdf-schema#label> "commit" .
 <http://example.org/entity/hash> <http://www.w3.org/2000/01/rdf-schema#label> "hash" .
 <http://example.org/entity/hash> <http://www.w3.org/2000/01/rdf-schema#label> "commit hash" .
 <http://example.org/ontology/Calendar_date> <http://www.w3.org/2000/01/rdf-schema#label> "date" .

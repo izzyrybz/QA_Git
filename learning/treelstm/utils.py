@@ -51,7 +51,33 @@ def build_vocab(filenames, vocabfile):
             with open(filename, 'r') as f:
                 for line in f:
                     tokens = line.rstrip('\n').split(' ')
-                    vocab |= set(tokens)
+                    new_tokens=[]
+                    for token in tokens:
+                        
+                        if('http://example.org/ontology/' in token):
+                            print("we go into the if statment")
+                            token = token.replace('http://example.org/ontology/','')
+                            token = token.replace('<','')
+                            token = token.replace('>','')
+                            new_tokens.append(token)
+                        elif('http://example.org/action/' in token):
+                            token = token.replace('http://example.org/action/','')
+                            token = token.replace('<','')
+                            token = token.replace('>','')
+                            new_tokens.append(token)
+                        elif('http://example.org/entity/' in token):
+                            token = token.replace('http://example.org/entity/','')
+                            token = token.replace('<','')
+                            token = token.replace('>','')
+                            new_tokens.append(token)
+                        else:
+                            new_tokens.append(token)
+
+                    #print("this is old",tokens)
+                    #print("this is new",new_tokens)
+                    
+                        
+                    vocab |= set(new_tokens)
     with open(vocabfile, 'w') as f:
         for token in sorted(vocab):
             f.write(token + '\n')

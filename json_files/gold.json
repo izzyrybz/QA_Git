@@ -26438,83 +26438,8 @@
         "id": "860",
         "query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Richard_Coke> <http://dbpedia.org/property/office> ?uri } ",
         "question": "Name the office of Richard Coke ?"
-    },
-
-  {
-        "answer": "correct",
-        "features": [
-            "single",
-            "count"
-        ],
-        "generated_queries": [
-            {
-                "correct": true,
-                "query": "?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit>",
-                "target_var": "?u1"
-            },
-            {
-                "correct": false,
-                "query": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u1 <http://example.org/entity/commit>",
-                "target_var": "?u1"
-            }
-            ,
-            {
-                "correct": false,
-                "query": "?u1 <http://dbpedia.org/ontology/description> <http://example.org/entity/commit>",
-                "target_var": "?u1"
-            }
-            ,
-            {
-                "correct": false,
-                "query": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit> ?u1  ",
-                "target_var": "?u1"
-            }
-          
-        ],
-        "id": "1136", 
-        "query": "SELECT COUNT (?uri) WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit> }",
-        "question": "How many commits have there been?"
-    },
-    {
-        "answer": "correct",
-        "features": [
-            "single",
-            "list"
-        ],
-        "generated_queries": [
-            {
-                "correct": true,
-                "query": "?u1 <https://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> ",
-                "target_var": "?u1"
-            },
-            {
-                "correct": false,
-                "query": "?u1 <https://dbpedia.org/ontology/user> <http://example.org/entity/izzyrybz> ",
-                "target_var": "?u1"
-            }
-            ,
-            {
-                "correct": false,
-                "query": "<https://dbpedia.org/ontology/user>  ?u1 <http://example.org/entity/izzyrybz> ",
-                "target_var": "?u1"
-            }
-            ,
-            {
-                "correct": false,
-                "query": "<https://dbpedia.org/ontology/author>  ?u1 <http://example.org/entity/izzyrybz> ",
-                "target_var": "?u1"
-            }
-            ,
-            {
-                "correct": false,
-                "query": "<https://dbpedia.org/ontology/author>  <http://example.org/entity/izzyrybz>  ?u1 ",
-                "target_var": "?u1"
-            }
-          
-        ],
-        "id": "1145", 
-        "query": "SELECT DISTINCT ?u1 WHERE {?u1 <https://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }",
-        "question": "Which commits have the user izzyrybz made?"
     }
+
+   
     
 ]

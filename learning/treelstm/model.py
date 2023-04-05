@@ -49,12 +49,13 @@ class ChildSumTreeLSTM(nn.Module):
         with open("trash.txt","w") as fp:
         json_str = json.dumps((i.detach().numpy().tolist()  ,"\n",":input gate",o.detach().numpy().tolist() ,"\n",":output gate",u.detach().numpy().tolist(),"\n",":gradient",f.detach().numpy().tolist() ,"\n", ":forget gate",c.detach().numpy().tolist()  ,"\n",":memorycell",h.detach().numpy().tolist()  ,"hidden state"))
         fp.write(json_str )
-        '''
-        
+        '''        
         return c, h
     
 
     def forward(self, tree, inputs):
+        #print("WE ARE IN ChildSumTreeLSTM")
+
         _ = [self.forward(tree.children[idx], inputs) for idx in range(tree.num_children)]
         
 
@@ -72,20 +73,6 @@ class ChildSumTreeLSTM(nn.Module):
             tree.state = self.node_forward(inputs[tree.idx], child_c, child_h)
         return tree.state
     
-    '''def forward(self, tree, inputs):
-        _ = [self.forward(tree.children[idx], inputs) for idx in range(tree.num_children)]
-
-        if tree.num_children == 0:
-            child_c = Var(inputs[0].data.new(1, self.mem_dim).fill_(0.))
-            child_h = Var(inputs[0].data.new(1, self.mem_dim).fill_(0.))
-        else:
-            child_c, child_h = zip(*map(lambda x: x.state, tree.children))
-            child_c, child_h = torch.cat(child_c, dim=0), torch.cat(child_h, dim=0)
-        
-        print("k,s",inputs)
-
-        tree.state = self.node_forward(inputs[tree.idx], child_c, child_h)
-        return tree.state'''
 
 
 # module for distance-angle similarity
@@ -101,7 +88,7 @@ class DASimilarity(nn.Module):
     def forward(self, lvec, rvec):
         mult_dist = torch.mul(lvec, rvec)
         #the two vectors are the same
-        #print("WE ARE IN DASIMILARYI",lvec,rvec)
+        #print("WE ARE IN DASIMILARYI")
         abs_dist = torch.abs(torch.add(lvec, -rvec))
         vec_dist = torch.cat((mult_dist, abs_dist), 1)
 

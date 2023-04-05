@@ -59,6 +59,7 @@ def closest_string(text, list_of_text):
 
 
 def find_mentions(text, uris):
+    #print("inside fine mention",text)
     output = {}
     for uri in uris:
         s, e, dist = __substring_with_min_levenshtein_distance(str(uri),text)
@@ -147,10 +148,10 @@ def __substring_with_min_levenshtein_distance(uri, text):
 
     res = re.search(uri,text)
     if res is not None:
-        #print("we have an answer",res.start(),res.end(),(res.end()-res.start()))
+        print("we have an answer RE")
         return (res.start(),res.end(), (res.end()-res.start()))
-    
-    
+    return -1 ,-1, -1
+    '''
     row = __fuzzy_substring(uri, text)
     end = min(__min_farest(row), len(text) - 1)
     row_rev = __fuzzy_substring(uri[::-1], text[::-1])
@@ -177,7 +178,7 @@ def __substring_with_min_levenshtein_distance(uri, text):
         else:
             break
 
-    return start, end, row[end]
+    return start, end, row[end]'''
 
 '''
 def __substring_with_min_levenshtein_distance(uri, question):

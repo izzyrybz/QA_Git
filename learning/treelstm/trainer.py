@@ -73,22 +73,20 @@ class Trainer(object):
                 target = target.cuda()
             
             #linput = torch.tensor(x)
+            print("this is our ltree, linput, rtree, rinput",ltree, linput, rtree, rinput)
             output = self.model(ltree, linput, rtree, rinput)
             
             err = self.criterion(output, target)
             loss += err.data
-            #output=output[0]
-            #print("this is output before cpu",output)
+            
             output = output.data.squeeze().cpu()
-            #print("this is output after cpu",output)
-
-            #print("this is our output", output)
-            #print(torch.exp(output))
-            #print(indices)
+            
             predictions[idx] = torch.dot(indices, torch.exp(output))
-            #print("this is our predications",predictions)
+            
+            
         if len(dataset)== 0:
             print("we have 0??")
+            exit()
             return 0,predictions
         else:
             return loss / len(dataset), predictions

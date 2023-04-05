@@ -43,6 +43,8 @@ def rank(args, question, generated_queries):
             #checkpoint_filename = '%s.pt' % os.path.join(args.save, args.expname)
             #dataset_vocab_file is like city,did,direct,director,ent
             dataset_vocab_file = os.path.join(args.data, 'dataset.vocab')
+            with open(dataset_vocab_file,'r') as fp:
+                print(fp.readlines())
             # metrics = Metrics(args.num_classes)
             vocab = Vocab(filename=dataset_vocab_file,
                           data=[Constants.PAD_WORD, Constants.UNK_WORD, Constants.BOS_WORD, Constants.EOS_WORD])
@@ -84,11 +86,11 @@ def rank(args, question, generated_queries):
             #print(json_data)
             parser = LC_Qaud_LinkedParser()
             output_dir = "./output/tmp"
-            print("right before save")
+            #print("right before save")
             #we need to fix this, it is fucked
             preprocess_lcquad.save_split(output_dir, *preprocess_lcquad.split(json_data, parser))
             #preprocess_lcquad.correct_data(generated_queries)
-            print("it is saved split isnt it")
+            #print("it is saved split isnt it")
 
             dep_tree_cache_file_path = './json_files/dep_tree_cache_lcquadtest.json'
             if os.path.exists(dep_tree_cache_file_path):
@@ -98,7 +100,7 @@ def rank(args, question, generated_queries):
                 dep_tree_cache = dict()
 
             if question in dep_tree_cache:
-                #print(question)
+                
                 
                 preprocess_lcquad.parse(output_dir, dep_parse=False)
 
@@ -124,7 +126,7 @@ def rank(args, question, generated_queries):
                 with open(dep_tree_cache_file_path, 'w') as f:
                     ujson.dump(dep_tree_cache, f)
             
-            
+            print("THIS IS THE OUTPUT DIRECT OF QG", output_dir)
             test_dataset = QGDataset(output_dir, vocab, args.num_classes)
             print("length of dataset" ,len(test_dataset))
 
@@ -173,6 +175,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     valid_walks_with_sparql = query_builder.to_where_statement(graph, ask_query=ask_query,
                                                     count_query=count_query, sort_query=sort_query)
     #print("these are the valid paths found:" ,valid_walks_with_sparql)
+    
 
     #use these valid paths to combine to multi var to check if <path1><path2> works within a query, (what I call double relation)
 
@@ -221,12 +224,12 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     args.save = os.path.join(base_path, "checkpoints/")
     #changed the checkpoint_filename from lc_quad,epoch=5,train_loss=0.08340245485305786
 
-    
-    args.expname = "lc_quad,epoch=5,train_loss=0.3421219289302826"
-    args.mem_dim = 150
-    args.hidden_dim = 50
+
+    args.expname = "lc_quad,epoch=5,train_loss=0.3238963186740875"
+    args.mem_dim = 45   
+    args.hidden_dim = 45
     args.num_classes = 2
-    args.input_dim = 300
+    args.input_dim = 150
     args.sparse = False
     args.lr = 0.01
     args.wd = 1e-4

@@ -1,11 +1,76 @@
-det ROOT advmod relcl prep pobj nmod dobj punct
-det ROOT advmod relcl prep pcomp dobj punct
-det ROOT advmod relcl prep pcomp dobj punct
-det ROOT advmod relcl prep nmod compound nmod pobj punct
-attr ROOT det nsubj prep predet det pobj punct
-attr ROOT det nsubj prep predet det nmod pobj punct
-attr ROOT det nsubj prep predet det pobj punct
-advmod amod nsubjpass aux auxpass ROOT punct
-advmod amod nmod nsubjpass auxpass ROOT punct
-det nsubjpass aux auxpass ROOT punct
-nsubjpass det nsubjpass auxpass ROOT punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct
+ROOT det dobj prep det pobj punct intj punct

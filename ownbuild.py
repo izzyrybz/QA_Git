@@ -1,3 +1,4 @@
+import time
 from SPARQLWrapper import SPARQLWrapper, JSON
 import json
 import requests, json, re, operator
@@ -11,6 +12,7 @@ from spacy import displacy
 from nltk import Tree
 import itertools
 import string
+import difflib
 
 
 def question_analysis(question):
@@ -147,6 +149,7 @@ def main(question):
     phrasemapper.phrasemap_question(question,tokened_question,lemmizized_question)
     print("phrasemapping generated in file that can be found under json_files")
     print("#"*80)
+    
 
 
    #prepare the data for the question_generator
@@ -162,7 +165,7 @@ def main(question):
     #print("finished query",finished_query)
     #return str(finished_query)
     
-    return finished_query
+    return query_generator['query'].replace('SELECT * WHERE {','')
 
     jena_response = requests.get("http://localhost:3030/dbpedia/query", params={"query": finished_query})
     if jena_response.status_code == 200:
@@ -171,33 +174,33 @@ def main(question):
             #print("The answer is",output)
     
 
-q1='Which commits have the user izzyrybz made?' 
+q1='Which commits have the user izzyrybz made?' #
 
-q2= 'How many commits have the user izzyrybz made?' 
+q2= 'How many commits have the user izzyrybz made?' #
 
-q3 ='How many commits have there been?'
+#q3 ='How many commits have there been?'
 
-q4 ='Which commits modified file killme.py?' 
+q4 ='Which commits modified file killme.py?'  #-
 
-q4_x ='Which commits altered files?' 
+q4_x ='Which commits altered files?' #
 
-q5 ='How many files have been deleted?'
+q5 ='How many files have been deleted?' #
 
-q6 = 'How many users have made commits that changed files?' 
+q6 = 'How many users have made commits that changed files?'  #needs u3
 
-q7 = 'Which commits had both added and deleted files?'
+q7 = 'Which commits had both added and modified files?' #
 
-q8='How many users have made commits that changed file killme.py?'
+q8='How many users have made commits that changed file killme.py?' #works
 
-q9 = 'List all the authors?' 
+q9 = 'List all the authors?' #
 
-q10 = "Which commit deleted file killme.py?"
+q10 = "Which commit changed file killme.py?" # works
 
-q11= 'How many files were modified in more than 3 commits?'
+q11= 'Which users changed file killme.py and file myphrasemapping.py?' #needs u3
 
-q12="Which users changed file killme.py or file phrasemapping.py?"
+q12= "When was file trash.py modified?" #  ----
 
-q13 = "When was file killme.py added?"
+q13 = "Which commits modified file killme.py?" # works
 
 #question= q1
 
@@ -206,17 +209,44 @@ q13 = "When was file killme.py added?"
 #8: What commits were made in 2022-01-01?
 
 #9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-main('How many commits a specific user made?')
+main(q12)
 exit()
-#main("How many users have made commits that changed files?")
+
+with open('testingdata.txt','r') as fp:
+    data = fp.readlines()
+count = 0
 
 with open('test.txt','w') as fp:
-    fp.write('\n'+q1 + '\n')
-    fp.write(main(q1)+ '\n')
-with open('test.txt','a') as fp:
-    fp.write('\n'+q2+ '\n')
-    fp.write(main(q2)+ '\n')
-    fp.write('\n')
+    
+    for item in data:
+        item = item.replace('\n','')
+        item = item.lstrip(' ')
+        item = item.rstrip(' ')
+        print("this is the item",len(item))
+        
+        d = difflib.Differ()
+
+        
+        result= main(item)
+        
+      
+        fp.write('\n'+item+ '\n')
+        fp.write(result+ '\n')
+        with open("trash2.txt","r") as trashfp:
+            possibleq = trashfp.readlines()
+        if possibleq[0].strip() in result.strip().replace('}',''):
+            count = count+1
+            fp.write("we have choosen the first possible option"+ '\n')
+            print("we have choosen the first possible option")
+            print(possibleq[0].strip() , result.strip().replace('}',''))
+            
+            
+            
+
+        fp.write('\n')
+print("THIS IS OUR COUNTER",count)
+    
+'''
 
     fp.write('\n'+q3+ '\n')
     fp.write(main(q3)+ '\n')
@@ -241,7 +271,7 @@ with open('test.txt','a') as fp:
     fp.write(main(q8)+ '\n')
 
     fp.write(q9+ '\n')
-    fp.write(main(q9))
+    fp.write(main(q9))'''
     
     #if main(q1) == 'SELECT ?u1 WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
     #    print("q1 works")

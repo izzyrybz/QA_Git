@@ -1,9 +1,43 @@
-advmod amod nmod nsubj aux expl ROOT punct
-advmod amod nmod nsubj aux expl ROOT punct
-advmod amod nmod nsubj aux expl ROOT punct
-advmod amod nmod nsubj aux expl ROOT punct
-nsubj ROOT xcomp det nsubj compound appos ccomp punct
-nsubj ROOT xcomp det nsubj compound appos ccomp punct
-nsubj ROOT xcomp det nsubj compound appos ccomp punct
-nsubj ROOT xcomp det nsubj compound appos ccomp punct
-nsubj ROOT xcomp det nsubj compound appos ccomp punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct
+advmod amod nsubj aux ROOT dobj prep pobj prep pobj punct

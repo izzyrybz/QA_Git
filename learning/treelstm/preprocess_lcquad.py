@@ -12,14 +12,17 @@ path = os.getcwd()
 sys.path.insert(0, path)
 from common.utility.utility import find_mentions
 from parser.lc_quad_linked import LC_Qaud_LinkedParser
+
 # sys.path.append('/cluster/home/xlig/kg/')
 # sys.path.insert(0, '/cluster/home/xlig/kg/')
+
 
 def contains_ent(string):
     return "#ent" in string
     
 
 def generalize_question(a, b, parser=None):
+    #print("before",a,'\n')
 
     
     # replace entity mention in question with a generic symbol
@@ -32,6 +35,7 @@ def generalize_question(a, b, parser=None):
 
     entity_uris=[]
     for uri in uris:
+        #print("this is uris in generlize quesiton", uri)
                 
         #check if the knowledge domain specific thing is an entity
         if "example.org/entity" in uri:
@@ -54,22 +58,32 @@ def generalize_question(a, b, parser=None):
 
     
     for uri in entity_uris:
-    #print("WHAT IS THIS BULLSHIT",find_mentions(a, uri))
+        #print("WHAT IS THIS BULLSHIT",a, uri)
         output = find_mentions(a, entity_uris)
-        #print(output,a,entity_uris)
+        print("find mentions output",output,"this is a",a,entity_uris)
+        
         #output contains start,end, dist,uri
+        if(output['start'] == -1):
+                return a,b
         if len(output)> 4:
+            
+            #if we find more than one mention
             for result in output:
                 #print(result)
                 a = a[:result['start']]+ '#ent' + a[result['end']:]
                 #a = "{} #en{} {}".format(a[:item[start]], "t" * (i + 1), a[item[end]:])
+                #print()
+            
                 #print("this is back from find mentions",a)
+                #print()
                 b = b.replace(result['uri'], "#en{}".format("t" * (i + 1)))
+        
         else:
             a = a[:output['start']]+ '#ent' + a[output['end']:]
             #a = "{} #en{} {}".format(a[:item[start]], "t" * (i + 1), a[item[end]:])
             #print("this is back from find mentions",a)
             b = b.replace(output['uri'], "#en{}".format("t" * (i + 1)))
+        
 
 
     # remove extra info from the relation's uri and remaining entities
@@ -77,43 +91,11 @@ def generalize_question(a, b, parser=None):
                 "http://dbpedia.org/property/", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"]:
         b = b.replace(item, "")
     b = b.replace("<", "").replace(">", "")
-
+    #print("after",a,'\n')
     return a, b
     
 
 
-    '''if parser is None:
-        parser = LC_Qaud_LinkedParser()
-    
-    #question= contains_fucked_ent(question)
-    
-    # Parse the question with spaCy
-    nlp = spacy.load("en_core_web_sm")
-    doc = nlp(question)
-
-    # Replace named entities with placeholders based on POS tags
-    generalized_words = []
-    for token in doc:
-        #print(token.pos_)
-        if token.ent_type_ != "":  # named entity
-            generalized_words.append("#ent")
-        elif token.pos_ in ["NOUN", "PROPN", "ADJ","ADV"]:  # common nouns or adjectives
-                generalized_words.append("#ent")
-        else:
-            generalized_words.append(token.text)
-
-    # Reconstruct the generalized question from the generalized words
-    generalized_words= ' '.join(generalized_words)
-    #print(generalized_words)
-
-    # Remove extra info from the relation's URI and remaining entities
-    prefixes = ["http://dbpedia.org/resource/", "http://dbpedia.org/ontology/",
-                "http://dbpedia.org/property/", "http://www.w3.org/1999/02/22-rdf-syntax-ns#"]
-    for prefix in prefixes:
-        sparql_query = sparql_query.replace(prefix, "")
-    sparql_query = sparql_query.replace("<", "").replace(">", "")
-
-    return generalized_words, sparql_query'''
 
 
 def make_dirs(dirs):
@@ -217,41 +199,103 @@ def query_parse(filepath):
             open(tokpath, 'w') as tokfile, \
             open(parentpath, 'w') as parentfile:
         for line in tqdm(datafile):
+            #print("\n we have a new line \n")
             clauses = line.split(" .")
             vars = dict()
             root = None
+            tree=[]
             for clause in clauses:
-                triple = [item.replace("\n", "") for item in clause.split(" ")]
+                root_node= None
+                left_node= None
+                right_node= None
+        
+                triple = [item.replace("\n", "").replace('}','').lstrip() for item in clause.split(" ")]
+                #print("we are looking at data from",tokpath,parentpath)
+                
+                for i in range(len(triple)-1, -1, -1):
+                    if triple[i] == '':
+                        triple.pop(i)
+                        
+                #print("this is our tripple",triple)
+                        
+                print("this is our tripple",triple,clause)
 
                 root_node = anytree.Node(triple[1])
                 left_node = anytree.Node(triple[0], root_node)
                 right_node = anytree.Node(triple[2], root_node)
+                #print("root_node",root_node,"left_node",left_node,"right_node",right_node)
+                second_tree=[]
 
                 leveled = [left_node, root_node, right_node]
                 for item in triple:
+                    #print("We are having problem with", item,clause,leveled)
+                    
                     if item.startswith("?u_"):
                         if item in vars:
+                            #print("this is vars",vars)
+                            
                             children = vars[item].parent.children
-                            if children[0] == vars[item]:
-                                vars[item].parent.children = [root_node, children[1]]
+                            #print("this is childern",children,"and parents",vars[item].parent)
+                            if children[0] == vars[item]: 
+                                # the u_ place is already taken
+                                #need to start a new branch on the tree
+                                 #vars[item].parent.children = [root_node, children[1]]
+                                 second_tree.append((left_node.name,1))
+                                 
+                                 second_tree.append((root_node.name,0))
+
+                                 second_tree.append((right_node.name,1))
+                                 break
+
                             else:
+                                
                                 vars[item].parent.children = [children[0], root_node]
                             vars[item] = [node for node in leveled if node.name == item][0]
                             break
                         else:
+                            #print("helvetes jävla skit",[node for node in leveled if node.name == item][0])
                             vars[item] = [node for node in leveled if node.name == item][0]
 
                 if root is None:
                     root = root_node
-
+            
+            
+            
             pre_order = [node for node in anytree.iterators.PreOrderIter(root)]
-            tokens = [node.name for node in pre_order]
-            for i in range(len(pre_order)):
-                pre_order[i].index = i + 1
-            idxs = [node.parent.index if node.parent is not None else 0 for node in pre_order]
+            #print("this is this is preorder tree", pre_order)
+            if(len(second_tree)>0):
+                node_names = [node.name for node in pre_order]
+                
+                node_index = [node.depth for node in pre_order]
+                #print("this is second tree", second_tree)
+                second_tree.sort(key=lambda x: x[1])
+                uris = [x[0] for x in second_tree]
+                
+                indexes = [x[1] for x in second_tree]
+                #print("PLEASE KILL ME",first_elements)
+                
+                #print("post preorder",pre_order)
 
-            tokfile.write(" ".join(tokens) + "\n")
-            parentfile.write(" ".join(map(str, idxs)) + "\n")
+                tokens = uris+node_names
+                
+                
+                idxs = indexes+node_index
+                #print(tokens,idxs)
+                tokfile.write(" ".join(tokens) + "\n")
+                parentfile.write(" ".join(map(str, idxs)) + "\n") 
+            else:
+            
+                tokens = [node.name for node in pre_order]
+                #print(tokens)
+                for i in range(len(pre_order)):
+                    pre_order[i].index = i + 1
+                idxs = [node.parent.index if node.parent is not None else 0 for node in pre_order]
+                #print(tokens,idxs)
+                tokfile.write(" ".join(tokens) + "\n")
+                parentfile.write(" ".join(map(str, idxs)) + "\n")  #print(root_node,left_node,right_node)
+                
+                
+        
 
 
 def build_vocab(filepaths, dst_path, lowercase=True):
@@ -277,13 +321,15 @@ def split(data, parser=None):
     b_list = []
     id_list = []
     sim_list = []
+    a =''
     for item in tqdm(dataset):
         #print("this is the answer from json",dataset)
         i = item["id"]
         
         #print("started tqdm",i,a)
         for query in item["generated_queries"]:
-            a = item["question"]
+            if len(a)<2:
+                a = item["question"]
             #print(query)
             
             b = query["query"]

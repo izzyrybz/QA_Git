@@ -52,7 +52,7 @@ class Paths(list):
                     sparql_q_varible_num = edge_elements[2].uris.strip("'")[-1]
 
                 else:
-                    sparql_q_varible_num = '?u1'
+                    sparql_q_varible_num = '?u_1'
 
                 #print(sparql_q_varible_num)
 

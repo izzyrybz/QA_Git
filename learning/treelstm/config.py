@@ -8,7 +8,7 @@ def parse_args():
                         help='mode: `train` or `test`')
     parser.add_argument('--data', default='./learning/treelstm/data/lc_quad/',
                         help='path to dataset')
-    parser.add_argument('--glove', default='./learning/treelstm/data/glove/',
+    parser.add_argument('--glove', default='../../data/glove/',
                         help='directory with GLOVE embeddings')
     parser.add_argument('--save', default='learning/treelstm/checkpoints/',
                         help='directory to save checkpoints in')
@@ -18,18 +18,18 @@ def parse_args():
                         help='Name to identify experiment')
 
     # model arguments
-    parser.add_argument('--input_dim', default=300, type=int,
+    parser.add_argument('--input_dim', default=150, type=int,#used to be 300
                         help='Size of input word vector')
-    parser.add_argument('--mem_dim', default=150, type=int,
+    parser.add_argument('--mem_dim', default=45, type=int, #used to be 150
                         help='Size of TreeLSTM cell state')
-    parser.add_argument('--hidden_dim', default=50, type=int,
+    parser.add_argument('--hidden_dim', default=45, type=int, #used to be 50
                         help='Size of classifier MLP')
     parser.add_argument('--num_classes', default=2, type=int,
                         help='Number of classes in dataset')
     # training arguments
     parser.add_argument('--epochs', default=15, type=int,
                         help='number of total epochs to run')
-    parser.add_argument('--batchsize', default=25, type=int,
+    parser.add_argument('--batchsize', default=15, type=int,
                         help='batchsize for optimizer updates')
     parser.add_argument('--lr', default=0.01, type=float,
                         metavar='LR', help='initial learning rate')

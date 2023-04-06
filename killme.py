@@ -1,6 +1,7 @@
 import json
 #import nntplib
 import os
+import time
 import numpy as np
 import torch.nn as nn
 import torch
@@ -43,11 +44,13 @@ def rank(args, question, generated_queries):
             #checkpoint_filename = '%s.pt' % os.path.join(args.save, args.expname)
             #dataset_vocab_file is like city,did,direct,director,ent
             dataset_vocab_file = os.path.join(args.data, 'dataset.vocab')
-            with open(dataset_vocab_file,'r') as fp:
-                print(fp.readlines())
+            
             # metrics = Metrics(args.num_classes)
             vocab = Vocab(filename=dataset_vocab_file,
                           data=[Constants.PAD_WORD, Constants.UNK_WORD, Constants.BOS_WORD, Constants.EOS_WORD])
+            
+            
+            
             
             similarity = DASimilarity(args.mem_dim, args.hidden_dim, args.num_classes)
             
@@ -190,8 +193,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
             walk = walk.lstrip() 
             valid_walks_with_sparql.append(walk)
     #print(valid_walks_with_sparql)
-    #print("these are the valid paths with more complex queries found:" ,valid_walks_with_sparql)
-
+    
 
     
     #I DONT UNDERSTAND WHY WE ARE DOING THIS 
@@ -212,8 +214,23 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     
 
     valid_walks_with_sparql = remove_duplicates(valid_walks_with_sparql)
+    #print("these are the valid paths with more complex queries found:" ,valid_walks_with_sparql)
+
+    #print([entity['uri'] for entity in entities])
+    #print([relation['uri'] for relation in relations])
+    walks_with_everything=[]
+    #we assume that the phrasemapping is so exact that it contains everything a sparql query needs 
+    all_entities_uri=[entity['uri'] for entity in entities]
+    all_relations_uri=[relation['uri'] for relation in relations]
     
-    
+    for walks in valid_walks_with_sparql:
+        #print(walks)
+        if all(entity in walks for entity in all_entities_uri) and all(relation in walks for relation in all_relations_uri):
+            walks_with_everything.append(walks)
+    valid_walks_with_sparql=walks_with_everything
+    print(valid_walks_with_sparql)
+    exit()
+
     with open('trash2.txt','w') as fp:
         for item in valid_walks_with_sparql:
             fp.writelines(item)
@@ -225,7 +242,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     #changed the checkpoint_filename from lc_quad,epoch=5,train_loss=0.08340245485305786
 
 
-    args.expname = "lc_quad,epoch=5,train_loss=0.3238963186740875"
+    args.expname = "lc_quad,epoch=5,train_loss=0.304111510515213"
     args.mem_dim = 45   
     args.hidden_dim = 45
     args.num_classes = 2

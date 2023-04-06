@@ -1,432 +1,1629 @@
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 http://example.org/entity/trash.py
-turning it into this tensor: tensor([1, 6, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 http://example.org/entity/trash.py
-turning it into this tensor: tensor([1, 7, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
 
-read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 http://example.org/entity/trash.py
-turning it into this tensor: tensor([1, 7, 1])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 1])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
 
-read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: When was file #ent modified ?
-turning it into this tensor: tensor([1, 1, 1, 1, 1, 5])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 http://example.org/entity/trash.py
-turning it into this tensor: tensor([1, 7, 1])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 1])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 1])
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
 
-read_sentence in dataset LINE: http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 1, 1, 7, 6])
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
-turning it into this tensor: tensor([1, 7, 6, 1, 7, 6])
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
 
-read_sentence in dataset LINE: <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 1, 1, 6, 7])
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
 
-read_sentence in dataset LINE: http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
-turning it into this tensor: tensor([1, 6, 7, 1, 6, 7])
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
+
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
+
+read_sentence in dataset LINE: author author ?u_0 izzyrybz ?u_1
+turning it into this tensor: tensor([11, 11,  3, 24,  4])
+
+read_sentence in dataset LINE: author author ?u_1 izzyrybz ?u_0
+turning it into this tensor: tensor([11, 11,  4, 24,  3])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: author author ?u_1 ?u_0 izzyrybz
+turning it into this tensor: tensor([11, 11,  4,  3, 24])
+
+read_sentence in dataset LINE: author author ?u_0 ?u_1 izzyrybz
+turning it into this tensor: tensor([11, 11,  3,  4, 24])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: Which commits modified file #ent ?
+turning it into this tensor: tensor([ 7, 13, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: Which commits modified file #ent ?
+turning it into this tensor: tensor([ 7, 13, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: Which commits modified file #ent ?
+turning it into this tensor: tensor([ 7, 13, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: Which commits modified file #ent ?
+turning it into this tensor: tensor([ 7, 13, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: Which commits altered files ?
+turning it into this tensor: tensor([ 7, 13,  1, 18,  1])
+
+read_sentence in dataset LINE: Which commits altered files ?
+turning it into this tensor: tensor([ 7, 13,  1, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: How many files have been deleted ?
+turning it into this tensor: tensor([ 1,  1, 18,  1,  1, 16,  1])
+
+read_sentence in dataset LINE: How many files have been deleted ?
+turning it into this tensor: tensor([ 1,  1, 18,  1,  1, 16,  1])
+
+read_sentence in dataset LINE: delete ?u_0 ?u_1
+turning it into this tensor: tensor([16,  3,  4])
+
+read_sentence in dataset LINE: delete ?u_1 ?u_0
+turning it into this tensor: tensor([16,  4,  3])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: add ?u_0 ?u_1
+turning it into this tensor: tensor([9, 3, 4])
+
+read_sentence in dataset LINE: add ?u_1 ?u_0
+turning it into this tensor: tensor([9, 4, 3])
+
+read_sentence in dataset LINE: modify add ?u_0 ?u_1 ?u_1
+turning it into this tensor: tensor([25,  9,  3,  4,  4])
+
+read_sentence in dataset LINE: modify add ?u_1 ?u_0 ?u_0
+turning it into this tensor: tensor([25,  9,  4,  3,  3])
+
+read_sentence in dataset LINE: add modify ?u_0 ?u_1 ?u_1
+turning it into this tensor: tensor([ 9, 25,  3,  4,  4])
+
+read_sentence in dataset LINE: add modify ?u_1 ?u_0 ?u_0
+turning it into this tensor: tensor([ 9, 25,  4,  3,  3])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: add ?u_1 ?u_0
+turning it into this tensor: tensor([9, 4, 3])
+
+read_sentence in dataset LINE: add ?u_0 ?u_1
+turning it into this tensor: tensor([9, 3, 4])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0 add ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3,  9,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1 add ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4,  9,  3,  4])
+
+read_sentence in dataset LINE: add ?u_1 ?u_0 modify ?u_1 ?u_0
+turning it into this tensor: tensor([ 9,  4,  3, 25,  4,  3])
+
+read_sentence in dataset LINE: add ?u_0 ?u_1 modify ?u_0 ?u_1
+turning it into this tensor: tensor([ 9,  3,  4, 25,  3,  4])
+
+read_sentence in dataset LINE: How many files have been deleted ?
+turning it into this tensor: tensor([ 1,  1, 18,  1,  1, 16,  1])
+
+read_sentence in dataset LINE: How many files have been deleted ?
+turning it into this tensor: tensor([ 1,  1, 18,  1,  1, 16,  1])
+
+read_sentence in dataset LINE: delete ?u_0 ?u_1
+turning it into this tensor: tensor([16,  3,  4])
+
+read_sentence in dataset LINE: delete ?u_1 ?u_0
+turning it into this tensor: tensor([16,  4,  3])
+
+read_sentence in dataset LINE: Which commits altered files ?
+turning it into this tensor: tensor([ 7, 13,  1, 18,  1])
+
+read_sentence in dataset LINE: Which commits altered files ?
+turning it into this tensor: tensor([ 7, 13,  1, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: Which commits had both added and modified files ?
+turning it into this tensor: tensor([ 7, 13,  1,  1,  9, 10, 25, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: add ?u_1 ?u_0
+turning it into this tensor: tensor([9, 4, 3])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: add ?u_0 ?u_1
+turning it into this tensor: tensor([9, 3, 4])
+
+read_sentence in dataset LINE: add ?u_0 ?u_1 modify ?u_0 ?u_1
+turning it into this tensor: tensor([ 9,  3,  4, 25,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0 add ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3,  9,  4,  3])
+
+read_sentence in dataset LINE: add ?u_1 ?u_0 modify ?u_1 ?u_0
+turning it into this tensor: tensor([ 9,  4,  3, 25,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1 add ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4,  9,  3,  4])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file #ent ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 killme.py
+turning it into this tensor: tensor([11,  3,  4, 25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 killme.py
+turning it into this tensor: tensor([11,  4,  3, 25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3, 25,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4, 18, 11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0 author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3, 11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4, 25,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3, 18, 11,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1 author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4, 11,  3,  4])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 killme.py
+turning it into this tensor: tensor([11,  3,  4, 25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 killme.py
+turning it into this tensor: tensor([11,  4,  3, 25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3, 18, 11,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1 author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4, 11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3, 25,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4, 18, 11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0 author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3, 11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4, 25,  3,  4])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 killme.py
+turning it into this tensor: tensor([11,  4,  3, 25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 killme.py
+turning it into this tensor: tensor([11,  3,  4, 25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4, 25,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3, 18, 11,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_0 ?u_1 author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3,  4, 11,  3,  4])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4, 18, 11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0 author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3, 11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3, 25,  4,  3])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 killme.py
+turning it into this tensor: tensor([11,  3,  4, 25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 killme.py
+turning it into this tensor: tensor([11,  4,  3, 25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4, 18, 11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3, 18, 11,  3,  4])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 killme.py
+turning it into this tensor: tensor([11,  4,  3, 25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 killme.py
+turning it into this tensor: tensor([11,  3,  4, 25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4, 18, 11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3, 18, 11,  3,  4])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 killme.py
+turning it into this tensor: tensor([11,  4,  3, 25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 killme.py
+turning it into this tensor: tensor([11,  3,  4, 25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4, 18, 11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3, 18, 11,  3,  4])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 killme.py
+turning it into this tensor: tensor([11,  3,  4, 25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 killme.py
+turning it into this tensor: tensor([11,  4,  3, 25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py author ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4, 18, 11,  4,  3])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py author ?u_0 ?u_1
+turning it into this tensor: tensor([25,  3, 18, 11,  3,  4])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1 modify ?u_0 killme.py
+turning it into this tensor: tensor([11,  3,  4, 25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0 modify ?u_1 killme.py
+turning it into this tensor: tensor([11,  4,  3, 25,  4, 18])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: modify author ?u_0 ?u_1 killme.py
+turning it into this tensor: tensor([25, 11,  3,  4, 18])
+
+read_sentence in dataset LINE: modify author ?u_1 ?u_0 killme.py
+turning it into this tensor: tensor([25, 11,  4,  3, 18])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: Which commits have the user izzyrybz made ?
+turning it into this tensor: tensor([ 7, 13,  1,  1, 11, 24,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file killme.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: modify author ?u_1 ?u_0 killme.py
+turning it into this tensor: tensor([25, 11,  4,  3, 18])
+
+read_sentence in dataset LINE: modify author ?u_0 ?u_1 killme.py
+turning it into this tensor: tensor([25, 11,  3,  4, 18])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_1 trash.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_0 trash.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: modify author ?u_1 ?u_0 trash.py
+turning it into this tensor: tensor([25, 11,  4,  3, 18])
+
+read_sentence in dataset LINE: modify author ?u_0 ?u_1 trash.py
+turning it into this tensor: tensor([25, 11,  3,  4, 18])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify ?u_1 trash.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_0 trash.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: author ?u_0 ?u_1
+turning it into this tensor: tensor([11,  3,  4])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: modify author ?u_1 ?u_0 trash.py
+turning it into this tensor: tensor([25, 11,  4,  3, 18])
+
+read_sentence in dataset LINE: modify author ?u_0 ?u_1 trash.py
+turning it into this tensor: tensor([25, 11,  3,  4, 18])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: How many users have made commits that changed file trash.py ?
+turning it into this tensor: tensor([ 1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1])
+
+read_sentence in dataset LINE: modify author ?u_0 ?u_1 trash.py
+turning it into this tensor: tensor([25, 11,  3,  4, 18])
+
+read_sentence in dataset LINE: modify author ?u_1 ?u_0 trash.py
+turning it into this tensor: tensor([25, 11,  4,  3, 18])
+
+read_sentence in dataset LINE: " Which commits have the user izzyrybz made ? "
+turning it into this tensor: tensor([ 1,  7, 13,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: " Which commits have the user izzyrybz made ? "
+turning it into this tensor: tensor([ 1,  7, 13,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: " How many commits have the user izzyrybz made ? "
+turning it into this tensor: tensor([ 1,  1,  1, 13,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: " How many commits have the user izzyrybz made ? "
+turning it into this tensor: tensor([ 1,  1,  1, 13,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: " Which commits modified file killme.py ? "
+turning it into this tensor: tensor([ 1,  7, 13, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: " Which commits modified file killme.py ? "
+turning it into this tensor: tensor([ 1,  7, 13, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: " Which commits altered files ? "
+turning it into this tensor: tensor([ 1,  7, 13,  1, 18,  1,  1])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])
+
+read_sentence in dataset LINE: " How many files have been deleted ? "
+turning it into this tensor: tensor([ 1,  1,  1, 18,  1,  1, 16,  1,  1])
+
+read_sentence in dataset LINE: delete ?u_1 ?u_0
+turning it into this tensor: tensor([16,  4,  3])
+
+read_sentence in dataset LINE: " How many users have made commits that changed files ? "
+turning it into this tensor: tensor([ 1,  1,  1, 11,  1,  1, 13,  1, 25, 18,  1,  1])
+
+read_sentence in dataset LINE: author modify ?u_1 ?u_0 ?u_0
+turning it into this tensor: tensor([11, 25,  4,  3,  3])
+
+read_sentence in dataset LINE: " Which commits had both added and deleted files ? "
+turning it into this tensor: tensor([ 1,  7, 13,  1,  1,  9, 10, 16, 18,  1,  1])
+
+read_sentence in dataset LINE: delete add ?u_1 ?u_0 ?u_0
+turning it into this tensor: tensor([16,  9,  4,  3,  3])
+
+read_sentence in dataset LINE: " How many users have made commits that changed file killme.py ? "
+turning it into this tensor: tensor([ 1,  1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: " How many users have made commits that changed file killme.py ? "
+turning it into this tensor: tensor([ 1,  1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: modify author ?u_0 ?u_1 killme.py
+turning it into this tensor: tensor([25, 11,  3,  4, 18])
+
+read_sentence in dataset LINE: modify author ?u_1 ?u_0 killme.py
+turning it into this tensor: tensor([25, 11,  4,  3, 18])
+
+read_sentence in dataset LINE: " List all the authors ? "
+turning it into this tensor: tensor([ 1,  1,  1,  1, 11,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 ?u_0
+turning it into this tensor: tensor([11,  4,  3])
+
+read_sentence in dataset LINE: " Which commit modified file killme.py ? "
+turning it into this tensor: tensor([ 1,  7,  1, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: " Which commit modified file killme.py ? "
+turning it into this tensor: tensor([ 1,  7,  1, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: " Which users changed file killme.py or file phrasemapping.py ? "
+turning it into this tensor: tensor([ 1,  7, 11, 25, 18, 18,  1, 18,  1,  1,  1])
+
+read_sentence in dataset LINE: " Which users changed file killme.py or file phrasemapping.py ? "
+turning it into this tensor: tensor([ 1,  7, 11, 25, 18, 18,  1, 18,  1,  1,  1])
+
+read_sentence in dataset LINE: modify author ?u_0 ?u_1 killme.py
+turning it into this tensor: tensor([25, 11,  3,  4, 18])
+
+read_sentence in dataset LINE: modify author ?u_1 ?u_0 killme.py
+turning it into this tensor: tensor([25, 11,  4,  3, 18])
+
+read_sentence in dataset LINE: " When was file killme.py modified ? "
+turning it into this tensor: tensor([ 1,  6,  1, 18, 18, 25,  1,  1])
+
+read_sentence in dataset LINE: " When was file killme.py modified ? "
+turning it into this tensor: tensor([ 1,  6,  1, 18, 18, 25,  1,  1])
+
+read_sentence in dataset LINE: modify Calendar_date ?u_0 ?u_1 killme.py
+turning it into this tensor: tensor([25,  6,  3,  4, 18])
+
+read_sentence in dataset LINE: modify Calendar_date ?u_1 ?u_0 killme.py
+turning it into this tensor: tensor([25,  6,  4,  3, 18])
+
+read_sentence in dataset LINE: " Which commits modified file killme.py ? "
+turning it into this tensor: tensor([ 1,  7, 13, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: " Which commits modified file killme.py ? "
+turning it into this tensor: tensor([ 1,  7, 13, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: " How often did user izzyrybz commit ? "
+turning it into this tensor: tensor([ 1,  1,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: " How often did user izzyrybz commit ? "
+turning it into this tensor: tensor([ 1,  1,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: " How many users have made commits that changed file killme.py ? "
+turning it into this tensor: tensor([ 1,  1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: " How many users have made commits that changed file killme.py ? "
+turning it into this tensor: tensor([ 1,  1,  1, 11,  1,  1, 13,  1, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: modify author ?u_0 ?u_1 killme.py
+turning it into this tensor: tensor([25, 11,  3,  4, 18])
+
+read_sentence in dataset LINE: modify author ?u_1 ?u_0 killme.py
+turning it into this tensor: tensor([25, 11,  4,  3, 18])
+
+read_sentence in dataset LINE: " Which commits have the user izzyrybz made ? "
+turning it into this tensor: tensor([ 1,  7, 13,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: " Which commits have the user izzyrybz made ? "
+turning it into this tensor: tensor([ 1,  7, 13,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: " How many commits have the user izzyrybz made ? "
+turning it into this tensor: tensor([ 1,  1,  1, 13,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: " How many commits have the user izzyrybz made ? "
+turning it into this tensor: tensor([ 1,  1,  1, 13,  1,  1, 11, 24,  1,  1,  1])
+
+read_sentence in dataset LINE: author ?u_1 izzyrybz
+turning it into this tensor: tensor([11,  4, 24])
+
+read_sentence in dataset LINE: author ?u_0 izzyrybz
+turning it into this tensor: tensor([11,  3, 24])
+
+read_sentence in dataset LINE: " Which commits modified file killme.py ? "
+turning it into this tensor: tensor([ 1,  7, 13, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: " Which commits modified file killme.py ? "
+turning it into this tensor: tensor([ 1,  7, 13, 25, 18, 18,  1,  1])
+
+read_sentence in dataset LINE: modify ?u_0 killme.py
+turning it into this tensor: tensor([25,  3, 18])
+
+read_sentence in dataset LINE: modify ?u_1 killme.py
+turning it into this tensor: tensor([25,  4, 18])
+
+read_sentence in dataset LINE: modify ?u_1 ?u_0
+turning it into this tensor: tensor([25,  4,  3])

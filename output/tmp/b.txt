@@ -1,18 +1,1 @@
- ?u_1 http://example.org/action/modify http://example.org/entity/trash.py }
- ?u_0 <http://example.org/action/modify> <http://example.org/entity/trash.py> }
- ?u_1 http://example.org/action/modify ?u_0 }
- ?u_0 http://example.org/action/modify ?u_1 }
- ?u_1 http://example.org/ontology/Calendar_date ?u_0 }
- ?u_0 http://example.org/ontology/Calendar_date ?u_1 }
- ?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/modify> ?u_0 }
- ?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_1 <http://example.org/ontology/Calendar_date> ?u_0 }
- ?u_0 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_0 <http://example.org/action/modify> ?u_1 }
- ?u_0 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1 }
- ?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> }
- ?u_1 http://example.org/action/modify ?u_0 .?u_1 http://example.org/ontology/Calendar_date ?u_0 }
- ?u_0 <http://example.org/action/modify> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/trash.py> }
- ?u_0 http://example.org/action/modify ?u_1 .?u_0 http://example.org/ontology/Calendar_date ?u_1 }
- ?u_1 <http://example.org/ontology/Calendar_date> ?u_0 .?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> }
- ?u_1 http://example.org/ontology/Calendar_date ?u_0 .?u_1 http://example.org/action/modify ?u_0 }
- ?u_0 <http://example.org/ontology/Calendar_date> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/trash.py> }
- ?u_0 http://example.org/ontology/Calendar_date ?u_1 .?u_0 http://example.org/action/modify ?u_1 }
+?u_1 <http://example.org/action/modify> ?u_0 }

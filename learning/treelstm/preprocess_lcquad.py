@@ -60,7 +60,7 @@ def generalize_question(a, b, parser=None):
     for uri in entity_uris:
         #print("WHAT IS THIS BULLSHIT",a, uri)
         output = find_mentions(a, entity_uris)
-        print("find mentions output",output,"this is a",a,entity_uris)
+        #print("find mentions output",output,"this is a",a,entity_uris)
         
         #output contains start,end, dist,uri
         if(output['start'] == -1):
@@ -218,7 +218,7 @@ def query_parse(filepath):
                         
                 #print("this is our tripple",triple)
                         
-                print("this is our tripple",triple,clause)
+                #print("this is our tripple",triple,clause)
 
                 root_node = anytree.Node(triple[1])
                 left_node = anytree.Node(triple[0], root_node)
@@ -229,6 +229,8 @@ def query_parse(filepath):
                 leveled = [left_node, root_node, right_node]
                 for item in triple:
                     #print("We are having problem with", item,clause,leveled)
+                    #if root_node == vars[item].parent:
+                    
                     
                     if item.startswith("?u_"):
                         if item in vars:
@@ -237,15 +239,16 @@ def query_parse(filepath):
                             children = vars[item].parent.children
                             #print("this is childern",children,"and parents",vars[item].parent)
                             if children[0] == vars[item]: 
+                                 
                                 # the u_ place is already taken
                                 #need to start a new branch on the tree
-                                 #vars[item].parent.children = [root_node, children[1]]
-                                 second_tree.append((left_node.name,1))
+                                 vars[item].parent.children = [root_node, children[1]]
+                                 '''second_tree.append((left_node.name,1))
                                  
                                  second_tree.append((root_node.name,0))
 
                                  second_tree.append((right_node.name,1))
-                                 break
+                                 break'''
 
                             else:
                                 
@@ -336,7 +339,7 @@ def split(data, parser=None):
             b = re.sub(r'^SELECT\s*\*\s*WHERE\s*{\s*', '', b)
             b= re.sub(r'ASK WHERE \{', '', b)
             #print("sending in a and b",a,b)
-            a, b = generalize_question(a,b, parser)
+            #a, b = generalize_question(a,b, parser)
             #print("outcome",a)
             
 

@@ -82,11 +82,11 @@ def preprocess_relations(file, prop=False):
             if(len(split_line)>0):
                 uri = split_line[0].replace('<', '').replace('>', '')
 
-            if prop is True:
-                uri_property = uri.replace('/ontology/', '/property/')
-                relations[key].extend([uri, uri_property])
-            else:
-                relations[key].append(uri)
+            #if prop is True:
+                #uri_property = uri.replace('/ontology/', '/property/')
+            #    relations[key].extend([uri, uri_property])
+            #else:
+            relations[key].append(uri)
     return relations
 
 def get_earl_entities(query):

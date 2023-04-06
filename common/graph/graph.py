@@ -103,6 +103,20 @@ class Graph:
                     all_relations.append(relation['uri'])
                 elif self.is_uri(relation) or self.is_var(relation):
                     all_relations.append(relation)
+
+        relation_without_ent=[]
+        for relation in all_relations:
+            for entity in all_entites:
+                relation_formatted = self.jena_formatting(relation)
+                entity = self.jena_formatting(entity)
+                #print("THIS IS THE JENA FORMATTED",relation,entity)
+                query = "SELECT ?u1 WHERE { ?u1 "+ relation_formatted+" "+entity+"}"
+                response = requests.get("http://localhost:3030/dbpedia/sparql", params={"query": query})
+                if( len(response.json()['results']['bindings']) == 0):
+                    relation_without_ent.append(relation)
+                    #print("we have gone wrong")
+        #print(relation_without_ent)
+        
         
         #print(all_entites)
         #print(all_relations)
@@ -123,8 +137,15 @@ class Graph:
             set4_u2_p_o = set(itertools.product(['?u_0'], all_relations, all_entites))
 
             ###################### ?u1 and ?u2###############################
-            set1_u1_p_u2 = set(itertools.product(['?u_1'], all_relations, ['?u_0']))
-            set2_u2_p_u1 = set(itertools.product(['?u_0'], all_relations, ['?u_1']))
+            #all the relation that has corresponding ents doesnt need to do this
+            
+
+            set1_u1_p_u2 = set(itertools.product(['?u_1'], relation_without_ent, ['?u_0']))
+            set2_u2_p_u1 = set(itertools.product(['?u_0'], relation_without_ent, ['?u_1']))
+
+            if (not len(all_relations)>0):
+                set1_u1_p_u2 = set(itertools.product(['?u_1'], ['?u_0'], all_entites))
+                set2_u2_p_u1 = set(itertools.product(['?u_0'], ['?u_0'], all_entites))
 
             set1_s_u1_u2 = set(itertools.product(hash_entities, ['?u_1'], ['?u_0']))
             set2_s_u2_u1 = set(itertools.product(hash_entities, ['?u_0'], ['?u_1']))

@@ -3,52 +3,28 @@
         "entities": [
             {
                 "surface": [
-                    21,
-                    14
+                    36,
+                    29
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/entity/trash.py"
+                        "uri": "http://example.org/entity/izzyrybz"
                     }
                 ]
             }
         ],
-        "question": "When was file trash.py modified?",
+        "question": "\"Which commits have the user izzyrybz made?\"",
         "relations": [
             {
                 "surface": [
-                    0,
+                    24,
                     3
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
-                        "uri": "http://example.org/ontology/Calendar_date"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    0,
-                    3
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/property/Calendar_date"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    23,
-                    8
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/action/modify"
+                        "uri": "http://example.org/ontology/author"
                     }
                 ]
             }

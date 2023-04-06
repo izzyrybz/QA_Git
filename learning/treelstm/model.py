@@ -71,6 +71,8 @@ class ChildSumTreeLSTM(nn.Module):
             tree.state = self.node_forward(torch.zeros_like(inputs[0]), child_c, child_h)
         else:
             tree.state = self.node_forward(inputs[tree.idx], child_c, child_h)
+
+        #print("WE ARE IN ChildSumTreeLSTM and this out tree state",tree.state)
         return tree.state
     
 
@@ -95,7 +97,7 @@ class DASimilarity(nn.Module):
         vec_dist = F.dropout(vec_dist, p=0.2, training=self.training)
         out = torch.sigmoid(self.wh(vec_dist))
         out = F.log_softmax(self.wp(out),dim=1)
-        
+        #print("WE ARE IN DASIMILARYI OUTOUT",out)
         
         return out
 
@@ -107,6 +109,7 @@ class CosSimilarity(nn.Module):
         self.cos = nn.CosineSimilarity(dim=mem_dim)
 
     def forward(self, lvec, rvec):
+        #print("CosSimilarity")
         out = self.cos(lvec, rvec)
         out = torch.autograd.Variable(torch.FloatTensor([[1 - out.data[0], out.data[0]]]), requires_grad=True)
         if torch.cuda.is_available():
@@ -131,4 +134,5 @@ class SimilarityTreeLSTM(nn.Module):
         rstate, rhidden = self.childsumtreelstm(rtree, rinputs)
         #print(rstate, rhidden,lstate, lhidden)
         output = self.similarity(lstate, rstate)
+        #print("this is We are in SimilarityTreeLSTM output",output)
         return output

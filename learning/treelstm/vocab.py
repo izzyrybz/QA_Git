@@ -21,12 +21,24 @@ class Vocab(object):
         idx = 0
         for line in open(filename, encoding='utf-8', errors='ignore'):
             token = line.rstrip('\n')
-            self.add(token)
-            idx += 1
+            if ',' in token:
+                token_synonyms = token.split(',')
+                for token_synonym in token_synonyms:
+                    self.add(token_synonym,idx)
+                    #print("this is synonym",token_synonym,idx)
+                idx += 1
+
+            else:
+                self.add(token,idx)
+                #print(token,idx)
+                idx += 1
+        
 
     def getIndex(self, key, default=None):
         key = key.lower() if self.lower else key
         try:
+            
+            #print("getting index ",self.labelToIdx[key])    
             return self.labelToIdx[key]
         except KeyError:
             return default
@@ -48,7 +60,7 @@ class Vocab(object):
             self.addSpecial(label)
 
     # Add `label` in the dictionary. Use `idx` as its index if given.
-    def add(self, label):
+    '''def add(self, label):
         label = label.lower() if self.lower else label
         if label in self.labelToIdx:
             idx = self.labelToIdx[label]
@@ -56,6 +68,19 @@ class Vocab(object):
             idx = len(self.idxToLabel)
             self.idxToLabel[idx] = label
             self.labelToIdx[label] = idx
+        return idx'''
+    def add(self, label, idx=None):
+        label = label.lower() if self.lower else label
+        if idx is not None:
+            self.labelToIdx[label] = idx
+            self.idxToLabel[idx] = label
+        else:
+            if label in self.labelToIdx:
+                idx = self.labelToIdx[label]
+            else:
+                idx = len(self.idxToLabel)
+                self.idxToLabel[idx] = label
+                self.labelToIdx[label] = idx
         return idx
 
     # Convert `labels` to indices. Use `unkWord` if not found.

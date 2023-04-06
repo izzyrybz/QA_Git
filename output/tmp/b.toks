@@ -1,18 +1,1 @@
-http://example.org/action/modify ?u_1 http://example.org/entity/trash.py
-<http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-http://example.org/action/modify ?u_1 ?u_0
-http://example.org/action/modify ?u_0 ?u_1
-http://example.org/ontology/Calendar_date ?u_1 ?u_0
-http://example.org/ontology/Calendar_date ?u_0 ?u_1
-<http://example.org/action/modify> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-<http://example.org/ontology/Calendar_date> ?u_1 ?u_0 <http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py>
-<http://example.org/action/modify> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-<http://example.org/ontology/Calendar_date> ?u_0 ?u_1 <http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py>
-<http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_1 ?u_0
-http://example.org/ontology/Calendar_date ?u_1 ?u_0 http://example.org/action/modify ?u_1 ?u_0
-<http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/action/modify> ?u_0 ?u_1
-http://example.org/ontology/Calendar_date ?u_0 ?u_1 http://example.org/action/modify ?u_0 ?u_1
-<http://example.org/action/modify> ?u_1 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_1 ?u_0
-http://example.org/action/modify ?u_1 ?u_0 http://example.org/ontology/Calendar_date ?u_1 ?u_0
-<http://example.org/action/modify> ?u_0 <http://example.org/entity/trash.py> <http://example.org/ontology/Calendar_date> ?u_0 ?u_1
-http://example.org/action/modify ?u_0 ?u_1 http://example.org/ontology/Calendar_date ?u_0 ?u_1
+<http://example.org/action/modify> ?u_1 ?u_0

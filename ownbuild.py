@@ -174,23 +174,23 @@ def main(question):
             #print("The answer is",output)
     
 
-q1='Which commits have the user izzyrybz made?' #
+q1='Which commits have the user izzyrybz made?' #w
 
-q2= 'How many commits have the user izzyrybz made?' #
+q2= 'How many commits have the user izzyrybz made?' #w
 
 #q3 ='How many commits have there been?'
 
-q4 ='Which commits modified file killme.py?'  #-
+q4 ='Which commits modified file killme.py?'  #w
 
-q4_x ='Which commits altered files?' #
+q4_x ='Which commits altered files?' #w
 
-q5 ='How many files have been deleted?' #
+q5 ='How many files have been deleted?' #w
 
 q6 = 'How many users have made commits that changed files?'  #needs u3
 
-q7 = 'Which commits had both added and modified files?' #
+q7 = 'Which commits had both added and modified files?' #w
 
-q8='How many users have made commits that changed file killme.py?' #works
+q8='How many users have made commits that changed file trash.py?' #
 
 q9 = 'List all the authors?' #
 
@@ -198,7 +198,7 @@ q10 = "Which commit changed file killme.py?" # works
 
 q11= 'Which users changed file killme.py and file myphrasemapping.py?' #needs u3
 
-q12= "When was file trash.py modified?" #  ----
+q12= "When was file trash.py modify?" #  ----
 
 q13 = "Which commits modified file killme.py?" # works
 
@@ -209,8 +209,8 @@ q13 = "Which commits modified file killme.py?" # works
 #8: What commits were made in 2022-01-01?
 
 #9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-main(q12)
-exit()
+#main(q8)
+#exit()
 
 with open('testingdata.txt','r') as fp:
     data = fp.readlines()

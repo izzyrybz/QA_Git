@@ -9,19 +9,37 @@ def check_triples(subjects,predicates,objects, used_triples):
     graph = Graph()
     for i in range(len(subjects)):
         
-        if (subjects[i], objects[i], predicates[i]) in used_triples:
-            return False
+        #if () in used_triples:
+        #    return False
+        
         for j in range(i+1, len(subjects)):
+            #print("in check tripples ",subjects[j],  predicates[j], objects[j],subjects[i],predicates[i], objects[i] )
+            #print("used tripples",used_triples)
+            
+            if (subjects[i],predicates[i], objects[i],subjects[j],  predicates[j], objects[j]) in used_triples:
+                #print("we have found a used tripple")
+                
+                return False
+            if (subjects[j],  predicates[j], objects[j],subjects[i],predicates[i], objects[i]) in used_triples:
+                print("we have found a used tripple2")
+                
+                return False
             #print(subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
             if subjects[i] == subjects[j] and objects[i] == objects[j] and predicates[i] == predicates[j]:
-                print("1.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
+                #print("1.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
                 return False
             if predicates[i] == predicates[j] and objects[i] == objects[j] and graph.is_var(subjects[i]) and graph.is_var(subjects[j]):
-                print("2.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
+                #print("2.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
+
+                return False
+            if predicates[i] == predicates[j] and graph.is_var(objects[i]) and graph.is_var(subjects[i]):
+
+                return False
+            if predicates[i] == predicates[j] and graph.is_var(objects[j]) and graph.is_var(subjects[j]):
 
                 return False
             if graph.is_var(subjects[i]) and graph.is_var(subjects[j]) and predicates[i] == predicates[j] and graph.is_var(objects[i]) and graph.is_var(objects[j]):
-                print("2.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
+                #print("2.returning false for",subjects[i], predicates[i], objects[i],subjects[j], predicates[j], objects[j])
                 return False
         if predicates[i] in objects or subjects[i] in objects or predicates[i] in subjects: 
             return False       
@@ -97,7 +115,7 @@ def mutli_var_complex_query(valid_walks,ask_query,count_query):
                     pbar.update(1)
 
         ########### tripple relation ########
-
+    
     #tripple_statment=input("ideally we would put ranking here")
     tripple_statment='0'
     

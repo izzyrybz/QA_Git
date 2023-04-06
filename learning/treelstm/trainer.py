@@ -5,6 +5,17 @@ from torch.autograd import Variable as Var
 from torch.utils.data import DataLoader
 
 from learning.treelstm.utils import map_label_to_target
+import numpy as np
+from numpy.linalg import norm
+
+def cosine_similarity(tensor1, tensor2):
+    max_size = max(tensor1.size(0), tensor2.size(0))
+    padded_tensor1 = torch.zeros(max_size)
+    padded_tensor2 = torch.zeros(max_size)
+    padded_tensor1[:tensor1.size(0)] = tensor1
+    padded_tensor2[:tensor2.size(0)] = tensor2
+    return torch.nn.functional.cosine_similarity(padded_tensor1, padded_tensor2, dim=0)
+
 
 
 class Trainer(object):
@@ -59,6 +70,8 @@ class Trainer(object):
         indices = torch.arange(1, dataset.num_classes + 1, dtype=torch.float)
         for idx in tqdm(range(len(dataset)), desc='Testing epoch  ' + str(self.epoch) + ''):
             ltree, lsent, rtree, rsent, label = dataset[idx]
+
+            
             #lsent, rsent,label are tensors that does have anything to do with the output
             
             #print("TREE",ltree.children, lsent, rtree.children, rsent, label)
@@ -73,7 +86,8 @@ class Trainer(object):
                 target = target.cuda()
             
             #linput = torch.tensor(x)
-            print("this is our ltree, linput, rtree, rinput",ltree, linput, rtree, rinput)
+            #print("this is our ltree, linput, rtree, rinput",ltree, linput, rtree, rinput)
+            
             output = self.model(ltree, linput, rtree, rinput)
             
             err = self.criterion(output, target)
@@ -82,6 +96,10 @@ class Trainer(object):
             output = output.data.squeeze().cpu()
             
             predictions[idx] = torch.dot(indices, torch.exp(output))
+            '''if cosine_similarity(linput,rinput) is not None:
+                
+                predictions[idx] = cosine_similarity(linput,rinput)
+                print("looked at ",linput,rinput,cosine_similarity(linput,rinput))'''
             
             
         if len(dataset)== 0:

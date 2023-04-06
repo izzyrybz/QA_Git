@@ -13,6 +13,5 @@
 "Which commits modified file killme.py?"
 "How often did user izzyrybz commit?"
 "How many users have made commits that changed file killme.py?"
-"Which users changed file killme.py and file trash.py?"
 "In which commits did file killme.py and file trash.py change together?"
 "How many files did user izzyrybz create in their commits?"

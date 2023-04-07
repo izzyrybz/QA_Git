@@ -3,8 +3,8 @@
         "entities": [
             {
                 "surface": [
-                    36,
-                    29
+                    32,
+                    25
                 ],
                 "uris": [
                     {
@@ -14,17 +14,29 @@
                 ]
             }
         ],
-        "question": "\"Which commits have the user izzyrybz made?\"",
+        "question": "\"How many files did user izzyrybz create in their commits?\"",
         "relations": [
             {
                 "surface": [
-                    24,
+                    20,
                     3
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
                         "uri": "http://example.org/ontology/author"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    34,
+                    5
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/action/add"
                     }
                 ]
             }

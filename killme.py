@@ -131,7 +131,7 @@ def rank(args, question, generated_queries):
             
             print("THIS IS THE OUTPUT DIRECT OF QG", output_dir)
             test_dataset = QGDataset(output_dir, vocab, args.num_classes)
-            print("length of dataset" ,len(test_dataset))
+            print("length of dataset" ,len(test_dataset),test_dataset)
 
             test_loss, test_pred = trainer.test(test_dataset)
             return test_pred
@@ -198,18 +198,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
     
     #I DONT UNDERSTAND WHY WE ARE DOING THIS 
 
-    if question_type == 0 and len(relations) == 1:
-        print("is this the place we go and get a superlong tqdm")
-        double_relation = True
-        graph = Graph()
-        query_builder = QueryBuilder()
-        graph.find_minimal_subgraph(entities, relations, double_relation=double_relation, ask_query=ask_query,
-                                    sort_query=sort_query, h1_threshold=h1_threshold)
-        valid_walks_new = query_builder.to_where_statement(graph,
-                                                            ask_query=ask_query,
-                                                            count_query=count_query, sort_query=sort_query)
-        
-        valid_walks_with_sparql.extend(valid_walks_new)
+    
 
     
 
@@ -228,14 +217,14 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         if all(entity in walks for entity in all_entities_uri) and all(relation in walks for relation in all_relations_uri):
             walks_with_everything.append(walks)
     valid_walks_with_sparql=walks_with_everything
-    print(valid_walks_with_sparql)
-    exit()
+    #print(valid_walks_with_sparql)
+    
 
     with open('trash2.txt','w') as fp:
         for item in valid_walks_with_sparql:
             fp.writelines(item)
             fp.writelines('\n')
-
+   
     args = Struct()
     base_path = "./learning/treelstm/"
     args.save = os.path.join(base_path, "checkpoints/")

@@ -148,7 +148,7 @@ def __substring_with_min_levenshtein_distance(uri, text):
 
     res = re.search(uri,text)
     if res is not None:
-        print("we have an answer RE")
+        #print("we have an answer RE")
         return (res.start(),res.end(), (res.end()-res.start()))
     return -1 ,-1, -1
     '''

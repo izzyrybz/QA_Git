@@ -8,7 +8,6 @@
 "How many users have made commits that changed file killme.py?"
 "List all the authors?" 
 "Which commit modified file killme.py?"
-"Which users changed file killme.py or file phrasemapping.py?"
 "When was file killme.py modified?"
 "Which commits modified file killme.py?"
 "How often did user izzyrybz commit?"

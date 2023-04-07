@@ -138,8 +138,7 @@ class Graph:
 
             ###################### ?u1 and ?u2###############################
             #all the relation that has corresponding ents doesnt need to do this
-            
-
+        
             set1_u1_p_u2 = set(itertools.product(['?u_1'], relation_without_ent, ['?u_0']))
             set2_u2_p_u1 = set(itertools.product(['?u_0'], relation_without_ent, ['?u_1']))
 
@@ -149,37 +148,21 @@ class Graph:
 
             set1_s_u1_u2 = set(itertools.product(hash_entities, ['?u_1'], ['?u_0']))
             set2_s_u2_u1 = set(itertools.product(hash_entities, ['?u_0'], ['?u_1']))
+
             set_u1 = set1_s_p_o | set2_s_p_u1 | set3_s_u1_o | set4_u1_p_o
             set_u2 = set2_s_p_u2|set3_s_u2_o|set4_u2_p_o
             set_s_p_o_u1_u2 =  set1_u1_p_u2 | set2_u2_p_u1 | set1_s_u1_u2 | set2_s_u2_u1
-            all_sets = set_u1|set_u2|set_s_p_o_u1_u2
+            #all_sets = set_u1|set_u2|set_s_p_o_u1_u2
         
 
-        elif(num_of_relation == '3'):
-            ############################# ?u1 ###################################
-            set1_s_p_o = set(itertools.product(hash_entities, all_relations, all_entites))
-            set2_s_p_u1 = set(itertools.product(hash_entities, all_relations, ['?u_1']))
-            set3_s_u1_o = set(itertools.product(hash_entities, ['?u_1'], all_entites))
-            set4_u1_p_o = set(itertools.product(['?u_1'], all_relations, all_entites))
-
-            ############################# ?u2 ###################################
-            set2_s_p_u2 = set(itertools.product(hash_entities, all_relations, ['?u_0']))
-            set3_s_u2_o = set(itertools.product(hash_entities, ['?u_0'], all_entites))
-            set4_u2_p_o = set(itertools.product(['?u_0'], all_relations, all_entites))
+        #elif(num_of_relation == '3'):
+            
 
             ############################## ?u3##############################
             set2_s_p_u3 = set(itertools.product(hash_entities, all_relations, ['?u_3']))
             set3_s_u3_o = set(itertools.product(hash_entities, ['?u_3'], all_entites))
             set4_u3_p_o = set(itertools.product(['?u_3'], all_relations, all_entites))
         
-
-                ###################### ?u1 and ?u2###############################
-            set1_u1_p_u2 = set(itertools.product(['?u_1'], all_relations, ['?u_0']))
-            set2_u2_p_u1 = set(itertools.product(['?u_0'], all_relations, ['?u_1']))
-
-            set1_s_u1_u2 = set(itertools.product(hash_entities, ['?u_1'], ['?u_0']))
-            set2_s_u2_u1 = set(itertools.product(hash_entities, ['?u_0'], ['?u_1']))
-
             ###########################?u1 and ?u3#################################
             set1_u1_p_u3 = set(itertools.product(['?u_1'], all_relations, ['?u_3']))
             set2_u3_p_u1 = set(itertools.product(['?u_3'], all_relations, ['?u_1']))
@@ -196,14 +179,13 @@ class Graph:
             set2_s_u2_u3 = set(itertools.product(hash_entities, ['?u_0'], ['?u_3']))
 
             
-            set_u1 = set1_s_p_o | set2_s_p_u1 | set3_s_u1_o | set4_u1_p_o
-            set_u2 = set2_s_p_u2|set3_s_u2_o|set4_u2_p_o
+            
             set_u3 = set2_s_p_u3|set3_s_u3_o|set4_u3_p_o
-            set_s_p_o_u1_u2 =  set1_u1_p_u2 | set2_u2_p_u1 | set1_s_u1_u2 | set2_s_u2_u1 
+            
             set_s_p_o_u1_u3 =  set1_u1_p_u3 | set2_u3_p_u1 | set1_s_u1_u3 | set2_s_u3_u1 
             set_s_p_o_u2_u3 =  set1_u3_p_u2 | set2_u2_p_u3 |set1_s_u3_u2 | set2_s_u2_u3 
-
-            all_sets = set_u1 |set_s_p_o_u1_u2|set_u2|set_u3|set_s_p_o_u1_u3 | set_s_p_o_u2_u3
+            #all_sets = set_u3|set_s_p_o_u1_u3 | set_s_p_o_u2_u3
+            all_sets = set_u1|set_u2|set_u3|set_s_p_o_u1_u2|set_s_p_o_u1_u3 | set_s_p_o_u2_u3
 
 
         unique_set = set()

@@ -11,54 +11,48 @@ we have choosen the first possible option
 
 "Which commits modified file killme.py?"
  ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
+we have choosen the first possible option
 
 
 "Which commits altered files?"
  ?u_1 <http://example.org/action/modify> ?u_0 }
-we have choosen the first possible option
 
 
 "How many files have been deleted?"
  ?u_1 <http://example.org/action/delete> ?u_0 }
-we have choosen the first possible option
 
 
 "How many users have made commits that changed files?"
-  ?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/action/modify> ?u_0 }
+  ?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/action/modify> ?u_0 }
 we have choosen the first possible option
 
 
 "Which commits had both added and deleted files?"
-  ?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 }
-we have choosen the first possible option
+  ?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 }
 
 
 "How many users have made commits that changed file killme.py?"
-  ?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_0 <http://example.org/ontology/author> ?u_1 }
+  ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://example.org/ontology/author> ?u_0 }
 we have choosen the first possible option
 
 
 "List all the authors?"
  ?u_1 <http://example.org/ontology/author> ?u_0 }
-we have choosen the first possible option
 
 
 "Which commit modified file killme.py?"
  ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
-
-
-"Which users changed file killme.py or file phrasemapping.py?" #tripple relation
-  ?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_0 <http://example.org/ontology/author> ?u_1 }
 we have choosen the first possible option
 
 
 "When was file killme.py modified?"
-ASK WHERE { ?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1 }
+ASK WHERE { ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_3 <http://example.org/ontology/Calendar_date> ?u_0 }
 we have choosen the first possible option
 
 
 "Which commits modified file killme.py?"
  ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
+we have choosen the first possible option
 
 
 "How often did user izzyrybz commit?"
@@ -66,6 +60,14 @@ we have choosen the first possible option
 
 
 "How many users have made commits that changed file killme.py?"
-  ?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_0 <http://example.org/ontology/author> ?u_1 }
+  ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://example.org/ontology/author> ?u_0 }
 we have choosen the first possible option
+
+
+"In which commits did file killme.py and file trash.py change together?"
+  ?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
+
+
+"How many files did user izzyrybz create in their commits?"
+  ?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_3 <http://example.org/action/add> ?u_0 }
 

@@ -1,2 +1,20 @@
-?u_1 <http://example.org/action/modify> ?u_0
-SELECT * WHERE { ?u_1 <http://example.org/action/modify> ?u_0 }
+?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_1 <http://example.org/action/add> ?u_0 
+SELECT * WHERE {  ?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_1 <http://example.org/action/add> ?u_0 }
+?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_1 <http://example.org/action/add> ?u_3 
+SELECT * WHERE {  ?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_1 <http://example.org/action/add> ?u_3 }
+?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_3 <http://example.org/action/add> ?u_0 
+SELECT * WHERE {  ?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_3 <http://example.org/action/add> ?u_0 }
+?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_0 <http://example.org/action/add> ?u_3 
+SELECT * WHERE {  ?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_0 <http://example.org/action/add> ?u_3 }
+?u_3 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_0 <http://example.org/action/add> ?u_1 
+SELECT * WHERE {  ?u_3 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_0 <http://example.org/action/add> ?u_1 }
+?u_3 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_1 <http://example.org/action/add> ?u_0 
+SELECT * WHERE {  ?u_3 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_1 <http://example.org/action/add> ?u_0 }
+?u_3 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_3 <http://example.org/action/add> ?u_1 
+SELECT * WHERE {  ?u_3 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_3 <http://example.org/action/add> ?u_1 }
+?u_0 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_0 <http://example.org/action/add> ?u_1 
+SELECT * WHERE {  ?u_0 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_0 <http://example.org/action/add> ?u_1 }
+?u_0 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_3 <http://example.org/action/add> ?u_1 
+SELECT * WHERE {  ?u_0 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_3 <http://example.org/action/add> ?u_1 }
+?u_0 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_1 <http://example.org/action/add> ?u_3 
+SELECT * WHERE {  ?u_0 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_1 <http://example.org/action/add> ?u_3 }

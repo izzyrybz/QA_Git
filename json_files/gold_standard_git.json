@@ -2914,7 +2914,7 @@
         ],
         "id": "20",
         "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> .?x <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py> }",
-        "question": "Which users changed myphrasemapping.py and killme.py?"
+        "question": "Which users changed myphrasemapping.py and killme.py in the same commit?"
     },
     {
         "answer": "correct",

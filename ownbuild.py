@@ -196,7 +196,7 @@ q9 = 'List all the authors?' #
 
 q10 = "Which commit changed file killme.py?" # works
 
-q11= 'Which users changed file killme.py and file myphrasemapping.py?' #needs u3
+q11= 'Which users changed file killme.py and file myphrasemapping.py?' #
 
 q12= "When was file trash.py modify?" #  ----
 
@@ -206,10 +206,9 @@ q13 = "Which commits modified file killme.py?" # works
 
 #7 : Did a commit have the description 'Initial commit'? - does not work
 
-#8: What commits were made in 2022-01-01?
-
+#8: What commits were made in 2022-01-0
 #9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-#main(q8)
+#main('Which users changed myphrasemapping.py and killme.py in the same commit?')
 #exit()
 
 with open('testingdata.txt','r') as fp:

@@ -72,12 +72,12 @@ class QGDataset(data.Dataset):
             new_line += word + " "
         new_line = new_line.strip()
        
-        print("this is new line",new_line.split())
+        #print("this is new line",new_line.split())
    
 
         indices=self.vocab.convertToIdx(new_line.split(), Constants.UNK_WORD)
         #print("this is indices",indices)
-        print("we are taking this line:", new_line,"and tunring it into this tensor",torch.LongTensor(indices))
+        #print("we are taking this line:", new_line,"and tunring it into this tensor",torch.LongTensor(indices))
         with open('trash.txt', 'a') as f:
                 f.write(f"\nread_sentence in dataset LINE: {new_line}\n")
                 f.write(f"turning it into this tensor: {torch.LongTensor(indices)}\n")

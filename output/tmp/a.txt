@@ -1,10 +1,6 @@
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
-"How many files did user #ent create in their commits?"
+Which commits had both added and modified files?
+Which commits had both added and modified files?
+Which commits had both added and modified files?
+Which commits had both added and modified files?
+Which commits had both added and modified files?
+Which commits had both added and modified files?

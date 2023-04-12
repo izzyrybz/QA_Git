@@ -5,13 +5,29 @@ from tqdm import tqdm
 
 from common.graph.graph import Graph
 
+def normalize_var_combo(combo):
+    var_dict = {}
+    next_var = 0
+    normalized_combo = []
+    for element in combo:
+        if element.startswith("?u_"):
+            if element not in var_dict:
+                var_dict[element] = f"?u_{next_var}"
+                next_var += 1
+            normalized_combo.append(var_dict[element])
+        else:
+            normalized_combo.append(element)
+    return tuple(normalized_combo)
 
-def check_triples(subjects, predicates, objects, used_triples):
+def check_triples(subjects, predicates, objects, used_triples,used_var_combo,normalized_combo):
     graph = Graph()
+    
+    #print(used_var_combo)
     for i in range(len(subjects)):
 
-        # if () in used_triples:
-        #    return False
+        if normalized_combo in used_var_combo:
+            return False
+
 
         for j in range(i+1, len(subjects)):
             # print("in check tripples ",subjects[j],  predicates[j], objects[j],subjects[i],predicates[i], objects[i] )
@@ -98,6 +114,7 @@ def mutli_var_complex_query(valid_walks, ask_query, count_query):
     # all_combinations_of_edges = self.create_all_combinations_for_edges(edge_list)
     count = 0
     used_triples_double = []
+    used_var_combo=set()
     used_triples_tripple = []
     total = len(tripples)*len(tripples)
 
@@ -108,7 +125,8 @@ def mutli_var_complex_query(valid_walks, ask_query, count_query):
             for subject2, predicate2, object2 in subject_predicate_object_list:
                 # print(edge2,source2,dest2,subject1,predicate1,dest1)
                 # if (subject1 == subject2 and predicate1 == predicate2 and object1 == object2) or ((subject1, predicate1, object1, subject2, predicate2, object2) in used_triples_double) or ((subject2, predicate2, object2, subject1, predicate1, object1) in used_triples_double):
-                if (not check_triples([subject1, subject2], [predicate1, predicate2], [object1, object2], used_triples_double)):
+                normalized_combo = normalize_var_combo((subject1, predicate1, object1, subject2, predicate2, object2))
+                if (not check_triples([subject1, subject2], [predicate1, predicate2], [object1, object2], used_triples_double,used_var_combo,normalized_combo)):
                     # If the two triples are the same or have been used before, skip to the next iteration
                     pbar.update(1)
                     continue
@@ -118,6 +136,8 @@ def mutli_var_complex_query(valid_walks, ask_query, count_query):
                     # print(subject1, predicate1, object1, subject2, predicate2, object2)
                     used_triples_double.append(
                         (subject1, predicate1, object1, subject2, predicate2, object2))
+                    #print((subject1, predicate1, object1, subject2, predicate2, object2))
+                    used_var_combo.add(normalized_combo)
                     list_with_elements_and_sparql_final.append(two_hop_complex_query_process(
                         subject1, predicate1, object1, subject2, predicate2, object2, ask_query, count_query))
                     pbar.update(1)
@@ -126,13 +146,15 @@ def mutli_var_complex_query(valid_walks, ask_query, count_query):
 
     # tripple_statment=input("ideally we would put ranking here")
     tripple_statment = '1'
+    used_var_combo=set()
 
     if (tripple_statment == '1'):
         with tqdm(total=total*len(tripples))as pbar:
             for subject1, predicate1, object1 in subject_predicate_object_list:
                 for subject2, predicate2, object2 in subject_predicate_object_list:
                     for subject3, predicate3, object3 in subject_predicate_object_list:
-                        if (not check_triples([subject1, subject2, subject3], [predicate1, predicate2, predicate3], [object1, object2, object3], used_triples_tripple)):
+                        normalized_combo = normalize_var_combo((subject1, predicate1, object1, subject2, predicate2, object2, subject3, predicate3, object3))
+                        if (not check_triples([subject1, subject2, subject3], [predicate1, predicate2, predicate3], [object1, object2, object3], used_triples_tripple,used_var_combo,normalized_combo)):
                             # If the two triples are the same or have been used before, skip to the next iteration
                             pbar.update(1)
                             continue
@@ -141,6 +163,10 @@ def mutli_var_complex_query(valid_walks, ask_query, count_query):
                             # print(subject1, predicate1, object1, subject2, predicate2, object2)
                             used_triples_tripple.append(
                                 (subject1, predicate1, object1, subject2, predicate2, object2, subject3, predicate3, object3))
+                            
+
+                            used_var_combo.add(normalized_combo)
+
                             list_with_elements_and_sparql_final.append(three_hop_complex_query_process(
                                 subject1, predicate1, object1, subject2, predicate2, object2, subject3, predicate3, object3, ask_query, count_query))
                             pbar.update(1)

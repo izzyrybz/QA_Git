@@ -192,13 +192,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         for walk in array_with_walks:
             walk = walk.lstrip() 
             valid_walks_with_sparql.append(walk)
-    #print(valid_walks_with_sparql)
-    
-
-    
-    #I DONT UNDERSTAND WHY WE ARE DOING THIS 
-
-    
+    #print("these are the valid paths found:",valid_walks_with_sparql)
 
     
 
@@ -217,7 +211,7 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
         if all(entity in walks for entity in all_entities_uri) and all(relation in walks for relation in all_relations_uri):
             walks_with_everything.append(walks)
     valid_walks_with_sparql=walks_with_everything
-    #print(valid_walks_with_sparql)
+    #print("these are the valid paths with more complex queries found:",valid_walks_with_sparql)
     
 
     with open('trash2.txt','w') as fp:
@@ -276,7 +270,11 @@ def generate_query(question, entities, relations, h1_threshold=9999999, question
             #print("this is scores[idx]",scores[idx]) 
             item["confidence"] = float(scores[idx] - 1)
     
-    item_with_highest_confidence = max(all_valid_walks, key=lambda x: x["confidence"])
+    if(len(all_valid_walks)>0):
+        item_with_highest_confidence = max(all_valid_walks, key=lambda x: x["confidence"])
+    else: 
+        print("no query for this question found")
+        item_with_highest_confidence=0
     
     return item_with_highest_confidence
     

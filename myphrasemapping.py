@@ -283,7 +283,9 @@ def spacy_parse(question, properties,lemma_q):
     relationships = []
     
     for token in doc:
+        #print(token)
         for line in properties:
+            #print(line)
             # check if token is in the subject, predicate or object of the knowledge graph
             if token.text not in ['-',',','/'] and token.tag_ not in ['DT','CC','IN'] :
                 #print(line['object'])
@@ -366,6 +368,7 @@ def spacy_parse(question, properties,lemma_q):
 
 class PhraseMapping:
     def __init__(self):
+        print("loading properties")
         self.properties = []
         self.properties = preprocess_relations('turtle/needed_information.ttl', True)
         self.properties_knowledgegraph = preprocess_relations('turtle/knowledge_graph.ttl', True)

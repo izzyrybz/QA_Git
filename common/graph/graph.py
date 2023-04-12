@@ -104,7 +104,7 @@ class Graph:
                 elif self.is_uri(relation) or self.is_var(relation):
                     all_relations.append(relation)
 
-        relation_without_ent=[]
+        '''relation_without_ent=[]
         for relation in all_relations:
             for entity in all_entites:
                 relation_formatted = self.jena_formatting(relation)
@@ -115,7 +115,7 @@ class Graph:
                 if( len(response.json()['results']['bindings']) == 0):
                     relation_without_ent.append(relation)
                     #print("we have gone wrong")
-        #print(relation_without_ent)
+        #print(relation_without_ent)'''
         
         
         #print(all_entites)
@@ -139,8 +139,8 @@ class Graph:
             ###################### ?u1 and ?u2###############################
             #all the relation that has corresponding ents doesnt need to do this
         
-            set1_u1_p_u2 = set(itertools.product(['?u_1'], relation_without_ent, ['?u_0']))
-            set2_u2_p_u1 = set(itertools.product(['?u_0'], relation_without_ent, ['?u_1']))
+            set1_u1_p_u2 = set(itertools.product(['?u_1'], all_relations, ['?u_0']))
+            set2_u2_p_u1 = set(itertools.product(['?u_0'], all_relations, ['?u_1']))
 
             if (not len(all_relations)>0):
                 set1_u1_p_u2 = set(itertools.product(['?u_1'], ['?u_0'], all_entites))

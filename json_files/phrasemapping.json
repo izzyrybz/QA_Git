@@ -1,42 +1,29 @@
 [
     {
-        "entities": [
-            {
-                "surface": [
-                    32,
-                    25
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/entity/izzyrybz"
-                    }
-                ]
-            }
-        ],
-        "question": "\"How many files did user izzyrybz create in their commits?\"",
+        "entities": [],
+        "question": "Which commits had both added and modified files?",
         "relations": [
             {
                 "surface": [
-                    20,
-                    3
-                ],
-                "uris": [
-                    {
-                        "confidence": 0.75,
-                        "uri": "http://example.org/ontology/author"
-                    }
-                ]
-            },
-            {
-                "surface": [
-                    34,
-                    5
+                    4,
+                    0
                 ],
                 "uris": [
                     {
                         "confidence": 0.75,
                         "uri": "http://example.org/action/add"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    33,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/action/modify"
                     }
                 ]
             }

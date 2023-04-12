@@ -242,21 +242,23 @@ def query_parse(filepath):
                                  
                                 # the u_ place is already taken
                                 #need to start a new branch on the tree
-                                 vars[item].parent.children = [root_node, children[1]]
-                                 '''second_tree.append((left_node.name,1))
-                                 
-                                 second_tree.append((root_node.name,0))
+                                try:
+                                    vars[item].parent.children = [root_node, children[1]]
+                                    vars[item] = [node for node in leveled if node.name == item][0]
+                                except:
+                                    second_tree.append((left_node.name,1))
+                                    
+                                    second_tree.append((root_node.name,0))
 
-                                 second_tree.append((right_node.name,1))
-                                 break'''
+                                    second_tree.append((right_node.name,1))
+                                break
 
                             else:
-                                
                                 vars[item].parent.children = [children[0], root_node]
-                            vars[item] = [node for node in leveled if node.name == item][0]
-                            break
+                            print([node for node in leveled])
+                            #vars[item] = [node for node in leveled if node.name == item][0]
+                            #break
                         else:
-                            #print("helvetes jävla skit",[node for node in leveled if node.name == item][0])
                             vars[item] = [node for node in leveled if node.name == item][0]
 
                 if root is None:

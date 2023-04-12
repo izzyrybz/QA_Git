@@ -106,10 +106,10 @@ def build_query(query_params, question_type):
         where_clause = "SELECT COUNT (DISTINCT "+target_var+") WHERE {"
     
     elif question_type[0] == 'boolean':
-        where_clause = "ASK WHERE {"
+        where_clause = "ASK WHERE "
     
     else:
-        where_clause = "SELECT DISTINCT"+target_var+" WHERE {"
+        where_clause = "SELECT DISTINCT "+target_var+" WHERE {"
     
     sparlq_query = where_clause +  query + "}"
     return sparlq_query
@@ -117,7 +117,7 @@ def build_query(query_params, question_type):
 
 
 #if __name__ == "__main__":
-def main(question):
+def main(question,phrasemapper):
     # Load the spaCy model
     
 
@@ -140,12 +140,12 @@ def main(question):
     #INSERT DATE TEST HERE
 
     #Knowledge Graph generator to a ttl file that we can use a properties
-    KnowledgeGraphGenerator()
+    #KnowledgeGraphGenerator()
     print("Knowledge graph generated")
-    print("#"*80)
+    #print("#"*80)
 
     #We create a phrase mapping
-    phrasemapper = PhraseMapping()
+    #phrasemapper = PhraseMapping()
     phrasemapper.phrasemap_question(question,tokened_question,lemmizized_question)
     print("phrasemapping generated in file that can be found under json_files")
     print("#"*80)
@@ -165,7 +165,7 @@ def main(question):
     #print("finished query",finished_query)
     #return str(finished_query)
     
-    return query_generator['query'].replace('SELECT * WHERE {','')
+    return finished_query
 
     jena_response = requests.get("http://localhost:3030/dbpedia/query", params={"query": finished_query})
     if jena_response.status_code == 200:
@@ -174,9 +174,9 @@ def main(question):
             #print("The answer is",output)
     
 
-q1='Which commits have the user izzyrybz made?' #w
+q1='Which commits have the user Shawn_Lee made?' #w
 
-q2= 'How many commits have the user izzyrybz made?' #w
+q2= 'How many commits have the user YJSoh made?' #w
 
 #q3 ='How many commits have there been?'
 
@@ -190,15 +190,15 @@ q6 = 'How many users have made commits that changed files?'  #needs u3
 
 q7 = 'Which commits had both added and modified files?' #w
 
-q8='How many users have made commits that changed file trash.py?' #
+q8= 'How many users have made commits that changed file trash.py?' #
 
 q9 = 'List all the authors?' #
 
-q10 = "Which commit changed file killme.py?" # works
+q10 = "Which commit changed file instructorComments.jsp?" # works
 
-q11= 'Which users changed file killme.py and file myphrasemapping.py?' #
+q11= 'Which users changed file instructorComments.jsp and file instructorCommentsPageSearchNormal.html?' #
 
-q12= "When was file trash.py modify?" #  ----
+q12= "When was file trash.py modified?" #  ----
 
 q13 = "Which commits modified file killme.py?" # works
 
@@ -208,8 +208,11 @@ q13 = "Which commits modified file killme.py?" # works
 
 #8: What commits were made in 2022-01-0
 #9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-#main('Which users changed myphrasemapping.py and killme.py in the same commit?')
-#exit()
+
+#KnowledgeGraphGenerator()
+phrasemapper = PhraseMapping()
+main(q7,phrasemapper)
+exit()
 
 with open('testingdata.txt','r') as fp:
     data = fp.readlines()
@@ -226,7 +229,7 @@ with open('test.txt','w') as fp:
         d = difflib.Differ()
 
         
-        result= main(item)
+        result= main(item,phrasemapper)
         
       
         fp.write('\n'+item+ '\n')

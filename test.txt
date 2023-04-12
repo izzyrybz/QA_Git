@@ -1,73 +1,65 @@
 
-"Which commits have the user izzyrybz made?"
- ?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }
+"Which commits have the user Shawn_Lee made?"
+SELECT DISTINCT ?u_1 WHERE {?u_1 <http://example.org/ontology/author> <http://example.org/entity/Shawn_Lee> }
+
+
+"How many commits have the user YJSoh made?"
+SELECT COUNT (DISTINCT ?u_1) WHERE {?u_1 <http://example.org/ontology/author> <http://example.org/entity/YJSoh> }
 we have choosen the first possible option
 
 
-"How many commits have the user izzyrybz made?"
- ?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }
-we have choosen the first possible option
-
-
-"Which commits modified file killme.py?"
- ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
-we have choosen the first possible option
+"Which commits modified file instructorComments.jsp?"
+SELECT DISTINCT ?u_1 WHERE {?u_1 <http://example.org/action/modify> <http://example.org/entity/src/main/webapp/jsp/instructorComments.jsp> }
 
 
 "Which commits altered files?"
- ?u_1 <http://example.org/action/modify> ?u_0 }
+SELECT DISTINCT ?u_0 WHERE {?u_1 <http://example.org/action/modify> ?u_0 }
 
 
 "How many files have been deleted?"
- ?u_1 <http://example.org/action/delete> ?u_0 }
-
-
-"How many users have made commits that changed files?"
-  ?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/action/modify> ?u_0 }
+SELECT COUNT (DISTINCT ?u_0) WHERE {?u_1 <http://example.org/action/delete> ?u_0 }
 we have choosen the first possible option
 
 
-"Which commits had both added and deleted files?"
-  ?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 }
+"How many users have made commits that changed files?" - DOESNT WORK
+SELECT COUNT (DISTINCT ?u_3) WHERE {?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3 }
 
 
-"How many users have made commits that changed file killme.py?"
-  ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://example.org/ontology/author> ?u_0 }
-we have choosen the first possible option
+"Which commits had both added and deleted files?" - DOESNT WORK
+SELECT DISTINCT ?u_1 WHERE {?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/action/delete> ?u_1 }
+
+
+"How many users have made commits that changed file instructorComments.jsp?"
+SELECT COUNT (DISTINCT ?u_1) WHERE {?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/action/modify> <http://example.org/entity/src/main/webapp/jsp/instructorComments.jsp> }
 
 
 "List all the authors?"
- ?u_1 <http://example.org/ontology/author> ?u_0 }
-
-
-"Which commit modified file killme.py?"
- ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
+SELECT DISTINCT ?u_1 WHERE {?u_0 <http://example.org/ontology/author> ?u_1 }
 we have choosen the first possible option
 
 
-"When was file killme.py modified?"
-ASK WHERE { ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_3 <http://example.org/ontology/Calendar_date> ?u_0 }
+"Which commit modified file instructorComments.jsp?"
+SELECT DISTINCT ?u_1 WHERE {?u_1 <http://example.org/action/modify> <http://example.org/entity/src/main/webapp/jsp/instructorComments.jsp> }
+
+
+"When was file instructorComments.jsp modified?"
+SELECT DISTINCT ?u_1 WHERE {?u_0 <http://example.org/action/modify> <http://example.org/entity/src/main/webapp/jsp/instructorComments.jsp> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1 }
 we have choosen the first possible option
 
 
-"Which commits modified file killme.py?"
- ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
+"Which commits modified file instructorComments.jsp?"
+SELECT DISTINCT ?u_1 WHERE {?u_1 <http://example.org/action/modify> <http://example.org/entity/src/main/webapp/jsp/instructorComments.jsp> }
+
+
+"How many users have made commits that changed file instructorComments.jsp?"
+SELECT COUNT (DISTINCT ?u_1) WHERE {?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/action/modify> <http://example.org/entity/src/main/webapp/jsp/instructorComments.jsp> }
+
+
+"In which commits did file instructorComments.jsp and file instructorCommentsPageSearchNormal.html change together?"
+SELECT DISTINCT ?u_1 WHERE {?u_1 <http://example.org/action/modify> <http://example.org/entity/src/test/resources/pages/instructorCommentsPageSearchNormal.html> .?u_1 <http://example.org/action/modify> <http://example.org/entity/src/main/webapp/jsp/instructorComments.jsp> }
+
+
+"How many files did user Shawn_Lee create in their commits?" - DOESNT WORK
+SELECT COUNT (DISTINCT ?u_0) WHERE {?u_3 <http://example.org/ontology/author> <http://example.org/entity/Shawn_Lee> .?u_1 <http://example.org/action/add> ?u_0 }
 we have choosen the first possible option
-
-
-"How often did user izzyrybz commit?"
- ?u_0 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }
-
-
-"How many users have made commits that changed file killme.py?"
-  ?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://example.org/ontology/author> ?u_0 }
-we have choosen the first possible option
-
-
-"In which commits did file killme.py and file trash.py change together?"
-  ?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }
-
-
-"How many files did user izzyrybz create in their commits?"
-  ?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> .?u_3 <http://example.org/action/add> ?u_0 }
 

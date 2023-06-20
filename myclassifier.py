@@ -15,10 +15,13 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 train_data = [
     {"question": "How many apples are there?", "type": "count"},
     {"question": "What are the names of the books?", "type": "list"},
+    {"question": "List all the authors in this repository?", "type": "list"},
+    {"question": "Which books of JK Rowling are of the fantasy genre?", "type": "list"},
     {"question": "Count the stars in the sky?", "type": "list"},
     {"question": "Is the sky blue?", "type": "boolean"},
     {"question": "Did Gwen die in spiderman?", "type": "boolean"},
-    {"question": "When did the first world war start?", "type": "count"},
+    {"question": "When did the first world war start?", "type": "list"},
+    {"question": "List all the types of birds?", "type": "list"},
     {"question": "What's the answer to the ultimate question of life, the universe, and everything?", "type": "unknown"},
     {"question": "How much wood would a woodchuck chuck if a woodchuck could chuck wood?", "type": "count"},
     {"question": "Muhammad Yunus has won how many awards?", "type": "count"},
@@ -27,24 +30,31 @@ train_data = [
     {"question": "How many fingers do humans have?", "type": "count"},
     {"question": "How many planets are there in our solar system?", "type": "count"},
     {"question": "Do all birds have wings?", "type": "boolean"},
+    {"question": "Was there ever a female president of the United States", "type": "boolean"},
     {"question": "Are all reptiles cold-blooded?", "type": "boolean"},
     {"question": "How many days are there in a week?", "type": "count"},
-    {"question": "Are there more dogs or cats as pets in the world?", "type": "boolean"},
+    {"question": "Which country has the most islands?", "type": "list"},
+    {"question": "Are there more dogs or cats as pets in the world?", "type": "list"},
     {"question": "What are the plantes with life?", "type": "list"},
-    {"question": "When did the queen die?", "type": "count"},
+    {"question": "When did the queen die?", "type": "list"},
     {"question": "Count the kings of England?", "type": "count"},
     {"question": "How many states are there in the United States?", "type": "count"},
     {"question": "Is it possible to see the stars during the day?", "type": "boolean"},
     {"question": "What are the types diamonds made of carbon?", "type": "list"},
     {"question": "How many seasons are there in a year?", "type": "count"},
+    {"question": "When does spring begin?", "type": "list"},
     {"question": "Who has Paris Hilton been married to?", "type": "boolean"},
     {"question": "Will Smith has been in what types of movie genres?", "type": "list"},
     {"question": "Are all snakes dangerous to humans?", "type": "boolean"},
     {"question": "Ducks are dangerous?", "type": "boolean"},
+    {"question": "Did the two towers collapase?", "type": "boolean"},
     {"question": "How many oceans are there on Earth?", "type": "count"},
     {"question": "How many commits are there on Github?", "type": "count"},
     {"question": "Does it snow in Portugal?", "type": "boolean"},
+    {"question": "Which is the best harry potter movie", "type": "list"},
     {"question": "Count everyone who studied at Karlstad University?", "type": "count"},
+    {"question": "Did the vikings have tattoos?", "type": "boolean"},
+    {"question": "which order to watch marvel", "type": "list"},
     {"question": "What is the capital of France?", "type": "list"}
 ]
 
@@ -81,5 +91,5 @@ class QuestionClassifier:
         self.classifier.fit(self.df['question'], self.df['type'])
 
     def classify_questions(self, question):
-        print(question)
+        #print(question)
         return self.classifier.predict([question])

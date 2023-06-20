@@ -4,9 +4,7 @@ from common.container.uri import Uri
 
 
 class AnswerParser(object):
-    def __init__(self, fuseki):
-        self.fuseki = fuseki
-
+    
     def parse_queryresult(self, raw_answerset):
         answer_rows = []
         if raw_answerset is None:

@@ -1,0 +1,3417 @@
+[
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> .?u_1 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3 ",
+                "target_var": "?u_0"
+            },
+            {
+                "correct": true,
+                "query": "?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_3"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "121",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/modify> ?x .?uri <http://example.org/action/delete> ?y}",
+        "question": "Which commits changed and removed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 .?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "122",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/modify> ?x}",
+        "question": "What commits modified files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "single"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/delete> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/modify> ?u_0 .?u_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "123",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/delete> <http://example.org/entity/trash.py> }",
+        "question": "Which commits removed file trash.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_0 <http://example.org/action/add> ?u_3 .?u_1 <http://example.org/action/add> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "124",
+        "query": "SELECT ?uri WHERE {?x <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?x <http://example.org/ontology/Calendar_date> ?uri}",
+        "question": "When was file data/LC-QUAD/train-data.json added?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/action/add> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_3 ?u_1 <http://example.org/entity/data/LC-QUAD/train-data.json> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "125",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> .?x <http://example.org/ontology/Calendar_date> ?uri}",
+        "question": "When was the commit preceding commit 0c3b4d81a5b086ddbb2c400ef14966125b9d3430?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/entity/parents> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 .?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/add> ?u_3 .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_3 <http://example.org/action/add> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_3 .?u_0 <http://example.org/action/delete> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "126",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/action/delete> ?uri .?y <http://example.org/action/add> ?uri .?x <http://example.org/entity/parents> ?y}",
+        "question": "Which files were deleted in the commit following the commit in which they were added?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_3 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 .?u_0 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "127",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How many users have made changes to the file killme through commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/delete> <http://example.org/entity/killme.py> .?u_3 <http://example.org/action/delete> <http://example.org/entity/__pycache__/killme.cpython-310.pyc> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "128",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How many users have modified the file killme?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/add> ?u_0 .?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/delete> ?u_3 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "129",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/add> ?x.?uri <http://example.org/action/modify> ?x}",
+        "question": "Which commits had both added and changed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/ontology/author> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/ontology/author> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "90",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri}",
+        "question": "List every author?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_0 <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "120",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> .?x <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py> }",
+        "question": "Which users modified the files killme.py and myphrasemapping.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "109",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "How many users edited the file killme.py with their commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "108",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }",
+        "question": "Number of commits of user izzyrybz?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "1 7",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/delete> <http://example.org/entity/killme.py> }",
+        "question": "What commits deleted file killme.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "106",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?uri <http://example.org/action/modify> ?u_0> }",
+        "question": "What number of commits changed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "105",
+        "query": "SELECT ?u_1 WHERE {?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "Commits modified file killme.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/add> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "104",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/modify> ?y .?uri <http://example.org/action/add> ?x }",
+        "question": "Which commits added and modified files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "103",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> ?y}",
+        "question": "How many users have changed files through commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/entity/branches> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "102",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/entity/branches> ?x}",
+        "question": "What branches are there in the repository?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "101",
+        "query": "SELECT DISTINCT ?uri WHERE {?u_1 <http://example.org/action/delete> ?x .?uri <http://example.org/action/add> ?y }",
+        "question": "Which commits included and removed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/textfiles/not_working_queries.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "10",
+        "query": "SELECT DISTINCT ?uri WHERE { ?uri <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "Which commits modified the file killme.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_3 .?u_1 <http://example.org/ontology/author> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "99",
+        "query": "SELECT COUNT (DISTINCT ?uri) WHERE { ?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>}",
+        "question": "How many commits have the user izzyrybz made?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> <http://example.org/entity/parents> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://example.org/entity/parents> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "98",
+        "query": "ASK WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?uri}",
+        "question": "Parent for the hash 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "97",
+        "query": "SELECT DISTINCT ?uri WHERE { ?x <http://example.org/ontology/author> ?uri}",
+        "question": "How about a list of every author in this repository?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 .<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "6",
+        "query": "SELECT DISTINCT ?uri WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?uri}",
+        "question": "What files where changed in commit 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "95",
+        "query": "SELECT DISTINCT? uri WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> }",
+        "question": "What are the hashes for each and every commit?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> <http://example.org/action/delete> ?u_3 .<http://example.org/entity/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> <http://example.org/action/delete> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "94",
+        "query": "SELECT COUNT (?uri) WHERE { ?x <http://example.org/action/delete> ?uri }",
+        "question": "What amount of files have been deleted?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "93",
+        "query": "SELECT DISTINCT?u_1 WHERE { ?u_0 <http://example.org/action/delete> ?u_1 }",
+        "question": "What files got cleared?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/description> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "2",
+        "query": "SELECT COUNT (?u_1) WHERE { ?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> }",
+        "question": "How many commits have there been?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/user> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/user> ?u_1 <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/author> ?u_1 <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "91",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }",
+        "question": "What changes did the user izzyrybz commit?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> .?u_1 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3 ",
+                "target_var": "?u_0"
+            },
+            {
+                "correct": true,
+                "query": "?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_3"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "81",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/modify> ?x.?uri <http://example.org/action/delete> ?y}",
+        "question": "Which commits altered files as well as deleting them?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 .?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "82",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/modify> ?x}",
+        "question": "Which commits changed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "single"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/delete> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/modify> ?u_0 .?u_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "83",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/delete> <http://example.org/entity/trash.py> }",
+        "question": "Which commits deleted file trash.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_0 <http://example.org/action/add> ?u_3 .?u_1 <http://example.org/action/add> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "84",
+        "query": "SELECT ?uri WHERE {?x <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?x <http://example.org/ontology/Calendar_date> ?uri}",
+        "question": "The train-data.json file was inserted when?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/action/add> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_3 ?u_1 <http://example.org/entity/data/LC-QUAD/train-data.json> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "85",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> .?x <http://example.org/ontology/Calendar_date> ?uri}",
+        "question": "When was the commit preceding commit 0c3b4d81a5b086ddbb2c400ef14966125b9d3430?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/entity/parents> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 .?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/add> ?u_3 .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_3 <http://example.org/action/add> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_3 .?u_0 <http://example.org/action/delete> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "86",
+        "query": "SELECT DISTINCT ?uri WHERE {?y <http://example.org/action/delete> ?uri .?x <http://example.org/action/add> ?uri .?y <http://example.org/entity/parents> ?x}",
+        "question": "Which files, in the commit that came after the one in which they were inserted, were removed?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_3 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 .?u_0 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "87",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How many users have made commits that changed file killme?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "88",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How many users have made commits that changed file killme?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/add> ?u_0 .?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/delete> ?u_3 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "89",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/add> ?x.?uri <http://example.org/action/modify> ?x}",
+        "question": "Which commits added and updated files, respectively?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/ontology/author> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/ontology/author> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "130",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri}",
+        "question": "Which are the authors?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_0 <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "80",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> .?x <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py> }",
+        "question": "Who modified the files myphrasemapping.py and killme.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "79",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "How many users have modified the file killme.py through commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "78",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }",
+        "question": "How often did user izzyrybz commit?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "77",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/delete> <http://example.org/entity/killme.py> }",
+        "question": "What deleted file killme.py's commit?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "76",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?uri <http://example.org/action/modify> ?u_0> }",
+        "question": "How many files were edited in commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "75",
+        "query": "SELECT ?u_1 WHERE {?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "What updated the killme.py file? ?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/add> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "74",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/modify> ?y .?uri <http://example.org/action/add> ?x }",
+        "question": "Which commits had both added and changed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "73",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> ?y}",
+        "question": "How many users have made commits that changed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/entity/branches> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "72",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/entity/branches> ?x}",
+        "question": "What branches are there in the repository?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "71",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/delete> ?y .?uri <http://example.org/action/add> ?x }",
+        "question": "Which changes both added and removed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/textfiles/not_working_queries.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "70",
+        "query": "SELECT DISTINCT ?uri WHERE { ?uri <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "Which commits changed the killme.py file?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_3 .?u_1 <http://example.org/ontology/author> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "69",
+        "query": "SELECT COUNT (DISTINCT ?uri) WHERE { ?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>}",
+        "question": "The user izzyrybz has made how many commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> <http://example.org/entity/parents> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://example.org/entity/parents> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "68",
+        "query": "ASK WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?uri}",
+        "question": "Does the hash have a parent? 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "67",
+        "query": "SELECT DISTINCT ?uri WHERE { ?x <http://example.org/ontology/author> ?uri}",
+        "question": "Please list every author in this repository. "
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 .<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "96",
+        "query": "SELECT DISTINCT ?uri WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?uri}",
+        "question": "Exact what files where updated in commit 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "65",
+        "query": "SELECT DISTINCT? uri WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> }",
+        "question": "What are the hashes of all the commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> <http://example.org/action/delete> ?u_3 .<http://example.org/entity/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> <http://example.org/action/delete> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "64",
+        "query": "SELECT COUNT (?uri) WHERE { ?x <http://example.org/action/delete> ?uri }",
+        "question": "How many files have been deleted?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "63",
+        "query": "SELECT DISTINCT ?uri WHERE { ?x <http://example.org/action/delete> ?uri }",
+        "question": "What files were excluded?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/description> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "2",
+        "query": "SELECT COUNT (?uri) WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> }",
+        "question": "How many commits have there been?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/user> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/user> ?u_1 <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/author> ?u_1 <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "61",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }",
+        "question": "The user izzyrybz has made what commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> .?u_1 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3 ",
+                "target_var": "?u_0"
+            },
+            {
+                "correct": true,
+                "query": "?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_3"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "51",
+        "query": "SELECT ?uri WHERE {?ur <http://example.org/action/modify> ?x.?uri <http://example.org/action/delete> ?y}",
+        "question": "What commits modified files and deleted them simultaneously?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 .?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "52",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/modify> ?x}",
+        "question": "What commits changed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "single"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_3 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/delete> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/modify> ?u_0 .?u_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "53",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/delete> <http://example.org/entity/trash.py> }",
+        "question": "What commits deleted file trash.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_0 <http://example.org/action/add> ?u_3 .?u_1 <http://example.org/action/add> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "54",
+        "query": "SELECT ?uri WHERE {?x <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?x <http://example.org/ontology/Calendar_date> ?uri}",
+        "question": "When was file train-data.json modified?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/action/add> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_3 ?u_1 <http://example.org/entity/data/LC-QUAD/train-data.json> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "55",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> .?x <http://example.org/ontology/Calendar_date> ?uri}",
+        "question": "When was the commit preceding commit 0c3b4d81a5b086ddbb2c400ef14966125b9d3430?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/entity/parents> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 .?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/add> ?u_3 .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_3 <http://example.org/action/add> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_3 .?u_0 <http://example.org/action/delete> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "56",
+        "query": "SELECT DISTINCT ?uri WHERE {?y <http://example.org/action/delete> ?uri .?x <http://example.org/action/add> ?uri .?y <http://example.org/entity/parents> ?x}",
+        "question": "Which files did the commit after the one in which they were added delete?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_3 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 .?u_0 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "57",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How many people have modified the file killme with commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/delete> <http://example.org/entity/killme.py> .?u_3 <http://example.org/action/delete> <http://example.org/entity/__pycache__/killme.cpython-310.pyc> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "58",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How many users have modified the file killme through commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/add> ?u_0 .?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 ?u_1 <http://example.org/entity/killme.py> .?u_3 <http://example.org/action/delete> ?u_0 .?u_3 ?u_1 <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/delete> ?u_3 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "59",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/add> ?x.?uri <http://example.org/action/modify> ?x}",
+        "question": "Which commits had both modified and added files?"
+    },
+    
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "49",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "How many users have made commits that changed file killme.py?"
+    },
+
+   
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/ontology/author> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/ontology/author> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "30",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri}",
+        "question": "List all the authors?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_0 <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "50",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> .?x <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py> }",
+        "question": "Who made the modifications to the files killme.py and myphrasemapping.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "49",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "How many users have made commits that changed file killme.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "48",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>}",
+        "question": "How many times did user izzyrybz commit?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "47",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/delete> <http://example.org/entity/killme.py> }",
+        "question": "Deleted file killme.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "46",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?uri <http://example.org/action/modify> ?u_0> }",
+        "question": "How many changes to files were committed?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "45",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "What commit updated killme.py and commited the changes?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/add> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "44",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/modify> ?y .?uri <http://example.org/action/add> ?x }",
+        "question": "Which commits changed files as well as added new ones?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "43",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> ?y}",
+        "question": "What share of users updated files using commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/entity/branches> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "42",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/entity/branches> ?x}",
+        "question": "What branches are there in the repository?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "41",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/delete> ?x .?uri <http://example.org/action/add> ?y }",
+        "question": "Which commits had both added and deleted files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/textfiles/not_working_queries.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "40",
+        "query": "SELECT DISTINCT ?uri WHERE { ?uri <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "The killme.py file was altered by which commits ?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_3 .?u_1 <http://example.org/ontology/author> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "39",
+        "query": "SELECT COUNT (DISTINCT ?uri) WHERE { ?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>}",
+        "question": "How many commits is the user izzyrybz responsible for?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> <http://example.org/entity/parents> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://example.org/entity/parents> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "38",
+        "query": "ASK WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?uri}",
+        "question": "Is the hash parent exists for 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "37",
+        "query": "SELECT DISTINCT ?uri WHERE { ?x <http://example.org/ontology/author> ?uri}",
+        "question": "List every author in this repository, please?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 .<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "66",
+        "query": "SELECT DISTINCT ?uri WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?uri}",
+        "question": "All files were modified by the commit 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "35",
+        "query": "SELECT DISTINCT ?uri WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> }",
+        "question": "What have all of the commits' hashes been hashed to?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> <http://example.org/action/delete> ?u_3 .<http://example.org/entity/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> <http://example.org/action/delete> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "34",
+        "query": "SELECT COUNT (?uri) WHERE { ?x <http://example.org/action/delete> ?uri }",
+        "question": "How many files have been removed?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "33",
+        "query": "SELECT DISTINCT?u_1 WHERE { ?u_0 <http://example.org/action/delete> ?u_1 }",
+        "question": "What files were removed?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/description> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "32",
+        "query": "SELECT COUNT (?u_1) WHERE { ?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> }",
+        "question": "How many commits have there been?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/user> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/user> ?u_1 <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/author> ?u_1 <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "31",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }",
+        "question": "Which commits is the user izzyrybz responsible for?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> .?u_1 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3 ",
+                "target_var": "?u_0"
+            },
+            {
+                "correct": true,
+                "query": "?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_3"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "21",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/modify> ?x.?uri <http://example.org/action/delete> ?y}",
+        "question": "Which commits had both removed and changed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/modify> ?u_0 .?u_3 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> .?u_3 <http://example.org/action/modify> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 .?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_0 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "22",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/modify> ?x}",
+        "question": "Which commits modified files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "single"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_3 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/modify> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/delete> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/trash.py> .?u_1 <http://example.org/action/modify> ?u_0 .?u_3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "23",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/delete> <http://example.org/entity/trash.py> }",
+        "question": "What commits removed file trash.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_0 <http://example.org/action/add> ?u_3 .?u_1 <http://example.org/action/add> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "24",
+        "query": "SELECT ?uri WHERE {?x <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?x <http://example.org/ontology/Calendar_date> ?uri}",
+        "question": "File data/LC-QUAD/train-data.json was added when?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> .?u_0 <http://example.org/ontology/Calendar_date> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/action/add> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> .?u_3 ?u_1 <http://example.org/entity/data/LC-QUAD/train-data.json> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "25",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> .?x <http://example.org/ontology/Calendar_date> ?uri}",
+        "question": "When was the commit preceding commit 0c3b4d81a5b086ddbb2c400ef14966125b9d3430?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 .?u_0 <http://example.org/entity/parents> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 .?u_3 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 .?u_3 <http://example.org/action/delete> ?u_1 .?u_3 <http://example.org/action/add> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/add> ?u_3 .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_3 <http://example.org/action/add> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_3 .?u_0 <http://example.org/action/delete> ?u_1 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "26",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/action/delete> ?uri .?y <http://example.org/action/add> ?uri .?x <http://example.org/entity/parents> ?y}",
+        "question": "What files were removed in the commit that came after the one where they were added?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/add> ?u_3 .?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 .?u_0 <http://example.org/action/delete> ?u_3 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "27",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "What amount of users have made commits that changed file killme?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "28",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "What amount of users have made commits that changed file killme?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/add> ?u_0 .?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "29",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/add> ?x.?uri <http://example.org/action/modify> ?x}",
+        "question": "Which commits had both added and modified files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/ontology/author> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 .?u_1 <http://example.org/ontology/author> ?u_3 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_3 <http://example.org/ontology/author> ?u_1 .?u_3 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "60",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri}",
+        "question": "Please list each author?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_0 <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "20",
+        "query": "SELECT DISTINCT ?uri WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> <http://example.org/entity/killme.py> .?x <http://example.org/action/modify> <http://example.org/entity/myphrasemapping.py> }",
+        "question": "Which users changed myphrasemapping.py and killme.py in the same commit?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "19",
+        "query": "SELECT COUNT(DISTINCT ?u_1) WHERE {?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "How many users have made changes to the killme.py file through commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "18",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }",
+        "question": "User izzyrybz commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "17",
+        "query": "SELECT ?uri WHERE {?uri <http://example.org/action/delete> <http://example.org/entity/killme.py> }",
+        "question": "Which commits deleted file killme.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "16",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?uri <http://example.org/action/modify> ?u_0> }",
+        "question": "How many commits modified files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "15",
+        "query": "SELECT ?u_1 WHERE {?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> }",
+        "question": "Which commits modified file killme.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0 .?u_1 <http://example.org/action/add> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> ?u_3 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "14",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/modify> ?x .?uri <http://example.org/action/add> ?y }",
+        "question": "Which contributions altered files in addition to adding them?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 .?u_0 <http://example.org/action/modify> ?u_3",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "13",
+        "query": "SELECT COUNT(DISTINCT ?uri) WHERE {?x <http://example.org/ontology/author> ?uri .?x <http://example.org/action/modify> ?y}",
+        "question": "How many users have made changes to files in commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/entity/branches> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "12",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/entity/branches> ?x}",
+        "question": "What branches are there in the repository?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_3",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/delete> ?u_3 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/action/delete> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_0 <http://example.org/action/add> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> ?u_0 .?u_1 <http://example.org/action/add> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "11",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/action/delete> ?y .?uri <http://example.org/action/add> ?x }",
+        "question": "Which commits added and removed files, respectively?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py> .?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> <http://example.org/entity/textfiles/not_working_queries.txt> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/modify> ?u_0",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "100",
+        "query": "SELECT DISTINCT ?uri WHERE { ?uri <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How was the killme.py file modified?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> .?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_3 .?u_1 <http://example.org/ontology/author> ?u_0",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "9",
+        "query": "SELECT COUNT (DISTINCT ?uri) WHERE { ?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz>}",
+        "question": "Izzyrybz has made how many commits, exactly?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> <http://example.org/entity/parents> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://example.org/entity/parents> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "8",
+        "query": "ASK WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/entity/parents> ?uri}",
+        "question": "Exists a parent for the hash 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/ontology/author> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/author> ?u_0 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "7",
+        "query": "SELECT DISTINCT ?uri WHERE { ?x <http://example.org/ontology/author> ?uri}",
+        "question": "List all the authors in this repository?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "<http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://example.org/action/modify> ?u_1 .<http://example.org/entity/hash/003757c6423a66b7aabc5601e9d32f910a9ae9cc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "36",
+        "query": "SELECT DISTINCT ?uri WHERE { <http://example.org/entity/hash/0c8471e02d824de8485e1abcfcd00c5b20ae995e> <http://example.org/action/modify> ?uri}",
+        "question": "Which files were modified by the commit 0c8471e02d824de8485e1abcfcd00c5b20ae995e?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_0 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "5",
+        "query": "SELECT DISTINCT ?uri WHERE { ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> }",
+        "question": "What are the hashes of all the commits?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/entity/hash/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> <http://example.org/action/delete> ?u_3 .<http://example.org/entity/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> <http://example.org/action/delete> ?u_1",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "4",
+        "query": "SELECT COUNT (?uri) WHERE { ?x <http://example.org/action/delete> ?uri }",
+        "question": "What number of files have been removed?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "multivar",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_0 <http://example.org/action/delete> ?u_1 ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/action/delete> <http://example.org/entity/killme.py> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "3",
+        "query": "SELECT DISTINCT?u_1 WHERE { ?u_0 <http://example.org/action/delete> ?u_1 }",
+        "question": "What files have been deleted?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "count"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u_1 <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/description> <http://example.org/entity/hash/> ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "2",
+        "query": "SELECT COUNT (?u_1) WHERE { ?u_1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/hash/> }",
+        "question": "How many commits have there been?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "single",
+            "list"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u_1 <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "?u_1 <http://example.org/ontology/user> <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/user> ?u_1 <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/author> ?u_1 <http://example.org/entity/izzyrybz> ",
+                "target_var": "?u_1"
+            },
+            {
+                "correct": false,
+                "query": "<http://example.org/ontology/author> <http://example.org/entity/izzyrybz> ?u_1 ",
+                "target_var": "?u_1"
+            }
+        ],
+        "id": "1",
+        "query": "SELECT DISTINCT ?uri WHERE {?uri <http://example.org/ontology/author> <http://example.org/entity/izzyrybz> }",
+        "question": "Which commits have the user izzyrybz made?"
+    }
+]

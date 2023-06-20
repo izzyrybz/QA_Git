@@ -1,0 +1,74 @@
+SELECT COUNT(?subject)
+WHERE {
+  ?subject <https://dbpedia.org/ontology/author> 'izzyrybz'
+}
+
+how many commits have izzyrybz made?
+------------------------------------
+
+------------------------------------------
+SELECT DISTINCT ?subject
+WHERE {
+  ?subject <https://dbpedia.org/ontology/author> 'izzyrybz'
+}
+
+"Which commits have the user izzyrybz made?"
+----------------------------------------------
+
+ASK WHERE {
+  ?subject 	
+<https://dbpedia.org/ontology/Calendar_date> "2023-01-27T12:22:12+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+}
+
+Was there a commit on the 27th of Jan 2023?
+
+------------------------------------------------
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?s ?date
+WHERE
+  {
+    ?s ?p ?date . FILTER ( ?date >= "2023-01-27T12:22:12+01:00"^^xsd:dateTime && ?date <= "2023-01-30T11:08:55+01:00"^^xsd:dateTime)
+  }
+
+Provide the commits between 2023-01-27 and 2023-01-30?
+-------------------------------------------------------------
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT (COUNT(DISTINCT ?s) AS ?count)
+WHERE {
+  ?s ?p ?date .
+  FILTER ( ?date >= "2023-01-01T00:00:00+01:00"^^xsd:dateTime && ?date <= "2023-02-01T00:00:00+01:00"^^xsd:dateTime)
+}
+
+How many commits was generated in Feburary?
+-------------------------------------------------------------
+
+
+"""PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?s
+WHERE
+  {
+    ?s ?p ?date . FILTER ( ?date >= "2023-01-27T12:22:12+01:00"^^xsd:dateTime && ?date <= "2023-01-30T11:08:55+01:00"^^xsd:dateTime). ?s <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz>.
+  }"""
+  
+What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30
+
+-------------------------------------------------------------
+
+What is the latest commit in the master branch?
+Which files were modified in the commit with hash "a1b2c3d4"?
+How many lines of code were added and removed in the commit with message "Update README.md"?
+Who were the authors of the top 10 commits by the number of lines changed?
+
+
+# Alternative questions
+# How many merges have there been?
+# How many commits have there been?
+# What language is the repository written in?
+# How many commits have there been for the repo?
+
+
+##### FOCUS ####
+How many commits have izzyrybz made? DONE
+How many commits have there been? DONE

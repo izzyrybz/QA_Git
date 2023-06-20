@@ -42,7 +42,7 @@ class LC_Qaud:
 
 class LC_QaudParser(AnswerParser):
     def __init__(self):
-        self.endpoint = "http://localhost:3030/test4commits/sparql"
+        self.endpoint = "http://localhost:3030/dbpedia/sparql"
         super(LC_QaudParser, self).__init__()
         
     def parse_sparql(self, q):

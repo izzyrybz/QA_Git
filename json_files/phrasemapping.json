@@ -1,0 +1,32 @@
+[
+    {
+        "entities": [],
+        "question": "Which commits had both added and modified files?",
+        "relations": [
+            {
+                "surface": [
+                    4,
+                    0
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/action/add"
+                    }
+                ]
+            },
+            {
+                "surface": [
+                    33,
+                    7
+                ],
+                "uris": [
+                    {
+                        "confidence": 0.75,
+                        "uri": "http://example.org/action/modify"
+                    }
+                ]
+            }
+        ]
+    }
+]

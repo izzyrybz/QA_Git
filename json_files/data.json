@@ -1,0 +1,1114 @@
+[
+    {
+        "_id": "1701", 
+        "corrected_question": "Which architect of Marine Corps Air Station Kaneohe Bay was also tenant of New Sanno hotel /'", 
+        "intermediary_question": "What is the <architect> of the <Marine Corps Air Station Kaneohe Bay> and <tenant> of the <New Sanno Hotel>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Marine_Corps_Air_Station_Kaneohe_Bay> <http://dbpedia.org/property/architect> ?uri. <http://dbpedia.org/resource/New_Sanno_Hotel> <http://dbpedia.org/ontology/tenant> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "3293", 
+        "corrected_question": "Which sects people are part of local political parties which fall under the International Muslim Brotherhood?", 
+        "intermediary_question": "What is the <faith> of the <political parties> whose <international> is <Muslim Brotherhood>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/international> <http://dbpedia.org/resource/Muslim_Brotherhood> . ?x <http://dbpedia.org/ontology/religion> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PoliticalParty>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "2161", 
+        "corrected_question": "List common systems are developed by of the Google Videos and written by of the Google Web Toolkit ?", 
+        "intermediary_question": "What is the <developed by> of the <Google Videos> and <written by> of the <Google Web Toolkit>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Google_Videos> <http://dbpedia.org/property/developer> ?uri. <http://dbpedia.org/resource/Google_Web_Toolkit> <http://dbpedia.org/ontology/author> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "1136", 
+        "corrected_question": "For which games are Sam Loyd and Eric Schiller both famous?", 
+        "intermediary_question": "What is the <known for> of the <Sam Loyd> and <Eric Schiller>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sam_Loyd> <http://dbpedia.org/ontology/knownFor> ?uri. <http://dbpedia.org/resource/Eric_Schiller> <http://dbpedia.org/ontology/knownFor> ?uri . }", 
+        "sparql_template_id": 15
+    }, 
+    {
+        "_id": "987", 
+        "corrected_question": "Is Peter Piper Pizza in the pizza industry?", 
+        "intermediary_question": "Is <Peter Piper Pizza> the <field of exercise> of <Pizza>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Peter_Piper_Pizza> <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Pizza> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "2549", 
+        "corrected_question": "Name the artist who made Dream Dancing and is often associated with Joe Pass?", 
+        "intermediary_question": "Who is the <associated band> of the <Joe Pass> and <Artist> of the <Dream Dancing (album)>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Joe_Pass> <http://dbpedia.org/ontology/associatedBand> ?uri. <http://dbpedia.org/resource/Dream_Dancing_(album)> <http://dbpedia.org/property/artist> ?uri . }", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "193", 
+        "corrected_question": "Who is the office holder with deputies as Neil Brown and Andrew Peacock?", 
+        "intermediary_question": "What is the <office holder> whose <deputies> are <Neil Brown (Australian politician)> and <Andrew Peacock>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/deputy> <http://dbpedia.org/resource/Neil_Brown_(Australian_politician)> . ?uri <http://dbpedia.org/property/deputy> <http://dbpedia.org/resource/Andrew_Peacock> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>}", 
+        "sparql_template_id": 307
+    }, 
+    {
+        "_id": "3057", 
+        "corrected_question": "Where did these popular aeroplanes - Focke Wulf 260 and Start+Flug H 101 originate?", 
+        "intermediary_question": "What is the <national origin> of the <Focke-Wulf Fw 260> and <Start + Flug H-101>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Focke-Wulf_Fw_260> <http://dbpedia.org/property/nationalOrigin> ?uri. <http://dbpedia.org/resource/Start_+_Flug_H-101> <http://dbpedia.org/property/nationalOrigin> ?uri . }", 
+        "sparql_template_id": 15
+    }, 
+    {
+        "_id": "3246", 
+        "corrected_question": "Which television show 's producer is Stephen E. Ambrose and written by Erik Jendresen?", 
+        "intermediary_question": "What is the <television show> whose <producer> is <Stephen E. Ambrose> and <writer> is <Erik Jendresen>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/producer> <http://dbpedia.org/resource/Stephen_E._Ambrose> . ?uri <http://dbpedia.org/property/writer> <http://dbpedia.org/resource/Erik_Jendresen>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "1394", 
+        "corrected_question": "Who created the Women in the Garden and also the L'Enfant a la tasse ?", 
+        "intermediary_question": "What is the <Artist> of the <Women in the Garden> and <L'Enfant a la tasse>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Women_in_the_Garden> <http://dbpedia.org/property/artist> ?uri. <http://dbpedia.org/resource/L'Enfant_a_la_tasse> <http://dbpedia.org/property/artist> ?uri . }", 
+        "sparql_template_id": 15
+    }, 
+    {
+        "_id": "2637", 
+        "corrected_question": "Which famous horserace has seen both Fergie sutherland and the illustrious War of Attrition?", 
+        "intermediary_question": "What is the <race> of the <War Of Attrition (horse)> and <Fergie Sutherland>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/War_Of_Attrition_(horse)> <http://dbpedia.org/property/race> ?uri. <http://dbpedia.org/resource/Fergie_Sutherland> <http://dbpedia.org/property/race> ?uri . }", 
+        "sparql_template_id": 15
+    }, 
+    {
+        "_id": "768", 
+        "corrected_question": "Tell me the name of the Prime Time Entertainment Network's TV show whose Artist is Christopher Franke ?", 
+        "intermediary_question": "What is the <television show> whose <Artist> is <Christopher Franke> and <network> is <Prime Time Entertainment Network>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/artist> <http://dbpedia.org/resource/Christopher_Franke> . ?uri <http://dbpedia.org/ontology/network> <http://dbpedia.org/resource/Prime_Time_Entertainment_Network>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "4702", 
+        "corrected_question": "How many other battles have the military person fought whose one of the battles is World War II ?", 
+        "intermediary_question": "How many other <battles> are there of the <military people> whose <battles> is <World War II> ?", 
+        "sparql_query": " SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/battles> <http://dbpedia.org/resource/World_War_II> . ?x <http://dbpedia.org/property/battles> ?uri }", 
+        "sparql_template_id": 111
+    }, 
+    {
+        "_id": "3090", 
+        "corrected_question": "Whose network's parent organisation is Comcast?", 
+        "intermediary_question": "What are the <television shows> whose <network>'s <parent organisation> is <Comcast>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/parentOrganisation> <http://dbpedia.org/resource/Comcast> . ?uri <http://dbpedia.org/ontology/network> ?x  . }", 
+        "sparql_template_id": 6
+    }, 
+    {
+        "_id": "3495", 
+        "corrected_question": "Is William H Blanchard buried in Colorado?", 
+        "intermediary_question": "Is <Colorado> the <placeofburial> of <William H. Blanchard>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/William_H._Blanchard> <http://dbpedia.org/property/placeofburial> <http://dbpedia.org/resource/Colorado> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "3215", 
+        "corrected_question": "Which cport of Vishwajyot High School is also the genere of Battle chess ", 
+        "intermediary_question": "What is the <kind of music> of the <Battle Chess> and <sport> of the <Vishwajyot High School>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Battle_Chess> <http://dbpedia.org/property/genre> ?uri. <http://dbpedia.org/resource/Vishwajyot_High_School> <http://dbpedia.org/ontology/sport> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "285", 
+        "corrected_question": "In which state is the Channel district?", 
+        "intermediary_question": "What is the <state> of Channel District ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Channel_District> <http://dbpedia.org/ontology/state> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "4938", 
+        "corrected_question": "Who was in the missions of Apollo 11 and Gemini 8?", 
+        "intermediary_question": "Whose <missions> are <Apollo 11> and <Gemini 8>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/mission> <http://dbpedia.org/resource/Apollo_11> . ?uri <http://dbpedia.org/property/mission> <http://dbpedia.org/resource/Gemini_8> . }", 
+        "sparql_template_id": 7
+    }, 
+    {
+        "_id": "428", 
+        "corrected_question": "What is the total number of other tenant of the stadia whose one of the tenant is Raptors 905?", 
+        "intermediary_question": "What is the total number of other <tenant> of the <stadia> whose <tenant> is <Raptors 905>?", 
+        "sparql_query": " SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/tenant> <http://dbpedia.org/resource/Raptors_905> . ?x <http://dbpedia.org/ontology/tenant> ?uri }", 
+        "sparql_template_id": 111
+    }, 
+    {
+        "_id": "4448", 
+        "corrected_question": "Where can one find the Dzogchen Ponolop Rinpoche?", 
+        "intermediary_question": "What is the <Location> of Dzogchen Ponlop Rinpoche ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Dzogchen_Ponlop_Rinpoche> <http://dbpedia.org/property/location> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "2332", 
+        "corrected_question": "Who is the stockholder of the road tunnels operated by the Massachusetts Department of Transportation?", 
+        "intermediary_question": "What is the <stockholder> of the <road tunnels> whose <operator> is <Massachusetts Department of Transportation>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/operator> <http://dbpedia.org/resource/Massachusetts_Department_of_Transportation> . ?x <http://dbpedia.org/property/owner> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/RoadTunnel>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "2717", 
+        "corrected_question": "What are the awards won by the film director of Saraband ?", 
+        "intermediary_question": "What is the <awards> of the <person> who is the <film director> of <Saraband> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Saraband> <http://dbpedia.org/ontology/director> ?x . ?x <http://dbpedia.org/property/awards> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "2079", 
+        "corrected_question": "What is the almamater of the president whose vice president was Enrique Jos Varona?", 
+        "intermediary_question": "What is the <alma mater> of the <owl> whose <vice president> is <Enrique Jos Varona> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/vicePresident> <http://dbpedia.org/resource/Enrique_Jos\u00e9_Varona> . ?x <http://dbpedia.org/ontology/almaMater> ?uri  . }", 
+        "sparql_template_id": 5
+    }, 
+    {
+        "_id": "3389", 
+        "corrected_question": "What is the route end of Birmingham and Oxford Junction Railway ?", 
+        "intermediary_question": "What is the <route end> of Birmingham and Oxford Junction Railway ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Birmingham_and_Oxford_Junction_Railway> <http://dbpedia.org/ontology/routeEnd> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "722", 
+        "corrected_question": "Where did the Vitis Vinifera grapes originate?", 
+        "intermediary_question": "What is the <origin> of the <grapes> whose <species> is <Vitis vinifera>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/species> <http://dbpedia.org/resource/Vitis_vinifera> . ?x <http://dbpedia.org/ontology/origin> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Grape>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "951", 
+        "corrected_question": "How many people are there whose children died in Indiana?", 
+        "intermediary_question": "What is the total number of <people> whose <kids>'s <deathplace> is <Indiana>?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/deathPlace> <http://dbpedia.org/resource/Indiana> . ?uri <http://dbpedia.org/ontology/child> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}", 
+        "sparql_template_id": 406
+    }, 
+    {
+        "_id": "4383", 
+        "corrected_question": "What is the military branch of the William French Smith which is also the branch of Pierre R. Graham ?", 
+        "intermediary_question": "What is the <military branch> of the <William French Smith> and <branch> of the <Pierre R. Graham>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/William_French_Smith> <http://dbpedia.org/ontology/militaryBranch> ?uri. <http://dbpedia.org/resource/Pierre_R._Graham> <http://dbpedia.org/property/branch> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "4366", 
+        "corrected_question": "What is the river whose source is Lake Ontario?", 
+        "intermediary_question": "What is the <river> whose <source> is <Lake Ontario>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/source> <http://dbpedia.org/resource/Lake_Ontario>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/River>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "2262", 
+        "corrected_question": "Whichlocation city of the Denver Broncos is the palce of birth of Steven Clark Cunningham ?", 
+        "intermediary_question": "What is the <location city> of the <Denver Broncos> and <place of birth> of the <Steven Clark Cunningham>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Denver_Broncos> <http://dbpedia.org/ontology/locationCity> ?uri. <http://dbpedia.org/resource/Steven_Clark_Cunningham> <http://dbpedia.org/ontology/birthPlace> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "989", 
+        "corrected_question": "What is the religion of the person who founded the Emel magazine?", 
+        "intermediary_question": "What is the <religion> of the <person> who is the <founded> of <Emel (magazine)> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Emel_(magazine)> <http://dbpedia.org/property/founder> ?x . ?x <http://dbpedia.org/ontology/religion> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}", 
+        "sparql_template_id": 303
+    }, 
+    {
+        "_id": "3212", 
+        "corrected_question": "Give the name of the  managers of England national under-20 football team and England national under-21 football team?", 
+        "intermediary_question": "Whose <managerclubss> are <England national under-20 football team> and <England national under-21 football team>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/managerclubs> <http://dbpedia.org/resource/England_national_under-20_football_team> . ?uri <http://dbpedia.org/property/managerclubs> <http://dbpedia.org/resource/England_national_under-21_football_team> . }", 
+        "sparql_template_id": 7
+    }, 
+    {
+        "_id": "1759", 
+        "corrected_question": "How many cities are around the sea in which the the fig tree bay meets?", 
+        "intermediary_question": "How many <cities> are there of the <sea> which is the <lake inflows> of <Fig Tree Bay> ?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Fig_Tree_Bay> <http://dbpedia.org/ontology/inflow> ?x . ?x <http://dbpedia.org/property/cities> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Sea>}", 
+        "sparql_template_id": 403
+    }, 
+    {
+        "_id": "4579", 
+        "corrected_question": "is blue lagoon island a part of the bahamas achipelago?", 
+        "intermediary_question": "Is <The Bahamas> the <archipelago> of <Blue Lagoon Island>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Blue_Lagoon_Island> <http://dbpedia.org/ontology/archipelago> <http://dbpedia.org/resource/The_Bahamas> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "326", 
+        "corrected_question": "Name the movies distributed by RKO Pictures and has music composer as Bernard Herrmann?", 
+        "intermediary_question": "What is the <movie> whose <distributed by> is <RKO Pictures> and <music composer> is <Bernard Herrmann>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/distributor> <http://dbpedia.org/resource/RKO_Pictures> . ?uri <http://dbpedia.org/ontology/musicComposer> <http://dbpedia.org/resource/Bernard_Herrmann>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "2608", 
+        "corrected_question": "Did the New Way party merge in the One Israel party?", 
+        "intermediary_question": "Is <One Israel> the <merged into party> of <New Way (Israel)>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/New_Way_(Israel)> <http://dbpedia.org/ontology/mergedIntoParty> <http://dbpedia.org/resource/One_Israel> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "1383", 
+        "corrected_question": "How many pole drivers have been there in grand prixes where first driver was Damon Hill?", 
+        "intermediary_question": "Count the number of <pole driver> of the <Grand Prixes> whose <first driver> is <Damon Hill>.", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/firstDriver> <http://dbpedia.org/resource/Damon_Hill> . ?x <http://dbpedia.org/ontology/poleDriver> ?uri  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FormulaOneRacer>}", 
+        "sparql_template_id": 405
+    }, 
+    {
+        "_id": "1724", 
+        "corrected_question": "Where are jockeys in Dubai World Cup from?", 
+        "intermediary_question": "List the <born in> of the <jockey (horse racer)s> whose <race> is <Dubai World Cup>.", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/race> <http://dbpedia.org/resource/Dubai_World_Cup> . ?x <http://dbpedia.org/property/birthPlace> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Jockey>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "1086", 
+        "corrected_question": "Who owns the newspaper which was founded by Nehru?", 
+        "intermediary_question": "What is the <is owned by> of the <newspaper> whose <is founded by> is <Jawaharlal Nehru> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/founder> <http://dbpedia.org/resource/Jawaharlal_Nehru> . ?x <http://dbpedia.org/ontology/owner> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Newspaper>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "2523", 
+        "corrected_question": "To which places do the flights go by airlines headquartered in the UK?", 
+        "intermediary_question": "What is the <destinations> of the <airlines> whose <headquarters> is <United Kingdom>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/headquarters> <http://dbpedia.org/resource/United_Kingdom> . ?x <http://dbpedia.org/property/destinations> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Airline>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "341", 
+        "corrected_question": "What is the magazine which have been  founded by Ralph J. Gleason?", 
+        "intermediary_question": "What is the <magazine> whose <founded by> is <Ralph J. Gleason>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/founder> <http://dbpedia.org/resource/Ralph_J._Gleason>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Magazine>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "3701", 
+        "corrected_question": "Is Seattle the Ship builder of USS Marmora (IX-189)?", 
+        "intermediary_question": "Is <Seattle> the <Ship builder> of <USS Marmora (IX-189)>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/USS_Marmora_(IX-189)> <http://dbpedia.org/property/shipBuilder> <http://dbpedia.org/resource/Seattle> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "147", 
+        "corrected_question": "Is Tirana the largest city of Albania?", 
+        "intermediary_question": "Is <Tirana> the <largest city> of <Albania>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Albania> <http://dbpedia.org/property/largestCity> <http://dbpedia.org/resource/Tirana> }", 
+        "sparql_template_id": 151
+    }, 
+    {
+        "_id": "688", 
+        "corrected_question": "In which cities can the beverage related to Barq's be found?", 
+        "intermediary_question": "What is the <location city> of the <beverage> which is the <related> of <Barq's> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Barq's> <http://dbpedia.org/ontology/related> ?x . ?x <http://dbpedia.org/property/locationCity> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "3432", 
+        "corrected_question": "What is the birth place of the astronaut whose mission was the Vostok programmer?", 
+        "intermediary_question": "What is the <birth place> of the <astronaut> whose <mission> is <Vostok programme> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/mission> <http://dbpedia.org/resource/Vostok_programme> . ?x <http://dbpedia.org/ontology/birthPlace> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Astronaut>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "1107", 
+        "corrected_question": "Count everyone who studied at an institute which are in Suburbs?", 
+        "intermediary_question": "How many <people> are there whose <studied at>'s <campus> is <Suburb> ?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/campus> <http://dbpedia.org/resource/Suburb> . ?uri <http://dbpedia.org/property/education> ?x  . }", 
+        "sparql_template_id": 106
+    }, 
+    {
+        "_id": "848", 
+        "corrected_question": "Where did Whitney Wistert debut?", 
+        "intermediary_question": "What is the <debutteam> of Whitey Wistert ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Whitey_Wistert> <http://dbpedia.org/property/debutteam> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "966", 
+        "corrected_question": "What is the major shrine of the monarchs whose successor is Dragimir of Travunia and Zachlumia?", 
+        "intermediary_question": "What is the <major shrine> of the <monarches> whose <successor> is <Dragimir of Travunia and Zachlumia>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/successor> <http://dbpedia.org/resource/Dragimir_of_Travunia_and_Zachlumia> . ?x <http://dbpedia.org/property/majorShrine> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Monarch>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "4727", 
+        "corrected_question": "How many television shows have  Fox Broadcasting Company as their channel?", 
+        "intermediary_question": "How many <television shows> are there whose <channel> is <Fox Broadcasting Company>?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/property/channel> <http://dbpedia.org/resource/Fox_Broadcasting_Company>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 401
+    }, 
+    {
+        "_id": "1492", 
+        "corrected_question": "What is the river whose mouth locations are Arctic Ocean and Laptev Sea?", 
+        "intermediary_question": "What is the <river> whose <mouth locations> are <Arctic Ocean> and <Laptev Sea>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/mouthLocation> <http://dbpedia.org/resource/Arctic_Ocean> . ?uri <http://dbpedia.org/property/mouthLocation> <http://dbpedia.org/resource/Laptev_Sea> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/River>}", 
+        "sparql_template_id": 307
+    }, 
+    {
+        "_id": "3953", 
+        "corrected_question": "What are some wars fought when Chung Il Kwon as the country's prime minister?", 
+        "intermediary_question": "What are the <military conflicts> whose <commander>'s <primeminister> is <Chung Il-kwon>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/primeminister> <http://dbpedia.org/resource/Chung_Il-kwon> . ?uri <http://dbpedia.org/ontology/commander> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MilitaryConflict>}", 
+        "sparql_template_id": 306
+    }, 
+    {
+        "_id": "2203", 
+        "corrected_question": "Where was the person born who died in Bryn Mawr Hospital?", 
+        "intermediary_question": "What is the <place of birth> of the <cleric> whose <PLACE OF DEATH> is <Bryn Mawr Hospital> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/placeOfDeath> <http://dbpedia.org/resource/Bryn_Mawr_Hospital> . ?x <http://dbpedia.org/property/placeOfBirth> ?uri  . }", 
+        "sparql_template_id": 5
+    }, 
+    {
+        "_id": "2713", 
+        "corrected_question": "What is the faith of the Ajith Perera and religious affiliation of the Neungin High School?", 
+        "intermediary_question": "What is the <faith> of the <Ajith Perera> and <religious affiliation> of the <Neungin High School>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ajith_Perera> <http://dbpedia.org/ontology/religion> ?uri. <http://dbpedia.org/resource/Neungin_High_School> <http://dbpedia.org/property/religiousAffiliation> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "661", 
+        "corrected_question": "Who was in military unit which played the role of Air interdiction?", 
+        "intermediary_question": "What are the <military people> whose <military unit>'s <role> is <Air interdiction>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/role> <http://dbpedia.org/resource/Air_interdiction> . ?uri <http://dbpedia.org/ontology/militaryUnit> ?x  . }", 
+        "sparql_template_id": 6
+    }, 
+    {
+        "_id": "1002", 
+        "corrected_question": "Who are the current members of Insects vs Robots?", 
+        "intermediary_question": "Who are the <current members> of Insects vs Robots?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Insects_vs_Robots> <http://dbpedia.org/property/currentMembers> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "62", 
+        "corrected_question": "Is Ombla originate in Croatia?", 
+        "intermediary_question": "Is <Croatia> the <source mountain> of <Ombla>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Ombla> <http://dbpedia.org/ontology/sourceMountain> <http://dbpedia.org/resource/Croatia> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "284", 
+        "corrected_question": "Greater Napanee is the home town of what people?", 
+        "intermediary_question": "Who is the <person> whose <home town> is <Greater Napanee>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/hometown> <http://dbpedia.org/resource/Greater_Napanee>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "2224", 
+        "corrected_question": "What place did Edwin Adams die at, which gave birth to William A Purtell?", 
+        "intermediary_question": "What is the <PLACE OF DEATH> of the <Edwin Adams (politician)> and <POB> of the <William A. Purtell>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Edwin_Adams_(politician)> <http://dbpedia.org/property/placeOfDeath> ?uri. <http://dbpedia.org/resource/William_A._Purtell> <http://dbpedia.org/ontology/birthPlace> ?uri . }", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "4706", 
+        "corrected_question": "Name the nationalteam of Trn Vit Hng ?", 
+        "intermediary_question": "What is the <nationalteam> of Trn Vit Hng ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Tr\u1ea7n_Vi\u1ec7t_H\u01b0\u01a1ng> <http://dbpedia.org/property/nationalteam> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "1879", 
+        "corrected_question": "Which designer of RENFE also owns Renaissance Center ?", 
+        "intermediary_question": "What is the <designed by> of the <RENFE Class 333> and <owned by> of the <Renaissance Center>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/RENFE_Class_333> <http://dbpedia.org/ontology/designer> ?uri. <http://dbpedia.org/resource/Renaissance_Center> <http://dbpedia.org/property/owner> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "3572", 
+        "corrected_question": "Whihc uni did Joshua A. Siegel attend ?", 
+        "intermediary_question": "What is the <university attended> of Joshua A. Siegel ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Joshua_A._Siegel> <http://dbpedia.org/property/education> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "4857", 
+        "corrected_question": "How many books are written by the author who is famous for Novelas Ejemplares?", 
+        "intermediary_question": "What is the total number of <books> whose <writers>'s <notable work> is <Novelas ejemplares>?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/notableWork> <http://dbpedia.org/resource/Novelas_ejemplares> . ?uri <http://dbpedia.org/ontology/author> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book>}", 
+        "sparql_template_id": 406
+    }, 
+    {
+        "_id": "1203", 
+        "corrected_question": "Name the rivers who originate from Essex?", 
+        "intermediary_question": "What is the <river> whose <mouth place> is <Essex>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/mouthPlace> <http://dbpedia.org/resource/Essex>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/River>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "1990", 
+        "corrected_question": "Companies founded in Taiwan have typically which divisions?", 
+        "intermediary_question": "What is the <division> of the <companies> whose <foundation place> is <Taiwan>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/foundationPlace> <http://dbpedia.org/resource/Taiwan> . ?x <http://dbpedia.org/ontology/division> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "24", 
+        "corrected_question": "Did Timm Gunn guest in Sunrise (HIMYM)?", 
+        "intermediary_question": "Is <Tim Gunn> the <Guests> of <Sunrise (How I Met Your Mother)>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Sunrise_(How_I_Met_Your_Mother)> <http://dbpedia.org/property/guests> <http://dbpedia.org/resource/Tim_Gunn> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "4852", 
+        "corrected_question": "to which university did both, the Stanford Cardinal and Gerald Reaven go?", 
+        "intermediary_question": "What is the <university> of the <Stanford Cardinal> and <institution> of the <Gerald Reaven>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Stanford_Cardinal> <http://dbpedia.org/ontology/university> ?uri. <http://dbpedia.org/resource/Gerald_Reaven> <http://dbpedia.org/ontology/institution> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "4102", 
+        "corrected_question": "Name the nearest city to David W. Brown House ?", 
+        "intermediary_question": "What is the <nearest city> of David W. Brown House ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/David_W._Brown_House> <http://dbpedia.org/ontology/nearestCity> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "4167", 
+        "corrected_question": "where did Deion Sanders debut?", 
+        "intermediary_question": "What is the <debutteam> of Deion Sanders ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Deion_Sanders> <http://dbpedia.org/property/debutteam> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "762", 
+        "corrected_question": "What cities are nearer to Fuountain Lake Farm?", 
+        "intermediary_question": "What are the <nearest city> of Fountain Lake Farm?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Fountain_Lake_Farm> <http://dbpedia.org/property/nearestCity> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "875", 
+        "corrected_question": "Who are the characters of Batman Live?", 
+        "intermediary_question": "Who are the <characters> of Batman Live?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Batman_Live> <http://dbpedia.org/property/characters> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "4742", 
+        "corrected_question": "Which artists trained in San Francisco Art Institute?", 
+        "intermediary_question": "Who are the <artists> whose <training> is <San Francisco Art Institute>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/training> <http://dbpedia.org/resource/San_Francisco_Art_Institute>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "938", 
+        "corrected_question": "What is the owning organisation of the Ford Kansas City Assembly Plant and also the builder of the Ford Y-block engine?", 
+        "intermediary_question": "What is the <owning organisation> of the <Ford Kansas City Assembly Plant> and <builder> of the <Ford Y-block engine>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ford_Kansas_City_Assembly_Plant> <http://dbpedia.org/ontology/owningOrganisation> ?uri. <http://dbpedia.org/resource/Ford_Y-block_engine> <http://dbpedia.org/ontology/manufacturer> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "2687", 
+        "corrected_question": "Name the country with currency as Aureus ?", 
+        "intermediary_question": "What is the <country> whose <currency> is <Aureus>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/currency> <http://dbpedia.org/resource/Aureus>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Country>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "3600", 
+        "corrected_question": "what awards have been given to A. Peter Dewey?", 
+        "intermediary_question": "What are the <awards received> of A. Peter Dewey?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/A._Peter_Dewey> <http://dbpedia.org/ontology/award> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "2394", 
+        "corrected_question": "How many shows belong to the network one of whose sister station is Cartoonite?", 
+        "intermediary_question": "How many <television shows> are there whose <network>'s <sister station> is <Cartoonito> ?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/sisterStation> <http://dbpedia.org/resource/Cartoonito> . ?uri <http://dbpedia.org/property/network> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 406
+    }, 
+    {
+        "_id": "4567", 
+        "corrected_question": "what has been developed by John Fanning?", 
+        "intermediary_question": "What is the <software> whose <developer> is <John Fanning (businessman)>?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/developer> <http://dbpedia.org/resource/John_Fanning_(businessman)> } ", 
+        "sparql_template_id": 1
+    }, 
+    {
+        "_id": "4980", 
+        "corrected_question": "Muhammad Yunus has won how many awards?", 
+        "intermediary_question": "Count the number of <awarded> in <Muhammad Yunus>?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Muhammad_Yunus> <http://dbpedia.org/ontology/award> ?uri  . }", 
+        "sparql_template_id": 102
+    }, 
+    {
+        "_id": "4124", 
+        "corrected_question": "List the associates of bands which have a label by Motown ?", 
+        "intermediary_question": "What is the <associated acts> of the <Bands> whose <label> is <Motown>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/recordLabel> <http://dbpedia.org/resource/Motown> . ?x <http://dbpedia.org/property/associatedActs> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Band>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "4564", 
+        "corrected_question": "Who wrote the musical whose composer is Emil Dean Zoghby?", 
+        "intermediary_question": "What is the <writers> of the <musical> whose <composer> is <Emil  Dean  Zoghby>> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/musicBy> <http://dbpedia.org/resource/Emil_Dean_Zoghby> . ?x <http://dbpedia.org/ontology/author> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Musical>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "385", 
+        "corrected_question": "Count the units garrisoned at Arlington County, Virginia.", 
+        "intermediary_question": "Give me a count of <military units> whose <garrison> is <Arlington County, Virginia>?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/ontology/garrison> <http://dbpedia.org/resource/Arlington_County,_Virginia>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MilitaryUnit>}", 
+        "sparql_template_id": 401
+    }, 
+    {
+        "_id": "3877", 
+        "corrected_question": "What is the faith of Kwai Chang Caine ?", 
+        "intermediary_question": "What is the <faith> of Kwai Chang Caine ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Kwai_Chang_Caine> <http://dbpedia.org/ontology/religion> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "4370", 
+        "corrected_question": "Who is related to Kelly Osbourne & Ozzy Osbourne?", 
+        "intermediary_question": "Who is the <person> whose <relativess> are <Kelly Osbourne> and <Ozzy Osbourne>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/relatives> <http://dbpedia.org/resource/Kelly_Osbourne> . ?uri <http://dbpedia.org/property/relatives> <http://dbpedia.org/resource/Ozzy_Osbourne> . }", 
+        "sparql_template_id": 7
+    }, 
+    {
+        "_id": "4569", 
+        "corrected_question": "What are the houses of the legislature where the leader is called Pullaiahgaripalli ?", 
+        "intermediary_question": "What is the <houses> of the <legislature> which is the <leader title> of <Pullaiahgaripalli> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Pullaiahgaripalli> <http://dbpedia.org/property/leaderTitle> ?x . ?x <http://dbpedia.org/property/houses> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Legislature>}", 
+        "sparql_template_id": 303
+    }, 
+    {
+        "_id": "536", 
+        "corrected_question": "Which serving railway line of the Daund Junction railway station was also the place where 99 (2009 film) was recorded ?", 
+        "intermediary_question": "What is the <serving railway line> of the <Daund Junction railway station> and <Recorded> of the <99 (2009 film)>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Daund_Junction_railway_station> <http://dbpedia.org/ontology/servingRailwayLine> ?uri. <http://dbpedia.org/resource/99_(2009_film)> <http://dbpedia.org/property/recorded> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "2291", 
+        "corrected_question": "List the ethnicity of Riley Reid?", 
+        "intermediary_question": "What are the <ethnicity> of Riley Reid?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Riley_Reid> <http://dbpedia.org/property/ethnicity> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "4665", 
+        "corrected_question": "Which shows are from a company whose subsidiary is Viacom Productions?", 
+        "intermediary_question": "What are the <television shows> whose <company>'s <subsidiary> is <Viacom Productions>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/subsidiary> <http://dbpedia.org/resource/Viacom_Productions> . ?uri <http://dbpedia.org/property/company> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 306
+    }, 
+    {
+        "_id": "3874", 
+        "corrected_question": " Giuseppe Bertello and Pietro Parolin are leaders of which place ?", 
+        "intermediary_question": "Whose <leaders> are <Giuseppe Bertello> and <Pietro Parolin>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/leader> <http://dbpedia.org/resource/Giuseppe_Bertello> . ?uri <http://dbpedia.org/ontology/leader> <http://dbpedia.org/resource/Pietro_Parolin> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>}", 
+        "sparql_template_id": 307
+    }, 
+    {
+        "_id": "936", 
+        "corrected_question": "What is the university whose campus is Mount Moosilauke?", 
+        "intermediary_question": "What is the <university> whose <campus> is <Mount Moosilauke>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/campus> <http://dbpedia.org/resource/Mount_Moosilauke>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/University>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "3737", 
+        "corrected_question": "How many religions are followed by the group whose architectural style can be seen on Sanggar Agung?", 
+        "intermediary_question": "How many <faith> are there of the <ethnic group> which is the <style of architecture> of <Sanggar Agung> ?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Sanggar_Agung> <http://dbpedia.org/property/architecturalStyle> ?x . ?x <http://dbpedia.org/ontology/religion> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/EthnicGroup>}", 
+        "sparql_template_id": 403
+    }, 
+    {
+        "_id": "4728", 
+        "corrected_question": "How many things are written in C++?", 
+        "intermediary_question": "Give me a count of <companies> whose <programming language> is <C++>?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/property/programmingLanguage> <http://dbpedia.org/resource/C++>  . }", 
+        "sparql_template_id": 101
+    }, 
+    {
+        "_id": "2360", 
+        "corrected_question": "Name the garrison of the Western Naval Command and line of the Vadodara Junction railway station ?", 
+        "intermediary_question": "What is the <garrison> of the <Western Naval Command> and <line> of the <Vadodara Junction railway station>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Western_Naval_Command> <http://dbpedia.org/property/garrison> ?uri. <http://dbpedia.org/resource/Vadodara_Junction_railway_station> <http://dbpedia.org/property/line> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "3507", 
+        "corrected_question": "Who are the shareholder of the soccer club for whom Steve Holland plays?", 
+        "intermediary_question": "What is the <shareholder> of the <soccer club> which is the <currentclub> of <Steve Holland (footballer)> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Steve_Holland_(footballer)> <http://dbpedia.org/property/currentclub> ?x . ?x <http://dbpedia.org/property/owner> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "201", 
+        "corrected_question": "Which city located on Mediterranean Sea is also the stadium of Panionios G.S.S. season ?", 
+        "intermediary_question": "What is the <stadium> of the <201415 Panionios G.S.S. season> and <cities> of the <Mediterranean Sea>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/2014\u201315_Panionios_G.S.S._season> <http://dbpedia.org/property/stadium> ?uri. <http://dbpedia.org/resource/Mediterranean_Sea> <http://dbpedia.org/property/cities> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "3208", 
+        "corrected_question": "Was Don't Bring Me Down recorded in West Germany?", 
+        "intermediary_question": "Is <West Germany> the <Recorded> of <Don't Bring Me Down>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Don't_Bring_Me_Down> <http://dbpedia.org/property/recorded> <http://dbpedia.org/resource/West_Germany> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "1332", 
+        "corrected_question": "Through which cities do the rivers starting at the Montauk State Park flow?", 
+        "intermediary_question": "What is the <city> of the <rivers> whose <source place> is <Montauk State Park>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/sourcePlace> <http://dbpedia.org/resource/Montauk_State_Park> . ?x <http://dbpedia.org/ontology/city> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/River>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "3016", 
+        "corrected_question": "How many ideologies do the political party of Boonchu Rojanastien hold?", 
+        "intermediary_question": "How many <political ideology> are there of the <political party> which is the <political party> of <Boonchu Rojanastien> ?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Boonchu_Rojanastien> <http://dbpedia.org/property/party> ?x . ?x <http://dbpedia.org/ontology/ideology> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PoliticalParty>}", 
+        "sparql_template_id": 403
+    }, 
+    {
+        "_id": "3502", 
+        "corrected_question": "What are the hubs of PLUS Helicopter Services, a highway helicopter unit of PLUS Expressways?", 
+        "intermediary_question": "What are the <hubs> of PLUS Expressways?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/PLUS_Expressways> <http://dbpedia.org/property/hubs> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "2708", 
+        "corrected_question": "Name the movies for which music was given by  Geoffrey Burgon and distributed by  Cinema International Corporation?", 
+        "intermediary_question": "What is the <movie> whose <music> is <Geoffrey Burgon> and <distributor> is <Cinema International Corporation>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/music> <http://dbpedia.org/resource/Geoffrey_Burgon> . ?uri <http://dbpedia.org/property/distributor> <http://dbpedia.org/resource/Cinema_International_Corporation>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "4021", 
+        "corrected_question": "Is Henry David Thoreau interested in Politics?", 
+        "intermediary_question": "Is <Politics> the <main interests> of <Henry David Thoreau>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Henry_David_Thoreau> <http://dbpedia.org/property/mainInterests> <http://dbpedia.org/resource/Politics> }", 
+        "sparql_template_id": 151
+    }, 
+    {
+        "_id": "1854", 
+        "corrected_question": "Among the companies who has product named Chinook who has a key person as Dennis Muilenburg ?", 
+        "intermediary_question": "What is the <company> whose <key people> is <Dennis Muilenburg> and <products> is <Boeing CH-47 Chinook>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/keyPeople> <http://dbpedia.org/resource/Dennis_Muilenburg> . ?uri <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Boeing_CH-47_Chinook>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "4469", 
+        "corrected_question": "Which country's leader  is Giuseppe Bertello?", 
+        "intermediary_question": "What is the <country> whose <leader> is <Giuseppe Bertello>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/leader> <http://dbpedia.org/resource/Giuseppe_Bertello>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Country>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "2872", 
+        "corrected_question": "Who wrote the subsequent work of One Day at a Time (Em's Version) ?", 
+        "intermediary_question": "What is the <writer> of the <single> which is the <subsequent work> of <One Day at a Time (Em's Version)> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/One_Day_at_a_Time_(Em's_Version)> <http://dbpedia.org/ontology/subsequentWork> ?x . ?x <http://dbpedia.org/ontology/writer> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "3030", 
+        "corrected_question": "Name the TV shows with network as NBC and company as Paramount Television ?", 
+        "intermediary_question": "What are the <television shows> whose <network> is <NBC> and <company> is <Paramount Television>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/network> <http://dbpedia.org/resource/NBC> . ?uri <http://dbpedia.org/property/company> <http://dbpedia.org/resource/Paramount_Television>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "1205", 
+        "corrected_question": "Name the fictional character whose voice's animator is Hardie Gramatky?", 
+        "intermediary_question": "What is the <fictional character> whose <voice>'s <animator> is <Hardie Gramatky>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/animator> <http://dbpedia.org/resource/Hardie_Gramatky> . ?uri <http://dbpedia.org/ontology/voice> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>}", 
+        "sparql_template_id": 306
+    }, 
+    {
+        "_id": "1645", 
+        "corrected_question": "Which license provider of MSX basic is also the designer of Language Integrated Query ?", 
+        "intermediary_question": "What is the <designed by> of the <Language Integrated Query> and <license> of the <MSX BASIC>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Language_Integrated_Query> <http://dbpedia.org/ontology/designer> ?uri. <http://dbpedia.org/resource/MSX_BASIC> <http://dbpedia.org/property/license> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "3417", 
+        "corrected_question": "Who are the architect of the stadium whose one of the architect is louis D. Astorino ?", 
+        "intermediary_question": "What are the other <architect> of the <stadia> whose <architect> is <Louis D. Astorino>>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/architect> <http://dbpedia.org/resource/Louis_D._Astorino> . ?x <http://dbpedia.org/property/architect> ?uri  . }", 
+        "sparql_template_id": 11
+    }, 
+    {
+        "_id": "3476", 
+        "corrected_question": "Who are the astronauts associated with NASA?", 
+        "intermediary_question": "Who are the <astronauts> whose <type> is <NASA>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/type> <http://dbpedia.org/resource/NASA>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Astronaut>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "2861", 
+        "corrected_question": "What is a common ingredient used in boyt Blodpalt and Kaszanka ?", 
+        "intermediary_question": "What is the <ingredient> of the <Blodpalt> and <Kaszanka>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Blodpalt> <http://dbpedia.org/ontology/ingredient> ?uri. <http://dbpedia.org/resource/Kaszanka> <http://dbpedia.org/ontology/ingredient> ?uri . }", 
+        "sparql_template_id": 15
+    }, 
+    {
+        "_id": "1792", 
+        "corrected_question": "Who is the partner of Rob Patterson?", 
+        "intermediary_question": "Who is the <person> whose <partner> is <Rob Patterson>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/partner> <http://dbpedia.org/resource/Rob_Patterson>  . }", 
+        "sparql_template_id": 1
+    }, 
+    {
+        "_id": "3797", 
+        "corrected_question": "How many politicians are there from the city of Ganges?", 
+        "intermediary_question": "How many <leader name> are there of the <city> which is the <city > of <Ganges> ?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Ganges> <http://dbpedia.org/property/city> ?x . ?x <http://dbpedia.org/ontology/leaderName> ?uri  . }", 
+        "sparql_template_id": 103
+    }, 
+    {
+        "_id": "3368", 
+        "corrected_question": "To which american football teams does the Heinz Field serve as home stadium?", 
+        "intermediary_question": "What is the <tenants> of Heinz Field ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Heinz_Field> <http://dbpedia.org/property/tenants> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "3367", 
+        "corrected_question": "Which architect of the Marine Corps Air Station Kaneohe Bay is the branch of the Burnet R. Maybank?", 
+        "intermediary_question": "What is the <architect> of the <Marine Corps Air Station Kaneohe Bay> and <branch> of the <Burnet R. Maybank>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Marine_Corps_Air_Station_Kaneohe_Bay> <http://dbpedia.org/property/architect> ?uri. <http://dbpedia.org/resource/Burnet_R._Maybank> <http://dbpedia.org/property/branch> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "3533", 
+        "corrected_question": "Which movies's screenplay is written by Akiva Goldsman", 
+        "intermediary_question": "What <movies>'s <screenplay> is <Akiva Goldsman>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/screenplay> <http://dbpedia.org/resource/Akiva_Goldsman>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "3449", 
+        "corrected_question": "How many TV shows are similar to the ones belonging to fantasy genre?", 
+        "intermediary_question": "What is the total number of <television shows> whose <related>'s <artistic genre> is <Fantasy television>?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/genre> <http://dbpedia.org/resource/Fantasy_television> . ?uri <http://dbpedia.org/ontology/related> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 406
+    }, 
+    {
+        "_id": "603", 
+        "corrected_question": "Give me all commanders which had an important role in both, the Battle of Fort Stephenson and Battle of the Thames?", 
+        "intermediary_question": "What is the <commander> of the <Battle of Fort Stephenson> and <Battle of the Thames>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Battle_of_Fort_Stephenson> <http://dbpedia.org/ontology/commander> ?uri. <http://dbpedia.org/resource/Battle_of_the_Thames> <http://dbpedia.org/ontology/commander> ?uri . }", 
+        "sparql_template_id": 15
+    }, 
+    {
+        "_id": "3056", 
+        "corrected_question": "How many developers were involved in creating games whose score is composed by Gerard Marino?", 
+        "intermediary_question": "How many <developer> are there, of the <video games> whose <composer> is <Gerard Marino> ?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/composer> <http://dbpedia.org/resource/Gerard_Marino> . ?x <http://dbpedia.org/ontology/developer> ?uri  . }", 
+        "sparql_template_id": 105
+    }, 
+    {
+        "_id": "4531", 
+        "corrected_question": "Which sea is surrounded by Rostock and Kaliningrad?", 
+        "intermediary_question": "What is the <sea> whose <citiess> are <Rostock> and <Kaliningrad>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Rostock> . ?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Kaliningrad> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Sea>}", 
+        "sparql_template_id": 307
+    }, 
+    {
+        "_id": "126", 
+        "corrected_question": "Which television show's developer is Brian Graden and voices to the character is by Isaac Hayes?", 
+        "intermediary_question": "What is the <television show> whose <developer> is <Brian Graden> and <voices> is <Isaac Hayes>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/developer> <http://dbpedia.org/resource/Brian_Graden> . ?uri <http://dbpedia.org/property/voices> <http://dbpedia.org/resource/Isaac_Hayes>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "3876", 
+        "corrected_question": "How did the child of Stevens T. Mason die?", 
+        "intermediary_question": "What is the <die from> of the <owl> which is the <child> of <Stevens Thomson Mason (Virginia)> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Stevens_Thomson_Mason_(Virginia)> <http://dbpedia.org/ontology/child> ?x . ?x <http://dbpedia.org/ontology/deathCause> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "2935", 
+        "corrected_question": "Does the Ontario International Airport serve the Inland Empire?", 
+        "intermediary_question": "Is <Inland Empire> the <city-served> of <Ontario International Airport>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Ontario_International_Airport> <http://dbpedia.org/property/cityServed> <http://dbpedia.org/resource/Inland_Empire> }", 
+        "sparql_template_id": 151
+    }, 
+    {
+        "_id": "3531", 
+        "corrected_question": "Is semnani one of the languages spoken in Iran?", 
+        "intermediary_question": "Is <Semnani languages> the <Languages> of <Iran>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Iran> <http://dbpedia.org/property/languages> <http://dbpedia.org/resource/Semnani_languages> }", 
+        "sparql_template_id": 151
+    }, 
+    {
+        "_id": "2730", 
+        "corrected_question": "What is the nickname of the home stadium of Angels Toru?", 
+        "intermediary_question": "What is the <Nickname> of the <owl> which is the <home stadium> of <Angels Toru> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Angels_Toru\u0144> <http://dbpedia.org/ontology/homeStadium> ?x . ?x <http://dbpedia.org/property/nickname> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "827", 
+        "corrected_question": "What is the television show whose executive producer is Douglas Netter?", 
+        "intermediary_question": "What is the <television show> whose <executive producer> is <Douglas Netter>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/executiveProducer> <http://dbpedia.org/resource/Douglas_Netter>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "1639", 
+        "corrected_question": "List out the people who are related to the relatives of Jared Kushner ?", 
+        "intermediary_question": "What is the <relation> of the <person> who is the <relation> of <Jared Kushner> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jared_Kushner> <http://dbpedia.org/ontology/relation> ?x . ?x <http://dbpedia.org/ontology/relation> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "984", 
+        "corrected_question": "List all the doctoral student of the scientist who has advised john Bowlby ?", 
+        "intermediary_question": "What are the other <doctoral students> of the <scientists> whose <doctoral students> is <John Bowlby>>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/doctoralStudents> <http://dbpedia.org/resource/John_Bowlby> . ?x <http://dbpedia.org/property/doctoralStudents> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>}", 
+        "sparql_template_id": 311
+    }, 
+    {
+        "_id": "3281", 
+        "corrected_question": "To which series does the book belong which came after the Blade Runner 2?", 
+        "intermediary_question": "What is the <series> of the <book> whose <previous work> is <Blade Runner 2: The Edge of Human> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/previousWork> <http://dbpedia.org/resource/Blade_Runner_2:_The_Edge_of_Human> . ?x <http://dbpedia.org/ontology/series> ?uri  . }", 
+        "sparql_template_id": 5
+    }, 
+    {
+        "_id": "4971", 
+        "corrected_question": "In which city did The Ultimate Fighter: Team Rousey vs. Team Tate take place ?", 
+        "intermediary_question": "What is the <city > of The Ultimate Fighter: Team Rousey vs. Team Tate ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Rousey_vs._Team_Tate> <http://dbpedia.org/property/city> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "2188", 
+        "corrected_question": "Where was Sino-French War fought ?", 
+        "intermediary_question": "What is the <territory> of Sino-French War ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sino-French_War> <http://dbpedia.org/ontology/territory> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "4612", 
+        "corrected_question": "Who did Daniel Gibson marry?", 
+        "intermediary_question": "What <person>'s <marriage partner> is <Daniel Gibson>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Daniel_Gibson>  . }", 
+        "sparql_template_id": 1
+    }, 
+    {
+        "_id": "2443", 
+        "corrected_question": "What is the political party of the daughter of Jawaharlal Nehru ?", 
+        "intermediary_question": "What is the <political party> of the <office holder> who is the <has kid> of <Jawaharlal Nehru> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jawaharlal_Nehru> <http://dbpedia.org/ontology/child> ?x . ?x <http://dbpedia.org/ontology/party> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "362", 
+        "corrected_question": "Name the river with source as Shannon Pot and its mouth is located in Limerick?", 
+        "intermediary_question": "What is the <river> whose <source> is <Shannon Pot> and <mouth location> is <Limerick>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/source> <http://dbpedia.org/resource/Shannon_Pot> . ?uri <http://dbpedia.org/property/mouthLocation> <http://dbpedia.org/resource/Limerick>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/River>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "2349", 
+        "corrected_question": "What is the organisation whose purposes are Environmentalism and Peace?", 
+        "intermediary_question": "What is the <organisation> whose <purposes> are <Environmentalism> and <Peace>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/purpose> <http://dbpedia.org/resource/Environmentalism> . ?uri <http://dbpedia.org/property/purpose> <http://dbpedia.org/resource/Peace> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation>}", 
+        "sparql_template_id": 307
+    }, 
+    {
+        "_id": "345", 
+        "corrected_question": "Count the number of sports team members  which have player named Matt Williams ?", 
+        "intermediary_question": "What is the total number of other <name> of the <Sports team members> whose <name> is <Matt  Williams ( New  Zealand footballer)>>?", 
+        "sparql_query": " SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/name> <http://dbpedia.org/resource/Matt_Williams_(New_Zealand_footballer)> . ?x <http://dbpedia.org/property/name> ?uri }", 
+        "sparql_template_id": 111
+    }, 
+    {
+        "_id": "814", 
+        "corrected_question": "How many different people own the Timeform award winners?", 
+        "intermediary_question": "Count the <belongs to> of the <race horses> whose <awards> is <Timeform>.", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/awards> <http://dbpedia.org/resource/Timeform> . ?x <http://dbpedia.org/ontology/owner> ?uri  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}", 
+        "sparql_template_id": 405
+    }, 
+    {
+        "_id": "3205", 
+        "corrected_question": "What religions do diplomats typically follow?", 
+        "intermediary_question": "What is the <religious affiliation> of the <office holders> whose <profession> is <Diplomacy>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/profession> <http://dbpedia.org/resource/Diplomacy> . ?x <http://dbpedia.org/property/religion> ?uri  . }", 
+        "sparql_template_id": 5
+    }, 
+    {
+        "_id": "4160", 
+        "corrected_question": "Guggenheim family is the cofounder of a company that invested stocks in which baseball teams?", 
+        "intermediary_question": "What are the <baseball teams> whose <stockholder>'s <co-founder> is <Guggenheim family>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/founder> <http://dbpedia.org/resource/Guggenheim_family> . ?uri <http://dbpedia.org/property/owner> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BaseballTeam>}", 
+        "sparql_template_id": 306
+    }, 
+    {
+        "_id": "4795", 
+        "corrected_question": "Was John muir one of the first to ascend a mountain on Mt hoffmann?", 
+        "intermediary_question": "Is <John Muir> the <person that first ascented a mountain> of <Mount Hoffmann>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Mount_Hoffmann> <http://dbpedia.org/ontology/firstAscentPerson> <http://dbpedia.org/resource/John_Muir> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "3325", 
+        "corrected_question": "Which city is known for the people working in the western penn hospital?", 
+        "intermediary_question": "What is the <known for> of the <medician> whose <work institutions> is <Western Pennsylvania Hospital> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/workInstitutions> <http://dbpedia.org/resource/Western_Pennsylvania_Hospital> . ?x <http://dbpedia.org/ontology/knownFor> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "4106", 
+        "corrected_question": "In which country does the publishing house exist which was cofounded by Panos Loannides?", 
+        "intermediary_question": "What is the <country> of the <publisher> whose <co-founder> is <Panos Ioannides> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/founder> <http://dbpedia.org/resource/Panos_Ioannides> . ?x <http://dbpedia.org/property/country> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Publisher>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "2116", 
+        "corrected_question": "Name the team which is owned by Dafenham wind turbines and stood first in 1967 mexican Grand Prix ?", 
+        "intermediary_question": "What is the <first team> of the <1967 Mexican Grand Prix> and <is owned by> of the <Dagenham wind turbines>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/1967_Mexican_Grand_Prix> <http://dbpedia.org/property/firstTeam> ?uri. <http://dbpedia.org/resource/Dagenham_wind_turbines> <http://dbpedia.org/property/owner> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "1834", 
+        "corrected_question": "Which education center Sidney Catlin Partrodge attended which was also the alma mater of Lisa Brummel ?", 
+        "intermediary_question": "What is the <education> of the <Sidney Catlin Partridge> and <alma mater> of the <Lisa Brummel>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sidney_Catlin_Partridge> <http://dbpedia.org/property/education> ?uri. <http://dbpedia.org/resource/Lisa_Brummel> <http://dbpedia.org/ontology/almaMater> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "793", 
+        "corrected_question": "What sports can be played in Kharghar's schools", 
+        "intermediary_question": "What is the <sport> of the <schools> whose <city> is <Kharghar>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/city> <http://dbpedia.org/resource/Kharghar> . ?x <http://dbpedia.org/ontology/sport> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/School>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "4946", 
+        "corrected_question": "Which ethinicity of  Riley Reid is the state of origin of Holmes Colbert?", 
+        "intermediary_question": "What is the <ethnic group> of the <Riley Reid> and <state of origin> of the <Holmes Colbert>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Riley_Reid> <http://dbpedia.org/property/ethnicity> ?uri. <http://dbpedia.org/resource/Holmes_Colbert> <http://dbpedia.org/ontology/stateOfOrigin> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "2674", 
+        "corrected_question": "Was John Boehner the winner of the US House of Representatives elections in Ohio in 2010?", 
+        "intermediary_question": "Is <John Boehner> the <incumbent> of <United States House of Representatives elections in Ohio, 2010>?", 
+        "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Ohio,_2010> <http://dbpedia.org/property/incumbent> <http://dbpedia.org/resource/John_Boehner> }", 
+        "sparql_template_id": 152
+    }, 
+    {
+        "_id": "94", 
+        "corrected_question": "Which american football team  has stadium as O.co Coliseum?", 
+        "intermediary_question": "What is the <american football Team> whose <location city> is <O.co Coliseum>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/locationCity> <http://dbpedia.org/resource/O.co_Coliseum>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/AmericanFootballTeam>}", 
+        "sparql_template_id": 301
+    }, 
+    {
+        "_id": "3756", 
+        "corrected_question": "How many subjects are covered in the publications of Doubleday?", 
+        "intermediary_question": "How many <non-fiction subject> of the <books> whose <publisher> is <Doubleday (publisher)>, are there ?", 
+        "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Doubleday_(publisher)> . ?x <http://dbpedia.org/ontology/nonFictionSubject> ?uri  . }", 
+        "sparql_template_id": 105
+    }, 
+    {
+        "_id": "2891", 
+        "corrected_question": "In which city of Pittsburg Steelers was the Congress of Inductrial Organization founded ?", 
+        "intermediary_question": "What is the <founded> of the <Congress of Industrial Organizations> and <city > of the <Pittsburgh Steelers>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Congress_of_Industrial_Organizations> <http://dbpedia.org/property/founded> ?uri. <http://dbpedia.org/resource/Pittsburgh_Steelers> <http://dbpedia.org/property/city> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "2371", 
+        "corrected_question": "What is the hometown of the residents of Martha's vineyards?", 
+        "intermediary_question": "What is the <home town> of the <office holder> whose <official residence> is <Martha's Vineyard> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/residence> <http://dbpedia.org/resource/Martha's_Vineyard> . ?x <http://dbpedia.org/ontology/hometown> ?uri  . }", 
+        "sparql_template_id": 5
+    }, 
+    {
+        "_id": "4149", 
+        "corrected_question": "Name the sea into which Danish Straits flows and has Kaliningrad as one of the city on the shore ?", 
+        "intermediary_question": "What is the <sea> whose <cities> is <Kaliningrad> and <outflow> is <Danish straits>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Kaliningrad> . ?uri <http://dbpedia.org/property/outflow> <http://dbpedia.org/resource/Danish_straits>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Sea>}", 
+        "sparql_template_id": 308
+    }, 
+    {
+        "_id": "4432", 
+        "corrected_question": "Name the team manger of Middlebrough F.C season 2006-07 ?", 
+        "intermediary_question": "Who is the <team manager> of 200607 Middlesbrough F.C. season ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/2006\u201307_Middlesbrough_F.C._season> <http://dbpedia.org/ontology/manager> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "3228", 
+        "corrected_question": "What city has the football team in which Lee Robinson debuted?", 
+        "intermediary_question": "What is the <location city> of the <american football Team> which is the <debut team> of <Lee Robinson (American football)> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Lee_Robinson_(American_football)> <http://dbpedia.org/ontology/debutTeam> ?x . ?x <http://dbpedia.org/ontology/locationCity> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "2853", 
+        "corrected_question": "Who is the owner of the bank which owns Bloomberg Radio?", 
+        "intermediary_question": "What is the <owner> of the <bank> which is the <owned by> of <Bloomberg Radio> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Bloomberg_Radio> <http://dbpedia.org/ontology/owner> ?x . ?x <http://dbpedia.org/property/owner> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Bank>}", 
+        "sparql_template_id": 303
+    }, 
+    {
+        "_id": "2912", 
+        "corrected_question": "Which companies were behind the renovation of McKechnie Field ?", 
+        "intermediary_question": "What is the <architect> of McKechnie Field ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/McKechnie_Field> <http://dbpedia.org/property/architect> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "1865", 
+        "corrected_question": "Who was the coach of marquette Golden Eagles men's basketball team-2012,13 season ?", 
+        "intermediary_question": "Who is the <coach> of 201213 Marquette Golden Eagles men's basketball team ?", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/2012\u201313_Marquette_Golden_Eagles_men's_basketball_team> <http://dbpedia.org/ontology/coach> ?uri } ", 
+        "sparql_template_id": 2
+    }, 
+    {
+        "_id": "1857", 
+        "corrected_question": "Miluk and Cayuse are still spoken in which part of the world?", 
+        "intermediary_question": "What is the <region> of the <Miluk language> and <Cayuse language>", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Miluk_language> <http://dbpedia.org/property/region> ?uri. <http://dbpedia.org/resource/Cayuse_language> <http://dbpedia.org/property/region> ?uri . }", 
+        "sparql_template_id": 15
+    }, 
+    {
+        "_id": "2645", 
+        "corrected_question": "Which governer of Winston bryant is also the president of Carl Stokes ?", 
+        "intermediary_question": "What is the <Governor> of the <Winston Bryant> and <President> of the <Carl Stokes>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Winston_Bryant> <http://dbpedia.org/property/governor> ?uri. <http://dbpedia.org/resource/Carl_Stokes> <http://dbpedia.org/property/president> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "2243", 
+        "corrected_question": "List the sports of PATTS College of Aeronautics which are of interest of Jon Speelman ?", 
+        "intermediary_question": "What is the <athletics> of the <PATTS College of Aeronautics> and <field> of the <Jon Speelman>", 
+        "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/PATTS_College_of_Aeronautics> <http://dbpedia.org/property/athletics> ?uri. <http://dbpedia.org/resource/Jon_Speelman> <http://dbpedia.org/ontology/field> ?uri} ", 
+        "sparql_template_id": 16
+    }, 
+    {
+        "_id": "2336", 
+        "corrected_question": "What is the home stadium of the club coached by Justine Omojong?", 
+        "intermediary_question": "What is the <Home Stadium> of the <soccer clubs> whose <coach> is <Justine  Omojong>>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/coach> <http://dbpedia.org/resource/Justine_Omojong> . ?x <http://dbpedia.org/property/homeStadium> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/SoccerClub>}", 
+        "sparql_template_id": 305
+    }, 
+    {
+        "_id": "950", 
+        "corrected_question": "Which are the predecessors of the cars which are similar to the Oldsmobile 88?", 
+        "intermediary_question": "What is the <predecessor> of the <automobile> which is the <related> of <Oldsmobile 88> ?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Oldsmobile_88> <http://dbpedia.org/property/related> ?x . ?x <http://dbpedia.org/ontology/predecessor> ?uri  . }", 
+        "sparql_template_id": 3
+    }, 
+    {
+        "_id": "3068", 
+        "corrected_question": "Name a queen whose parent is Ptolemy XII Auletes and consort is Ptolemy XIII Theos Philopator?", 
+        "intermediary_question": "What is the <royalty> whose <parent> is <Ptolemy XII Auletes> and <consort> is <Ptolemy XIII Theos Philopator>?", 
+        "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/parent> <http://dbpedia.org/resource/Ptolemy_XII_Auletes> . ?uri <http://dbpedia.org/property/spouse> <http://dbpedia.org/resource/Ptolemy_XIII_Theos_Philopator>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Royalty>}", 
+        "sparql_template_id": 308
+    }]

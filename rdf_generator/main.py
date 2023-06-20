@@ -66,11 +66,11 @@ with open(path,'r') as f:
                 commit["commit_ref"]  = hash
             if('Author:' in element): 
                 #print("adding person",line[index+1])
-                name = element[element.index(":") + 1:]
+                name = element[element.index(":") + 1:].strip()
                 commit["author"] = name
             if('Description:' in element): 
                 #print("adding person",line[index+1])
-                description = element[element.index(":") + 1:]
+                description = element[element.index(":") + 1:].strip()
                 commit["description"] = description
             if('Date:' in element):
                 date = element[element.index(":") + 1:]
@@ -88,27 +88,35 @@ with open(path,'r') as f:
 
 ############################################ TO CREATE THE RDF TRIPPLES #############################################
 
-commits = Namespace("http://dbpedia.org/resource/Commit_(version_control)")
+#commits = URIRef("http://dbpedia.org/resource/Commit_(version_control)")
+commits = URIRef("http://example.org/entity/commit")
+
+# there is a chance that this ^^ will cause issues with the property ttl file
+
 # I think we can create namespace for like entity or ontology 
 # https://dbpedia.org/ontology/author ???
 #
-EX = Namespace("http://dbpedia.org/page/")
+Author = URIRef("http://dbpedia.org/ontology/author")
+Description = URIRef("http://dbpedia.org/ontology/description")
+Calendar_date = URIRef("http://dbpedia.org/ontology/Calendar_date")
+Entity_uri = URIRef("http://example.org/entity/")
 
 data=[]
 g = Graph()
 
 for commit in history:
-    urirefstring = "http://example.org/"+commit["commit_ref"]
+    #possible to make this https://github.com/izzyrybz/rdf_code_extended/commit+commit["commit_ref"] but we need to make sure of the uri for that
+    urirefstring = "http://example.org/"+ commit['commit_ref']
     urirefstring= urirefstring.replace(" ", "")
     commit_uri = URIRef(urirefstring)
     #commit_uri = commits[commit['commit_ref']]
-    g.add((commit_uri, RDF.type, EX.Commit))
-    g.add((commit_uri, EX.Author, Literal(commit['author'])))
-    g.add((commit_uri, EX.Description, Literal(commit['description'])))
-    g.add((commit_uri, EX.Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
+    g.add((commit_uri, RDF.type, commits))
+    g.add((commit_uri, Author, Entity_uri+commit['author']))
+    g.add((commit_uri, Description, Literal(commit['description'])))
+    g.add((commit_uri, Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
 
 # To save the graph to a file
-g.serialize(destination='commits3.ttl', format='turtle')
+g.serialize(destination='commit7.ttl', format='turtle')
 
 
 

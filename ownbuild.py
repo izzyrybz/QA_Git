@@ -6,7 +6,7 @@ from myclassifier import QuestionClassifier
 from myphrasemapping import PhraseMapping
 
 from knowledgegraph_generator import KnowledgeGraphGenerator
-from killme import generate_query
+from generate_q_rank_q import generate_query
 import spacy
 from spacy import displacy
 from nltk import Tree
@@ -137,15 +137,7 @@ def main(question,phrasemapper):
     print("Type of question:",question_type)
     print("#"*80)
 
-    #INSERT DATE TEST HERE
-
-    #Knowledge Graph generator to a ttl file that we can use a properties
-    #KnowledgeGraphGenerator()
-    print("Knowledge graph generated")
-    #print("#"*80)
-
     #We create a phrase mapping
-    #phrasemapper = PhraseMapping()
     phrasemapper.phrasemap_question(question,tokened_question,lemmizized_question)
     print("phrasemapping generated in file that can be found under json_files")
     print("#"*80)
@@ -174,108 +166,10 @@ def main(question,phrasemapper):
             #print("The answer is",output)
     
 
-q1='Which commits have the user Shawn_Lee made?' #w
 
-q2= 'How many commits have the user YJSoh made?' #w
-
-#q3 ='How many commits have there been?'
-
-q4 ='Which commits modified file killme.py?'  #w
-
-q4_x ='Which commits altered files?' #w
-
-q5 ='How many files have been deleted?' #w
-
-q6 = 'How many users have made commits that changed files?'  #needs u3
-
-q7 = 'Which commits had both added and modified files?' #w
-
-q8= 'How many users have made commits that changed file trash.py?' #
-
-q9 = 'List all the authors?' #
-
-q10 = "Which commit changed file instructorComments.jsp?" # works
-
-q11= 'Which users changed file instructorComments.jsp and file instructorCommentsPageSearchNormal.html?' #
-
-q12= "When was file trash.py modified?" #  ----
-
-q13 = "Which commits modified file killme.py?" # works
-
-#question= q1
-
-#7 : Did a commit have the description 'Initial commit'? - does not work
-
-#8: What commits were made in 2022-01-0
-#9: What commits did the user izzrybz make between the time 2023-01-27 and 2023-01-30?
-
-#KnowledgeGraphGenerator()
 phrasemapper = PhraseMapping()
-main(q7,phrasemapper)
-exit()
 
 with open('testingdata.txt','r') as fp:
-    data = fp.readlines()
-count = 0
-
-with open('test.txt','w') as fp:
-    
-    for item in data:
-        item = item.replace('\n','')
-        item = item.lstrip(' ')
-        item = item.rstrip(' ')
-        print("this is the item",len(item))
-        
-        d = difflib.Differ()
-
-        
-        result= main(item,phrasemapper)
-        
-      
-        fp.write('\n'+item+ '\n')
-        fp.write(result+ '\n')
-        with open("trash2.txt","r") as trashfp:
-            possibleq = trashfp.readlines()
-        if possibleq[0].strip() in result.strip().replace('}',''):
-            count = count+1
-            fp.write("we have choosen the first possible option"+ '\n')
-            print("we have choosen the first possible option")
-            print(possibleq[0].strip() , result.strip().replace('}',''))
-            
-            
-            
-
-        fp.write('\n')
-print("THIS IS OUR COUNTER",count)
-    
-'''
-
-    fp.write('\n'+q3+ '\n')
-    fp.write(main(q3)+ '\n')
-    
-
-    fp.write('\n'+q4+ '\n')
-    fp.write(main(q4)+ '\n')
-
-    fp.write('\n'+q4_x+ '\n')
-    fp.write(main(q4_x)+ '\n')
-
-    fp.write('\n'+q5+ '\n')
-    fp.write(main(q5)+ '\n')
-
-    fp.write('\n'+q6+ '\n')
-    fp.write(main(q6)+'\n')
-
-    fp.write('\n'+q7+ '\n')
-    fp.write(main(q7)+ '\n')
-
-    fp.write('\n'+q8+ '\n')
-    fp.write(main(q8)+ '\n')
-
-    fp.write(q9+ '\n')
-    fp.write(main(q9))'''
-    
-    #if main(q1) == 'SELECT ?u1 WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
-    #    print("q1 works")
-    #if main(q2) == 'SELECT COUNT (?u1) WHERE {?u1 <http://dbpedia.org/ontology/author> <http://example.org/entity/izzyrybz> }':
-    #    print("q2 works")
+    for line in fp:
+            print(main(line,phrasemapper))
+print("We have finished the questions")

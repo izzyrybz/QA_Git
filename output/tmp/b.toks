@@ -1,6 +1,0 @@
-http://example.org/action/modify http://example.org/action/add ?u_1 ?u_0 ?u_0
-http://example.org/action/modify ?u_1 http://example.org/action/add ?u_3 ?u_0
-http://example.org/action/modify http://example.org/action/add ?u_1 ?u_3 ?u_0
-http://example.org/action/add http://example.org/action/modify ?u_1 ?u_3 ?u_0
-http://example.org/action/add ?u_1 http://example.org/action/modify ?u_3 ?u_0
-http://example.org/action/add http://example.org/action/modify ?u_0 ?u_1 ?u_1
